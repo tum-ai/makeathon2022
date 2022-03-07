@@ -1,0 +1,108 @@
+.RoadmapItem{
+  width: 100%;
+  display: flex;
+}
+.LeftContainer{
+  width: 50%;
+  height: 800px;
+  position: relative;
+}
+.LineContainer{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 48px 0;
+  position: absolute;
+}
+.Line{
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to bottom, #FFFFFF, #A0A0A0 50%, #FFFFFF 100%);
+}
+.MarkedLineContainer{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 48px 0;
+  position: absolute;
+}
+.MarkedLine{
+  width: 2px;
+  background: linear-gradient(to bottom, #FFFFFF, #5C2EE8 20%);
+}
+.PointContainer{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 60px 0;
+}
+.Point{
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  border: 2px solid #A0A0A0;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.PointMarked{
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  border: 2px solid #5C2EE8;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.TextContainer{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 60px 0;
+}
+.TextLeft{
+  width: 40%;
+  align-self: flex-start;
+  text-align: right;
+  cursor: pointer;
+}
+.TextRight{
+  width: 40%;
+  align-self: flex-end;
+  cursor: pointer;
+}
+
+.RightContainer{
+  width: 50%;
+  background: linear-gradient(125.53deg, #211B45 8.83%, #0F2538 99.14%), #C4C4C4;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+.TopContainer{
+  width: 100%; 
+  height: 260px;
+  position: relative;
+}
+.CardTime {
+  padding-top: 280px;
+  text-align: right;
+}
+.BottomContainer{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}

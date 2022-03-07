@@ -1,0 +1,43 @@
+.Paragraph2Item{
+    width: 100%;
+  }
+  .NormalParagraph{
+    font-family: IBM Plex Sans;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #BFBFBF;
+    letter-spacing: 0.03em;
+    margin: 0;
+  }
+  .NormalParagraphDark{
+    font-family: IBM Plex Sans;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #4C4C4C; 
+    letter-spacing: 0.03em;
+    margin: 0;
+  }
+  .HighlightedContent{
+    font-family: IBM Plex Sans;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+    color: #FFFFFF; 
+    letter-spacing: 0.03em; 
+    margin: 0;
+  }
+  .HighlightedContentDark{
+    font-family: IBM Plex Sans;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+    color: #000000;
+    letter-spacing: 0.03em;
+    margin: 0;
+  }

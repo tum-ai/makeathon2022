@@ -1,3 +1,53 @@
 .HeroItem {
-
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Background{
+  top: 0px;
+  position: absolute;
+}
+.Svg{
+  width: 100vw;
+}
+.Grid{
+  position: relative;
+  width: 1200px;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  padding-top: 180px;
+}
+.LeftContainer{
+  width: calc(((100% - (5 * 24px)) / 6 * 2) + (1 * 24px));
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+.UpperContainer{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.BottomContainer{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.Value{
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  width: 90%;
+}
+.CheckIcon{
+  width: 36px;
+  height: 36px;
+  background-image: url("/assets/check.svg");
+}
+.RightContainer{
+  width: calc(((100% - (5 * 24px)) / 6 * 2) + (1 * 24px));
+  height: 200px;
+  position: relative;
 }

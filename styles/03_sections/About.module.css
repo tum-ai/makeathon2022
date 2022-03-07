@@ -1,0 +1,31 @@
+.AboutItem{
+  width: 100%;
+}
+.Description{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(295.13deg, #F6F2FF 7.21%, #FFFFFF 93.4%), #C4C4C4;
+  padding-top: 300px;
+  padding-bottom: 120px;
+}
+.Grid{
+  width: 1200px;
+  display: flex;
+  gap: 24px;
+}
+.LeftContainer{
+  width: calc(((100% - (5 * 24px)) / 6 * 1) + (0 * 24px));
+}
+.MiddleContainer{
+  width: calc(((100% - (5 * 24px)) / 6 * 4) + (3 * 24px));
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+.Paragraph{
+  width: calc(((100% - (3 * 24px)) / 4 * 3) + (2 * 24px));
+}
+.Button{
+  width: fit-content;
+}

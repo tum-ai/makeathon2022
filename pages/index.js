@@ -1,4 +1,8 @@
 import Head from 'next/head'
+import About from '../components/03_sections/about'
+import FullscreenPicture from '../components/03_sections/fullscreenPicture'
+import Hero from '../components/03_sections/hero'
+import Roadmap from '../components/03_sections/roadmap'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
@@ -11,7 +15,10 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-       
+        <Hero />
+        <About />
+        <Roadmap />
+        <FullscreenPicture />
       </main>
 
       <footer className={styles.footer}>

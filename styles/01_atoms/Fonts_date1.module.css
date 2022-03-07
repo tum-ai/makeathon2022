@@ -1,0 +1,21 @@
+.Date1Item{
+    width: 100%;
+}
+.NormalText{
+    font-family: IBM Plex Sans;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 35px;
+    color: #B2B2B2;
+    margin: 0;
+}
+.NormalTextDark{
+    font-family: IBM Plex Sans;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 35px;
+    color: #000000;
+    margin: 0;
+}

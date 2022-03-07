@@ -1,0 +1,33 @@
+.TicketItem{
+  width: 340px;
+  position: absolute;
+  right: 0;
+}
+.Ticket{
+  width: 340px;
+  height: 600px;
+  background-image: url("/assets/ticket.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  filter: drop-shadow(0px 40px 124px rgba(123, 154, 239, 0.25));
+}
+.CtaButton{
+  position: absolute;
+  padding: 13px;
+  background: linear-gradient(108.48deg, #9A6CDA 0%, #7C35DE 100%);
+  box-shadow: 0px 14.0977px 61.09px rgba(92, 46, 232, 0.16);
+  border-radius: 8px;
+  width: 82%;
+  margin: 9%;
+  top: 470px;
+  text-align: center;
+  cursor: pointer;
+}
+.Text{
+  font-family: IBM Plex Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 21px;
+  color: #FFFFFF;
+}

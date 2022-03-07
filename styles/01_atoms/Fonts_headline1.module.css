@@ -1,0 +1,30 @@
+.Headline1Item{
+    width: 100%;
+}
+.NormalHeadline{
+    font-family: IBM Plex Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 46px;
+    line-height: 55px;
+    color: #FFFFFF;
+    margin: 0;
+}
+.NormalHeadlineDark{
+    font-family: IBM Plex Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 46px;
+    line-height: 55px;
+    color: #000000;
+    margin: 0;
+}
+.HighlightedContent{
+    font-family: IBM Plex Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 46px;
+    line-height: 55px;
+    color: #A450E6;
+    margin: 0;
+}
