@@ -1,0 +1,113 @@
+.TracksItem{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(295.13deg, #F6F2FF 7.21%, #FFFFFF 93.4%), #C4C4C4;
+  padding: 140px 0;
+}
+.Grid{
+  width: 1200px;
+  display: flex;
+  gap: 24px;
+}
+.LeftContainer{
+  width: calc(((100% - (5 * 24px)) / 6 * 1) + (0 * 24px));
+}
+.MiddleContainer{
+  width: calc(((100% - (5 * 24px)) / 6 * 4) + (3 * 24px));
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+.Paragraph{
+  width: calc(((100% - (3 * 24px)) / 4 * 3) + (2 * 24px));
+}
+.TracklList{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-top: 48px;
+}
+.Track{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.TopContainer{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 24px;
+  cursor: pointer;
+}
+.TitleSection{
+  width: calc(((100% - (3 * 24px)) / 4 * 1));
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.Icon{
+  width: 24px;
+  height: 24px;
+  position: relative; 
+}
+.DescriptionSection{
+  width: calc(((100% - (3 * 24px)) / 4 * 2) + (1 * 24px));
+}
+.ArrowSection{
+  width: calc(((100% - (3 * 24px)) / 4 * 1));
+  display: flex;
+  flex-direction: row-reverse;
+}
+.Arrow{
+  width: 24px;
+  height: 24px;
+  position: relative; 
+  margin-top: 16px;
+}
+
+.Content{
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin: 24px 0;
+}
+.ChallengeContainer{
+  display: flex;
+  gap: 24px;
+}
+.FirstContainer{
+  width: calc(((100% - (3 * 24px)) / 4 * 1) + (0 * 24px)); 
+  display: flex;
+  flex-direction: row-reverse;
+}
+.NextArrow{
+  width: 24px;
+  height: 24px;
+  position: relative; 
+}
+.SecondContainer{
+  width: calc(((100% - (3 * 24px)) / 4 * 1) + (0 * 24px));
+}
+.ChallengeImg{
+  width: 100%;
+  height: 100px;
+  position: relative;
+}
+.ThirdContainer{
+  width: calc(((100% - (3 * 24px)) / 4 * 2) + (1 * 24px));
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: -10px;
+}
+
+.Separator{
+  height: 2px;
+  width: 100%;
+  background-color: #D6D6D6;
+}

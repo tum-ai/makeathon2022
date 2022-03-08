@@ -3,6 +3,7 @@ import About from '../components/03_sections/about'
 import FullscreenPicture from '../components/03_sections/fullscreenPicture'
 import Hero from '../components/03_sections/hero'
 import Roadmap from '../components/03_sections/roadmap'
+import Tracks from '../components/03_sections/tracks'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
@@ -19,6 +20,7 @@ export default function Home() {
         <About />
         <Roadmap />
         <FullscreenPicture />
+        <Tracks />
       </main>
 
       <footer className={styles.footer}>
