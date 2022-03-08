@@ -1,0 +1,72 @@
+.SpeakersItem{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(125.53deg, #211B45 8.83%, #0F2538 99.14%), #C4C4C4;    padding: 140px 0;
+}
+.Grid{
+  width: 1200px;
+  display: flex;
+  gap: 24px;
+}
+.LeftContainer{
+  width: calc(((100% - (5 * 24px)) / 6 * 1) + (0 * 24px));
+}
+.MiddleContainer{
+  width: calc(((100% - (5 * 24px)) / 6 * 5) + (4 * 24px));
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+.SpeakerContainer{
+  width: 100%;
+  height: 380px;
+  display: flex !important;
+  gap: 24px;
+}
+.TextContainer{
+  width: calc(((100% - (4 * 24px)) / 5 * 2) + (1 * 24px));
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.TopContainer{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.SocialLinks{
+  display: flex;
+  gap: 28px;
+}
+.Link{
+  width: 28px;
+  height: 28px;
+  position: relative;
+}
+
+.ImageContainer{
+  width: calc(((100% - (4 * 24px)) / 5 * 3) + (2 * 24px));
+  height: 100%;
+  background-color: black;
+  position: relative;
+}
+.Arrow{
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: calc(50% - 30px);
+  right: -30px;
+  background-color: #FFFFFF;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.Container{
+  position: relative;
+  margin: 16px;
+  width: 28px;
+  height: 28px;
+}
+

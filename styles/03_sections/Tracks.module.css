@@ -89,6 +89,7 @@
   width: 24px;
   height: 24px;
   position: relative; 
+  opacity: 0.5;
 }
 .SecondContainer{
   width: calc(((100% - (3 * 24px)) / 4 * 1) + (0 * 24px));

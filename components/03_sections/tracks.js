@@ -64,7 +64,7 @@ const data = {
 }
 
 export default function Tracks(){
-  const [trackIndex, setTrackIndex] = useState(1);
+  const [trackIndex, setTrackIndex] = useState(undefined);
 
   return <div className={styles.TracksItem}>
     <div className={styles.Grid}>
