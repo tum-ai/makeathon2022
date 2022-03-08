@@ -1,0 +1,82 @@
+.StoriesItem{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 140px 0;
+  overflow: hidden;
+  gap: 80px;
+}
+.Grid{
+  width: 1200px;
+  display: flex;
+  gap: 24px;
+}
+.LeftContainer{
+  width: calc(((100% - (5 * 24px)) / 6 * 1) + (0 * 24px));
+}
+.MiddleContainer{
+  width: calc(((100% - (5 * 24px)) / 6 * 4) + (3 * 24px));
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+.Paragraph{
+  width: calc(((100% - (3 * 24px)) / 4 * 3) + (2 * 24px));
+}
+
+.BottomGrid{
+  width: 1200px;
+  display: flex;
+  justify-content: center;
+}
+.SliderBox{
+  height: 540px;
+  width: calc(((100% - (5 * 24px)) / 6 * 4) + (3 * 24px));
+}
+.Box{
+  height: 540px;
+  width: calc(((100% - (3 * 24px)) / 4 * 2) + (1 * 24px));
+  padding-right: 24px;
+}
+.Card{
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(125.53deg, #211B45 8.83%, #0F2538 99.14%), #C4C4C4;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  filter: drop-shadow(0px 16px 16px rgba(18, 31, 61, 0.34));
+}
+.TopImage{
+  width: 100%;
+  height: 220px;
+  position: relative;
+}
+.CardContent{
+  padding: 24px;
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.Text{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.Members{
+  display: flex;
+  margin-left: 16px;
+}
+.Member{
+  width: 40px;
+  height: 40px;
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 4px solid #211B45;
+  box-sizing: content-box;
+  margin-left: -16px;
+  cursor: pointer;
+}

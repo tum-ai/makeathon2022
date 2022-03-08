@@ -7,6 +7,7 @@ import Paragraph2 from '../01_atoms/fonts_paragraph2'
 import Headline1 from '../01_atoms/fonts_headline1'
 import Image from 'next/image'
 import Paragraph1 from '../01_atoms/fonts_paragraph1'
+import $ from 'jquery';
 
 const data = {
   "chapter_title": "The speakers",
@@ -44,6 +45,11 @@ const data = {
 
 }
 
+function changeStyles(){
+  const slider = $(".slick-list")[1];
+  console.log($(slider).css("overflow","visible"));
+}
+
 export default function Speakers(){
   const settings = {
     dots: true,
@@ -57,7 +63,7 @@ export default function Speakers(){
     autoplay: true,
     autoplaySpeed: 7000,
     nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />
+    prevArrow: <SamplePrevArrow />,
   };
   return <div className={styles.SpeakersItem}>
     <div className={styles.Grid}>
@@ -66,7 +72,7 @@ export default function Speakers(){
         </div>
         <div className={styles.MiddleContainer}>
           <Headline1 isH1={false} normalContent={data.title} isDarkBackground />
-          <Slider {...settings}>
+          <Slider {...settings} onInit={()=>changeStyles()}>
             {data.speakers.map((speaker,index)=>(
               <div key={index} className={styles.SpeakerContainer}>
                 <div className={styles.TextContainer}>

@@ -4,6 +4,7 @@ import FullscreenPicture from '../components/03_sections/fullscreenPicture'
 import Hero from '../components/03_sections/hero'
 import Roadmap from '../components/03_sections/roadmap'
 import Speakers from '../components/03_sections/speakers'
+import Stories from '../components/03_sections/stories'
 import Tracks from '../components/03_sections/tracks'
 import styles from '../styles/Home.module.css'
 
@@ -23,6 +24,7 @@ export default function Home() {
         <FullscreenPicture />
         <Tracks />
         <Speakers />
+        <Stories />
       </main>
 
       <footer className={styles.footer}>
