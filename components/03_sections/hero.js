@@ -4,6 +4,8 @@ import Paragraph1 from '../01_atoms/fonts_paragraph1'
 import Paragraph2 from '../01_atoms/fonts_paragraph2'
 import Ticket from '../02_molecules/ticket'
 
+import Image from 'next/image'
+
 const data = {
   "headline": "Join our next",
   "headline_marked": " Makeathon",
@@ -27,7 +29,11 @@ const data = {
 
 export default function Hero(){
   return <div className={styles.HeroItem}>
-    <div className={styles.Background}>{NotSymetricBG()}</div>
+    <div className={styles.Background}>
+      <div className={styles.BgContainer}>
+        <Image src="/assets/heroBG.svg" alt="HeroBG" layout="fill" objectFit="cover"/>
+      </div>
+    </div>
     <div className={styles.Grid}>
       <div className={styles.LeftContainer}>
         <div className={styles.UpperContainer}>
@@ -53,34 +59,4 @@ export default function Hero(){
       </div>
     </div>
   </div>
-}
-
-
-function NotSymetricBG() {
-  return (
-    <svg
-      className={styles.Svg}
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 1512 912"
-    >
-      <path fill="#C4C4C4" d="M0 0h1512v704L0 912V0z"></path>
-      <path
-        fill="url(#paint0_linear_248_1194)"
-        d="M0 0h1512v704L0 912V0z"
-      ></path>
-      <defs>
-        <linearGradient
-          id="paint0_linear_248_1194"
-          x1="0"
-          x2="1069.96"
-          y1="0"
-          y2="1266.67"
-          gradientUnits="userSpaceOnUse"
-        >
-          <stop offset="0.089" stopColor="#211B45"></stop>
-          <stop offset="1" stopColor="#0F2538"></stop>
-        </linearGradient>
-      </defs>
-    </svg>
-  );
 }
