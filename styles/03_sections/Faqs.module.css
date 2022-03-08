@@ -24,3 +24,54 @@
 .Paragraph{
   width: calc(((100% - (3 * 24px)) / 4 * 3) + (2 * 24px));
 }
+.BottomGrid{
+  width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.QuestionContainer{
+  width: calc(((100% - (5 * 24px)) / 6 * 4) + (3 * 24px));
+}
+.Question{
+  width: 100%;
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.myMasonryGrid{
+  display: -webkit-box; /* Not needed if autoprefixing */
+  display: -ms-flexbox; /* Not needed if autoprefixing */
+  display: flex;
+  margin-left: -24px; /* gutter size offset */
+  width: auto;
+}
+.myMasonryGridColumn{
+  padding-left: 24px; /* gutter size */
+  background-clip: padding-box;
+}
+.Header{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.Text{
+  width: 90%;
+}
+.Arrow{
+  width: 24px;
+  height: 24px;
+  position: relative;
+  margin-top: 16px;
+  margin-right: 16px;
+}
+.Separator{
+  height: 2px;
+  width: 100%;
+  background-color: #C6C4CC;
+}
+.Answer{
+  width: 90%;
+}

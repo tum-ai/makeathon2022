@@ -2,6 +2,10 @@ import styles from '../../styles/03_sections/Faqs.module.css'
 import ChapterBar from '../02_molecules/chapterBar'
 import Headline1 from '../01_atoms/fonts_headline1'
 import Paragraph1 from '../01_atoms/fonts_paragraph1'
+import Paragraph2 from '../01_atoms/fonts_paragraph2'
+import Masonry from 'react-masonry-css'
+import Image from 'next/image'
+import { useState } from 'react'
 
 const data = {
   "chapter_title": "Q&A",
@@ -43,6 +47,12 @@ const data = {
 }
 
 export default function Faqs(){
+  const breakpointColumnsObj = {
+    default: 2,
+    800: 1
+  };
+  const [questionIndex, setQuestionIndex] = useState(1);
+
   return <div className={styles.FaqsItem}>
     <div className={styles.Grid}>
       <div className={styles.LeftContainer}>
@@ -53,6 +63,37 @@ export default function Faqs(){
         <div className={styles.Paragraph}>
           <Paragraph1 className={styles.Paragraph} highlightedContent={data.paragraph_highlighted} normalContent={data.paragraph} isDarkBackground={false}/>
         </div>
+      </div>
+    </div>
+    <div className={styles.BottomGrid}>
+      <div className={styles.QuestionContainer}>
+      <Masonry
+        breakpointCols={breakpointColumnsObj}
+        className={styles.myMasonryGrid}
+        columnClassName={styles.myMasonryGridColumn}>
+        {data.questions.map((question, index)=>(
+          <div key={index} className={styles.Question}>
+            <div className={styles.Header} onClick={()=>questionIndex == index ? setQuestionIndex(undefined) : setQuestionIndex(index)}>
+              {questionIndex != index ? <div className={styles.Text}>
+                <Paragraph1 normalContent={question.question} isDarkBackground={false}/>
+              </div> :
+              <div className={styles.Text}>
+                <Paragraph1 highlightedContent={question.question} isDarkBackground={false}/>
+              </div>}
+              {questionIndex == index ? <div className={styles.Arrow} style={{transform: "rotate(180deg)"}}>
+                <Image src="/assets/arrow.svg" alt="Arrow" layout="fill" objectFit="cover" />
+              </div> :
+              <div className={styles.Arrow} >
+                <Image src="/assets/arrow.svg" alt="Arrow" layout="fill" objectFit="cover" />
+              </div>}
+            </div>
+            {questionIndex == index ? <div className={styles.Answer}>
+              <Paragraph2 normalContent={question.answer} isDarkBackground={false} />
+            </div> : ""}
+            <div className={styles.Separator}></div>
+          </div>
+        ))}
+      </Masonry>
       </div>
     </div>
   </div>
