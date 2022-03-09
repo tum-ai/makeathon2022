@@ -68,3 +68,30 @@
   width: max-content;
   transform-origin: bottom left;
 }
+@media only screen and (max-width: 850px) {
+  .ChapterBarItem{
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+  .SeparartorDark{
+    height: 2px;
+    width: 100%;
+  }
+  .Separartor{
+    height: 2px;
+    width: 100%;
+  }
+  .Chapter{
+    transform: none;
+  }
+  .Number{
+    transform: none;
+  }
+  .ChapterDark{
+    transform: none;
+  }
+  .NumberDark{
+    transform: none;
+  }
+}

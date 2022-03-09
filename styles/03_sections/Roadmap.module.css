@@ -67,6 +67,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 .TextContainer{
   width: 100%;
@@ -111,4 +112,31 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
+}
+
+@media only screen and (max-width: 1100px) {
+  .TextContainer{
+    display: none;
+  }
+  .LeftContainer{
+    width: 20%;
+  }
+  .RightContainer{
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 850px) {
+  .LeftContainer{
+    width: 15%;
+  }
+  .RightContainer{
+    width: 85%;
+    padding: 8vw;
+  }
+  .TopContainer{
+    height: 160px;
+  }
+  .CardTime {
+    padding-top: 180px;
+  }
 }

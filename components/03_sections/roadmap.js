@@ -65,11 +65,11 @@ export default function Roadmap(){
         <div className={styles.PointContainer}>
           {data.points.map(function(point, index){
             if(roadIndex >= index){
-              return <div className={styles.PointMarked} key={index}>
+              return <div className={styles.PointMarked} key={index} onClick={()=>setRoadIndex(index)}>
                 <Image width="16px" height="16px" src={point.icon} alt={point.title}/>
               </div>
             }else{
-              return <div className={styles.Point} key={index}>
+              return <div className={styles.Point} key={index} onClick={()=>setRoadIndex(index)}>
                 <Image width="16px" height="16px" src={point.icon} alt={point.title}/>
               </div>
             }

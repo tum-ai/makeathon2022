@@ -18,7 +18,7 @@
 .Logo{
   position: relative;
   height: 32px;
-  width: 200px;
+  width: 130px;
 }
 .Nav{
   display: flex;
@@ -36,4 +36,26 @@
   align-items: center;
   color: #FFFFFF;
   opacity: 0.7;
+}
+@media only screen and (max-width: 1300px) {
+  .Grid{
+    width: 1000px;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .Grid{
+    width: 800px;
+  }
+}
+@media only screen and (max-width: 850px) {
+  .Grid{
+    width: 90%;
+  }
+  .Nav{
+    display: none;
+  }
+  .NavBarItem {
+    background: transparent;
+    position: absolute;
+  }
 }

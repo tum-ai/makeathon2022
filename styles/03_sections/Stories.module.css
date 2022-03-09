@@ -81,3 +81,50 @@
   margin-left: -16px;
   cursor: pointer;
 }
+
+@media only screen and (max-width: 1300px) {
+  .Grid{
+    width: 1000px;
+  }
+  .BottomGrid{
+    width: 1000px;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .Grid{
+    width: 800px;
+  }
+  .BottomGrid{
+    width: 800px;
+  }
+  .MiddleContainer{
+    width: calc(((100% - (5 * 24px)) / 6 * 5) + (4 * 24px));
+  }
+  .Paragraph{
+    width: calc(((100% - (4 * 24px)) / 5 * 4) + (3 * 24px));
+  }
+}
+@media only screen and (max-width: 850px) {
+  .StoriesItem{
+    padding: 70px 0;
+  }
+  .Grid{
+    width: 90%;
+    flex-direction: column;
+  }
+  .BottomGrid{
+    width: 90%;
+  }
+  .LeftContainer{
+    width: 100%;
+  }
+  .MiddleContainer{
+    width: 100%;
+  }
+  .Paragraph{
+    width: 90%;
+  }
+  .SliderBox{
+    width: 100%;
+  }
+}

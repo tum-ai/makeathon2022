@@ -49,7 +49,7 @@ const data = {
 export default function Faqs(){
   const breakpointColumnsObj = {
     default: 2,
-    800: 1
+    1100: 1
   };
   const [questionIndex, setQuestionIndex] = useState(undefined);
 
