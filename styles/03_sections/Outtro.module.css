@@ -1,0 +1,53 @@
+.OuttroItem{
+  width: 100%;
+  position: relative;
+  padding-top: 100px;
+  padding-bottom: 200px;
+}
+.Background{
+  width: 100%;
+  height: calc(600px + ((100vw * 0.176327) / 2));
+  position: absolute;
+  bottom: 0;
+}
+.ConatinerBG{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(125.53deg, #211B45 8.83%, #0F2538 99.14%), #C4C4C4;
+  transform-origin: top right;
+  transform: skewY(-10deg);
+}
+.Content{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.Grid{
+  width: 1200px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 24px;
+}
+.TicketContainer{
+  width: calc(((100% - (5 * 24px)) / 6 * 2) + (1 * 24px));
+  position: relative;
+}
+.TextContainer{
+  width: calc(((100% - (5 * 24px)) / 6 * 3) + (2 * 24px));
+  padding-left: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  justify-content: flex-end;
+  margin-top: 200px;
+}
+.ParagraphContainer{
+  width: 70%;
+}
+.buttonWrapper{
+  width: fit-content;
+}

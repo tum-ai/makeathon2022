@@ -3,12 +3,17 @@ import About from '../components/03_sections/about'
 import Faqs from '../components/03_sections/faqs'
 import FullscreenPicture from '../components/03_sections/fullscreenPicture'
 import Hero from '../components/03_sections/hero'
+import Outtro from '../components/03_sections/outtro'
 import Roadmap from '../components/03_sections/roadmap'
 import Speakers from '../components/03_sections/speakers'
 import Sponsors from '../components/03_sections/sponsors'
 import Stories from '../components/03_sections/stories'
 import Tracks from '../components/03_sections/tracks'
 import styles from '../styles/Home.module.css'
+import Image from 'next/image'
+import NavBar from '../components/02_molecules/navBar'
+
+import {Element} from 'react-scroll'
 
 export default function Home() {
   return (
@@ -20,19 +25,55 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <Hero />
+        <NavBar />
+        <Hero id="hero"/>
+        <Element name="about"></Element>
         <About />
         <Roadmap />
         <FullscreenPicture />
-        <Tracks />
-        <Speakers />
-        <Stories />
+        <Element name="tracks">
+          <Tracks />
+        </Element>
+        <Element name="speakers">
+          <Speakers />
+        </Element>
+        <Element name="stories">
+          <Stories />
+        </Element>
         <Sponsors />
-        <Faqs />
+        <Element name="faqs">
+          <Faqs />
+        </Element>
+        <Outtro />
       </main>
 
-      <footer className={styles.footer}>
-       
+      <footer className={styles.Footer}>
+        <div className={styles.Grid}>
+          <div className={styles.Container}>
+            <div className={styles.Top}>{"TUM.ai © 2022 "}</div>
+            <div className={styles.Middle}>
+              <div className={styles.FirstContainer}>
+                {"Website by IT & Infrastructure department"}
+              </div>
+              <div className={styles.SecondContainer}>
+                <a className={styles.Link}>Contact</a>
+                <a className={styles.Link}>Admin</a>
+              </div>
+              <div className={styles.ThirdContainer}>
+                <a className={styles.Link}>{"Terms&Security"}</a>
+                <a className={styles.Link}>Imprint</a>
+              </div>
+            </div>
+            <div className={styles.Bottom}>
+              <a className={styles.SocialWrapper}>
+                <Image src={"/assets/linkedIn.svg"} alt={"LinkedIn"} layout="fill" objectFit="cover" />
+              </a>
+              <a className={styles.SocialWrapper}>
+                <Image src={"/assets/insta.svg"} alt={"Instagram"} layout="fill" objectFit="cover" />
+              </a>
+            </div>
+          </div>
+        </div>
       </footer>
     </div>
   )

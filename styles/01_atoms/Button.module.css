@@ -4,6 +4,7 @@
   border: 2px solid #A9A7AF;
   box-sizing: border-box;
   border-radius: 8px;
+  cursor: pointer;
 }
 .Text{
   font-family: IBM Plex Sans;

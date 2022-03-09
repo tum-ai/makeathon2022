@@ -31,7 +31,6 @@ export default function Hero(){
   return <div className={styles.HeroItem}>
     <div className={styles.Background}>
       <div className={styles.BgContainer}>
-        <Image src="/assets/heroBG.svg" alt="HeroBG" layout="fill" objectFit="cover"/>
       </div>
     </div>
     <div className={styles.Grid}>
@@ -55,7 +54,7 @@ export default function Hero(){
         </div>
       </div>
       <div className={styles.RightContainer}>
-        <Ticket />
+        <Ticket position={"right"}/>
       </div>
     </div>
   </div>

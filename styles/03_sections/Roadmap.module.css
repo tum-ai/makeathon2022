@@ -1,6 +1,12 @@
 .RoadmapItem{
   width: 100%;
   display: flex;
+  justify-content: center;
+}
+.Grid{
+  width: 100%;
+  max-width: 1800px;
+  display: flex;
 }
 .LeftContainer{
   width: 50%;

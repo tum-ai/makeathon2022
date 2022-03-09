@@ -51,7 +51,7 @@ export default function Faqs(){
     default: 2,
     800: 1
   };
-  const [questionIndex, setQuestionIndex] = useState(1);
+  const [questionIndex, setQuestionIndex] = useState(undefined);
 
   return <div className={styles.FaqsItem}>
     <div className={styles.Grid}>

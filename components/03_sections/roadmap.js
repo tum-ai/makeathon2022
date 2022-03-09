@@ -54,52 +54,54 @@ export default function Roadmap(){
   }
 
   return <div className={styles.RoadmapItem}>
-    <div className={styles.LeftContainer}>
-      <div className={styles.LineContainer}>
-        <div className={styles.Line}></div>
-      </div>
-      <div className={styles.MarkedLineContainer}>
-        <div style={{"height": calculatePercentage()+"%"}} className={styles.MarkedLine}></div>
-      </div>
-      <div className={styles.PointContainer}>
+    <div className={styles.Grid}>
+      <div className={styles.LeftContainer}>
+        <div className={styles.LineContainer}>
+          <div className={styles.Line}></div>
+        </div>
+        <div className={styles.MarkedLineContainer}>
+          <div style={{"height": calculatePercentage()+"%"}} className={styles.MarkedLine}></div>
+        </div>
+        <div className={styles.PointContainer}>
+          {data.points.map(function(point, index){
+            if(roadIndex >= index){
+              return <div className={styles.PointMarked} key={index}>
+                <Image width="16px" height="16px" src={point.icon} alt={point.title}/>
+              </div>
+            }else{
+              return <div className={styles.Point} key={index}>
+                <Image width="16px" height="16px" src={point.icon} alt={point.title}/>
+              </div>
+            }
+          })}
+        </div>
+        <div className={styles.TextContainer}>
         {data.points.map(function(point, index){
-          if(roadIndex >= index){
-            return <div className={styles.PointMarked} key={index}>
-              <Image width="16px" height="16px" src={point.icon} alt={point.title}/>
+          if(index %2 == 0){
+            return <div key={index} onClick={()=>setRoadIndex(index)} style={index==roadIndex ? {"opacity":"1"} : {"opacity":"0.5"}} className={styles.TextLeft}>
+              <Paragraph1 highlightedContent={point.title} normalContent={""} isDarkBackground={false}/>
+              <Paragraph2 highlightedContent={""} normalContent={point.time} isDarkBackground={false}/>
             </div>
           }else{
-            return <div className={styles.Point} key={index}>
-              <Image width="16px" height="16px" src={point.icon} alt={point.title}/>
+            return <div key={index} onClick={()=>setRoadIndex(index)} style={index==roadIndex ? {"opacity":"1"} : {"opacity":"0.5"}} className={styles.TextRight}>
+              <Paragraph1 style={index == roadIndex ? {"color":"#000000"} : {"color":"#A0A0A0"}} highlightedContent={point.title} normalContent={""} isDarkBackground={false}/>
+              <Paragraph2 highlightedContent={""} normalContent={point.time} isDarkBackground={false}/>
             </div>
           }
         })}
-      </div>
-      <div className={styles.TextContainer}>
-      {data.points.map(function(point, index){
-        if(index %2 == 0){
-          return <div key={index} onClick={()=>setRoadIndex(index)} style={index==roadIndex ? {"opacity":"1"} : {"opacity":"0.5"}} className={styles.TextLeft}>
-            <Paragraph1 highlightedContent={point.title} normalContent={""} isDarkBackground={false}/>
-            <Paragraph2 highlightedContent={""} normalContent={point.time} isDarkBackground={false}/>
-          </div>
-        }else{
-          return <div key={index} onClick={()=>setRoadIndex(index)} style={index==roadIndex ? {"opacity":"1"} : {"opacity":"0.5"}} className={styles.TextRight}>
-            <Paragraph1 style={index == roadIndex ? {"color":"#000000"} : {"color":"#A0A0A0"}} highlightedContent={point.title} normalContent={""} isDarkBackground={false}/>
-            <Paragraph2 highlightedContent={""} normalContent={point.time} isDarkBackground={false}/>
-          </div>
-        }
-      })}
-      </div>
-    </div>
-    <div className={styles.RightContainer}>
-      <div className={styles.TopContainer}>
-        <Image src="/assets/roadmap01.png" alt={data.points[roadIndex].title} layout="fill" objectFit='cover' />
-        <div className={styles.CardTime}>
-          <Date1 normalContent={data.points[roadIndex].time} isDarkBackground/>
         </div>
       </div>
-      <div className={styles.BottomContainer}>
-        <Headline2 isDarkBackground normalContent={data.points[roadIndex].title}/>
-        <Paragraph1 highlightedContent={data.points[roadIndex].content_highlighted} normalContent={data.points[roadIndex].content} isDarkBackground/>
+      <div className={styles.RightContainer}>
+        <div className={styles.TopContainer}>
+          <Image src="/assets/roadmap01.png" alt={data.points[roadIndex].title} layout="fill" objectFit='cover' />
+          <div className={styles.CardTime}>
+            <Date1 normalContent={data.points[roadIndex].time} isDarkBackground/>
+          </div>
+        </div>
+        <div className={styles.BottomContainer}>
+          <Headline2 isDarkBackground normalContent={data.points[roadIndex].title}/>
+          <Paragraph1 highlightedContent={data.points[roadIndex].content_highlighted} normalContent={data.points[roadIndex].content} isDarkBackground/>
+        </div>
       </div>
     </div>
   </div>

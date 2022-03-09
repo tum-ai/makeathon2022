@@ -1,7 +1,29 @@
 import styles from '../../styles/03_sections/Outtro.module.css'
+import Button from '../01_atoms/button'
+import Headline1 from '../01_atoms/fonts_headline1'
+import Paragraph1 from '../01_atoms/fonts_paragraph1'
+import Ticket from '../02_molecules/ticket'
 
 export default function Outtro(){
   return <div className={styles.OuttroItem}>
-
+    <div className={styles.Background}>
+      <div className={styles.ConatinerBG}></div>
+    </div>
+    <div className={styles.Content}>
+      <div className={styles.Grid}>
+        <div className={styles.TicketContainer}>
+          <Ticket position={"left"}/>
+        </div>
+        <div className={styles.TextContainer}>
+          <Headline1 isH1={false} isDarkBackground normalContent={"🚀 Apply now and join our next "} highlightedContent={"Makeathon"} />
+          <div className={styles.ParagraphContainer}>
+            <Paragraph1 isDarkBackground normalContent={"If you want to learn more about our student initiative click on the link below."} />
+          </div>
+          <div className={styles.buttonWrapper}>
+            <Button isDarkBackground content={"Learn more about TUM.ai"}/>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 }
