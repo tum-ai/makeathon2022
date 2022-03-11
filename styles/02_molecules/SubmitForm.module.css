@@ -1,0 +1,39 @@
+.SubmitFormItem{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 0;
+    gap: 48px;
+  }
+  .Grid{
+    width: 1200px;
+    display: flex;
+    gap: 24px;
+  }
+  .Left{
+    width: calc(((100% - (5 * 24px)) / 6 * 2) + (1 * 24px));
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .Right{
+    width: calc(((100% - (5 * 24px)) / 6 * 4) + (3 * 24px));
+    background-color: #2F2E51;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.05);
+    padding: 40px;
+  }
+  .Content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    column-gap: 24px;
+    row-gap: 48px;
+    flex-wrap: wrap;
+  }
+  .Half{
+    width: calc(((100% - (3 * 24px)) / 4 * 2) + (1 * 24px));
+  }
+  .Full{
+    width: 100%;
+  }

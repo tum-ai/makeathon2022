@@ -27,7 +27,7 @@ export default function About(){
             <Paragraph1 className={styles.Paragraph} highlightedContent={data.paragraph_highlighted} normalContent={data.paragraph} isDarkBackground={false}/>
           </div>
           <div className={styles.Button}>
-            <Button content={data.button} isDarkBackground={false}/>
+            <Button content={data.button} link="https://www.tum-ai.com/" isDarkBackground={false}/>
           </div>
         </div>
       </div>

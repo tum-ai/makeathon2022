@@ -20,7 +20,7 @@ export default function Outtro(){
             <Paragraph1 isDarkBackground normalContent={"If you want to learn more about our student initiative click on the link below."} />
           </div>
           <div className={styles.buttonWrapper}>
-            <Button isDarkBackground content={"Learn more about TUM.ai"}/>
+            <Button isDarkBackground link="https://www.tum-ai.com/" content={"Learn more about TUM.ai"}/>
           </div>
         </div>
       </div>

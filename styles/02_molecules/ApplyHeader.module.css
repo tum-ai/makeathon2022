@@ -1,0 +1,45 @@
+.ApplyHeaderItem{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Grid{
+  width: 1200px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+.TopContainer{
+  width: 100%;
+  height: 90px;
+  display: flex;
+  align-items: center;
+}
+.LogoContainer{
+  height: 32px;
+  width: 130px;
+  position: relative;
+}
+.BottomContainer{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.Text{
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 46px;
+  line-height: 55px;
+  color: #FFFFFF;
+}
+.Highlight{
+  color: #A450E6;
+}
+.Separator{
+  width: 100%;
+  height: 2px;
+  background-color: #626185;
+}

@@ -1,0 +1,63 @@
+.ApplyFooterItem{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 100px;
+}
+.Grid{
+  width: 1200px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+.Separator{
+  width: 100%;
+  height: 2px;
+  background-color: #626185;
+}
+.Bottom{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Text{
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  color: #9766DB;
+}
+.Btn{
+  height: 50px;
+  background: linear-gradient(108.48deg, #9A6CDA 0%, #7C35DE 100%);
+  color: #FFFFFF;
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18.7969px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 0 32px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.PrevBtn{
+  height: 50px;
+  background-color: #545376;
+  color: #FFFFFF;
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18.7969px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 0 32px;
+  border-radius: 8px;
+  cursor: pointer;
+}
