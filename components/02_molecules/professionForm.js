@@ -1,13 +1,12 @@
 import styles from '../../styles/02_molecules/ProfessionForm.module.css'
 import BoolInput from '../01_atoms/boolInput'
-import DateInput from '../01_atoms/dateInput'
 import DropDownInput from '../01_atoms/dropDownInput'
 import Headline2 from '../01_atoms/fonts_headline2'
 import Paragraph1 from '../01_atoms/fonts_paragraph1'
 import TextAreaInput from '../01_atoms/textAreaInput'
 import TextInput from '../01_atoms/textInput'
 
-export default function ProfessionForm({data, onInputChange}){
+export default function ProfessionForm({data, onInputChange, isControlled}){
   return <div className={styles.ProfessionFormItem}>
     <div className={styles.Grid}>
       <div className={styles.Left}>
@@ -22,6 +21,8 @@ export default function ProfessionForm({data, onInputChange}){
               placeholderText="Enter text here ..."
               name="academic"
               onContentChange={(event)=>onInputChange(event)}
+              value={data.academic}
+              isControlled={isControlled}
             />
           </div>
           <div className={styles.Full}>
@@ -32,6 +33,8 @@ export default function ProfessionForm({data, onInputChange}){
               withIcon
               iconPath="/assets/application/school.svg"
               onContentChange={(event)=>onInputChange(event)}
+              value={data.university}
+              isControlled={isControlled}
             />
           </div>
           <div className={styles.Full}>
@@ -40,6 +43,8 @@ export default function ProfessionForm({data, onInputChange}){
               placeholderText="Enter text here ..."
               name="description"
               onContentChange={(event)=>onInputChange(event)}
+              value={data.description}
+              isControlled={isControlled}
             />
           </div>
           <div className={styles.Full}>
@@ -47,6 +52,8 @@ export default function ProfessionForm({data, onInputChange}){
               headerText="Which field do you think you are expert in?"
               name="expert"
               onContentChange={(event)=>onInputChange(event)}
+              value={data.expert}
+              isControlled={isControlled}
             >
               <option value="AI">Artificial Intelligence</option>
               <option value="IT">IT</option>
@@ -70,6 +77,8 @@ export default function ProfessionForm({data, onInputChange}){
               headerText="Do you have programming skills?"
               name="codeSkill"
               onContentChange={(event)=>onInputChange(event)}
+              value={data.codeSkill}
+              isControlled={isControlled}
             />
           </div>
           <div className={styles.Half}>
@@ -78,6 +87,8 @@ export default function ProfessionForm({data, onInputChange}){
               placeholderText="Enter skills here ..."
               name="codeSkillDescription"
               onContentChange={(event)=>onInputChange(event)}
+              value={data.codeSkillDescription}
+              isControlled={isControlled}
             />
           </div>
           <div className={styles.Half}>
@@ -85,6 +96,8 @@ export default function ProfessionForm({data, onInputChange}){
               headerText="Have you done a hackathon/makeathon before?"
               name="hackathon"
               onContentChange={(event)=>onInputChange(event)}
+              value={data.hackathon}
+              isControlled={isControlled}
             />
           </div>
           <div className={styles.Half}>
@@ -93,6 +106,8 @@ export default function ProfessionForm({data, onInputChange}){
               placeholderText="Talk about your experience here ..."
               name="hackathonList"
               onContentChange={(event)=>onInputChange(event)}
+              value={data.hackathonList}
+              isControlled={isControlled}
             />
           </div>
         </div>
@@ -111,6 +126,8 @@ export default function ProfessionForm({data, onInputChange}){
               placeholderText="Talk about your idea here ..."
               name="idea"
               onContentChange={(event)=>onInputChange(event)}
+              value={data.idea}
+              isControlled={isControlled}
             />
           </div>
           <div className={styles.Half}>
@@ -118,6 +135,8 @@ export default function ProfessionForm({data, onInputChange}){
               headerText="Are you part of a team?"
               name="team"
               onContentChange={(event)=>onInputChange(event)}
+              value={data.team}
+              isControlled={isControlled}
             />
           </div>
           <div className={styles.Half}>
@@ -126,6 +145,8 @@ export default function ProfessionForm({data, onInputChange}){
               placeholderText="List team mates here ..."
               name="mates"
               onContentChange={(event)=>onInputChange(event)}
+              value={data.mates}
+              isControlled={isControlled}
             />
           </div>
         </div>

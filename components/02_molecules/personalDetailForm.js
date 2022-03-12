@@ -6,8 +6,8 @@ import Paragraph1 from '../01_atoms/fonts_paragraph1'
 import TextInput from '../01_atoms/textInput'
 import TextAreaInput from '../01_atoms/textAreaInput'
 
-export default function PersonalDetailForm({data, onInputChange}){
-  console.log(data);
+export default function PersonalDetailForm({data, onInputChange, isControlled}){
+
   return <div className={styles.PersonalDetailFormItem}>
     <div className={styles.Grid}>
       <div className={styles.Left}>
@@ -23,6 +23,8 @@ export default function PersonalDetailForm({data, onInputChange}){
               withIcon={false}
               name="fname"
               onContentChange={(event)=>onInputChange(event)}
+              value={data.fname}
+              isControlled={isControlled}
             />
           </div>
           <div className={styles.Half}>
@@ -32,6 +34,8 @@ export default function PersonalDetailForm({data, onInputChange}){
               withIcon={false}
               name="lname"
               onContentChange={(event)=>onInputChange(event)}
+              value={data.lname}
+              isControlled={isControlled}
             />
           </div>
           <div className={styles.Full}>
@@ -42,6 +46,8 @@ export default function PersonalDetailForm({data, onInputChange}){
               iconPath="/assets/application/email.svg"
               name="email"
               onContentChange={(event)=>onInputChange(event)}
+              value={data.email}
+              isControlled={isControlled}
             />
           </div>
           <div className={styles.Half}>
@@ -52,6 +58,8 @@ export default function PersonalDetailForm({data, onInputChange}){
               iconPath="/assets/application/land.svg"
               name="land"
               onContentChange={(event)=>onInputChange(event)}
+              value={data.land}
+              isControlled={isControlled}
             />
           </div>
           <div className={styles.Half}>
@@ -60,6 +68,8 @@ export default function PersonalDetailForm({data, onInputChange}){
               withIcon={false}
               name="timeZone"
               onContentChange={(event)=>onInputChange(event)}
+              value={data.timeZone}
+              isControlled={isControlled}
             >
               <option value="CET UTC+1">🇩🇪  Berlin, Germany</option>
               <option value="MSK UTC+3">🇷🇺 Moscow, Russian Federation</option>
@@ -78,7 +88,14 @@ export default function PersonalDetailForm({data, onInputChange}){
             </DropDownInput>
           </div>
           <div className={styles.Half}>
-            <DateInput headerText="Date of birth" placeholderText="Select date ..." name="birthday" onContentChange={(event)=>onInputChange(event)}/>
+            <DateInput 
+              headerText="Date of birth" 
+              placeholderText="Select date ..." 
+              name="birthday" 
+              onContentChange={(event)=>onInputChange(event)}
+              value={data.birthday}
+              isControlled={isControlled}
+            />
           </div>
         </div>
       </div>
@@ -98,6 +115,8 @@ export default function PersonalDetailForm({data, onInputChange}){
               iconPath="/assets/application/linkedIn.svg"
               name="linkedIn"
               onContentChange={(event)=>onInputChange(event)}
+              value={data.linkedIn}
+              isControlled={isControlled}
             />
           </div>
           <div className={styles.Full}>
@@ -108,6 +127,8 @@ export default function PersonalDetailForm({data, onInputChange}){
               iconPath="/assets/application/website.svg"
               name="website"
               onContentChange={(event)=>onInputChange(event)}
+              value={data.website}
+              isControlled={isControlled}
             />
           </div>
           <div className={styles.Full}>
@@ -118,6 +139,8 @@ export default function PersonalDetailForm({data, onInputChange}){
               iconPath="/assets/application/github.svg"
               name="github"
               onContentChange={(event)=>onInputChange(event)}
+              value={data.github}
+              isControlled={isControlled}
             />
           </div>
         </div>
@@ -136,6 +159,8 @@ export default function PersonalDetailForm({data, onInputChange}){
               placeholderText="Enter text here ..."
               name="participation"
               onContentChange={(event)=>onInputChange(event)}
+              value={data.participation}
+              isControlled={isControlled}
             />
           </div>
           <div className={styles.Full}>
@@ -144,6 +169,8 @@ export default function PersonalDetailForm({data, onInputChange}){
               placeholderText="Enter text here ..."
               name="reach"
               onContentChange={(event)=>onInputChange(event)}
+              value={data.reach}
+              isControlled={isControlled}
             />
           </div>
           <div className={styles.Full}>
@@ -152,6 +179,8 @@ export default function PersonalDetailForm({data, onInputChange}){
               placeholderText="Enter text here ..."
               name="contribution"
               onContentChange={(event)=>onInputChange(event)}
+              value={data.contribution}
+              isControlled={isControlled}
             />
           </div>
           <div className={styles.Full}>
@@ -160,6 +189,8 @@ export default function PersonalDetailForm({data, onInputChange}){
               placeholderText="Enter text here ..."
               name="learing"
               onContentChange={(event)=>onInputChange(event)}
+              value={data.learing}
+              isControlled={isControlled}
             />
           </div>
         </div>

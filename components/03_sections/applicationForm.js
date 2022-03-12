@@ -1,10 +1,6 @@
 import styles from '../../styles/03_sections/ApplicationForm.module.css'
 import { useState } from 'react'
 
-import TextInput from '../01_atoms/textInput';
-import DropDownInput from '../01_atoms/dropDownInput';
-import TextAreaInput from '../01_atoms/textAreaInput';
-import BoolInput from '../01_atoms/boolInput';
 import ApplyHeader from '../02_molecules/applyHeader';
 import ApplyFooter from '../02_molecules/applyFooter';
 import PersonalDetailForm from '../02_molecules/personalDetailForm';
@@ -16,6 +12,7 @@ import Button from '../01_atoms/button';
 export default function ApplicationForm(){
   const [applicationState,changeApplicationState] = useState(0);
   const [applicationData,setApplicationData] = useState({});
+  const [isControlled, setIsControlled] = useState(false);
 
   function submitData(data) {
     fetch("https://react-test-64a47-default-rtdb.firebaseio.com/meetups.json", {
@@ -34,7 +31,21 @@ export default function ApplicationForm(){
     let newObj = applicationData;
     Object.defineProperty(newObj, event.target.name, {value: event.target.value, writable: true});
     setApplicationData(newObj);
-    console.log(applicationData);
+  }
+
+  function handleNextPage(){
+    changeApplicationState(applicationState + 1); 
+    setIsControlled(true); 
+    setTimeout(() => {
+      setIsControlled(false);
+    }, 500);
+  }
+  function handlePrevPage(){
+    changeApplicationState(applicationState - 1); 
+    setIsControlled(true); 
+    setTimeout(() => {
+      setIsControlled(false);
+    }, 500);
   }
 
   switch(applicationState){
@@ -44,12 +55,13 @@ export default function ApplicationForm(){
         <PersonalDetailForm 
           onInputChange={(event)=>onInputChange(event)}
           data={applicationData}
+          isControlled={isControlled}
         />
         <ApplyFooter 
           nextBtnText="Next" 
           stateNumber={applicationState + 1} 
-          nextPage={()=>changeApplicationState(applicationState + 1)}
-          prevPage={()=>changeApplicationState(applicationState - 1)}
+          nextPage={()=>handleNextPage()}
+          prevPage={()=>handlePrevPage()}
         />
         </div>
       break;    
@@ -59,13 +71,14 @@ export default function ApplicationForm(){
         <ProfessionForm 
           onInputChange={(event)=>onInputChange(event)}
           data={applicationData}
+          isControlled={isControlled}
         />
         <ApplyFooter 
           nextBtnText="Next" 
           prevBtnText="Prev" 
           stateNumber={applicationState + 1} 
-          nextPage={()=>changeApplicationState(applicationState + 1)}
-          prevPage={()=>changeApplicationState(applicationState - 1)}
+          nextPage={()=>handleNextPage()}
+          prevPage={()=>handlePrevPage()}
         />
        </div>
       break;    
@@ -75,13 +88,14 @@ export default function ApplicationForm(){
         <SubmitForm 
           onInputChange={(event)=>onInputChange(event)}
           data={applicationData}
+          isControlled={isControlled}
         />
         <ApplyFooter 
           nextBtnText="Submit" 
           prevBtnText="Prev" 
           stateNumber={applicationState + 1} 
-          nextPage={()=>changeApplicationState(applicationState + 1)}
-          prevPage={()=>changeApplicationState(applicationState - 1)}
+          nextPage={()=>handleNextPage()}
+          prevPage={()=>handlePrevPage()}
         />
        </div>
       break;    

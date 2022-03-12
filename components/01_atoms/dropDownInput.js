@@ -1,7 +1,7 @@
 import styles from '../../styles/01_atoms/DropDownInput.module.css'
 import Image from 'next/image'
 
-export default function DropDownInput({headerText, iconPath, onContentChange, withIcon, children, name}){ 
+export default function DropDownInput({value, isControlled, headerText, iconPath, onContentChange, withIcon, children, name}){ 
 
   return <div className={styles.DropDownInputItem}>
     <div className={styles.InputHeader}>{headerText}</div>
@@ -13,6 +13,7 @@ export default function DropDownInput({headerText, iconPath, onContentChange, wi
         name={name} 
         id={name}
         onChange={(event)=>onContentChange(event)}
+        value={isControlled ? value : undefined}
       >
         {children}
       </select> : <select 
@@ -21,6 +22,7 @@ export default function DropDownInput({headerText, iconPath, onContentChange, wi
         name={name} 
         id={name}
         onChange={(event)=>onContentChange(event)}
+        value={isControlled ? value : undefined}
       >
         {children}
       </select>}

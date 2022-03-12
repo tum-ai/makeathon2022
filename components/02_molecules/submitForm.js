@@ -1,13 +1,11 @@
 import styles from '../../styles/02_molecules/SubmitForm.module.css'
 import BoolInput from '../01_atoms/boolInput'
-import DateInput from '../01_atoms/dateInput'
 import DropDownInput from '../01_atoms/dropDownInput'
 import Headline2 from '../01_atoms/fonts_headline2'
 import Paragraph1 from '../01_atoms/fonts_paragraph1'
 import TextAreaInput from '../01_atoms/textAreaInput'
-import TextInput from '../01_atoms/textInput'
 
-export default function SubmitForm({data, onInputChange}){
+export default function SubmitForm({data, onInputChange, isControlled}){
   return <div className={styles.SubmitFormItem}>
     <div className={styles.Grid}>
       <div className={styles.Left}>
@@ -21,6 +19,8 @@ export default function SubmitForm({data, onInputChange}){
               headerText="How did you hear about the hackathon?"
               name="hack"
               onContentChange={(event)=>onInputChange(event)}
+              value={data.hack}
+              isControlled={isControlled}
             >
               <option value="website">Website</option>
               <option value="friends">Friends</option>
@@ -34,6 +34,8 @@ export default function SubmitForm({data, onInputChange}){
               headerText="Would you like to become a part of TUM.ai in future?"
               name="future"
               onContentChange={(event)=>onInputChange(event)}
+              value={data.future}
+              isControlled={isControlled}
             />
           </div>
           <div className={styles.Full}>
@@ -42,6 +44,8 @@ export default function SubmitForm({data, onInputChange}){
               placeholderText="Enter text here ..."
               name="share"
               onContentChange={(event)=>onInputChange(event)}
+              value={data.share}
+              isControlled={isControlled}
             />
           </div>
         </div>
