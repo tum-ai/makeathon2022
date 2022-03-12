@@ -71,6 +71,7 @@ export default function PersonalDetailForm({data, onInputChange, isControlled}){
               value={data.timeZone}
               isControlled={isControlled}
             >
+              <option value="">Choose ...</option>
               <option value="CET UTC+1">🇩🇪  Berlin, Germany</option>
               <option value="MSK UTC+3">🇷🇺 Moscow, Russian Federation</option>
               <option value="GST UTC+4">🇦🇪 Dubai, United Arab Emirates</option>

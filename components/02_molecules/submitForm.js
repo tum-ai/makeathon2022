@@ -22,6 +22,7 @@ export default function SubmitForm({data, onInputChange, isControlled}){
               value={data.hack}
               isControlled={isControlled}
             >
+              <option value="">Choose ...</option>
               <option value="website">Website</option>
               <option value="friends">Friends</option>
               <option value="work">Work</option>

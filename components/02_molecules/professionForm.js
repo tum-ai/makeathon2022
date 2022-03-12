@@ -55,6 +55,7 @@ export default function ProfessionForm({data, onInputChange, isControlled}){
               value={data.expert}
               isControlled={isControlled}
             >
+              <option value="">Choose ...</option>
               <option value="AI">Artificial Intelligence</option>
               <option value="IT">IT</option>
               <option value="Business">Business</option>

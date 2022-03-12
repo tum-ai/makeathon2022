@@ -1,20 +1,24 @@
 import styles from '../../styles/02_molecules/Ticket.module.css'
+import Link from 'next/link'
 
 export default function Ticket({position}){
   if(position == "right"){
     return <div style={{right: 0}}className={styles.TicketItem}>
       <div alt="Ticket" className={styles.Ticket}></div>
-      <div className={styles.CtaButton}>
-        <div className={styles.Text}>Apply now</div>
-      </div>
+      <Link href="/apply" passHref={true} >
+        <div className={styles.CtaButton}>
+          <div className={styles.Text}>Apply now</div>
+        </div>
+      </Link>
     </div>
   }else{
     return <div className={styles.TicketItem}>
       <div alt="Ticket" className={styles.Ticket}></div>
-      <div className={styles.CtaButton}>
-        <div className={styles.Text}>Apply now</div>
-      </div>
+      <Link href="/apply" passHref={true} >
+        <div className={styles.CtaButton}>
+          <div className={styles.Text}>Apply now</div>
+        </div>
+      </Link>
     </div>
   }
-  
 }
