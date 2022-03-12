@@ -6,7 +6,7 @@ import Paragraph1 from '../01_atoms/fonts_paragraph1'
 import TextInput from '../01_atoms/textInput'
 import TextAreaInput from '../01_atoms/textAreaInput'
 
-export default function PersonalDetailForm(){
+export default function PersonalDetailForm({onFirstNameChange, onLastNameChange, onEmailChange, onLandChange, onTZChange, onBirthChange, onLinkedInChange, onWebsiteChange, onGithubChange, onParticipationChange, onReachChange, onContributionChange, onLearningChange}){
   return <div className={styles.PersonalDetailFormItem}>
     <div className={styles.Grid}>
       <div className={styles.Left}>
@@ -21,6 +21,7 @@ export default function PersonalDetailForm(){
               placeholderText="Enter first name ..."
               withIcon={false}
               name="fname"
+              onContentChange={(value)=>onFirstNameChange(value)}
             />
           </div>
           <div className={styles.Half}>
@@ -29,6 +30,7 @@ export default function PersonalDetailForm(){
               placeholderText="Enter last name ..."
               withIcon={false}
               name="lname"
+              onContentChange={(value)=>onLastNameChange(value)}
             />
           </div>
           <div className={styles.Full}>
@@ -38,6 +40,7 @@ export default function PersonalDetailForm(){
               withIcon={true}
               iconPath="/assets/application/email.svg"
               name="email"
+              onContentChange={(value)=>onEmailChange(value)}
             />
           </div>
           <div className={styles.Half}>
@@ -47,6 +50,7 @@ export default function PersonalDetailForm(){
               withIcon={true}
               iconPath="/assets/application/land.svg"
               name="land"
+              onContentChange={(value)=>onLandChange(value)}
             />
           </div>
           <div className={styles.Half}>
@@ -54,6 +58,7 @@ export default function PersonalDetailForm(){
               headerText="Time Zone"
               withIcon={false}
               name="timeZone"
+              onContentChange={(value)=>onTZChange(value)}
             >
               <option value="CET UTC+1">🇩🇪  Berlin, Germany</option>
               <option value="MSK UTC+3">🇷🇺 Moscow, Russian Federation</option>
@@ -72,7 +77,7 @@ export default function PersonalDetailForm(){
             </DropDownInput>
           </div>
           <div className={styles.Half}>
-            <DateInput headerText="Date of birth" placeholderText="Select date ..." name="birthday"/>
+            <DateInput headerText="Date of birth" placeholderText="Select date ..." name="birthday" onContentChange={(value)=>onBirthChange(value)}/>
           </div>
         </div>
       </div>
@@ -91,6 +96,7 @@ export default function PersonalDetailForm(){
               withIcon={true}
               iconPath="/assets/application/linkedIn.svg"
               name="linkedIn"
+              onContentChange={(value)=>onLinkedInChange(value)}
             />
           </div>
           <div className={styles.Full}>
@@ -100,6 +106,7 @@ export default function PersonalDetailForm(){
               withIcon={true}
               iconPath="/assets/application/website.svg"
               name="website"
+              onContentChange={(value)=>onWebsiteChange(value)}
             />
           </div>
           <div className={styles.Full}>
@@ -109,6 +116,7 @@ export default function PersonalDetailForm(){
               withIcon={true}
               iconPath="/assets/application/github.svg"
               name="github"
+              onContentChange={(value)=>onGithubChange(value)}
             />
           </div>
         </div>
@@ -126,6 +134,7 @@ export default function PersonalDetailForm(){
               headerText="Why do you want to take part in the hack?" 
               placeholderText="Enter text here ..."
               name="participation"
+              onContentChange={(value)=>onParticipationChange(value)}
             />
           </div>
           <div className={styles.Full}>
@@ -133,6 +142,7 @@ export default function PersonalDetailForm(){
               headerText="What do you want to reach?" 
               placeholderText="Enter text here ..."
               name="reach"
+              onContentChange={(value)=>onReachChange(value)}
             />
           </div>
           <div className={styles.Full}>
@@ -140,6 +150,7 @@ export default function PersonalDetailForm(){
               headerText="What do you think you can contribute to?" 
               placeholderText="Enter text here ..."
               name="contribution"
+              onContentChange={(value)=>onContributionChange(value)}
             />
           </div>
           <div className={styles.Full}>
@@ -147,6 +158,7 @@ export default function PersonalDetailForm(){
               headerText="What do you want to learn?" 
               placeholderText="Enter text here ..."
               name="learing"
+              onContentChange={(value)=>onLearningChange(value)}
             />
           </div>
         </div>

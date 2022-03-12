@@ -7,7 +7,7 @@ import Paragraph1 from '../01_atoms/fonts_paragraph1'
 import TextAreaInput from '../01_atoms/textAreaInput'
 import TextInput from '../01_atoms/textInput'
 
-export default function ProfessionForm(){
+export default function ProfessionForm({onAcademicChange, onUniversityChange, onDescriptionChange, onExpertChange, onCodeSkillChange, onCodeSkillDescriptionChange, onHackathonChange, onHackathonListChange, onIdeaChange, onTeamChange, onMatesChange}){
   return <div className={styles.ProfessionFormItem}>
     <div className={styles.Grid}>
       <div className={styles.Left}>
@@ -21,6 +21,7 @@ export default function ProfessionForm(){
               headerText="Are you currently pursuing or did you pursue an academic or professional degree ?" 
               placeholderText="Enter text here ..."
               name="academic"
+              onContentChange={(value)=>onAcademicChange(value)}
             />
           </div>
           <div className={styles.Full}>
@@ -30,6 +31,7 @@ export default function ProfessionForm(){
               name="university"
               withIcon
               iconPath="/assets/application/school.svg"
+              onContentChange={(value)=>onUniversityChange(value)}
             />
           </div>
           <div className={styles.Full}>
@@ -37,12 +39,14 @@ export default function ProfessionForm(){
               headerText="What describes you best?" 
               placeholderText="Enter text here ..."
               name="description"
+              onContentChange={(value)=>onDescriptionChange(value)}
             />
           </div>
           <div className={styles.Full}>
             <DropDownInput
               headerText="Which field do you think you are expert in?"
               name="expert"
+              onContentChange={(value)=>onExpertChange(value)}
             >
               <option value="AI">Artificial Intelligence</option>
               <option value="IT">IT</option>
@@ -65,6 +69,7 @@ export default function ProfessionForm(){
             <BoolInput 
               headerText="Do you have programming skills?"
               name="codeSkill"
+              onContentChange={(value)=>onCodeSkillChange(value)}
             />
           </div>
           <div className={styles.Half}>
@@ -72,12 +77,14 @@ export default function ProfessionForm(){
               headerText="If yes – which skills do you have? (Do not be afraid is this does not apply to you)" 
               placeholderText="Enter skills here ..."
               name="codeSkillDescription"
+              onContentChange={(value)=>onCodeSkillDescriptionChange(value)}
             />
           </div>
           <div className={styles.Half}>
             <BoolInput 
               headerText="Have you done a hackathon/makeathon before?"
               name="hackathon"
+              onContentChange={(value)=>onHackathonChange(value)}
             />
           </div>
           <div className={styles.Half}>
@@ -85,6 +92,7 @@ export default function ProfessionForm(){
               headerText="If yes, which one?" 
               placeholderText="Talk about your experience here ..."
               name="hackathonList"
+              onContentChange={(value)=>onHackathonListChange(value)}
             />
           </div>
         </div>
@@ -102,12 +110,14 @@ export default function ProfessionForm(){
               headerText="What is your idea?" 
               placeholderText="Talk about your idea here ..."
               name="idea"
+              onContentChange={(value)=>onIdeaChange(value)}
             />
           </div>
           <div className={styles.Half}>
             <BoolInput 
               headerText="Are you part of a team?"
               name="team"
+              onContentChange={(value)=>onTeamChange(value)}
             />
           </div>
           <div className={styles.Half}>
@@ -115,6 +125,7 @@ export default function ProfessionForm(){
               headerText="If yes, please specify the exact names and Email addresses of your team mates." 
               placeholderText="List team mates here ..."
               name="mates"
+              onContentChange={(value)=>onMatesChange(value)}
             />
           </div>
         </div>
