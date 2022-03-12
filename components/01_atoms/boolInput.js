@@ -4,7 +4,7 @@ export default function BoolInput({headerText, onContentChange, name}){
 
   return <div className={styles.BoolInputItem}>
     <div className={styles.InputContainer}>
-      <input className={styles.Checkbox} type="checkbox" id={name} name={name} onChange={(event)=>onContentChange(event.target.value)}/>
+      <input className={styles.Checkbox} type="checkbox" id={name} name={name} onChange={(event)=>onContentChange(event)}/>
       <label className={styles.Label} htmlFor={name}>{headerText}</label>
     </div>
   </div>

@@ -1,7 +1,7 @@
 import styles from '../../styles/01_atoms/DateInput.module.css'
 import Image from 'next/image'
 
-export default function DateInput({headerText, placeholderText, iconPath, onContentChange, withIcon, name}){ 
+export default function DateInput({headerText, placeholderText, onContentChange, name}){ 
 
   return <div className={styles.DateInputItem}>
     <div className={styles.InputHeader}>{headerText}</div>
@@ -12,7 +12,7 @@ export default function DateInput({headerText, placeholderText, iconPath, onCont
         id={name} 
         name={name} 
         placeholder={placeholderText} 
-        onChange={(event)=>onContentChange(event.target.value)}
+        onChange={(event)=>onContentChange(event)}
       />
       <div className={styles.Label}>
         <Image src={"/assets/application/date.svg"} alt="icon" layout="fill" objectFit="cover" />

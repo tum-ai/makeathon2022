@@ -12,7 +12,7 @@ export default function DropDownInput({headerText, iconPath, onContentChange, wi
         type="text" 
         name={name} 
         id={name}
-        onChange={(event)=>onContentChange(event.target.value)}
+        onChange={(event)=>onContentChange(event)}
       >
         {children}
       </select> : <select 
@@ -20,7 +20,7 @@ export default function DropDownInput({headerText, iconPath, onContentChange, wi
         type="text" 
         name={name} 
         id={name}
-        onChange={(event)=>onContentChange(event.target.value)}
+        onChange={(event)=>onContentChange(event)}
       >
         {children}
       </select>}

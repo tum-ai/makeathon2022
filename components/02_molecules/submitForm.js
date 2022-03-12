@@ -7,7 +7,7 @@ import Paragraph1 from '../01_atoms/fonts_paragraph1'
 import TextAreaInput from '../01_atoms/textAreaInput'
 import TextInput from '../01_atoms/textInput'
 
-export default function SubmitForm({onHackChange, onFutureChange, onShareChange}){
+export default function SubmitForm({data, onInputChange}){
   return <div className={styles.SubmitFormItem}>
     <div className={styles.Grid}>
       <div className={styles.Left}>
@@ -20,7 +20,7 @@ export default function SubmitForm({onHackChange, onFutureChange, onShareChange}
             <DropDownInput
               headerText="How did you hear about the hackathon?"
               name="hack"
-              onContentChange={(value)=>onHackChange(value)}
+              onContentChange={(event)=>onInputChange(event)}
             >
               <option value="website">Website</option>
               <option value="friends">Friends</option>
@@ -33,7 +33,7 @@ export default function SubmitForm({onHackChange, onFutureChange, onShareChange}
             <BoolInput 
               headerText="Would you like to become a part of TUM.ai in future?"
               name="future"
-              onContentChange={(value)=>onFutureChange(value)}
+              onContentChange={(event)=>onInputChange(event)}
             />
           </div>
           <div className={styles.Full}>
@@ -41,7 +41,7 @@ export default function SubmitForm({onHackChange, onFutureChange, onShareChange}
               headerText="Is there anything else you would like to share?" 
               placeholderText="Enter text here ..."
               name="share"
-              onContentChange={(value)=>onShareChange(value)}
+              onContentChange={(event)=>onInputChange(event)}
             />
           </div>
         </div>

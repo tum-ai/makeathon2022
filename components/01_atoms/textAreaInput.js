@@ -6,7 +6,7 @@ export default function TextAreaInput({headerText, placeholderText, onContentCha
   return <div className={styles.TextAreaInputItem}>
     <div className={styles.InputHeader}>{headerText}</div>
     <div className={styles.InputContainer}>
-      <textarea className={styles.InputField} cols="4" name={name} id={name} placeholder={placeholderText} onChange={(event)=>onContentChange(event.target.value)}/>
+      <textarea className={styles.InputField} cols="4" name={name} id={name} placeholder={placeholderText} onChange={(event)=>onContentChange(event)}/>
     </div>
   </div>
 }

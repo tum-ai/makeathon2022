@@ -6,7 +6,7 @@ import Paragraph1 from '../01_atoms/fonts_paragraph1'
 import TextInput from '../01_atoms/textInput'
 import TextAreaInput from '../01_atoms/textAreaInput'
 
-export default function PersonalDetailForm({data, onFirstNameChange, onLastNameChange, onEmailChange, onLandChange, onTZChange, onBirthChange, onLinkedInChange, onWebsiteChange, onGithubChange, onParticipationChange, onReachChange, onContributionChange, onLearningChange}){
+export default function PersonalDetailForm({data, onInputChange}){
   console.log(data);
   return <div className={styles.PersonalDetailFormItem}>
     <div className={styles.Grid}>
@@ -22,8 +22,7 @@ export default function PersonalDetailForm({data, onFirstNameChange, onLastNameC
               placeholderText="Enter first name ..."
               withIcon={false}
               name="fname"
-              onContentChange={(value)=>onFirstNameChange(value)}
-              value={data.personal.first_name}
+              onContentChange={(event)=>onInputChange(event)}
             />
           </div>
           <div className={styles.Half}>
@@ -32,7 +31,7 @@ export default function PersonalDetailForm({data, onFirstNameChange, onLastNameC
               placeholderText="Enter last name ..."
               withIcon={false}
               name="lname"
-              onContentChange={(value)=>onLastNameChange(value)}
+              onContentChange={(event)=>onInputChange(event)}
             />
           </div>
           <div className={styles.Full}>
@@ -42,7 +41,7 @@ export default function PersonalDetailForm({data, onFirstNameChange, onLastNameC
               withIcon={true}
               iconPath="/assets/application/email.svg"
               name="email"
-              onContentChange={(value)=>onEmailChange(value)}
+              onContentChange={(event)=>onInputChange(event)}
             />
           </div>
           <div className={styles.Half}>
@@ -52,7 +51,7 @@ export default function PersonalDetailForm({data, onFirstNameChange, onLastNameC
               withIcon={true}
               iconPath="/assets/application/land.svg"
               name="land"
-              onContentChange={(value)=>onLandChange(value)}
+              onContentChange={(event)=>onInputChange(event)}
             />
           </div>
           <div className={styles.Half}>
@@ -60,7 +59,7 @@ export default function PersonalDetailForm({data, onFirstNameChange, onLastNameC
               headerText="Time Zone"
               withIcon={false}
               name="timeZone"
-              onContentChange={(value)=>onTZChange(value)}
+              onContentChange={(event)=>onInputChange(event)}
             >
               <option value="CET UTC+1">🇩🇪  Berlin, Germany</option>
               <option value="MSK UTC+3">🇷🇺 Moscow, Russian Federation</option>
@@ -79,7 +78,7 @@ export default function PersonalDetailForm({data, onFirstNameChange, onLastNameC
             </DropDownInput>
           </div>
           <div className={styles.Half}>
-            <DateInput headerText="Date of birth" placeholderText="Select date ..." name="birthday" onContentChange={(value)=>onBirthChange(value)}/>
+            <DateInput headerText="Date of birth" placeholderText="Select date ..." name="birthday" onContentChange={(event)=>onInputChange(event)}/>
           </div>
         </div>
       </div>
@@ -98,7 +97,7 @@ export default function PersonalDetailForm({data, onFirstNameChange, onLastNameC
               withIcon={true}
               iconPath="/assets/application/linkedIn.svg"
               name="linkedIn"
-              onContentChange={(value)=>onLinkedInChange(value)}
+              onContentChange={(event)=>onInputChange(event)}
             />
           </div>
           <div className={styles.Full}>
@@ -108,7 +107,7 @@ export default function PersonalDetailForm({data, onFirstNameChange, onLastNameC
               withIcon={true}
               iconPath="/assets/application/website.svg"
               name="website"
-              onContentChange={(value)=>onWebsiteChange(value)}
+              onContentChange={(event)=>onInputChange(event)}
             />
           </div>
           <div className={styles.Full}>
@@ -118,7 +117,7 @@ export default function PersonalDetailForm({data, onFirstNameChange, onLastNameC
               withIcon={true}
               iconPath="/assets/application/github.svg"
               name="github"
-              onContentChange={(value)=>onGithubChange(value)}
+              onContentChange={(event)=>onInputChange(event)}
             />
           </div>
         </div>
@@ -136,7 +135,7 @@ export default function PersonalDetailForm({data, onFirstNameChange, onLastNameC
               headerText="Why do you want to take part in the hack?" 
               placeholderText="Enter text here ..."
               name="participation"
-              onContentChange={(value)=>onParticipationChange(value)}
+              onContentChange={(event)=>onInputChange(event)}
             />
           </div>
           <div className={styles.Full}>
@@ -144,7 +143,7 @@ export default function PersonalDetailForm({data, onFirstNameChange, onLastNameC
               headerText="What do you want to reach?" 
               placeholderText="Enter text here ..."
               name="reach"
-              onContentChange={(value)=>onReachChange(value)}
+              onContentChange={(event)=>onInputChange(event)}
             />
           </div>
           <div className={styles.Full}>
@@ -152,7 +151,7 @@ export default function PersonalDetailForm({data, onFirstNameChange, onLastNameC
               headerText="What do you think you can contribute to?" 
               placeholderText="Enter text here ..."
               name="contribution"
-              onContentChange={(value)=>onContributionChange(value)}
+              onContentChange={(event)=>onInputChange(event)}
             />
           </div>
           <div className={styles.Full}>
@@ -160,7 +159,7 @@ export default function PersonalDetailForm({data, onFirstNameChange, onLastNameC
               headerText="What do you want to learn?" 
               placeholderText="Enter text here ..."
               name="learing"
-              onContentChange={(value)=>onLearningChange(value)}
+              onContentChange={(event)=>onInputChange(event)}
             />
           </div>
         </div>
