@@ -37,3 +37,27 @@
   .Full{
     width: 100%;
   }
+
+  @media only screen and (max-width: 1300px) {
+    .Grid{
+      width: 750px;
+    }
+    .Half{
+      width: 100%;
+    }
+  }
+
+  @media only screen and (max-width: 800px) {
+    .Grid{
+      width: 90%;
+      flex-direction: column;
+      gap: 32px;
+    }
+    .Right{
+      width: 100%;
+      padding: 24px;
+    }
+    .Left{
+      width: 100%;
+    }
+  }

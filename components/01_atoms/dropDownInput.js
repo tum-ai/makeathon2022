@@ -7,7 +7,7 @@ export default function DropDownInput({value, isControlled, headerText, iconPath
     <div className={styles.InputHeader}>{headerText}</div>
     <div className={styles.InputContainer}>
       {withIcon ? <select 
-        style={{"padding-left": "70px"}} 
+        style={{paddingLeft: "70px"}} 
         className={styles.InputField} 
         type="text" 
         name={name} 

@@ -43,3 +43,16 @@
   height: 2px;
   background-color: #626185;
 }
+
+
+@media only screen and (max-width: 1300px) {
+  .Grid{
+    width:750px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .Grid{
+    width: 90%;
+  }
+}
