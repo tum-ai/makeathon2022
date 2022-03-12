@@ -59,6 +59,19 @@ export default function ApplicationForm(){
     }
   });
 
+  function submitData(data) {
+    fetch("https://react-test-64a47-default-rtdb.firebaseio.com/meetups.json", {
+      method: "POST",
+      body: JSON.stringify(data),
+      header: {
+        "Content-Type": "application/json",
+      },
+    }).then(() => {
+      console.log("success");
+      applicationState(4);
+    });
+  }
+
   switch(applicationState){
     case 0:
        return <div className={styles.ApplicationFormItem}>
@@ -77,6 +90,7 @@ export default function ApplicationForm(){
           onReachChange={(value)=>{let obj = applicationData; obj.motivation.goal = value; setApplicationData(obj)}}
           onContributionChange={(value)=>{let obj = applicationData; obj.motivation.contribution = value; setApplicationData(obj)}}
           onLearningChange={(value)=>{let obj = applicationData; obj.motivation.learn = value; setApplicationData(obj)}}
+          data={applicationData}
         />
         <ApplyFooter 
           nextBtnText="Next" 

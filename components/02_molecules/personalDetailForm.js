@@ -6,7 +6,8 @@ import Paragraph1 from '../01_atoms/fonts_paragraph1'
 import TextInput from '../01_atoms/textInput'
 import TextAreaInput from '../01_atoms/textAreaInput'
 
-export default function PersonalDetailForm({onFirstNameChange, onLastNameChange, onEmailChange, onLandChange, onTZChange, onBirthChange, onLinkedInChange, onWebsiteChange, onGithubChange, onParticipationChange, onReachChange, onContributionChange, onLearningChange}){
+export default function PersonalDetailForm({data, onFirstNameChange, onLastNameChange, onEmailChange, onLandChange, onTZChange, onBirthChange, onLinkedInChange, onWebsiteChange, onGithubChange, onParticipationChange, onReachChange, onContributionChange, onLearningChange}){
+  console.log(data);
   return <div className={styles.PersonalDetailFormItem}>
     <div className={styles.Grid}>
       <div className={styles.Left}>
@@ -22,6 +23,7 @@ export default function PersonalDetailForm({onFirstNameChange, onLastNameChange,
               withIcon={false}
               name="fname"
               onContentChange={(value)=>onFirstNameChange(value)}
+              value={data.personal.first_name}
             />
           </div>
           <div className={styles.Half}>
