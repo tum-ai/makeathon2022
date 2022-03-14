@@ -1,7 +1,9 @@
 import styles from '../../styles/02_molecules/ApplyFooter.module.css'
 import Image from 'next/image'
 
-export default function ApplyFooter({nextBtnText, prevBtnText, stateNumber, nextPage, prevPage}){
+import { useState } from 'react';
+
+export default function ApplyFooter({nextBtnText, prevBtnText, stateNumber, nextPage, prevPage, isValid}){
 
   function nextHandler(){
     nextPage();
@@ -17,7 +19,8 @@ export default function ApplyFooter({nextBtnText, prevBtnText, stateNumber, next
       <div className={styles.Separator}></div>
       <div className={styles.Bottom}>
         {prevBtnText != undefined ? <div className={styles.PrevBtn} onClick={()=>prevHandler()}>{prevBtnText}</div> : <div></div>}
-        <div className={styles.Btn} onClick={()=>nextHandler()}>{nextBtnText}</div>
+        {isValid ? <div className={styles.Btn} onClick={()=>nextHandler()}>{nextBtnText}</div> :
+        <div className={styles.InvalidBtn} onClick={()=>nextHandler()}>{nextBtnText}</div>}
       </div>
     </div>
   </div>

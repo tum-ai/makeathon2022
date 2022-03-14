@@ -1,19 +1,35 @@
 import styles from '../../styles/01_atoms/DropDownInput.module.css'
 import Image from 'next/image'
+import { useState } from 'react';    
 
-export default function DropDownInput({value, isControlled, headerText, iconPath, onContentChange, withIcon, children, name}){ 
+export default function DropDownInput({value, isControlled, headerText, iconPath, onContentChange, withIcon, children, name, setIsValid, isRequired}){ 
+
+  const [isFieldValid, setIsFieldValid] = useState(true);
+
+  function validateField(event){
+    if(isRequired){
+      if(event.target.value == ""){
+        setIsValid(false);
+        setIsFieldValid(false);
+      }else{
+        setIsValid(true);
+        setIsFieldValid(true);
+      }
+    }
+  }
 
   return <div className={styles.DropDownInputItem}>
     <div className={styles.InputHeader}>{headerText}</div>
     <div className={styles.InputContainer}>
       {withIcon ? <select 
-        style={{paddingLeft: "70px"}} 
         className={styles.InputField} 
         type="text" 
         name={name} 
         id={name}
         onChange={(event)=>onContentChange(event)}
         value={isControlled ? value : undefined}
+        onBlur={(event)=>validateField(event)} 
+        style={{paddingLeft: "70px", outline: isFieldValid ? "" : "2px solid red"}}
       >
         {children}
       </select> : <select 
@@ -23,6 +39,8 @@ export default function DropDownInput({value, isControlled, headerText, iconPath
         id={name}
         onChange={(event)=>onContentChange(event)}
         value={isControlled ? value : undefined}
+        onBlur={(event)=>validateField(event)} 
+        style={{outline: isFieldValid ? "" : "2px solid red"}}
       >
         {children}
       </select>}

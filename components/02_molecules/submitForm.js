@@ -4,8 +4,20 @@ import DropDownInput from '../01_atoms/dropDownInput'
 import Headline2 from '../01_atoms/fonts_headline2'
 import Paragraph1 from '../01_atoms/fonts_paragraph1'
 import TextAreaInput from '../01_atoms/textAreaInput'
+import { useState } from 'react'
 
-export default function SubmitForm({data, onInputChange, isControlled}){
+export default function SubmitForm({data, onInputChange, isControlled, setIsAppValid}){
+
+  const [isPageValid, setIsPageValid] = useState({
+    "hack": false,
+  });
+
+  function checkPageStatus(){
+    if (Object.values(isPageValid).includes(false) == false){
+      setIsAppValid(true);
+    } 
+  }
+
   return <div className={styles.SubmitFormItem}>
     <div className={styles.Grid}>
       <div className={styles.Left}>
@@ -16,11 +28,13 @@ export default function SubmitForm({data, onInputChange, isControlled}){
         <div className={styles.Content}>
           <div className={styles.Full}>
             <DropDownInput
-              headerText="How did you hear about the hackathon?"
+              headerText="How did you hear about the hackathon?*"
               name="hack"
               onContentChange={(event)=>onInputChange(event)}
               value={data.hack}
               isControlled={isControlled}
+              setIsValid={(value)=>{let obj = isPageValid; obj.hack = value; setIsPageValid(obj); checkPageStatus();}}
+              isRequired={true}
             >
               <option value="">Choose ...</option>
               <option value="website">Website</option>

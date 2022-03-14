@@ -13,6 +13,7 @@ export default function ApplicationForm(){
   const [applicationState,changeApplicationState] = useState(0);
   const [applicationData,setApplicationData] = useState({});
   const [isControlled, setIsControlled] = useState(false);
+  const [isAppValid,setIsAppValid] = useState(false);
 
   function submitData(data) {
     fetch("https://react-test-64a47-default-rtdb.firebaseio.com/meetups.json", {
@@ -38,6 +39,7 @@ export default function ApplicationForm(){
     setIsControlled(true); 
     setTimeout(() => {
       setIsControlled(false);
+      setIsAppValid(false);
     }, 500);
   }
   function handlePrevPage(){
@@ -56,12 +58,14 @@ export default function ApplicationForm(){
           onInputChange={(event)=>onInputChange(event)}
           data={applicationData}
           isControlled={isControlled}
+          setIsAppValid={(value)=>setIsAppValid(value)}
         />
         <ApplyFooter 
           nextBtnText="Next" 
           stateNumber={applicationState + 1} 
           nextPage={()=>handleNextPage()}
           prevPage={()=>handlePrevPage()}
+          isValid={isAppValid ? true : false}
         />
         </div>
       break;    
@@ -72,6 +76,7 @@ export default function ApplicationForm(){
           onInputChange={(event)=>onInputChange(event)}
           data={applicationData}
           isControlled={isControlled}
+          setIsAppValid={(value)=>setIsAppValid(value)}
         />
         <ApplyFooter 
           nextBtnText="Next" 
@@ -79,6 +84,7 @@ export default function ApplicationForm(){
           stateNumber={applicationState + 1} 
           nextPage={()=>handleNextPage()}
           prevPage={()=>handlePrevPage()}
+          isValid={isAppValid ? true : false}
         />
        </div>
       break;    
@@ -89,6 +95,7 @@ export default function ApplicationForm(){
           onInputChange={(event)=>onInputChange(event)}
           data={applicationData}
           isControlled={isControlled}
+          setIsAppValid={(value)=>setIsAppValid(value)}
         />
         <ApplyFooter 
           nextBtnText="Submit" 
@@ -96,6 +103,7 @@ export default function ApplicationForm(){
           stateNumber={applicationState + 1} 
           nextPage={()=>handleNextPage()}
           prevPage={()=>handlePrevPage()}
+          isValid={isAppValid ? true : false}
         />
        </div>
       break;    

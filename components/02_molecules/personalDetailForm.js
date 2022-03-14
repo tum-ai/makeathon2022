@@ -5,8 +5,27 @@ import Headline2 from '../01_atoms/fonts_headline2'
 import Paragraph1 from '../01_atoms/fonts_paragraph1'
 import TextInput from '../01_atoms/textInput'
 import TextAreaInput from '../01_atoms/textAreaInput'
+import { useState } from 'react'
 
-export default function PersonalDetailForm({data, onInputChange, isControlled}){
+export default function PersonalDetailForm({data, onInputChange, isControlled, setIsAppValid}){
+
+  const [isPageValid, setIsPageValid] = useState({
+    "fname": false,
+    "lname": false,
+    "email": false,
+    "land": false,
+    "timeZone": false,
+    "academic": false,
+    "description": false,
+    "expert": false,
+    "birthday": false
+  });
+
+  function checkPageStatus(){
+    if (Object.values(isPageValid).includes(false) == false){
+      setIsAppValid(true);
+    } 
+  }
 
   return <div className={styles.PersonalDetailFormItem}>
     <div className={styles.Grid}>
@@ -18,29 +37,33 @@ export default function PersonalDetailForm({data, onInputChange, isControlled}){
         <div className={styles.Content}>
           <div className={styles.Half}>
             <TextInput 
-              headerText="First name"
+              headerText="First name*"
               placeholderText="Enter first name ..."
               withIcon={false}
               name="fname"
               onContentChange={(event)=>onInputChange(event)}
               value={data.fname}
               isControlled={isControlled}
+              setIsValid={(value)=>{let obj = isPageValid; obj.fname = value; setIsPageValid(obj); checkPageStatus();}}
+              isRequired={true}
             />
           </div>
           <div className={styles.Half}>
             <TextInput 
-              headerText="Last name"
+              headerText="Last name*"
               placeholderText="Enter last name ..."
               withIcon={false}
               name="lname"
               onContentChange={(event)=>onInputChange(event)}
               value={data.lname}
               isControlled={isControlled}
+              setIsValid={(value)=>{let obj = isPageValid; obj.lname = value; setIsPageValid(obj); checkPageStatus();}}
+              isRequired={true}
             />
           </div>
           <div className={styles.Full}>
             <TextInput 
-              headerText="Email"
+              headerText="Email*"
               placeholderText="Enter your email adress ..."
               withIcon={true}
               iconPath="/assets/application/email.svg"
@@ -48,11 +71,13 @@ export default function PersonalDetailForm({data, onInputChange, isControlled}){
               onContentChange={(event)=>onInputChange(event)}
               value={data.email}
               isControlled={isControlled}
+              setIsValid={(value)=>{let obj = isPageValid; obj.email = value; setIsPageValid(obj); checkPageStatus();}}
+              isRequired={true}
             />
           </div>
           <div className={styles.Half}>
             <TextInput 
-              headerText="Nationality"
+              headerText="Nationality*"
               placeholderText="Where are you from?"
               withIcon={true}
               iconPath="/assets/application/land.svg"
@@ -60,16 +85,20 @@ export default function PersonalDetailForm({data, onInputChange, isControlled}){
               onContentChange={(event)=>onInputChange(event)}
               value={data.land}
               isControlled={isControlled}
+              setIsValid={(value)=>{let obj = isPageValid; obj.land = value; setIsPageValid(obj); checkPageStatus();}}
+              isRequired={true}
             />
           </div>
           <div className={styles.Half}>
             <DropDownInput 
-              headerText="Time Zone"
+              headerText="Time Zone*"
               withIcon={false}
               name="timeZone"
               onContentChange={(event)=>onInputChange(event)}
               value={data.timeZone}
               isControlled={isControlled}
+              setIsValid={(value)=>{let obj = isPageValid; obj.timeZone = value; setIsPageValid(obj); checkPageStatus();}}
+              isRequired={true}
             >
               <option value="">Choose ...</option>
               <option value="CET UTC+1">🇩🇪  Berlin, Germany</option>
@@ -90,12 +119,14 @@ export default function PersonalDetailForm({data, onInputChange, isControlled}){
           </div>
           <div className={styles.Half}>
             <DateInput 
-              headerText="Date of birth" 
+              headerText="Date of birth*" 
               placeholderText="Select date ..." 
               name="birthday" 
               onContentChange={(event)=>onInputChange(event)}
               value={data.birthday}
               isControlled={isControlled}
+              setIsValid={(value)=>{let obj = isPageValid; obj.birthday = value; setIsPageValid(obj); checkPageStatus();}}
+              isRequired={true}
             />
           </div>
         </div>
@@ -118,6 +149,7 @@ export default function PersonalDetailForm({data, onInputChange, isControlled}){
               onContentChange={(event)=>onInputChange(event)}
               value={data.linkedIn}
               isControlled={isControlled}
+              isRequired={false}
             />
           </div>
           <div className={styles.Full}>
@@ -130,6 +162,7 @@ export default function PersonalDetailForm({data, onInputChange, isControlled}){
               onContentChange={(event)=>onInputChange(event)}
               value={data.website}
               isControlled={isControlled}
+              isRequired={false}
             />
           </div>
           <div className={styles.Full}>
@@ -142,57 +175,74 @@ export default function PersonalDetailForm({data, onInputChange, isControlled}){
               onContentChange={(event)=>onInputChange(event)}
               value={data.github}
               isControlled={isControlled}
+              isRequired={false}
             />
           </div>
         </div>
       </div>
     </div>
     <div className={styles.Grid}>
-      <div className={styles.Left}>
-        <Headline2 normalContent={"Your motivation"} isDarkBackground/>
+    <div className={styles.Left}>
+        <Headline2 normalContent={"Your background"} isDarkBackground/>
         <Paragraph1 normalContent={"Is a weekend project that connects several hundred students."} isDarkBackground/>
       </div>
       <div className={styles.Right}>
         <div className={styles.Content}>
           <div className={styles.Full}>
             <TextAreaInput 
-              headerText="Why do you want to take part in the hack?" 
+              headerText="Are you currently pursuing or did you pursue an academic or professional degree?*" 
               placeholderText="Enter text here ..."
-              name="participation"
+              name="academic"
               onContentChange={(event)=>onInputChange(event)}
-              value={data.participation}
+              value={data.academic}
               isControlled={isControlled}
+              setIsValid={(value)=>{let obj = isPageValid; obj.academic = value; setIsPageValid(obj); checkPageStatus();}}
+              isRequired={true}
+            />
+          </div>
+          <div className={styles.Full}>
+            <TextInput 
+              headerText="Which University you are studying at?" 
+              placeholderText="Name of you university ..."
+              name="university"
+              withIcon
+              iconPath="/assets/application/school.svg"
+              onContentChange={(event)=>onInputChange(event)}
+              value={data.university}
+              isControlled={isControlled}
+              setIsValid={(value)=>setIsPageValid(value)}
+              isRequired={false}
             />
           </div>
           <div className={styles.Full}>
             <TextAreaInput 
-              headerText="What do you want to reach?" 
+              headerText="What describes you best?*" 
               placeholderText="Enter text here ..."
-              name="reach"
+              name="description"
               onContentChange={(event)=>onInputChange(event)}
-              value={data.reach}
+              value={data.description}
               isControlled={isControlled}
+              setIsValid={(value)=>{let obj = isPageValid; obj.description = value; setIsPageValid(obj); checkPageStatus();}}
+              isRequired={true}
             />
           </div>
           <div className={styles.Full}>
-            <TextAreaInput 
-              headerText="What do you think you can contribute to?" 
-              placeholderText="Enter text here ..."
-              name="contribution"
+            <DropDownInput
+              headerText="Which field do you think you are expert in?*"
+              name="expert"
               onContentChange={(event)=>onInputChange(event)}
-              value={data.contribution}
+              value={data.expert}
               isControlled={isControlled}
-            />
-          </div>
-          <div className={styles.Full}>
-            <TextAreaInput 
-              headerText="What do you want to learn?" 
-              placeholderText="Enter text here ..."
-              name="learing"
-              onContentChange={(event)=>onInputChange(event)}
-              value={data.learing}
-              isControlled={isControlled}
-            />
+              setIsValid={(value)=>{let obj = isPageValid; obj.expert = value; setIsPageValid(obj); checkPageStatus();}}
+              isRequired={true}
+            >
+              <option value="">Choose ...</option>
+              <option value="AI">Artificial Intelligence</option>
+              <option value="IT">IT</option>
+              <option value="Business">Business</option>
+              <option value="Design/UX">Design/UX</option>
+              <option value="Domain">A specific Domain</option>
+            </DropDownInput>
           </div>
         </div>
       </div>

@@ -5,66 +5,81 @@ import Headline2 from '../01_atoms/fonts_headline2'
 import Paragraph1 from '../01_atoms/fonts_paragraph1'
 import TextAreaInput from '../01_atoms/textAreaInput'
 import TextInput from '../01_atoms/textInput'
+import { useState } from 'react'
 
-export default function ProfessionForm({data, onInputChange, isControlled}){
+export default function ProfessionForm({data, onInputChange, isControlled, setIsAppValid}){
+
+  const [isPageValid, setIsPageValid] = useState({
+    "participation": false,
+    "reach": false,
+    "contribution": false,
+    "learing": false
+  });
+
+  function checkPageStatus(){
+    if (Object.values(isPageValid).includes(false) == false){
+      setIsAppValid(true);
+    } 
+  }
+
   return <div className={styles.ProfessionFormItem}>
     <div className={styles.Grid}>
       <div className={styles.Left}>
-        <Headline2 normalContent={"Your background"} isDarkBackground/>
+        <Headline2 normalContent={"Your motivation"} isDarkBackground/>
         <Paragraph1 normalContent={"Is a weekend project that connects several hundred students."} isDarkBackground/>
       </div>
       <div className={styles.Right}>
         <div className={styles.Content}>
           <div className={styles.Full}>
             <TextAreaInput 
-              headerText="Are you currently pursuing or did you pursue an academic or professional degree ?" 
+              headerText="Why do you want to take part in the hack?*" 
               placeholderText="Enter text here ..."
-              name="academic"
+              name="participation"
               onContentChange={(event)=>onInputChange(event)}
-              value={data.academic}
+              value={data.participation}
               isControlled={isControlled}
-            />
-          </div>
-          <div className={styles.Full}>
-            <TextInput 
-              headerText="Which University you are studying at?" 
-              placeholderText="Name of you university ..."
-              name="university"
-              withIcon
-              iconPath="/assets/application/school.svg"
-              onContentChange={(event)=>onInputChange(event)}
-              value={data.university}
-              isControlled={isControlled}
+              setIsValid={(value)=>{let obj = isPageValid; obj.participation = value; setIsPageValid(obj); checkPageStatus();}}
+              isRequired={true}
             />
           </div>
           <div className={styles.Full}>
             <TextAreaInput 
-              headerText="What describes you best?" 
+              headerText="What do you want to reach?*" 
               placeholderText="Enter text here ..."
-              name="description"
+              name="reach"
               onContentChange={(event)=>onInputChange(event)}
-              value={data.description}
+              value={data.reach}
               isControlled={isControlled}
+              setIsValid={(value)=>{let obj = isPageValid; obj.reach = value; setIsPageValid(obj); checkPageStatus();}}
+              isRequired={true}
             />
           </div>
           <div className={styles.Full}>
-            <DropDownInput
-              headerText="Which field do you think you are expert in?"
-              name="expert"
+            <TextAreaInput 
+              headerText="What do you think you can contribute to?*" 
+              placeholderText="Enter text here ..."
+              name="contribution"
               onContentChange={(event)=>onInputChange(event)}
-              value={data.expert}
+              value={data.contribution}
               isControlled={isControlled}
-            >
-              <option value="">Choose ...</option>
-              <option value="AI">Artificial Intelligence</option>
-              <option value="IT">IT</option>
-              <option value="Business">Business</option>
-              <option value="Design/UX">Design/UX</option>
-              <option value="Domain">A specific Domain</option>
-            </DropDownInput>
+              setIsValid={(value)=>{let obj = isPageValid; obj.contribution = value; setIsPageValid(obj); checkPageStatus();}}
+              isRequired={true}
+            />
+          </div>
+          <div className={styles.Full}>
+            <TextAreaInput 
+              headerText="What do you want to learn?*" 
+              placeholderText="Enter text here ..."
+              name="learing"
+              onContentChange={(event)=>onInputChange(event)}
+              value={data.learing}
+              isControlled={isControlled}
+              setIsValid={(value)=>{let obj = isPageValid; obj.learing = value; setIsPageValid(obj); checkPageStatus();}}
+              isRequired={true}
+            />
           </div>
         </div>
-      </div>
+      </div>  
     </div>
     <div className={styles.Grid}>
       <div className={styles.Left}>
