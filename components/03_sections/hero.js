@@ -14,15 +14,15 @@ const data = {
   "value": [
     {
       "title": "Lauch your AI project",
-      "subtitle": "innovative AI-related solutions on the"
+      "subtitle": "in the filed of AI4SocialGood"
     },
     {
       "title": "Grow your network",
-      "subtitle": "innovative AI-related solutions on the"
+      "subtitle": "work, talk and connect to other students"
     },
     {
       "title": "Win awesome prices",
-      "subtitle": "innovative AI-related solutions on the"
+      "subtitle": "up to 2000 Euro for the winning teams"
     }
   ] 
 }

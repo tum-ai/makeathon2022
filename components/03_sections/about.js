@@ -6,8 +6,8 @@ import ChapterBar from '../02_molecules/chapterBar'
 
 const data = {
   "title": "We at TUM.ai are thrilled to have you on board and can't wait to hear what you and your team come up with! 🚀",
-  "paragraph_highlighted": "As the largest student-organized Makeathon in Germany, ",
-  "paragraph": "you can expect numerous exciting speakers, big-name companies, cool prizes, and excellent opportunities to meet like-minded international students. Due to the ongoing Corona Pandemic, all events will be held online. Therefore you don't have to live in Munich to participate.",
+  "paragraph_highlighted": "The Makeathon by TUM.ai is a weekend project ",
+  "paragraph": "that connects several hundred students to collaborate on new, innovative AI-related solutions on the topic of AI4SocialGood. As the largest student-organized Makeathon in Germany, you can expect numerous exciting speakers, big-name companies, cool prizes, and excellent opportunities to meet like-minded international students. Due to the ongoing Corona Pandemic, all events will be held online. Therefore you don't have to live in Munich to participate.",
   "button": "Learn more about TUM.ai",
   "button_link": "https://www.tum-ai.com/",
   "chapter_title": "About the makeathon",

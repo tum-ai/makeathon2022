@@ -14,6 +14,7 @@ import Image from 'next/image'
 import NavBar from '../components/02_molecules/navBar'
 
 import {Element} from 'react-scroll'
+import Video from '../components/03_sections/video'
 
 export default function Home() {
   return (
@@ -29,6 +30,7 @@ export default function Home() {
         <Hero id="hero"/>
         <Element name="about"></Element>
         <About />
+        <Video />
         <Roadmap />
         <FullscreenPicture />
         <Element name="tracks">
