@@ -10,42 +10,42 @@ const data = {
   "points": [
     {
       "title": "Application deadline",
-      "icon": "/assets/users.svg",
+      "icon": "/assets/deadline.svg",
       "time": "06.04",
       "content_highlighted": "As the largest student-organized Makeathon in Germany, ",
       "content": "you can expect numerous exciting speakers, big-name companies, cool prizes, and excellent opportunities to meet like-minded international students. Due to the ongoing Corona Pandemic, all events will be held online. Therefore you don't have to live in Munich to participate."
     },
     {
       "title": "Selection Process ",
-      "icon": "/assets/users.svg",
+      "icon": "/assets/selection.svg",
       "time": "09.04",
       "content_highlighted": "As the largest student-organized Makeathon in Germany, ",
       "content": "you can expect numerous exciting speakers, big-name companies, cool prizes, and excellent opportunities to meet like-minded international students. Due to the ongoing Corona Pandemic, all events will be held online. Therefore you don't have to live in Munich to participate."
     },
     {
       "title": "Challenge Pitch",
-      "icon": "/assets/users.svg",
+      "icon": "/assets/pitch.svg",
       "time": "11.04",
       "content_highlighted": "As the largest student-organized Makeathon in Germany, ",
       "content": "you can expect numerous exciting speakers, big-name companies, cool prizes, and excellent opportunities to meet like-minded international students. Due to the ongoing Corona Pandemic, all events will be held online. Therefore you don't have to live in Munich to participate."
     },
     {
       "title": "Workshops",
-      "icon": "/assets/users.svg",
+      "icon": "/assets/workshops.svg",
       "time": "12.04 - 15.04",
       "content_highlighted": "As the largest student-organized Makeathon in Germany, ",
       "content": "you can expect numerous exciting speakers, big-name companies, cool prizes, and excellent opportunities to meet like-minded international students. Due to the ongoing Corona Pandemic, all events will be held online. Therefore you don't have to live in Munich to participate."
     },
     {
       "title": "Business Talks",
-      "icon": "/assets/users.svg",
+      "icon": "/assets/business_talks.svg",
       "time": "18.04 - 21.04",
       "content_highlighted": "As the largest student-organized Makeathon in Germany, ",
       "content": "you can expect numerous exciting speakers, big-name companies, cool prizes, and excellent opportunities to meet like-minded international students. Due to the ongoing Corona Pandemic, all events will be held online. Therefore you don't have to live in Munich to participate."
     },
     {
       "title": "Makeathon",
-      "icon": "/assets/users.svg",
+      "icon": "/assets/makeathon.svg",
       "time": "22.04 - 24.04",
       "content_highlighted": "As the largest student-organized Makeathon in Germany, ",
       "content": "you can expect numerous exciting speakers, big-name companies, cool prizes, and excellent opportunities to meet like-minded international students. Due to the ongoing Corona Pandemic, all events will be held online. Therefore you don't have to live in Munich to participate."
@@ -73,11 +73,11 @@ export default function Roadmap(){
           {data.points.map(function(point, index){
             if(roadIndex >= index){
               return <div className={styles.PointMarked} key={index} onClick={()=>setRoadIndex(index)}>
-                <Image width="16px" height="16px" src={point.icon} alt={point.title}/>
+                <Image layout='fill' objectFit='cover' src={point.icon} alt={point.title}/>
               </div>
             }else{
               return <div className={styles.Point} key={index} onClick={()=>setRoadIndex(index)}>
-                <Image width="16px" height="16px" src={point.icon} alt={point.title}/>
+                <Image layout='fill' objectFit='cover' src={point.icon} alt={point.title}/>
               </div>
             }
           })}

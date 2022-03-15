@@ -59,6 +59,7 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  position: relative;
 }
 .PointMarked{
   width: 40px;
@@ -70,6 +71,7 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  position: relative;
 }
 .TextContainer{
   width: 100%;
