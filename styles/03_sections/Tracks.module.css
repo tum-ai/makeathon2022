@@ -76,6 +76,26 @@
   gap: 32px;
   margin: 24px 0;
 }
+.ContentTextConatiner{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.ContentSub{
+  width: calc(((100% - (3 * 24px)) / 4 * 3) + (2 * 24px));
+}
+.ListHeadline{
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: 0.05em;
+  color: #979797;
+}
+.List{
+  padding-inline-start: 20px;
+}
 .ChallengeContainer{
   display: flex;
   gap: 24px;

@@ -7,7 +7,7 @@ export default function Paragraph2({normalContent, highlightedContent, isDarkBac
     </div>);
   }else{
     return(<div className={styles.Paragraph2Item}>
-      <h1 className={styles.NormalParagraphDark}><span className={styles.HighlightedContentDark}>{highlightedContent}</span>{normalContent}</h1>
+      <p className={styles.NormalParagraphDark}><span className={styles.HighlightedContentDark}>{highlightedContent}</span>{normalContent}</p>
     </div>);
   }
 }

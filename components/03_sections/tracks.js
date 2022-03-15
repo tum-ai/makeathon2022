@@ -6,6 +6,7 @@ import Image from 'next/image'
 import Paragraph2 from '../01_atoms/fonts_paragraph2'
 
 import { useState } from 'react'
+import ReactAudioPlayer from 'react-audio-player';
 
 const data = {
   "chapter_number": "02",
@@ -16,9 +17,20 @@ const data = {
   "paragraph": "you can expect numerous exciting speakers, big-name companies, cool prizes, and excellent opportunities to meet like-minded international students.",
   "track_list": [
     {
-      "title": "Health",
-      "icon": "/assets/health.svg",
-      "text": "Bring together companies and students through projects and events about AI.",
+      "title": "Education",
+      "icon": "/assets/education.svg",
+      "text": "This track is about empowering & enhancing education for people of all ages and backgrounds.",
+      "soundfile": "/sounds/sound.mp3",
+      "soundtitle": "Why is education important?",
+      "userImage": "/assets/pic.png",
+      "userLink": "https://www.google.com",
+      "subText": "The pandemic in particular significantly accelerated the digitization of classrooms and now presents far-reaching opportunities to actively drive the shift to Remote Learning.",
+      "guidingQuestions": [
+        "How can Remote Learning enhance access to education?",
+        "In which way can technology embrace the positive effects of Remote Learning?",
+        "What technologies could we build to help teachers quickly pivot from in-person to remote learning and vice versa?",
+        "What are the unresolved challenges (access to education in many countries, quality & effectiveness of education, personalized learning, affordability)?",
+      ],
       "challeges": [
         {
           "image": "/assets/woods.png",
@@ -37,7 +49,18 @@ const data = {
     {
       "title": "Environment",
       "icon": "/assets/environment.svg",
-      "text": "Bring together companies and students through projects and events about AI.",
+      "text": "Projects in this track look at how Technology can help make humanity's treatment of our planet more sustainable.",
+      "soundfile": "/sounds/test.mp3",
+      "soundtitle": "Why is education important?",
+      "userImage": "/assets/pic.png",
+      "userLink": "https://www.google.com",
+      "subText": "The pandemic in particular significantly accelerated the digitization of classrooms and now presents far-reaching opportunities to actively drive the shift to Remote Learning.",
+      "guidingQuestions": [
+        "How can Remote Learning enhance access to education?",
+        "In which way can technology embrace the positive effects of Remote Learning?",
+        "What technologies could we build to help teachers quickly pivot from in-person to remote learning and vice versa?",
+        "What are the unresolved challenges (access to education in many countries, quality & effectiveness of education, personalized learning, affordability)?",
+      ],
       "challeges": [
         {
           "image": "/assets/woods.png",
@@ -48,9 +71,20 @@ const data = {
       ],
     },
     {
-      "title": "Eductaion",
-      "icon": "/assets/education.svg",
-      "text": "Bring together companies and students through projects and events about AI.",
+      "title": "MedTech",
+      "icon": "/assets/health.svg",
+      "text": "Projects in this track investigate the possibilities of new technologies for better understanding and solving medicine and health-related problems.",
+      "soundfile": "/sounds/test.mp3",
+      "soundtitle": "Why is education important?",
+      "userImage": "/assets/pic.png",
+      "userLink": "https://www.google.com",
+      "subText": "The pandemic in particular significantly accelerated the digitization of classrooms and now presents far-reaching opportunities to actively drive the shift to Remote Learning.",
+      "guidingQuestions": [
+        "How can Remote Learning enhance access to education?",
+        "In which way can technology embrace the positive effects of Remote Learning?",
+        "What technologies could we build to help teachers quickly pivot from in-person to remote learning and vice versa?",
+        "What are the unresolved challenges (access to education in many countries, quality & effectiveness of education, personalized learning, affordability)?",
+      ],
       "challeges": [
         {
           "image": "/assets/woods.png",
@@ -99,6 +133,31 @@ export default function Tracks(){
                   </div>
                 </div>
                 {trackIndex == index ? <div className={styles.Content}>
+                  <div className={styles.ContentTextConatiner}>
+                    <div className={styles.ContentSub}>
+                      <ReactAudioPlayer
+                        src={track.soundfile}
+                        controls
+                      />
+                    </div>
+                  </div>
+                  <div className={styles.ContentTextConatiner}>
+                    <div className={styles.ContentSub}>
+                      <Paragraph2 isDarkBackground={false} normalContent={track.text} highlightedContent={""}/>
+                    </div>
+                  </div>
+                  <div className={styles.ContentTextConatiner}>
+                    <div className={styles.ContentSub}>
+                      <div className={styles.ListHeadline}>GUIDING QUESTIONS</div>
+                      <ul className={styles.List}>
+                        {track.guidingQuestions.map((question, index)=>(
+                          <li key={index}>
+                            <Paragraph2 normalContent={question} />
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
                   {track.challeges.map((challenge,index)=>(
                     <div key={index} className={styles.ChallengeContainer}>
                       <div className={styles.FirstContainer}>
