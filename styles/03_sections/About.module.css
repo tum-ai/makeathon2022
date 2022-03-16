@@ -9,6 +9,7 @@
   background: linear-gradient(295.13deg, #F6F2FF 7.21%, #FFFFFF 93.4%), #C4C4C4;
   padding-top: 1170px;
   padding-bottom: 120px;
+  gap: 48px;
 }
 .Grid{
   width: 1200px;
@@ -30,6 +31,37 @@
 .Button{
   width: fit-content;
   cursor: pointer;
+}
+.Player{
+  width: calc(((100% - (5 * 24px)) / 6 * 2) + (1 * 24px));
+  display: flex;
+  justify-content: space-between;
+}
+.PlayerSeparator{
+  width: 2px;
+  background-color: #000000;
+}
+.PlayerRightContainer{
+  width: calc(100% - 30px);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.PlayerHeader{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.Author{
+  width: 52px;
+  height: 52px;
+  position: relative;
+  border-radius: 26px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.Text{
+  width: calc(100% - 76px);
 }
 
 @media only screen and (max-width: 1300px) {
