@@ -2,11 +2,13 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  background: linear-gradient(295.13deg, #F6F2FF 7.21%, #FFFFFF 93.4%), #C4C4C4;
 }
 .Grid{
   width: 100%;
-  max-width: 1800px;
+  max-width: 1200px;
   display: flex;
+  align-items: center;
 }
 .LeftContainer{
   width: 50%;
@@ -52,18 +54,29 @@
 .Point{
   width: 40px;
   height: 40px;
-  border-radius: 20px;
-  border: 2px solid #A0A0A0;
-  background-color: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
   position: relative;
 }
+.LittlePoint{
+  width: 10px;
+  height: 10px;
+  background-color: #A0A0A0;
+  border-radius: 5px;
+}
+.LittlePoint:hover{
+  width: 15px;
+  height: 15px;
+  background-color: #A0A0A0;
+  border-radius: 10px;
+  transition: all 0.1s;
+}
 .PointMarked{
-  width: 40px;
-  height: 40px;
+  width: 20px;
+  height: 20px;
+  margin: 10px;
   border-radius: 20px;
   border: 2px solid #5C2EE8;
   background-color: #ffffff;
@@ -101,11 +114,11 @@
 
 .RightContainer{
   width: 50%;
+  height: 80%;
   background: linear-gradient(125.53deg, #211B45 8.83%, #0F2538 99.14%), #C4C4C4;
-  padding: 60px;
   display: flex;
   flex-direction: column;
-  gap: 100px;
+  justify-content: space-between;
 }
 .TopContainer{
   width: 100%; 
@@ -115,22 +128,18 @@
 .CardTime {
   padding-top: 280px;
   text-align: right;
+  padding-right: 40px;
 }
 .BottomContainer{
   display: flex;
   flex-direction: column;
   gap: 24px;
+  padding: 40px;
 }
 
-@media only screen and (max-width: 1100px) {
-  .TextContainer{
-    display: none;
-  }
-  .LeftContainer{
-    width: 20%;
-  }
-  .RightContainer{
-    width: 80%;
+@media only screen and (max-width: 1300px) {
+  .Grid{
+    width: 800px;
   }
 }
 @media only screen and (max-width: 850px) {
@@ -139,7 +148,6 @@
   }
   .RightContainer{
     width: 85%;
-    padding: 8vw;
   }
   .TopContainer{
     height: 160px;

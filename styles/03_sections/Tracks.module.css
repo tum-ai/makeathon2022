@@ -84,14 +84,35 @@
 .ContentSub{
   width: calc(((100% - (3 * 24px)) / 4 * 3) + (2 * 24px));
 }
-.ListHeadline{
-  font-family: 'IBM Plex Sans';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 12px;
-  letter-spacing: 0.05em;
-  color: #979797;
+.Player{
+  display: flex;
+  justify-content: space-between;
+}
+.PlayerSeparator{
+  width: 2px;
+  background-color: #000000;
+}
+.PlayerRightContainer{
+  width: calc(100% - 30px);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.PlayerHeader{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.Author{
+  width: 52px;
+  height: 52px;
+  position: relative;
+  border-radius: 26px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.Text{
+  width: calc(100% - 76px);
 }
 .List{
   padding-inline-start: 20px;

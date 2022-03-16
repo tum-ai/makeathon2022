@@ -49,6 +49,9 @@
   gap: 24px;
   width: 90%;
 }
+.Text{
+  width: calc(100% - 60px);
+}
 .CheckIcon{
   width: 36px;
   height: 36px;

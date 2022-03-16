@@ -9,20 +9,20 @@ import Image from 'next/image'
 const data = {
   "headline": "Join our next",
   "headline_marked": " Makeathon",
-  "paragraph_marked": "The Makeathon by TUM.ai ",
-  "paragraph": "is a weekend project that connects several hundred students to collaborate on new, innovative AI-related solutions on the topic of AI4SocialGood.",
+  "paragraph_marked": "The Makeathon by TUM.ai is a weekend project ",
+  "paragraph": "that connects several hundred students to collaborate on new, innovative AI-related solutions on the topic of AI4SocialGood.",
   "value": [
     {
       "title": "Lauch your AI project",
-      "subtitle": "in the filed of AI4SocialGood"
+      "subtitle": "Use the Makeathon to kickstart your startup journey"
     },
     {
       "title": "Grow your network",
-      "subtitle": "work, talk and connect to other students"
+      "subtitle": "Meet and socialize with motivated and likeminded people"
     },
     {
       "title": "Win awesome prices",
-      "subtitle": "up to 2000 Euro for the winning teams"
+      "subtitle": "🤫  These are still a secret. Stay tuned"
     }
   ] 
 }

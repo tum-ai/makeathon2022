@@ -19,61 +19,77 @@ const data = {
   "stories": [
     {
       "title": "CabMate",
-      "paragraph_highlighted": "As the largest student-organized Makeathon in Germany, ",
-      "paragraph": "you can expect numerous exciting speakers, big-name companies, cool prizes, and excellent opportunities to meet like-minded international students.",
+      "paragraph_highlighted": "An AI based web app that supports taxi drivers on a daily basis ",
+      "paragraph": "by predicting where the most demand will be across the city. By using CabMate cabdrivers can reduce their cruising-time and have more productive shifts.",
       "image": "/assets/story01.png",
       "members": [
         {
-          "image": "/assets/user01.png",
-          "link": "https://www.google.com",
+          "image": "/stories/nils_jacobsen.webp",
+          "link": "https://www.linkedin.com/in/nils-jacobsen/",
         },
         {
-          "image": "/assets/user02.png",
-          "link": "https://www.google.com",
+          "image": "/stories/oliver_kovacs.webp",
+          "link": "https://www.linkedin.com/in/oliver-kovacs/",
         },
         {
-          "image": "/assets/user03.png",
-          "link": "https://www.google.com",
+          "image": "/stories/ramona_dombetzki.webp",
+          "link": "https://www.linkedin.com/in/ramona-dombetzki-9a52531a0/",
         },
         {
-          "image": "/assets/user04.png",
-          "link": "https://www.google.com",
-        },
-      ]
-    },
-    {
-      "title": "CabMate",
-      "paragraph_highlighted": "As the largest student-organized Makeathon in Germany, ",
-      "paragraph": "you can expect numerous exciting speakers, big-name companies, cool prizes, and excellent opportunities to meet like-minded international students.",
-      "image": "/assets/keithRandal.png",
-      "members": [
-        {
-          "image": "/assets/user01.png",
-          "link": "https://www.google.com",
+          "image": "/stories/sebastian_wilhelm.webp",
+          "link": "https://www.linkedin.com/in/sebastian-wilhelm/",
         },
         {
-          "image": "/assets/user02.png",
-          "link": "https://www.google.com",
+          "image": "/stories/stefan_rummer.webp",
+          "link": "https://www.linkedin.com/in/stefanrmmr/",
         },
       ]
     },
     {
-      "title": "CabMate",
-      "paragraph_highlighted": "As the largest student-organized Makeathon in Germany, ",
-      "paragraph": "you can expect numerous exciting speakers, big-name companies, cool prizes, and excellent opportunities to meet like-minded international students.",
-      "image": "/assets/keithRandal.png",
+      "title": "flyAI",
+      "paragraph_highlighted": "AI as a service to enable autonomous drones to land anywhere. ",
+      "paragraph": "Added to this we create a drone fleet relocation algorithm to ensure best coverage of drone services.",
+      "image": "/stories/flyai.jpeg",
       "members": [
         {
-          "image": "/assets/user01.png",
-          "link": "https://www.google.com",
+          "image": "/stories/marcel_schlicke.jpg",
+          "link": "https://www.linkedin.com/in/marcel-schlicke-63657b18a/",
         },
         {
-          "image": "/assets/user02.png",
-          "link": "https://www.google.com",
+          "image": "/stories/mreenav_deka.jpg",
+          "link": "https://www.linkedin.com/in/mreenavdeka/",
         },
         {
-          "image": "/assets/user03.png",
-          "link": "https://www.google.com",
+          "image": "/stories/nikolas_kolbenschlag.jpg",
+          "link": "https://www.linkedin.com/in/nicolas-kolbenschlag-860161169/",
+        },
+        {
+          "image": "/stories/raphael_maier.jpg",
+          "link": "https://www.linkedin.com/in/raphael-m-952481153/",
+        },
+      ]
+    },
+    {
+      "title": "Speak Easy",
+      "paragraph_highlighted": "'Speak Easy' ",
+      "paragraph": "- a text simplification engine that automatically turns text from 'normal' into 'simple language' - language that is easily understood by elderly, cognitively impaired, mentally handicapped people and learners of a new language.",
+      "image": "/stories/speak_easy.jpeg",
+      "members": [
+        {
+          "image": "/stories/alisha_r.webp",
+          "link": "https://www.linkedin.com/in/alisha-riecker-690743187/",
+        },
+        {
+          "image": "/stories/flora_g.webp",
+          "link": "https://www.linkedin.com/in/flora-g-603274a9/",
+        },
+        {
+          "image": "/stories/nicholas.webp",
+          "link": "https://www.linkedin.com/in/nicholas-jm-wolf/",
+        },
+        {
+          "image": "/stories/vanessa.webp",
+          "link": "https://www.linkedin.com/in/vanessa-theel-624b54122/",
         },
       ]
     },
