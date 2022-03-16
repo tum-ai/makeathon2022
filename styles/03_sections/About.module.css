@@ -82,6 +82,10 @@
   .MiddleContainer{
     width: calc(((100% - (5 * 24px)) / 6 * 5) + (4 * 24px));
   }
+  .Player{
+    margin-top: 40px;
+    width: calc(((100% - (5 * 24px)) / 6 * 4) + (3 * 24px));
+  }
 }
 @media only screen and (max-width: 850px) {
   .Grid{
@@ -105,6 +109,10 @@
     width: 100%;
   }
   .Paragraph{
+    width: 100%;
+  }
+  .Player{
+    margin-top: 40px;
     width: 100%;
   }
 }

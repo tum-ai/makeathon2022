@@ -9,6 +9,21 @@
 .Grid{
     width: 1200px;
     height: calc(1200px / 16 * 9);
-    background-color: aqua;
     position: relative;
+}
+
+@media only screen and (max-width: 1300px) {
+  .Grid{
+    width: 1000px;
+    height: calc(1000px / 16 * 9);
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .Grid{
+    width: 100%;
+    height: calc(100vw / 16 * 9);
+  }
+  .VideoItem{
+    padding: 0;
+  }
 }

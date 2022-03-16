@@ -232,4 +232,10 @@
   .TracksItem{
     padding: 70px 0;
   }
+  .ContentTextConatiner{
+    width: 100%;
+  }
+  .ContentSub{
+    width: 100%;
+  }
 }
