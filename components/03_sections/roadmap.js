@@ -111,6 +111,20 @@ export default function Roadmap(){
           <Paragraph1 highlightedContent={data.points[roadIndex].content_highlighted} normalContent={data.points[roadIndex].content} isDarkBackground/>
         </div>
       </div>
+      {data.points.map((point, index)=>(
+        <div key={index} className={styles.MobileContainer}>
+          <div className={styles.TopContainer}>
+            <Image src="/assets/roadmap01.png" alt={point.title} layout="fill" objectFit='cover' />
+            <div className={styles.CardTime}>
+              <Date1 normalContent={point.time} isDarkBackground/>
+            </div>
+          </div>
+          <div className={styles.BottomContainer}>
+            <Headline2 isDarkBackground normalContent={point.title}/>
+            <Paragraph1 highlightedContent={point.content_highlighted} normalContent={point.content} isDarkBackground/>
+          </div>
+        </div>
+      ))}
     </div>
   </div>
 }
