@@ -28,7 +28,7 @@ export default function SubmitForm({data, onInputChange, isControlled, setIsAppV
         <div className={styles.Content}>
           <div className={styles.Full}>
             <DropDownInput
-              headerText="How did you hear about the hackathon?*"
+              headerText="How have you heard about the Makeathon?*"
               name="hack"
               onContentChange={(event)=>onInputChange(event)}
               value={data.hack}
@@ -39,9 +39,11 @@ export default function SubmitForm({data, onInputChange, isControlled, setIsAppV
               <option value="">Choose ...</option>
               <option value="website">Website</option>
               <option value="friends">Friends</option>
+              <option value="linkedIn">LinkedIn</option>
               <option value="work">Work</option>
               <option value="university">University</option>
-              <option value="other organisations">Other organisations</option>
+              <option value="other student initiatives">Other student initiatives</option>
+              <option value="other">Other</option>
             </DropDownInput>
           </div>
           <div className={styles.Full}>
@@ -61,6 +63,17 @@ export default function SubmitForm({data, onInputChange, isControlled, setIsAppV
               onContentChange={(event)=>onInputChange(event)}
               value={data.share}
               isControlled={isControlled}
+            />
+          </div>
+          <div className={styles.Full}>
+            <BoolInput 
+              headerText="I hereby confirm that I will  participate for the full 48 hours of the Makeathon. (22-24.04)*"
+              name="confirmation"
+              onContentChange={(event)=>onInputChange(event)}
+              value={data.future}
+              isControlled={isControlled}
+              setIsValid={(value)=>{let obj = isPageValid; obj.confirmation = value; setIsPageValid(obj); checkPageStatus();}}
+              isRequired={true}
             />
           </div>
         </div>

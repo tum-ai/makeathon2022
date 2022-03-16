@@ -10,10 +10,7 @@ import { useState } from 'react'
 export default function ProfessionForm({data, onInputChange, isControlled, setIsAppValid}){
 
   const [isPageValid, setIsPageValid] = useState({
-    "participation": false,
-    "reach": false,
-    "contribution": false,
-    "learing": false
+    "test": true,
   });
 
   function checkPageStatus(){
@@ -21,6 +18,8 @@ export default function ProfessionForm({data, onInputChange, isControlled, setIs
       setIsAppValid(true);
     } 
   }
+
+  checkPageStatus();
 
   return <div className={styles.ProfessionFormItem}>
     <div className={styles.Grid}>
@@ -32,50 +31,32 @@ export default function ProfessionForm({data, onInputChange, isControlled, setIs
         <div className={styles.Content}>
           <div className={styles.Full}>
             <TextAreaInput 
-              headerText="Why do you want to take part in the hack?*" 
+              headerText="What are your main reasons for participating in the Makeathon?" 
               placeholderText="Enter text here ..."
               name="participation"
               onContentChange={(event)=>onInputChange(event)}
               value={data.participation}
               isControlled={isControlled}
-              setIsValid={(value)=>{let obj = isPageValid; obj.participation = value; setIsPageValid(obj); checkPageStatus();}}
-              isRequired={true}
             />
           </div>
           <div className={styles.Full}>
             <TextAreaInput 
-              headerText="What do you want to reach?*" 
-              placeholderText="Enter text here ..."
-              name="reach"
-              onContentChange={(event)=>onInputChange(event)}
-              value={data.reach}
-              isControlled={isControlled}
-              setIsValid={(value)=>{let obj = isPageValid; obj.reach = value; setIsPageValid(obj); checkPageStatus();}}
-              isRequired={true}
-            />
-          </div>
-          <div className={styles.Full}>
-            <TextAreaInput 
-              headerText="What do you think you can contribute to?*" 
-              placeholderText="Enter text here ..."
-              name="contribution"
-              onContentChange={(event)=>onInputChange(event)}
-              value={data.contribution}
-              isControlled={isControlled}
-              setIsValid={(value)=>{let obj = isPageValid; obj.contribution = value; setIsPageValid(obj); checkPageStatus();}}
-              isRequired={true}
-            />
-          </div>
-          <div className={styles.Full}>
-            <TextAreaInput 
-              headerText="What do you want to learn?*" 
+              headerText="What do you want to learn during the Makeathon?" 
               placeholderText="Enter text here ..."
               name="learing"
               onContentChange={(event)=>onInputChange(event)}
               value={data.learing}
               isControlled={isControlled}
-              setIsValid={(value)=>{let obj = isPageValid; obj.learing = value; setIsPageValid(obj); checkPageStatus();}}
-              isRequired={true}
+            />
+          </div>
+          <div className={styles.Full}>
+            <TextAreaInput 
+              headerText="Where do you think you can contribute the most during the Makeathon?" 
+              placeholderText="Enter text here ..."
+              name="contribution"
+              onContentChange={(event)=>onInputChange(event)}
+              value={data.contribution}
+              isControlled={isControlled}
             />
           </div>
         </div>
@@ -90,30 +71,12 @@ export default function ProfessionForm({data, onInputChange, isControlled, setIs
         <div className={styles.Content}>
           <div className={styles.Half}>
             <BoolInput 
-              headerText="Do you have programming skills?"
-              name="codeSkill"
-              onContentChange={(event)=>onInputChange(event)}
-              value={data.codeSkill}
-              isControlled={isControlled}
-            />
-          </div>
-          <div className={styles.Half}>
-            <TextInput 
-              headerText="If yes – which skills do you have? (Do not be afraid is this does not apply to you)" 
-              placeholderText="Enter skills here ..."
-              name="codeSkillDescription"
-              onContentChange={(event)=>onInputChange(event)}
-              value={data.codeSkillDescription}
-              isControlled={isControlled}
-            />
-          </div>
-          <div className={styles.Half}>
-            <BoolInput 
-              headerText="Have you done a hackathon/makeathon before?"
+              headerText="Have you previously participated in a Hackathon?"
               name="hackathon"
               onContentChange={(event)=>onInputChange(event)}
               value={data.hackathon}
               isControlled={isControlled}
+              setIsValid={(value)=>{let obj = isPageValid; obj.mailForward = value; setIsPageValid(obj); checkPageStatus();}}
             />
           </div>
           <div className={styles.Half}>
@@ -123,6 +86,27 @@ export default function ProfessionForm({data, onInputChange, isControlled, setIs
               name="hackathonList"
               onContentChange={(event)=>onInputChange(event)}
               value={data.hackathonList}
+              isControlled={isControlled}
+            />
+          </div>
+          <div className={styles.Half}>
+            <BoolInput 
+              headerText="Do you have programming skills?"
+              name="codeSkill"
+              onContentChange={(event)=>onInputChange(event)}
+              value={data.codeSkill}
+              isControlled={isControlled}
+              setIsValid={(value)=>{let obj = isPageValid; obj.mailForward = value; setIsPageValid(obj); checkPageStatus();}}
+
+            />
+          </div>
+          <div className={styles.Half}>
+            <TextInput 
+              headerText="If yes – which skills do you have? (Do not be afraid is this does not apply to you)" 
+              placeholderText="Enter skills here ..."
+              name="codeSkillDescription"
+              onContentChange={(event)=>onInputChange(event)}
+              value={data.codeSkillDescription}
               isControlled={isControlled}
             />
           </div>
@@ -136,16 +120,6 @@ export default function ProfessionForm({data, onInputChange, isControlled, setIs
       </div>
       <div className={styles.Right}>
         <div className={styles.Content}>
-          <div className={styles.Full}>
-            <TextInput 
-              headerText="What is your idea?" 
-              placeholderText="Talk about your idea here ..."
-              name="idea"
-              onContentChange={(event)=>onInputChange(event)}
-              value={data.idea}
-              isControlled={isControlled}
-            />
-          </div>
           <div className={styles.Half}>
             <BoolInput 
               headerText="Are you part of a team?"
@@ -153,6 +127,7 @@ export default function ProfessionForm({data, onInputChange, isControlled, setIs
               onContentChange={(event)=>onInputChange(event)}
               value={data.team}
               isControlled={isControlled}
+              setIsValid={(value)=>{let obj = isPageValid; obj.mailForward = value; setIsPageValid(obj); checkPageStatus();}}
             />
           </div>
           <div className={styles.Half}>

@@ -11,7 +11,15 @@ import Button from '../01_atoms/button';
 
 export default function ApplicationForm(){
   const [applicationState,changeApplicationState] = useState(0);
-  const [applicationData,setApplicationData] = useState({});
+  const [applicationData,setApplicationData] = useState({
+    "confirmation": "false",
+    "furture": "false",
+    "mailForward": "false",
+    "academic": "false",
+    "hackathon": "false",
+    "codeSkill": "false",
+    "team": "false"
+  });
   const [isControlled, setIsControlled] = useState(false);
   const [isAppValid,setIsAppValid] = useState(false);
 
@@ -41,6 +49,9 @@ export default function ApplicationForm(){
       setIsControlled(false);
       setIsAppValid(false);
     }, 500);
+    if(applicationState == 2){
+      console.log(applicationData);
+    }
   }
   function handlePrevPage(){
     changeApplicationState(applicationState - 1); 
