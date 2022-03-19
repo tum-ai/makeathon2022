@@ -22,19 +22,23 @@ export default function ApplicationForm(){
   });
   const [isControlled, setIsControlled] = useState(false);
   const [isAppValid,setIsAppValid] = useState(false);
+  
+  var myHeaders = new Headers();
+  myHeaders.append("Content-Type", "application/json");
 
-  function submitData(data) {
-    fetch("https://react-test-64a47-default-rtdb.firebaseio.com/meetups.json", {
-      method: "POST",
-      body: JSON.stringify(data),
-      header: {
-        "Content-Type": "application/json",
-      },
-    }).then(() => {
-      console.log("success");
-      applicationState(4);
-    });
-  }
+  var raw = JSON.stringify({"firstname":"test","lastname":"test","email":"nils.jacobsen98@gmail.com","phone":"test","dateOfBirth":"test","nationality":"test","placeOfResidence":"test","timeZone":"test","areaOfExpertise":"test","bestDescription":"test","academicBackground":"test","programmingSkils":"test","hackExperience":"test","university":"test","idea":"test","challenges":"test","teamDetails":"test","whyParticipate":"test","whatReach":"test","whatContribution":"test","whatLearn":"test","linkedIn":"test","personalWebsite":"test","github":"test","hackAwareness":"test","futureMember":"test","additionalInfo":"test","participationPossible":"test","openAI":"test"});
+
+  var requestOptions = {
+    method: 'POST',
+    headers: myHeaders,
+    body: raw,
+    redirect: 'follow'
+  };
+
+  fetch("https://tum-ai-backends-dev.herokuapp.com/makeathon/submit-application", requestOptions)
+    .then(response => response.text())
+    .then(result => console.log(result))
+    .catch(error => console.log('error', error));
 
   function onInputChange(event){
     let newObj = applicationData;
