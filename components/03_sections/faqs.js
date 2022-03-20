@@ -9,7 +9,7 @@ import { useState } from 'react'
 
 const data = {
   "chapter_title": "Q&A",
-  "chapter_number": "05",
+  "chapter_number": "06",
   "title": "Do you have any ",
   "title_highlighted": "questions?", 
   "paragraph_highlighted": "As the largest student-organized Makeathon in Germany, ",

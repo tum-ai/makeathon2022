@@ -142,7 +142,7 @@ export default function Tracks(){
                   </div>
                 </div>
                 {trackIndex == index ? <div className={styles.Content}>
-                  <div className={styles.ContentTextConatiner}>
+                  {/* <div className={styles.ContentTextConatiner}>
                     <div className={styles.ContentSub}>
                       <div className={styles.Player}>
                         <div className={styles.PlayerSeparator}></div>
@@ -171,7 +171,7 @@ export default function Tracks(){
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
                   <div className={styles.ContentTextConatiner}>
                     <div className={styles.ContentSub}>
                       <Paragraph2 highlightedContent={"Guiding Questions"} />

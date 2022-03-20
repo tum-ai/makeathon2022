@@ -15,6 +15,7 @@ import NavBar from '../components/02_molecules/navBar'
 
 import {Element} from 'react-scroll'
 import Video from '../components/03_sections/video'
+import SponsorInfo from '../components/03_sections/sponsorInfo'
 
 export default function Home() {
   return (
@@ -43,6 +44,7 @@ export default function Home() {
           <Stories />
         </Element>
         <Sponsors />
+        <SponsorInfo />
         <Element name="faqs">
           <Faqs />
         </Element>

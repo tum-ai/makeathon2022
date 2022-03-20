@@ -49,7 +49,7 @@ export default function About(){
           </div>
         </div>
       </div>
-      <div className={styles.Grid} style={{justifyContent: "flex-end"}}>
+      {/* <div className={styles.Grid} style={{justifyContent: "flex-end"}}>
         <div className={styles.Player}>
           <div className={styles.PlayerSeparator}></div>
           <div className={styles.PlayerRightContainer}>
@@ -77,7 +77,7 @@ export default function About(){
             />
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   </div>
 }

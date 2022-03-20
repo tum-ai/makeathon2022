@@ -1,0 +1,116 @@
+.AboutItem{
+    width: 100%;
+  }
+  .Description{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #F5F3FB;
+    padding-bottom: 120px;
+    gap: 48px;
+  }
+  .Grid{
+    width: 1200px;
+    display: flex;
+    gap: 24px;
+  }
+  .LeftContainer{
+    width: calc(((100% - (5 * 24px)) / 6 * 1) + (0 * 24px));
+  }
+  .MiddleContainer{
+    width: calc(((100% - (5 * 24px)) / 6 * 4) + (3 * 24px));
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+  }
+  .Paragraph{
+    width: calc(((100% - (3 * 24px)) / 4 * 3) + (2 * 24px));
+  }
+  .Button{
+    width: fit-content;
+    cursor: pointer;
+  }
+  .Player{
+    width: calc(((100% - (5 * 24px)) / 6 * 2) + (1 * 24px));
+    display: flex;
+    justify-content: space-between;
+  }
+  .PlayerSeparator{
+    width: 2px;
+    background-color: #000000;
+  }
+  .PlayerRightContainer{
+    width: calc(100% - 30px);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .PlayerHeader{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .Author{
+    width: 52px;
+    height: 52px;
+    position: relative;
+    border-radius: 26px;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .Text{
+    width: calc(100% - 76px);
+  }
+  
+  @media only screen and (max-width: 1300px) {
+    .Grid{
+      width: 1000px;
+    }
+    .Description{
+      padding-top: 1100px;
+    }
+  }
+  @media only screen and (max-width: 1100px) {
+    .Grid{
+      width: 800px;
+    }
+    .Description{
+      padding-top: 1700px;
+    }
+    .MiddleContainer{
+      width: calc(((100% - (5 * 24px)) / 6 * 5) + (4 * 24px));
+    }
+    .Player{
+      margin-top: 40px;
+      width: calc(((100% - (5 * 24px)) / 6 * 4) + (3 * 24px));
+    }
+  }
+  @media only screen and (max-width: 850px) {
+    .Grid{
+      width: 90%;
+      flex-direction: column;
+    }
+    .AboutItem{
+      width: 100%;
+      margin-top: -200vw;
+    }
+    .Description{
+      padding-top: calc(400vw - 300px);
+    }
+    .MiddleContainer{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+    }
+    .LeftContainer{
+      width: 100%;
+    }
+    .Paragraph{
+      width: 100%;
+    }
+    .Player{
+      margin-top: 40px;
+      width: 100%;
+    }
+  }

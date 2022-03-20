@@ -8,6 +8,8 @@ import Headline1 from '../01_atoms/fonts_headline1'
 import Image from 'next/image'
 import Paragraph1 from '../01_atoms/fonts_paragraph1'
 import $ from 'jquery';
+import Headline2 from '../01_atoms/fonts_headline2'
+import Link from 'next/link'
 
 const data = {
   "chapter_title": "The speakers",
@@ -15,31 +17,28 @@ const data = {
   "title": "Who will be on stage?",
   "speakers": [
     {
-      "name": "Keith Randall",
-      "paragraph_highlighted": "As the largest student-organized Makeathon in Germany, ",
-      "paragraph": "you can expect numerous exciting speakers, big-name companies, cool prizes, and excellent opportunities to meet like-minded international students.",
-      "linkedIn_link": "https://www.google.com",
-      "twitter_link": "https://www.google.com",
-      "website_link": "https://www.google.com",
-      "image": "/assets/keithRandal.png"
+      "name": "Cecilia Carbonelli",
+      "paragraph_highlighted": "Infineon | Senior principal",
+      "paragraph": "– system and algorithm architect at Infineon AG. Cecilia is an author of 35+ scientific publications and numerous patents, with broad experience in the areas of system and algorithm design, data science, machine learning, smart sensors, information theory, and signal processing.",
+      "linkedIn_link": "https://www.linkedin.com/in/cecilia-carbonelli-a83007b/",
+      "website_link": "https://www.infineon.com",
+      "image": "/speakers/Cecilia Carbonelli.jpg"
     },
     {
-      "name": "Peter Lustig2",
-      "paragraph_highlighted": "As the largest student-organized Makeathon in Germany, ",
-      "paragraph": "you can expect numerous exciting speakers, big-name numerous exciting speakers, big-name companies, cool prizes, and excellent opportunities to meet like-minded international students.",
-      "linkedIn_link": "https://www.google.com",
-      "twitter_link": "https://www.google.com",
-      "website_link": "https://www.google.com",
-      "image": "/assets/peterLustig.png"
+      "name": "Nico Kelling",
+      "paragraph_highlighted": "Infineon | Head of AI Center of Excellence ",
+      "paragraph": "at Infineon AG will share how a leading semiconductor company is using AI to products its producs and internal products.",
+      "linkedIn_link": "https://www.linkedin.com/in/nico-kelling-b686787/",
+      "website_link": "https://www.infineon.com",
+      "image": "/speakers/Nico_Kelling.jpg"
     },
     {
-      "name": "Peter Lustig3",
-      "paragraph_highlighted": "As the largest student-organized Makeathon in Germany, ",
-      "paragraph": "you can expect numerous exciting speakers, big-name numerous exciting speakers, big-name companies, cool prizes, and excellent numerous exciting speakers, big-name opportunities numerous exciting speakers, big-name to meet like-minded international students.",
-      "linkedIn_link": "https://www.google.com",
-      "twitter_link": "https://www.google.com",
-      "website_link": "https://www.google.com",
-      "image": "/assets/peterLustig.png"
+      "name": "Lorenzo Servadei",
+      "paragraph_highlighted": "Infineon |  Senior staff ML engineer ",
+      "paragraph": "at Infineon AG and lecturer at the Technical University of Munich. Lorenzo has researched in the field of computer vision, image segmentation and crowd-sourcing on web applications, and deep learning approaches in approaches in firmware/hardware and trade-off analysis.",
+      "linkedIn_link": "https://www.linkedin.com/in/lorenzo-servadei-32140937/",
+      "website_link": "https://www.infineon.com",
+      "image": "/speakers/speaker03.jpeg"
     },
   ]
 
@@ -47,7 +46,7 @@ const data = {
 
 function changeStyles(){
   const slider = $(".slick-list")[1];
-  console.log($(slider).css("overflow","visible"));
+  $(slider).css("overflow","visible");
 }
 
 export default function Speakers(){
@@ -74,22 +73,19 @@ export default function Speakers(){
           <Headline1 isH1={false} normalContent={data.title} isDarkBackground />
           <Slider {...settings} onInit={()=>changeStyles()}>
             {data.speakers.map((speaker,index)=>(
-              <div key={index} className={styles.SpeakerContainer}>
+              <div key={speaker.name} className={styles.SpeakerContainer}>
                 <div className={styles.TextContainer}>
                   <div className={styles.TopContainer}>
-                    <Paragraph1 isDarkBackground highlightedContent={speaker.name} isH1={false} />
+                    <Headline2 isDarkBackground normalContent={speaker.name} isH1={false} />
                     <Paragraph2 isDarkBackground highlightedContent={speaker.paragraph_highlighted} normalContent={speaker.paragraph}/>
                   </div>
                   <div className={styles.SocialLinks}>
-                    {speaker.website_link != "" ? <a href={speaker.website_link} className={styles.Link}>
-                      <Image src={"/assets/website.svg"} alt="website icon" layout="fill" objectFit="cover" />
-                    </a> : ""}
-                    {speaker.linkedIn_link != "" ? <a href={speaker.linkedIn_link} className={styles.Link}>
+                    {speaker.linkedIn_link != "" ? <Link href={speaker.linkedIn_link} passHref><div className={styles.Link}>
                       <Image src={"/assets/linkedIn.svg"} alt="linkedIn icon" layout="fill" objectFit="cover" />
-                    </a> : ""}
-                    {speaker.twitter_link != "" ? <a href={speaker.twitter_link} className={styles.Link}>
-                      <Image src={"/assets/twitter.svg"} alt="twitter icon" layout="fill" objectFit="cover" />
-                    </a> : ""}
+                    </div></Link> : ""}
+                    {speaker.website_link != "" ? <Link href={speaker.website_link} passHref><div  className={styles.Link}>
+                      <Image src={"/assets/website.svg"} alt="website icon" layout="fill" objectFit="cover" />
+                    </div></Link> : ""}
                   </div>
                 </div>
                 <div className={styles.ImageContainer}>
