@@ -15,9 +15,57 @@ const data = {
   "chapter_title": "Our tracks",
   "title": "We would love to introduce you to the",
   "title_highlighted": " following tracks.",
-  "paragraph_highlighted": "The main idea of our Makeathon is to develop a solution powered by AI with a cross-functional team. ",
-  "paragraph": "The solutions you will be working on have to fit into one of three tracks: Education, Environment or MedTech. Within these tracks, you can either join a challenge pitched by one of our industry partners (Challenge-Setter), or if you have an awesome idea yourself you can also pitch it, so you can convince others to join you in building a viable business concept.",
+  "paragraph_highlighted": "The main idea of TUM.ai Makeathon is to develop a solution powered by AI within a cross-functional team. ",
+  "paragraph": "The solutions you will be working on have to fit into one of three tracks: Education, Environment or MedTech. Within these tracks, you can either join a challenge pitched by one of our industry partners, challenge setter, or if you have an awesome idea yourself you can also pitch it, so you can convince others to join you in building a viable business concept.",
   "track_list": [
+    {
+      "title": "MedTech",
+      "icon": "/assets/health.svg",
+      "text": "Find ways for AI to improve modern-day health care and make it more accessible",
+      "soundfile": "/sounds/test.mp3",
+      "soundtitle": "MedTech - Why should we care? 💊",
+      "soundAuthor": "Nicolas Remerscheid",
+      "userImage": "/assets/author.png",
+      "userLink": "https://www.google.com",
+      "guidingQuestions": [
+        "How can we improve access to healthcare for people of different ages and backgrounds?",
+        "What are the unresolved issues, and how can Technology help?",
+        "How can healthcare become more personalized?",
+        "How can a common understanding of the significance of a healthy lifestyle be achieved?",
+      ],
+      "challeges": [
+        {
+          "image": "/assets/woods.png",
+          "title": "Google AI Geoecology",
+          "paragraph_highlighted": "As the largest student-organized Makeathon in Germany, ",
+          "paragraph": "you can expect numerous exciting speakers, big-name companies, cool prizes, and excellent opportunities to meet like-minded international students."
+        }
+      ],
+    },
+    {
+      "title": "Environment",
+      "icon": "/assets/environment.svg",
+      "text": "Utilize AI to provide more environmentally sustainable behaviors.",
+      "soundfile": "/sounds/test.mp3",
+      "soundtitle": "Let's talk about environment? 🍃",
+      "soundAuthor": "Nicolas Remerscheid",
+      "userImage": "/assets/author.png",
+      "userLink": "https://www.google.com",
+      "guidingQuestions": [
+        "In what ways is our current Technology unsustainable, and how could we address this?",
+        "How can we address the tradeoff between sustainability and affordability?",
+        "How can Technology minimize the negative impact of human behavior?",
+        "What must be done to establish a shared awareness of our responsibility towards the environment, and how can Technology help accomplish this?",
+      ],
+      "challeges": [
+        {
+          "image": "/assets/woods.png",
+          "title": "Google AI Geoecology",
+          "paragraph_highlighted": "As the largest student-organized Makeathon in Germany, ",
+          "paragraph": "you can expect numerous exciting speakers, big-name companies, cool prizes, and excellent opportunities to meet like-minded international students."
+        }
+      ],
+    },
     {
       "title": "Education",
       "icon": "/assets/education.svg",
@@ -46,54 +94,6 @@ const data = {
           "paragraph_highlighted": "As the largest student-organized Makeathon in Germany, ",
           "paragraph": "you can expect numerous exciting speakers, big-name companies, cool prizes, and excellent opportunities to meet like-minded international students."
         },
-      ],
-    },
-    {
-      "title": "Environment",
-      "icon": "/assets/environment.svg",
-      "text": "Utilise AI to make humanity's treatment of our planet more sustainable",
-      "soundfile": "/sounds/test.mp3",
-      "soundtitle": "Let's talk about environment? 🍃",
-      "soundAuthor": "Nicolas Remerscheid",
-      "userImage": "/assets/author.png",
-      "userLink": "https://www.google.com",
-      "guidingQuestions": [
-        "In what ways is our current Technology unsustainable, and how could we address this?",
-        "How can we address the tradeoff between sustainability and affordability?",
-        "How can Technology minimize the negative impact of human behavior?",
-        "What must be done to establish a shared awareness of our responsibility towards the environment, and how can Technology help accomplish this?",
-      ],
-      "challeges": [
-        {
-          "image": "/assets/woods.png",
-          "title": "Google AI Geoecology",
-          "paragraph_highlighted": "As the largest student-organized Makeathon in Germany, ",
-          "paragraph": "you can expect numerous exciting speakers, big-name companies, cool prizes, and excellent opportunities to meet like-minded international students."
-        }
-      ],
-    },
-    {
-      "title": "MedTech",
-      "icon": "/assets/health.svg",
-      "text": "Find ways for AI to improve modern day health care and make it more accessible",
-      "soundfile": "/sounds/test.mp3",
-      "soundtitle": "MedTech - Why should we care? 💊",
-      "soundAuthor": "Nicolas Remerscheid",
-      "userImage": "/assets/author.png",
-      "userLink": "https://www.google.com",
-      "guidingQuestions": [
-        "How can we improve access to healthcare for people of different ages and backgrounds?",
-        "What are the unresolved issues, and how can Technology help?",
-        "How can healthcare become more personalized?",
-        "How can a common understanding of the significance of a healthy lifestyle be achieved?",
-      ],
-      "challeges": [
-        {
-          "image": "/assets/woods.png",
-          "title": "Google AI Geoecology",
-          "paragraph_highlighted": "As the largest student-organized Makeathon in Germany, ",
-          "paragraph": "you can expect numerous exciting speakers, big-name companies, cool prizes, and excellent opportunities to meet like-minded international students."
-        }
       ],
     },
   ]

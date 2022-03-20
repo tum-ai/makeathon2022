@@ -14,8 +14,8 @@ const data = {
   "chapter_number": "04",
   "title": "Winning teams of the last ",
   "title_highlighted": "Makeathon.",
-  "paragraph_highlighted": "As the largest student-organized Makeathon in Germany, ",
-  "paragraph": "you can expect numerous exciting speakers, big-name companies, cool prizes, and excellent opportunities to meet like-minded international students.",
+  "paragraph_highlighted": "Over 600 enthusiastic students and young participants have already participated in TUM.ai’s previous Makeathon iterations. ",
+  "paragraph": "Have a look at the winning teams and fantastic solutions that resulted from only 48h working time!",
   "stories": [
     {
       "title": "CabMate",
@@ -88,7 +88,7 @@ const data = {
           "link": "https://www.linkedin.com/in/nicholas-jm-wolf/",
         },
         {
-          "image": "/stories/vanessa.webp",
+          "image": "/stories/vanessa.jpg",
           "link": "https://www.linkedin.com/in/vanessa-theel-624b54122/",
         },
       ]

@@ -12,43 +12,49 @@ const data = {
       "title": "Application deadline",
       "icon": "/assets/deadline.svg",
       "time": "06.04",
-      "content_highlighted": "You have time to submit your application until the 6th of April. ",
-      "content": "As we accept applications on a rolling basis, the earlier you apply the higher are your changes. Furthermore, we are giving away great gifts for early birds."
+      "content_highlighted": "You have time to submit your application until the 6th of April. Apply either with a group of friends or alone. ",
+      "content": "If you are applying with an already formed team, make sure that every member submits the application! Else, take part in exciting team-finding events to match up with other motivated participants! Hurry up to apply as there are thrilling gifts for the early bird applicants!",
+      "img": "/assets/road01.jpg"
     },
     {
       "title": "Selection Process ",
       "icon": "/assets/selection.svg",
       "time": "09.04",
-      "content_highlighted": "You will hear from us the latest by the 9th of April ",
-      "content": "if you were accepted to participate in the Makeathon. In this email you will also receive more information about the upcoming talks, workshops and tools available to you."
+      "content_highlighted": "After careful application screening and assessment, participants will be informed by April 9th! ",
+      "content": "In the acceptance email, you can find information about the next steps and how to best prepare for the TUM.ai Makeathon.",
+      "img": "/assets/road02.jpg"
     },
     {
-      "title": "Challenge Pitch",
+      "title": "Opening Ceremony",
       "icon": "/assets/pitch.svg",
       "time": "11.04",
-      "content_highlighted": "On the 11th of April you get the chance to hear companies (Challenge Setters) presenting real life problems. ",
-      "content": "Afterwards, a team finding event will take place where you can discuss the presented projects with the other participants and form you interdisciplinary team. You always have the option to also work on your own ideas. These events will take place in the evening."
+      "content_highlighted": "During the opening ceremony on April 11th, our premium sponsors will welcome you to the Makeathon journey and share a few words about the effort of industry leaders to use AI to benefit society. ",
+      "content": "Furthermore, challenge setters will announce their challenges for the first time and answer all your questions, followed by a socializing round where you have a chance to meet potential team members. The ceremony takes place starting at 18:00 CET.",
+      "img": "/assets/road03.jpg"
     },
     {
-      "title": "Workshops",
+      "title": "Workshops & Team Finding",
       "icon": "/assets/workshops.svg",
       "time": "12.04 - 15.04",
-      "content_highlighted": "Use the workshops to get helpful insights into AI as well as how business modeling works. ",
-      "content": "The workshops will be held on the evenings (19:00) from the 12th until 15th of April. "
+      "content_highlighted": "In a series of team-finding events that will take place from the 12th until the 15th of April, you can discuss the challenges with the other participants and form your interdisciplinary team. ",
+      "content": "You always have the option to come up with your own challenge in the domain of AI4SocialGood and find participants that are ready to join you on the way! In addition, [TUM.](http://TUM.ai)ai and industry partners organize educational workshops to give first insights about **introduction to AI to non-techies**, **business ideation** introduction to those with technical background, OpenAI workshop to **get you started with Codex**, and much more!",
+      "img": "/assets/road04.jpg"
     },
     {
-      "title": "Business Talks",
+      "title": "Deep Dive Days",
       "icon": "/assets/business_talks.svg",
-      "time": "18.04 - 21.04",
-      "content_highlighted": "Join business talks and get inspired by entrepreneurs or industry experts. ",
-      "content": "The Business talks will be held from the 19th to 21st of April."
+      "time": "19.04 - 21.04",
+      "content_highlighted": "From the 19th until the 21th of April, ",
+      "content": "you will have a chance to listen to inspiring talks held by industry leaders on topics related to AI in the medical, environmental or educational domain. The workshops will be held online starting at 19:00 CET.",
+      "img": "/assets/road05.jpeg"
     },
     {
       "title": "Makeathon",
       "icon": "/assets/makeathon.svg",
       "time": "22.04 - 24.04",
       "content_highlighted": "You have 48 hours to develop a proof of concept with your team. ",
-      "content": "After pitching your results on Sunday afternoon, a jury of experts will select the winning teams for each track. Fantastic prizes are waiting!"
+      "content": "After pitching your results on Sunday afternoon, a jury of experts will select the winning teams for each track in the closing ceremony. Fantastic prizes are waiting!",
+      "img": "/assets/road06.jpeg"
     },
   ] 
 }
@@ -101,7 +107,7 @@ export default function Roadmap(){
       </div>
       <div className={styles.RightContainer}>
         <div className={styles.TopContainer}>
-          <Image src="/assets/roadmap01.png" alt={data.points[roadIndex].title} layout="fill" objectFit='cover' />
+          <Image src={data.points[roadIndex].img} alt={data.points[roadIndex].title} layout="fill" objectFit='cover' />
           <div className={styles.CardTime}>
             <Date1 normalContent={data.points[roadIndex].time} isDarkBackground/>
           </div>

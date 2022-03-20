@@ -9,8 +9,8 @@ import Image from 'next/image'
 const data = {
   "headline": "Join our next",
   "headline_marked": " Makeathon",
-  "paragraph_marked": "The Makeathon by TUM.ai is a weekend project ",
-  "paragraph": "that connects several hundred students to collaborate on new, innovative AI-related solutions on the topic of AI4SocialGood.",
+  "paragraph_marked": "TUM.ai Makeathon is a 48h hackathon ",
+  "paragraph": "that connects young innovators with different backgrounds to develop AI solutions for real-life business cases.",
   "value": [
     {
       "title": "Lauch your AI project",
