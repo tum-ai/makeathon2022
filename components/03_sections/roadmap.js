@@ -36,8 +36,8 @@ const data = {
       "title": "Workshops & Team Finding",
       "icon": "/assets/workshops.svg",
       "time": "12.04 - 15.04",
-      "content_highlighted": "In a series of team-finding events that will take place from the 12th until the 15th of April, you can discuss the challenges with the other participants and form your interdisciplinary team. ",
-      "content": "You always have the option to come up with your own challenge in the domain of AI4SocialGood and find participants that are ready to join you on the way! In addition, [TUM.](http://TUM.ai)ai and industry partners organize educational workshops to give first insights about **introduction to AI to non-techies**, **business ideation** introduction to those with technical background, OpenAI workshop to **get you started with Codex**, and much more!",
+      "content_highlighted": "Find your team members in the series of socializing events between 12th and 15th of April! ",
+      "content": "In addition, TUM.ai and industry partners organize educational workshops about introduction to AI to non-techies, business ideation, geting started with Codex by OpenAI, and much more!",
       "img": "/assets/road04.jpg"
     },
     {
@@ -54,7 +54,7 @@ const data = {
       "time": "22.04 - 24.04",
       "content_highlighted": "You have 48 hours to develop a proof of concept with your team. ",
       "content": "After pitching your results on Sunday afternoon, a jury of experts will select the winning teams for each track in the closing ceremony. Fantastic prizes are waiting!",
-      "img": "/assets/road06.jpeg"
+      "img": "/assets/road06.jpg"
     },
   ] 
 }
