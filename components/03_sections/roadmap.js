@@ -120,7 +120,7 @@ export default function Roadmap(){
       {data.points.map((point, index)=>(
         <div key={index} className={styles.MobileContainer}>
           <div className={styles.TopContainer}>
-            <Image src="/assets/roadmap01.png" alt={point.title} layout="fill" objectFit='cover' />
+            <Image src={point.img} alt={point.title} layout="fill" objectFit='cover' />
             <div className={styles.CardTime}>
               <Date1 normalContent={point.time} isDarkBackground/>
             </div>
