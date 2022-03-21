@@ -11,13 +11,14 @@ import 'react-h5-audio-player/lib/styles.css'
 import Headline2 from '../01_atoms/fonts_headline2'
 
 const data = {
-  "title": "For sponsers",
+  "title": "Be a part of TUM.ai Makeathon",
   "paragraph": "Join us on the journey of raising awareness of AI potential and inspiring young individuals to discover potential AI business cases in the real world!",
-  "paragraph_highlighted1": "1. Premium Sponsor | ",
+  "sub_headline": "For companies, NGOs, student or research organizations we offer 3 partner packages:",
+  "paragraph_highlighted1": "Premium Sponsor | ",
   "paragraph1": "Share your company’s vision and tell the word about the efforts your company takes to use AI to improve the world in a 1h talk during Deep Dive Days and during opening ceremony. Take advantage of TUM.ai’s talent pool and connect with potential future coworkers and innovators. In addition to that, benefit from marketing posts shared on TUM.ai’s media channels and enjoy many other advantages.",
-  "paragraph_highlighted2": "2. Standard Sponsor | ",
+  "paragraph_highlighted2": "Standard Sponsor | ",
   "paragraph2": "Have your company’s logo advertised in  TUM.ai Makeathon website and contribute to the prize for the winners. In addition, benefit from 3-month sponsor visibility on TUM.ai’s official website and much more.",
-  "paragraph_highlighted3": "3. Challenge Setter | ",
+  "paragraph_highlighted3": "Challenge Setter | ",
   "paragraph3": "Challenge motivated young people with a problem and test the feasibility of a possible business case. Practive leadership, attract talents, inspire and get inspired, and much more!",
   "button": "Get in touch with us",
   "button_link": "mailto:makeathon@tum-ai.com?subject=Sponsor%20request",
@@ -50,6 +51,9 @@ export default function SponsorInfo(){
           <Headline1 isH1={false} normalContent={data.title} highlightedContent={""} isDarkBackground={false}/>
           <div className={styles.Paragraph}>
             <Headline2 className={styles.Paragraph} normalContent={data.paragraph} isDarkBackground={false}/>
+          </div>
+          <div className={styles.Paragraph}>
+            <Paragraph1 className={styles.Paragraph} normalContent={data.sub_headline} isDarkBackground={false}/>
           </div>
           <div className={styles.Paragraph}>
             <Paragraph1 className={styles.Paragraph} highlightedContent={data.paragraph_highlighted1} normalContent={data.paragraph1} isDarkBackground={false}/>

@@ -18,24 +18,24 @@ const data = {
   "speakers": [
     {
       "name": "Cecilia Carbonelli",
-      "paragraph_highlighted": "Infineon | Senior principal",
-      "paragraph": "– system and algorithm architect at Infineon AG. Cecilia is an author of 35+ scientific publications and numerous patents, with broad experience in the areas of system and algorithm design, data science, machine learning, smart sensors, information theory, and signal processing.",
+      "paragraph_highlighted": "Senior principal – system and algorithm architect at Infineon AG.",
+      "paragraph": " Cecilia is an author of 35+ scientific publications and numerous patents, with broad experience in the areas of system and algorithm design, data science, machine learning, smart sensors, information theory, and signal processing.",
       "linkedIn_link": "https://www.linkedin.com/in/cecilia-carbonelli-a83007b/",
       "website_link": "https://www.infineon.com",
       "image": "/speakers/Cecilia Carbonelli.jpg"
     },
     {
       "name": "Nico Kelling",
-      "paragraph_highlighted": "Infineon | Head of AI Center of Excellence ",
-      "paragraph": "at Infineon AG will share how a leading semiconductor company is using AI to products its producs and internal products.",
+      "paragraph_highlighted": "Head of AI Center of Excellence at Infineon AG",
+      "paragraph": "He will share how a leading semiconductor company is using AI to products its producs and internal products.",
       "linkedIn_link": "https://www.linkedin.com/in/nico-kelling-b686787/",
       "website_link": "https://www.infineon.com",
       "image": "/speakers/Nico_Kelling.jpg"
     },
     {
       "name": "Lorenzo Servadei",
-      "paragraph_highlighted": "Infineon |  Senior staff ML engineer ",
-      "paragraph": "at Infineon AG and lecturer at the Technical University of Munich. Lorenzo has researched in the field of computer vision, image segmentation and crowd-sourcing on web applications, and deep learning approaches in approaches in firmware/hardware and trade-off analysis.",
+      "paragraph_highlighted": "Senior staff ML engineer at Infineon AG and lecturer at the Technical University of Munich.",
+      "paragraph": " Lorenzo has researched in the field of computer vision, image segmentation and crowd-sourcing on web applications, and deep learning approaches in approaches in firmware/hardware and trade-off analysis.",
       "linkedIn_link": "https://www.linkedin.com/in/lorenzo-servadei-32140937/",
       "website_link": "https://www.infineon.com",
       "image": "/speakers/speaker03.jpeg"

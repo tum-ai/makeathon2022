@@ -9,7 +9,7 @@ import Image from 'next/image'
 const data = {
   "headline": "Join our next",
   "headline_marked": " Makeathon",
-  "paragraph_marked": "TUM.ai Makeathon is a 48h hackathon ",
+  "paragraph_marked": "TUM.ai Makeathon is a 48h virtual challenge ",
   "paragraph": "that connects young innovators with different backgrounds to develop AI solutions for real-life business cases.",
   "value": [
     {
