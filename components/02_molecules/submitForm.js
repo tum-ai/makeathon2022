@@ -9,7 +9,7 @@ import { useState } from 'react'
 export default function SubmitForm({data, onInputChange, isControlled, setIsAppValid}){
 
   const [isPageValid, setIsPageValid] = useState({
-    "hack": false,
+    "hackAwareness": false,
   });
 
   function checkPageStatus(){
@@ -29,11 +29,11 @@ export default function SubmitForm({data, onInputChange, isControlled, setIsAppV
           <div className={styles.Full}>
             <DropDownInput
               headerText="How have you heard about the Makeathon?*"
-              name="hack"
+              name="hackAwareness"
               onContentChange={(event)=>onInputChange(event)}
-              value={data.hack}
+              value={data.hackAwareness}
               isControlled={isControlled}
-              setIsValid={(value)=>{let obj = isPageValid; obj.hack = value; setIsPageValid(obj); checkPageStatus();}}
+              setIsValid={(value)=>{let obj = isPageValid; obj.hackAwareness = value; setIsPageValid(obj); checkPageStatus();}}
               isRequired={true}
             >
               <option value="">Choose ...</option>
@@ -49,9 +49,9 @@ export default function SubmitForm({data, onInputChange, isControlled, setIsAppV
           <div className={styles.Full}>
             <BoolInput 
               headerText="Would you like to become a part of TUM.ai in future?"
-              name="future"
+              name="futureMember"
               onContentChange={(event)=>onInputChange(event)}
-              value={data.future}
+              value={data.futureMember}
               isControlled={isControlled}
             />
           </div>
@@ -59,9 +59,9 @@ export default function SubmitForm({data, onInputChange, isControlled, setIsAppV
             <TextAreaInput 
               headerText="Is there anything else you would like to share?" 
               placeholderText="Enter text here ..."
-              name="share"
+              name="additionalInfo"
               onContentChange={(event)=>onInputChange(event)}
-              value={data.share}
+              value={data.additionalInfo}
               isControlled={isControlled}
             />
           </div>
@@ -70,7 +70,7 @@ export default function SubmitForm({data, onInputChange, isControlled, setIsAppV
               headerText="I hereby confirm that I will  participate for the full 48 hours of the Makeathon. (22-24.04)*"
               name="confirmation"
               onContentChange={(event)=>onInputChange(event)}
-              value={data.future}
+              value={data.confirmation}
               isControlled={isControlled}
               setIsValid={(value)=>{let obj = isPageValid; obj.confirmation = value; setIsPageValid(obj); checkPageStatus();}}
               isRequired={true}

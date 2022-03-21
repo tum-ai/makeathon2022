@@ -11,14 +11,14 @@ import { useState } from 'react'
 export default function PersonalDetailForm({data, onInputChange, isControlled, setIsAppValid}){
 
   const [isPageValid, setIsPageValid] = useState({
-    "fname": false,
-    "lname": false,
+    "firstname": false,
+    "lastname": false,
     "email": false,
-    "land": false,
-    "residence": false,
+    "nationality": false,
+    "placeOfResidence": false,
     "timeZone": false,
-    "expert": false,
-    "birthday": false,
+    "areaOfExpertise": false,
+    "dateOfBirth": false,
   });
 
   function checkPageStatus(){
@@ -40,11 +40,11 @@ export default function PersonalDetailForm({data, onInputChange, isControlled, s
               headerText="First name*"
               placeholderText="Enter first name ..."
               withIcon={false}
-              name="fname"
+              name="firstname"
               onContentChange={(event)=>onInputChange(event)}
-              value={data.fname}
+              value={data.firstname}
               isControlled={isControlled}
-              setIsValid={(value)=>{let obj = isPageValid; obj.fname = value; setIsPageValid(obj); checkPageStatus();}}
+              setIsValid={(value)=>{let obj = isPageValid; obj.firstname = value; setIsPageValid(obj); checkPageStatus();}}
               isRequired={true}
             />
           </div>
@@ -53,11 +53,11 @@ export default function PersonalDetailForm({data, onInputChange, isControlled, s
               headerText="Last name*"
               placeholderText="Enter last name ..."
               withIcon={false}
-              name="lname"
+              name="lastname"
               onContentChange={(event)=>onInputChange(event)}
-              value={data.lname}
+              value={data.lastname}
               isControlled={isControlled}
-              setIsValid={(value)=>{let obj = isPageValid; obj.lname = value; setIsPageValid(obj); checkPageStatus();}}
+              setIsValid={(value)=>{let obj = isPageValid; obj.lastname = value; setIsPageValid(obj); checkPageStatus();}}
               isRequired={true}
             />
           </div>
@@ -75,15 +75,26 @@ export default function PersonalDetailForm({data, onInputChange, isControlled, s
               isRequired={true}
             />
           </div>
+          <div className={styles.Full}>
+            <TextInput 
+              headerText="Phone"
+              placeholderText="Enter your phone number ..."
+              name="phone"
+              onContentChange={(event)=>onInputChange(event)}
+              value={data.phone}
+              isControlled={isControlled}
+              setIsValid={(value)=>{let obj = isPageValid; obj.phone = value; setIsPageValid(obj); checkPageStatus();}}
+            />
+          </div>
           <div className={styles.Half}>
             <DateInput 
               headerText="Date of birth*" 
               placeholderText="Select date ..." 
-              name="birthday" 
+              name="dateOfBirth" 
               onContentChange={(event)=>onInputChange(event)}
-              value={data.birthday}
+              value={data.dateOfBirth}
               isControlled={isControlled}
-              setIsValid={(value)=>{let obj = isPageValid; obj.birthday = value; setIsPageValid(obj); checkPageStatus();}}
+              setIsValid={(value)=>{let obj = isPageValid; obj.dateOfBirth = value; setIsPageValid(obj); checkPageStatus();}}
               isRequired={true}
             />
           </div>
@@ -93,11 +104,11 @@ export default function PersonalDetailForm({data, onInputChange, isControlled, s
               placeholderText="Where are you from?"
               withIcon={true}
               iconPath="/assets/application/land.svg"
-              name="land"
+              name="nationality"
               onContentChange={(event)=>onInputChange(event)}
-              value={data.land}
+              value={data.nationality}
               isControlled={isControlled}
-              setIsValid={(value)=>{let obj = isPageValid; obj.land = value; setIsPageValid(obj); checkPageStatus();}}
+              setIsValid={(value)=>{let obj = isPageValid; obj.nationality = value; setIsPageValid(obj); checkPageStatus();}}
               isRequired={true}
             />
           </div>
@@ -105,11 +116,11 @@ export default function PersonalDetailForm({data, onInputChange, isControlled, s
             <TextInput 
               headerText="Place of Residence at the time of the Makeathon?*"
               placeholderText="Enter place here..."
-              name="residence"
+              name="placeOfResidence"
               onContentChange={(event)=>onInputChange(event)}
-              value={data.land}
+              value={data.placeOfResidence}
               isControlled={isControlled}
-              setIsValid={(value)=>{let obj = isPageValid; obj.residence = value; setIsPageValid(obj); checkPageStatus();}}
+              setIsValid={(value)=>{let obj = isPageValid; obj.placeOfResidence = value; setIsPageValid(obj); checkPageStatus();}}
               isRequired={true}
             />
           </div>
@@ -144,11 +155,11 @@ export default function PersonalDetailForm({data, onInputChange, isControlled, s
           <div className={styles.Full}>
             <BoolInput 
               headerText="I accept that my name and e-mail will be forwarded to OpenAI in order to create an account for accessing Codex and GPT-3."
-              name="mailForward"
+              name="openAI"
               onContentChange={(event)=>onInputChange(event)}
-              value={data.codeSkill}
+              value={data.openAI}
               isControlled={isControlled}
-              setIsValid={(value)=>{let obj = isPageValid; obj.mailForward = value; setIsPageValid(obj); checkPageStatus();}}
+              setIsValid={(value)=>{let obj = isPageValid; obj.openAI = value; setIsPageValid(obj); checkPageStatus();}}
               isRequired={true}
             />
           </div>
@@ -181,9 +192,9 @@ export default function PersonalDetailForm({data, onInputChange, isControlled, s
               placeholderText="Enter your website url ..."
               withIcon={true}
               iconPath="/assets/application/website.svg"
-              name="website"
+              name="personalWebsite"
               onContentChange={(event)=>onInputChange(event)}
-              value={data.website}
+              value={data.personalWebsite}
               isControlled={isControlled}
               isRequired={false}
             />
@@ -215,9 +226,9 @@ export default function PersonalDetailForm({data, onInputChange, isControlled, s
         <div className={styles.Full}>
             <BoolInput 
               headerText="Are you currently pursuing or did you pursue an academic or professional degree?" 
-              name="academic"
+              name="universityBool"
               onContentChange={(event)=>onInputChange(event)}
-              value={data.academic}
+              value={data.universityBool}
               isControlled={isControlled}
             />
           </div>
@@ -239,20 +250,20 @@ export default function PersonalDetailForm({data, onInputChange, isControlled, s
             <TextAreaInput 
               headerText="What describes you best?" 
               placeholderText="Enter text here ..."
-              name="description"
+              name="bestDescription"
               onContentChange={(event)=>onInputChange(event)}
-              value={data.description}
+              value={data.bestDescription}
               isControlled={isControlled}
             />
           </div>
           <div className={styles.Full}>
             <DropDownInput
               headerText="Which field do you think you are expert in?*"
-              name="expert"
+              name="areaOfExpertise"
               onContentChange={(event)=>onInputChange(event)}
-              value={data.expert}
+              value={data.areaOfExpertise}
               isControlled={isControlled}
-              setIsValid={(value)=>{let obj = isPageValid; obj.expert = value; setIsPageValid(obj); checkPageStatus();}}
+              setIsValid={(value)=>{let obj = isPageValid; obj.areaOfExpertise = value; setIsPageValid(obj); checkPageStatus();}}
               isRequired={true}
             >
               <option value="">Choose ...</option>

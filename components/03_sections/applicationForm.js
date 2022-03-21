@@ -12,33 +12,67 @@ import Button from '../01_atoms/button';
 export default function ApplicationForm(){
   const [applicationState,changeApplicationState] = useState(0);
   const [applicationData,setApplicationData] = useState({
-    "confirmation": "false",
-    "furture": "false",
-    "mailForward": "false",
-    "academic": "false",
-    "hackathon": "false",
-    "codeSkill": "false",
-    "team": "false"
+    "academicBackground": "",
+    "confirmation": false,
+    "futureMember": false,
+    "hackExperienceBool": false,
+    "openAI": false,
+    "programmingSkilsBool": false,
+    "teamDetailsBool": false,
+    "additionalInfo": "",
+    "areaOfExpertise": "",
+    "bestDescription": "",
+    "dateOfBirth": null,
+    "email": "",
+    "firstname": "",
+    "github": "",
+    "hackAwareness": null,
+    "hackExperience": "",
+    "lastname": "",
+    "linkedIn": "",
+    "nationality": "",
+    "personalWebsite": "",
+    "phone": "",
+    "placeOfResidence": "",
+    "programmingSkills": "",
+    "programmingSkillsBool": false,
+    "teamDetails": "",
+    "timeZone": null,
+    "university": "",
+    "universityBool": true,
+    "whatContribution": "",
+    "whatLearn": "",
+    "whyParticipate": ""
   });
   const [isControlled, setIsControlled] = useState(false);
   const [isAppValid,setIsAppValid] = useState(false);
+  const [submitStatus,setSubmitStatus] = useState(false);
   
-  var myHeaders = new Headers();
-  myHeaders.append("Content-Type", "application/json");
+  function fetchData (){
+    if(!submitStatus){
+      console.log("moin");
+      var myHeaders = new Headers();
+      myHeaders.append("Content-Type", "application/json");
+      var raw = JSON.stringify(applicationData);
 
-  var raw = JSON.stringify({"firstname":"test","lastname":"test","email":"nils.jacobsen98@gmail.com","phone":"test","dateOfBirth":"test","nationality":"test","placeOfResidence":"test","timeZone":"test","areaOfExpertise":"test","bestDescription":"test","academicBackground":"test","programmingSkils":"test","hackExperience":"test","university":"test","idea":"test","challenges":"test","teamDetails":"test","whyParticipate":"test","whatReach":"test","whatContribution":"test","whatLearn":"test","linkedIn":"test","personalWebsite":"test","github":"test","hackAwareness":"test","futureMember":"test","additionalInfo":"test","participationPossible":"test","openAI":"test"});
+      var requestOptions = {
+        method: 'POST',
+        headers: myHeaders,
+        body: raw,
+        redirect: 'follow'
+      };
 
-  var requestOptions = {
-    method: 'POST',
-    headers: myHeaders,
-    body: raw,
-    redirect: 'follow'
-  };
+      fetch("https://tum-ai-backends-dev.herokuapp.com/makeathon/submit-application", requestOptions)
+        .then(response => response.text())
+        .then(result => {
+          console.log(result);
+          response.status == 200 ? changeApplicationState(applicationState + 1) : console.log("fail");
+        })
+        .catch(error => console.log('error', error));
 
-  fetch("https://tum-ai-backends-dev.herokuapp.com/makeathon/submit-application", requestOptions)
-    .then(response => response.text())
-    .then(result => console.log(result))
-    .catch(error => console.log('error', error));
+      setSubmitStatus(true);
+    }   
+  }
 
   function onInputChange(event){
     let newObj = applicationData;
@@ -54,7 +88,7 @@ export default function ApplicationForm(){
       setIsAppValid(false);
     }, 500);
     if(applicationState == 2){
-      console.log(applicationData);
+      //console.log(applicationData);
     }
   }
   function handlePrevPage(){
@@ -63,6 +97,26 @@ export default function ApplicationForm(){
     setTimeout(() => {
       setIsControlled(false);
     }, 500);
+  }
+
+  function submitValidation(){
+    if(applicationState == 2){
+      if(isAppValid){
+        if(applicationData.confirmation){
+          return true;
+        }else{
+          return false;
+        }
+      }else{
+        return false;
+      }
+    }else{
+      if(isAppValid){
+        return true;
+      }else{
+        return false;
+      }
+    }
   }
 
   switch(applicationState){
@@ -112,17 +166,18 @@ export default function ApplicationForm(){
           isControlled={isControlled}
           setIsAppValid={(value)=>setIsAppValid(value)}
         />
-        <ApplyFooter 
+        <ApplyFooter  
           nextBtnText="Submit" 
           prevBtnText="Prev" 
           stateNumber={applicationState + 1} 
           nextPage={()=>handleNextPage()}
           prevPage={()=>handlePrevPage()}
-          isValid={isAppValid ? true : false}
+          isValid={()=>submitValidation()}
         />
        </div>
       break;    
     case 3:
+      fetchData();
       return <div className={styles.ApplicationFormItem}>
         <div className={styles.Wrapper}>
           <div className={styles.Spinner}>
