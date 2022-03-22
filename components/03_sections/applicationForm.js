@@ -63,9 +63,9 @@ export default function ApplicationForm(){
       };
 
       fetch("https://tum-ai-backends-dev.herokuapp.com/makeathon/submit-application", requestOptions)
-        .then(response => response.text())
-        .then(result => {
-          console.log(result);
+//         .then(response => response.text())
+        .then(response => {
+//           console.log(response.text());
           response.status == 201 ? changeApplicationState(applicationState + 1) : console.log("fail");
         })
         .catch(error => console.log('error', error));
