@@ -66,7 +66,7 @@ export default function ApplicationForm(){
         .then(response => response.text())
         .then(result => {
           console.log(result);
-          response.status == 200 ? changeApplicationState(applicationState + 1) : console.log("fail");
+          response.status == 201 ? changeApplicationState(applicationState + 1) : console.log("fail");
         })
         .catch(error => console.log('error', error));
 
