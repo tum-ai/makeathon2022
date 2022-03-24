@@ -63,7 +63,7 @@ export default function ApplicationForm() {
       };
 
       fetch(
-        "https://tum-ai-backends-dev.herokuapp.com/makeathon/submit-application",
+        "https://tum-ai-backends-prod.herokuapp.com/makeathon/submit-application",
         requestOptions
       )
         .then((response) => {
