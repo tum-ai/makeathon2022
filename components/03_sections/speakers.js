@@ -27,7 +27,7 @@ const data = {
     {
       "name": "Nico Kelling",
       "paragraph_highlighted": "Head of AI Center of Excellence at Infineon AG",
-      "paragraph": "He will share how a leading semiconductor company is using AI to products its producs and internal products.",
+      "paragraph": " He will share how a leading semiconductor company is using AI to products its producs and internal products.",
       "linkedIn_link": "https://www.linkedin.com/in/nico-kelling-b686787/",
       "website_link": "https://www.infineon.com",
       "image": "/speakers/Nico_Kelling.jpg"
