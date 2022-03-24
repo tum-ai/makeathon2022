@@ -68,11 +68,14 @@ export default function ApplicationForm() {
       )
         .then((response) => {
           //           console.log(response.text());
-          if (response.status == 409)
+          if (response.status == 201)
             changeApplicationState(applicationState + 1);
-          else if (response.status == 201)
+          else if (response.status == 409)
             changeApplicationState(applicationState + 2);
-          else console.log("fail");
+          else {
+            console.log("fail");
+          }
+          changeApplicationState(applicationState + 3);
         })
         .catch((error) => console.log("error", error));
 
@@ -236,6 +239,25 @@ export default function ApplicationForm() {
           <ApplyHeader
             title="Your email address is already registered with us!"
             highlighted_title=""
+          />
+          <div className={styles.Grid}>
+            <div className={styles.BtnContainer}>
+              <Button
+                link="/"
+                content="Back to Makeathon website"
+                isDarkBackground
+              />
+            </div>
+          </div>
+        </div>
+      );
+      break;
+    case 6:
+      return (
+        <div className={styles.ApplicationFormItem}>
+          <ApplyHeader
+            title="Schade!"
+            highlighted_title="Some error has occurred on the server. Please try again later"
           />
           <div className={styles.Grid}>
             <div className={styles.BtnContainer}>
