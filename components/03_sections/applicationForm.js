@@ -74,8 +74,8 @@ export default function ApplicationForm() {
             changeApplicationState(applicationState + 2);
           else {
             console.log("fail");
+            changeApplicationState(applicationState + 3);
           }
-          changeApplicationState(applicationState + 3);
         })
         .catch((error) => console.log("error", error));
 
