@@ -222,6 +222,10 @@ export default function ApplicationForm() {
             highlighted_title=" Congratulations 🎉"
           />
           <div className={styles.Grid}>
+            <p>
+              If you have any questions about your application, please write to
+              applicants.makeathon@tum-ai.com
+            </p>
             <div className={styles.BtnContainer}>
               <Button
                 link="/"
@@ -241,6 +245,10 @@ export default function ApplicationForm() {
             highlighted_title=""
           />
           <div className={styles.Grid}>
+            <p>
+              If you have any questions about your application, please write to
+              applicants.makeathon@tum-ai.com
+            </p>
             <div className={styles.BtnContainer}>
               <Button
                 link="/"
@@ -256,10 +264,11 @@ export default function ApplicationForm() {
       return (
         <div className={styles.ApplicationFormItem}>
           <ApplyHeader
-            title="Schade!"
-            highlighted_title="Some error has occurred on the server. Please try again later"
+            title="Schade! "
+            highlighted_title="Some error has occurred on the server."
           />
           <div className={styles.Grid}>
+            <p>Please write to applicants.makeathon@tum-ai.com</p>
             <div className={styles.BtnContainer}>
               <Button
                 link="/"
