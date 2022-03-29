@@ -6,7 +6,6 @@ import "slick-carousel/slick/slick-theme.css"
 import Paragraph2 from '../01_atoms/fonts_paragraph2'
 import Headline1 from '../01_atoms/fonts_headline1'
 import Image from 'next/image'
-import Paragraph1 from '../01_atoms/fonts_paragraph1'
 import $ from 'jquery';
 import Headline2 from '../01_atoms/fonts_headline2'
 import Link from 'next/link'
@@ -40,8 +39,23 @@ const data = {
       "website_link": "https://www.infineon.com",
       "image": "/speakers/speaker03.jpeg"
     },
+    {
+        "name": "Muneer Ahmad Dedmari",
+        "paragraph_highlighted": "AI engineer at NetApp.",
+        "paragraph": " Muneer has worked on developing end-to-end solutions for AI applications in the Automotive, Healthcare and FinTech domains, and is passionate about closing the gap between business and technology.",
+        "linkedIn_link": "https://www.linkedin.com/in/muneer-ahmad-dedmari/",
+        "website_link": "https://www.netapp.com",
+        "image": "/speakers/speaker04.jpg"
+    },
+    {
+        "name": "Dr. Raphael Prevost",
+        "paragraph_highlighted": "Senior scientist at ImFusion as Head of Machine Learning.",
+        "paragraph": " Raphael specialized in deep learning and image processing, especially in the medical imaging field. He is actively involved in the medical image analysis community, publishing research papers and reviewing main conferences and journals.",
+        "linkedIn_link": "https://www.linkedin.com/in/raphaelprevost",
+        "website_link": "https://www.imfusion.com",
+        "image": "/speakers/speaker05.jpg"
+    }
   ]
-
 }
 
 function changeStyles(){
@@ -64,6 +78,7 @@ export default function Speakers(){
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
   };
+
   return <div className={styles.SpeakersItem}>
     <div className={styles.Grid}>
         <div className={styles.LeftContainer}>
@@ -72,7 +87,7 @@ export default function Speakers(){
         <div className={styles.MiddleContainer}>
           <Headline1 isH1={false} normalContent={data.title} isDarkBackground />
           <Slider {...settings} onInit={()=>changeStyles()}>
-            {data.speakers.map((speaker,index)=>(
+            {data.speakers.map(speaker => (
               <div key={speaker.name} className={styles.SpeakerContainer}>
                 <div className={styles.TextContainer}>
                   <div className={styles.TopContainer}>
@@ -80,12 +95,18 @@ export default function Speakers(){
                     <Paragraph2 isDarkBackground highlightedContent={speaker.paragraph_highlighted} normalContent={speaker.paragraph}/>
                   </div>
                   <div className={styles.SocialLinks}>
-                    {speaker.linkedIn_link != "" ? <Link href={speaker.linkedIn_link} passHref><div className={styles.Link}>
-                      <Image src={"/assets/linkedIn.svg"} alt="linkedIn icon" layout="fill" objectFit="cover" />
-                    </div></Link> : ""}
-                    {speaker.website_link != "" ? <Link href={speaker.website_link} passHref><div  className={styles.Link}>
-                      <Image src={"/assets/website.svg"} alt="website icon" layout="fill" objectFit="cover" />
-                    </div></Link> : ""}
+                    {speaker.linkedIn_link != "" && 
+                        <Link href={speaker.linkedIn_link} passHref>
+                          <div className={styles.Link}>
+                            <Image src={"/assets/linkedIn.svg"} alt="linkedIn icon" layout="fill" objectFit="cover" />
+                          </div>
+                        </Link>}
+                    {speaker.website_link != "" && 
+                        <Link href={speaker.website_link} passHref>
+                          <div className={styles.Link}>
+                            <Image src={"/assets/website.svg"} alt="website icon" layout="fill" objectFit="cover" />
+                          </div>
+                        </Link>}
                   </div>
                 </div>
                 <div className={styles.ImageContainer}>
