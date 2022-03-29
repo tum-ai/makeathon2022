@@ -21,7 +21,7 @@ const data = {
       "paragraph": " Cecilia is an author of 35+ scientific publications and numerous patents, with broad experience in the areas of system and algorithm design, data science, machine learning, smart sensors, information theory, and signal processing.",
       "linkedIn_link": "https://www.linkedin.com/in/cecilia-carbonelli-a83007b/",
       "website_link": "https://www.infineon.com",
-      "image": "/speakers/Cecilia Carbonelli.jpg"
+      "image": "/speakers/Cecilia_Carbonelli.jpg"
     },
     {
       "name": "Nico Kelling",
