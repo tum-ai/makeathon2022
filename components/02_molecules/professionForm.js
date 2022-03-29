@@ -25,7 +25,7 @@ export default function ProfessionForm({data, onInputChange, isControlled, setIs
     <div className={styles.Grid}>
       <div className={styles.Left}>
         <Headline2 normalContent={"Your motivation"} isDarkBackground/>
-        <Paragraph1 normalContent={"Is a weekend project that connects several hundred students."} isDarkBackground/>
+        <Paragraph1 normalContent={""} isDarkBackground/>
       </div>
       <div className={styles.Right}>
         <div className={styles.Content}>
@@ -65,7 +65,7 @@ export default function ProfessionForm({data, onInputChange, isControlled, setIs
     <div className={styles.Grid}>
       <div className={styles.Left}>
         <Headline2 normalContent={"Code?"} isDarkBackground/>
-        <Paragraph1 normalContent={"Is a weekend project that connects several hundred students."} isDarkBackground/>
+        <Paragraph1 normalContent={""} isDarkBackground/>
       </div>
       <div className={styles.Right}>
         <div className={styles.Content}>
@@ -116,7 +116,7 @@ export default function ProfessionForm({data, onInputChange, isControlled, setIs
     <div className={styles.Grid}>
       <div className={styles.Left}>
         <Headline2 normalContent={"Your want to bring your own idea?"} isDarkBackground/>
-        <Paragraph1 normalContent={"Is a weekend project that connects several hundred students."} isDarkBackground/>
+        <Paragraph1 normalContent={""} isDarkBackground/>
       </div>
       <div className={styles.Right}>
         <div className={styles.Content}>

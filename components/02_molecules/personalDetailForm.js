@@ -38,7 +38,7 @@ export default function PersonalDetailForm({
           <Headline2 normalContent={"Personal Information"} isDarkBackground />
           <Paragraph1
             normalContent={
-              "Is a weekend project that connects several hundred students."
+              ""
             }
             isDarkBackground
           />
@@ -537,7 +537,7 @@ export default function PersonalDetailForm({
           <Headline2 normalContent={"Digital Appearence"} isDarkBackground />
           <Paragraph1
             normalContent={
-              "Is a weekend project that connects several hundred students."
+              ""
             }
             isDarkBackground
           />
@@ -597,7 +597,7 @@ export default function PersonalDetailForm({
           <Headline2 normalContent={"Your background"} isDarkBackground />
           <Paragraph1
             normalContent={
-              "Is a weekend project that connects several hundred students."
+              ""
             }
             isDarkBackground
           />
