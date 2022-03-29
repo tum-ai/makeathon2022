@@ -192,7 +192,7 @@ export default function ApplicationForm() {
             stateNumber={applicationState + 1}
             nextPage={() => handleNextPage()}
             prevPage={() => handlePrevPage()}
-            isValid={() => submitValidation()}
+            isValid={isAppValid ? true : false}
           />
         </div>
       );

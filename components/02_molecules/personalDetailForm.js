@@ -26,6 +26,7 @@ export default function PersonalDetailForm({
   });
 
   function checkPageStatus() {
+    console.log(isPageValid);
     if (Object.values(isPageValid).includes(false) == false) {
       setIsAppValid(true);
     }
