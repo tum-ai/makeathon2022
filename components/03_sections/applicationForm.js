@@ -8,6 +8,7 @@ import ProfessionForm from "../02_molecules/professionForm";
 import SubmitForm from "../02_molecules/submitForm";
 import Image from "next/image";
 import Button from "../01_atoms/button";
+import { appConfig } from "../04_constants/constants"
 
 export default function ApplicationForm() {
   const [applicationState, changeApplicationState] = useState(0);
@@ -50,7 +51,6 @@ export default function ApplicationForm() {
 
   function fetchData() {
     if (!submitStatus) {
-      console.log("moin");
       var myHeaders = new Headers();
       myHeaders.append("Content-Type", "application/json");
       var raw = JSON.stringify(applicationData);
@@ -63,7 +63,7 @@ export default function ApplicationForm() {
       };
 
       fetch(
-        "https://tum-ai-backends-prod.herokuapp.com/makeathon/submit-application",
+        `${appConfig.urls.API_BASE_URL}/makeathon/submit-application`,
         requestOptions
       )
         .then((response) => {
@@ -103,6 +103,7 @@ export default function ApplicationForm() {
       //console.log(applicationData);
     }
   }
+
   function handlePrevPage() {
     changeApplicationState(applicationState - 1);
     setIsControlled(true);
@@ -151,7 +152,7 @@ export default function ApplicationForm() {
           />
         </div>
       );
-      break;
+
     case 1:
       return (
         <div className={styles.ApplicationFormItem}>
@@ -175,7 +176,7 @@ export default function ApplicationForm() {
           />
         </div>
       );
-      break;
+
     case 2:
       return (
         <div className={styles.ApplicationFormItem}>
@@ -192,11 +193,11 @@ export default function ApplicationForm() {
             stateNumber={applicationState + 1}
             nextPage={() => handleNextPage()}
             prevPage={() => handlePrevPage()}
-            isValid={() => submitValidation()}
+            isValid={isAppValid ? true : false}
           />
         </div>
       );
-      break;
+
     case 3:
       fetchData();
       return (
@@ -213,7 +214,7 @@ export default function ApplicationForm() {
           </div>
         </div>
       );
-      break;
+
     case 4:
       return (
         <div className={styles.ApplicationFormItem}>
@@ -236,7 +237,7 @@ export default function ApplicationForm() {
           </div>
         </div>
       );
-      break;
+
     case 5:
       return (
         <div className={styles.ApplicationFormItem}>
@@ -259,7 +260,7 @@ export default function ApplicationForm() {
           </div>
         </div>
       );
-      break;
+
     case 6:
       return (
         <div className={styles.ApplicationFormItem}>
@@ -279,10 +280,8 @@ export default function ApplicationForm() {
           </div>
         </div>
       );
-      break;
+
     default:
       return <div className={styles.ApplicationFormItem}></div>;
-      break;
   }
-  return <div className={styles.ApplicationFormItem}></div>;
 }

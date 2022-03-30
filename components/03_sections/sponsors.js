@@ -12,7 +12,7 @@ export default function Sponsors(){
         <div className={styles.Separator}></div>
       </div>
       <div className={styles.Sponsors}>
-        <Link href="https://www.netapp.com/de/" passHref >
+        <Link href="https://www.netapp.com/" passHref >
           <div className={styles.Premium}>
             <Image src={"/assets/netapp.png"} alt="netapp" layout="fill" objectFit="contain" />
           </div>
@@ -31,22 +31,39 @@ export default function Sponsors(){
         <Headline2  isDarkBackground={false} normalContent={"Other Partners and Sponsors"} />
         <div className={styles.Separator}></div>
       </div>
-      <div className={styles.Sponsors}>
-        <Link href="https://www.infineon.com/" passHref >
-          <div className={styles.Sponsor}>
-            <Image src={"/assets/infineon.png"} alt="netapp" layout="fill" objectFit="contain" />
-          </div>
-        </Link>
-        <Link href="https://openai.com/" passHref >
-          <div className={styles.Sponsor}>
-            <Image src={"/assets/openAI.png"} alt="netapp" layout="fill" objectFit="contain" />
-          </div>
-        </Link>
-        <Link href="https://www.siemens-healthineers.com/de" passHref >
-          <div className={styles.Sponsor}>
-            <Image src={"/assets/siemens.svg"} alt="netapp" layout="fill" objectFit="contain" />
-          </div>
-        </Link>
+      <div className={styles.SponsorsGrid}>
+        {/* 1st row */}
+        <div className={styles.SponsorsRow}>
+            <Link href="https://www.infineon.com/" passHref >
+            <div className={styles.Sponsor}>
+                <Image src={"/assets/infineon.png"} alt="netapp" layout="fill" objectFit="contain" />
+            </div>
+            </Link>
+            <Link href="https://www.imfusion.com" passHref >
+            <div className={styles.Sponsor}>
+                <Image src={"/assets/ImFusionLogo.png"} alt="imfusion" layout="fill" objectFit="contain" />
+            </div>
+            </Link>
+            {/* TODO: SET CORRECT HREF */}
+            <Link href="" passHref >
+            <div className={styles.Sponsor}>
+                <Image src={"/assets/Logo_MI_kurz.svg"} alt="mi" layout="fill" objectFit="contain" />
+            </div>
+            </Link>
+        </div>
+        {/* 2nd row */}
+        <div className={styles.SponsorsRow}>
+            {/*<Link href="https://openai.com/" passHref >
+            <div className={styles.Sponsor}>
+                <Image src={"/assets/openAI.png"} alt="netapp" layout="fill" objectFit="contain" />
+            </div>
+            </Link>
+            <Link href="https://www.siemens-healthineers.com/" passHref >
+            <div className={styles.Sponsor}>
+                <Image src={"/assets/siemens.svg"} alt="netapp" layout="fill" objectFit="contain" />
+            </div>
+            </Link> */}
+        </div>
       </div>
     </div>
   </div>
