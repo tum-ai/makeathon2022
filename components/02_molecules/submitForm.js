@@ -10,9 +10,13 @@ export default function SubmitForm({data, onInputChange, isControlled, setIsAppV
 
   const [isPageValid, setIsPageValid] = useState({
     "hackAwareness": false,
+    "confirmation": false,
   });
 
+  checkPageStatus();
+
   function checkPageStatus(){
+    console.log(isPageValid);
     if (Object.values(isPageValid).includes(false) == false){
       setIsAppValid(true);
     } 
@@ -69,7 +73,16 @@ export default function SubmitForm({data, onInputChange, isControlled, setIsAppV
             <BoolInput 
               headerText="I hereby confirm that I will  participate for the full 48 hours of the Makeathon. (22-24.04)*"
               name="confirmation"
-              onContentChange={(event)=>onInputChange(event)}
+              onContentChange={(event)=>{
+                onInputChange(event); 
+                let obj = isPageValid; 
+                obj.confirmation = event.target.checked;
+                setIsPageValid(obj); 
+                checkPageStatus();
+                if(event.target.checked == false){
+                  setIsAppValid(false);
+                }
+              }}
               value={data.confirmation}
               isControlled={isControlled}
               setIsValid={(value)=>{let obj = isPageValid; obj.confirmation = value; setIsPageValid(obj); checkPageStatus();}}
