@@ -26,7 +26,7 @@ export default function SubmitForm({data, onInputChange, isControlled, setIsAppV
     <div className={styles.Grid}>
       <div className={styles.Left}>
         <Headline2 normalContent={"How did you get here?"} isDarkBackground/>
-        <Paragraph1 normalContent={"Is a weekend project that connects several hundred students."} isDarkBackground/>
+        <Paragraph1 normalContent={""} isDarkBackground/>
       </div>
       <div className={styles.Right}>
         <div className={styles.Content}>
