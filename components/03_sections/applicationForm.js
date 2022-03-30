@@ -8,7 +8,7 @@ import ProfessionForm from "../02_molecules/professionForm";
 import SubmitForm from "../02_molecules/submitForm";
 import Image from "next/image";
 import Button from "../01_atoms/button";
-import { appConfig } from "../../pages/constants"
+import { appConfig } from "../04_constants/constants"
 
 export default function ApplicationForm() {
   const [applicationState, changeApplicationState] = useState(0);
