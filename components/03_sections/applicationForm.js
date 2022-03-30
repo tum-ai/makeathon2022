@@ -9,6 +9,7 @@ import SubmitForm from "../02_molecules/submitForm";
 import Image from "next/image";
 import Button from "../01_atoms/button";
 import { appConfig } from "../04_constants/constants"
+import Paragraph1 from "../01_atoms/fonts_paragraph1";
 
 export default function ApplicationForm() {
   const [applicationState, changeApplicationState] = useState(0);
@@ -223,10 +224,7 @@ export default function ApplicationForm() {
             highlighted_title=" Congratulations 🎉"
           />
           <div className={styles.Grid}>
-            <p>
-              If you have any questions about your application, please write to
-              applicants.makeathon@tum-ai.com
-            </p>
+            <Paragraph1 normalContent={"If you have any questions about your application, please write to applicants.makeathon@tum-ai.com" } isDarkBackground />
             <div className={styles.BtnContainer}>
               <Button
                 link="/"
@@ -246,10 +244,7 @@ export default function ApplicationForm() {
             highlighted_title=""
           />
           <div className={styles.Grid}>
-            <p>
-              If you have any questions about your application, please write to
-              applicants.makeathon@tum-ai.com
-            </p>
+            <Paragraph1 normalContent={"If you have any questions about your application, please write to applicants.makeathon@tum-ai.com" } isDarkBackground />
             <div className={styles.BtnContainer}>
               <Button
                 link="/"
