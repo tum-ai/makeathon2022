@@ -39,19 +39,6 @@ export default function Sponsors(){
                 <Image src={"/assets/infineon.png"} alt="netapp" layout="fill" objectFit="contain" />
             </div>
             </Link>
-            <Link href="https://openai.com/" passHref >
-            <div className={styles.Sponsor}>
-                <Image src={"/assets/openAI.png"} alt="netapp" layout="fill" objectFit="contain" />
-            </div>
-            </Link>
-            <Link href="https://www.siemens-healthineers.com/" passHref >
-            <div className={styles.Sponsor}>
-                <Image src={"/assets/siemens.svg"} alt="netapp" layout="fill" objectFit="contain" />
-            </div>
-            </Link>
-        </div>
-        {/* 2nd row */}
-        <div className={styles.SponsorsRow}>
             <Link href="https://www.imfusion.com" passHref >
             <div className={styles.Sponsor}>
                 <Image src={"/assets/ImFusionLogo.png"} alt="imfusion" layout="fill" objectFit="contain" />
@@ -63,6 +50,19 @@ export default function Sponsors(){
                 <Image src={"/assets/Logo_MI_kurz.svg"} alt="mi" layout="fill" objectFit="contain" />
             </div>
             </Link>
+        </div>
+        {/* 2nd row */}
+        <div className={styles.SponsorsRow}>
+            {/*<Link href="https://openai.com/" passHref >
+            <div className={styles.Sponsor}>
+                <Image src={"/assets/openAI.png"} alt="netapp" layout="fill" objectFit="contain" />
+            </div>
+            </Link>
+            <Link href="https://www.siemens-healthineers.com/" passHref >
+            <div className={styles.Sponsor}>
+                <Image src={"/assets/siemens.svg"} alt="netapp" layout="fill" objectFit="contain" />
+            </div>
+            </Link> */}
         </div>
       </div>
     </div>
