@@ -20,6 +20,9 @@
 .Grid{
   width: 1200px;
   margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 }
 .BtnContainer{
   width: 300px;
