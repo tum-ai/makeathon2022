@@ -45,7 +45,7 @@ export default function Sponsors(){
             </div>
             </Link>
             {/* TODO: SET CORRECT HREF */}
-            <Link href="" passHref >
+            <Link href="https://www.mi4people.org/" passHref >
             <div className={styles.Sponsor}>
                 <Image src={"/assets/Logo_MI_kurz.svg"} alt="mi" layout="fill" objectFit="contain" />
             </div>
