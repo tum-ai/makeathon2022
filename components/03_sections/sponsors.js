@@ -34,6 +34,11 @@ export default function Sponsors(){
       <div className={styles.SponsorsGrid}>
         {/* 1st row */}
         <div className={styles.SponsorsRow}>
+            <Link href="https://www.siemens-healthineers.com/" passHref >
+              <div className={styles.Sponsor}>
+                  <Image src={"/assets/siemens_logo_cmyk-pantone.svg"} alt="netapp" layout="fill" objectFit="contain" />
+              </div>
+            </Link> 
             <Link href="https://www.infineon.com/" passHref >
             <div className={styles.Sponsor}>
                 <Image src={"/assets/infineon.png"} alt="netapp" layout="fill" objectFit="contain" />
