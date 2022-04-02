@@ -69,10 +69,10 @@ export default function Home() {
               </div>
             </div>
             <div className={styles.Bottom}>
-              <a className={styles.SocialWrapper}>
+              <a className={styles.SocialWrapper} href="https://www.linkedin.com/company/tum-ai/">
                 <Image src={"/assets/linkedIn.svg"} alt={"LinkedIn"} layout="fill" objectFit="cover" />
               </a>
-              <a className={styles.SocialWrapper}>
+              <a className={styles.SocialWrapper} href="https://www.instagram.com/tum.ai_official/">
                 <Image src={"/assets/insta.svg"} alt={"Instagram"} layout="fill" objectFit="cover" />
               </a>
             </div>
