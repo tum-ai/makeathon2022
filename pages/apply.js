@@ -22,12 +22,12 @@ export default function Apply(){
                 {"Website by IT & Infrastructure department"}
               </div>
               <div className={styles.SecondContainer}>
-                <a className={styles.Link}>Contact</a>
+                <a href="mailto:contact@tum-ai.com" className={styles.Link}>Contact</a>
                 <a className={styles.Link}>Admin</a>
               </div>
               <div className={styles.ThirdContainer}>
-                <a className={styles.Link}>{"Terms&Security"}</a>
-                <a className={styles.Link}>Imprint</a>
+                <a href="https://www.tum-ai.com/datenschutz" className={styles.Link}>{"Terms&Security"}</a>
+                <a href="https://www.tum-ai.com/impressum" className={styles.Link}>Imprint</a>
               </div>
             </div>
             <div className={styles.Bottom}>
