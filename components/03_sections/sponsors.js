@@ -27,6 +27,11 @@ export default function Sponsors(){
             <Image src={"/assets/siemens_logo_cmyk-pantone.svg"} alt="netapp" layout="fill" objectFit="contain" />
           </div>
         </Link> 
+        <Link href="https://www2.deloitte.com/de/de.html" passHref >
+          <div className={styles.Premium}>
+            <Image src={"/assets/deloitte.jpg"} alt="netapp" layout="fill" objectFit="contain" />
+          </div>
+        </Link> 
         {/* <div className={styles.Sponsor}>
           <Image src={"/assets/infineon.png"} alt="netapp" layout="fill" objectFit="contain" />
         </div> */}
