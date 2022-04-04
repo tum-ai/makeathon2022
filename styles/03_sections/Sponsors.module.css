@@ -27,7 +27,9 @@
 }
 .Sponsors{
   display: flex;
-  gap: 120px;
+  column-gap: 120px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .SponsorsGrid {
   justify-content: center;

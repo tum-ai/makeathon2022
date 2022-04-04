@@ -29,7 +29,7 @@ const data = {
     },
     {
       "question": "What if I have more questions?",
-      "answer": "If you still have questions, you can email contact@tum-ai.com, and we will be happy to assist you!"
+      "answer": "If you still have questions, you can email makeathon@tum-ai.com, and we will be happy to assist you!"
     },
     {
       "question": "What events will be held?",
