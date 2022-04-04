@@ -23,15 +23,30 @@ export default function Sponsors(){
           </div>
         </Link>
         <Link href="https://www.siemens-healthineers.com/" passHref >
-          <div className={styles.Premium}>
+          <div style={{filter: "grayscale(1)"}} className={styles.Premium}>
             <Image src={"/assets/siemens_logo_cmyk-pantone.svg"} alt="netapp" layout="fill" objectFit="contain" />
           </div>
         </Link> 
         <Link href="https://www2.deloitte.com/de/de.html" passHref >
-          <div className={styles.Premium}>
+          <div style={{filter: "grayscale(1)"}} className={styles.Premium}>
             <Image src={"/assets/Deloitte.png"} alt="netapp" layout="fill" objectFit="contain" />
           </div>
         </Link> 
+        <Link href="https://www.roche.com/" passHref >
+          <div style={{filter: "grayscale(1)"}} className={styles.Premium}>
+            <Image src={"/assets/roche.png"} alt="netapp" layout="fill" objectFit="contain" />
+          </div>
+        </Link> 
+        <Link href="https://healthcare-xplorers.com/" passHref >
+          <div style={{filter: "grayscale(1)"}} className={styles.Premium}>
+            <Image src={"/assets/Healthcare-xplorers-Logo-claim.png"} alt="netapp" layout="fill" objectFit="contain" />
+          </div>
+        </Link> 
+        <Link href="https://www.imfusion.com" passHref >
+          <div style={{filter: "grayscale(1)"}} className={styles.Premium}>
+              <Image src={"/assets/ImFusionLogo.png"} alt="imfusion" layout="fill" objectFit="contain" />
+          </div>
+        </Link>
         {/* <div className={styles.Sponsor}>
           <Image src={"/assets/infineon.png"} alt="netapp" layout="fill" objectFit="contain" />
         </div> */}
@@ -45,20 +60,16 @@ export default function Sponsors(){
         {/* 1st row */}
         <div className={styles.SponsorsRow}>
             <Link href="https://www.infineon.com/" passHref >
-            <div className={styles.Sponsor}>
-                <Image src={"/assets/infineon.png"} alt="netapp" layout="fill" objectFit="contain" />
-            </div>
+              <div style={{filter: "grayscale(1)"}} className={styles.Sponsor}>
+                  <Image src={"/assets/infineon.png"} alt="netapp" layout="fill" objectFit="contain" />
+              </div>
             </Link>
-            <Link href="https://www.imfusion.com" passHref >
-            <div className={styles.Sponsor}>
-                <Image src={"/assets/ImFusionLogo.png"} alt="imfusion" layout="fill" objectFit="contain" />
-            </div>
-            </Link>
+            
             {/* TODO: SET CORRECT HREF */}
             <Link href="https://www.mi4people.org/" passHref >
-            <div className={styles.Sponsor}>
-                <Image src={"/assets/Logo_MI_kurz.svg"} alt="mi" layout="fill" objectFit="contain" />
-            </div>
+              <div style={{filter: "grayscale(1)"}} className={styles.Sponsor}>
+                  <Image src={"/assets/Logo_MI_kurz.svg"} alt="mi" layout="fill" objectFit="contain" />
+              </div>
             </Link>
         </div>
         {/* 2nd row */}
