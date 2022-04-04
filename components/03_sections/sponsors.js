@@ -29,7 +29,7 @@ export default function Sponsors(){
         </Link> 
         <Link href="https://www2.deloitte.com/de/de.html" passHref >
           <div style={{filter: "grayscale(1)"}} className={styles.Premium}>
-            <Image src={"/assets/deloitte.jpg"} alt="netapp" layout="fill" objectFit="contain" />
+            <Image src={"/assets/Deloitte.png"} alt="netapp" layout="fill" objectFit="contain" />
           </div>
         </Link> 
         <Link href="https://www.roche.com/" passHref >
