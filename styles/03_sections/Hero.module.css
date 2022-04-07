@@ -6,7 +6,7 @@
 }
 .Background{
   width: 100%;
-  height: calc(780px + ((100vw * 0.176327) / 2));
+  height: calc(850px + ((100vw * 0.176327) / 2));
   position: absolute;
 }
 .BgContainer{
