@@ -11,8 +11,8 @@ const data = {
     {
       "title": "Application deadline",
       "icon": "/assets/deadline.svg",
-      "time": "06.04",
-      "content_highlighted": "You have time to submit your application until the 6th of April. Apply either with a group of friends or alone. ",
+      "time": "08.04",
+      "content_highlighted": "You have time to submit your application until the 8th of April. Apply either with a group of friends or alone. ",
       "content": "If you are applying with an already formed team, make sure that every member submits the application! Else, take part in exciting team-finding events to match up with other motivated participants! Hurry up to apply as there are thrilling gifts for the early bird applicants!",
       "img": "/assets/road01.jpg"
     },
