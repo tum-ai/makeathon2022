@@ -64,16 +64,30 @@ export default function Sponsors(){
                   <Image src={"/assets/infineon.png"} alt="netapp" layout="fill" objectFit="contain" />
               </div>
             </Link>
-            
-            {/* TODO: SET CORRECT HREF */}
             <Link href="https://www.mi4people.org/" passHref >
               <div style={{filter: "grayscale(1)"}} className={styles.Sponsor}>
                   <Image src={"/assets/Logo_MI_kurz.svg"} alt="mi" layout="fill" objectFit="contain" />
               </div>
             </Link>
+            <Link href="https://www.startmunich.de/" passHref >
+              <div style={{filter: "grayscale(1)"}} className={styles.Sponsor}>
+                  <Image src={"/assets/START_munich_white.png"} alt="mi" layout="fill" objectFit="contain" />
+              </div>
+            </Link>
         </div>
         {/* 2nd row */}
+        {/* TODO: SET CORRECT HREF */}
         <div className={styles.SponsorsRow}>
+            <Link href="#" passHref >
+              <div style={{filter: "grayscale(1)"}} className={styles.Sponsor}>
+                  <Image src={"/assets/brian_logo.png"} alt="mi" layout="fill" objectFit="contain" />
+              </div>
+            </Link>
+            <Link href="https://www.muenchen.de/" passHref >
+              <div style={{filter: "grayscale(1)"}} className={styles.Sponsor}>
+                  <Image src={"/assets/stadt_münchen.svg"} alt="mi" layout="fill" objectFit="contain" />
+              </div>
+            </Link>
             {/*<Link href="https://openai.com/" passHref >
             <div className={styles.Sponsor}>
                 <Image src={"/assets/openAI.png"} alt="netapp" layout="fill" objectFit="contain" />
