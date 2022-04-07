@@ -71,7 +71,7 @@ export default function Sponsors(){
             </Link>
             <Link href="https://www.startmunich.de/" passHref >
               <div style={{filter: "grayscale(1)"}} className={styles.Sponsor}>
-                  <Image src={"/assets/START_munich_white.png"} alt="mi" layout="fill" objectFit="contain" />
+                  <Image src={"/assets/start_logo.png"} alt="START" layout="fill" objectFit="contain" />
               </div>
             </Link>
         </div>
@@ -80,12 +80,12 @@ export default function Sponsors(){
         <div className={styles.SponsorsRow}>
             <Link href="#" passHref >
               <div style={{filter: "grayscale(1)"}} className={styles.Sponsor}>
-                  <Image src={"/assets/brian_logo.png"} alt="mi" layout="fill" objectFit="contain" />
+                  <Image src={"/assets/brian_logo.png"} alt="brian" layout="fill" objectFit="contain" />
               </div>
             </Link>
             <Link href="https://www.muenchen.de/" passHref >
               <div style={{filter: "grayscale(1)"}} className={styles.Sponsor}>
-                  <Image src={"/assets/stadt_münchen.svg"} alt="mi" layout="fill" objectFit="contain" />
+                  <Image src={"/assets/muc_it_logo.jpg"} alt="muc_it" layout="fill" objectFit="contain" />
               </div>
             </Link>
             {/*<Link href="https://openai.com/" passHref >
