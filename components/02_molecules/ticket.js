@@ -5,18 +5,18 @@ export default function Ticket({position}){
   if(position == "right"){
     return <div style={{right: 0}}className={styles.TicketItem}>
       <div alt="Ticket" className={styles.Ticket}></div>
-      <Link href="/apply" passHref={true} >
+      <Link href="#" passHref={true} >
         <div className={styles.CtaButton}>
-          <div className={styles.Text}>Apply now</div>
+          <div className={styles.Text}>The application phase has ended!</div>
         </div>
       </Link>
     </div>
   }else{
     return <div className={styles.TicketItem}>
       <div alt="Ticket" className={styles.Ticket}></div>
-      <Link href="/apply" passHref={true} >
+      <Link href="#" passHref={true} >
         <div className={styles.CtaButton}>
-          <div className={styles.Text}>Apply now</div>
+          <div className={styles.Text}>The application phase has ended!</div>
         </div>
       </Link>
     </div>
