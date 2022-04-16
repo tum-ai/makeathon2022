@@ -172,7 +172,19 @@ export default function ApplicationForm() {
     });
 
     setApplicationData(newObj);
-  };
+  }
+
+  function handleNextPage() {
+    changeApplicationState(applicationState + 1);
+    setIsControlled(true);
+    setTimeout(() => {
+      setIsControlled(false);
+      setIsAppValid(false);
+    }, 500);
+    if (applicationState == 2) {
+      //console.log(applicationData);
+    }
+  }
 
   const handleNextPage = () => setApplicationState(applicationState + 1);
   const handlePrevPage = () => setApplicationState(applicationState - 1);
@@ -213,8 +225,8 @@ export default function ApplicationForm() {
             stateNumber={applicationState + 1}
             nextPage={() => handleNextPage()}
             prevPage={() => handlePrevPage()}
-            isValid={isAppValid ? true : false} 
-          /> 
+            isValid={isAppValid ? true : false}
+          />
         </div>
       );
     case 1:
