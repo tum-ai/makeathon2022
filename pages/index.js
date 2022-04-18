@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import About from '../components/03_sections/about'
 import Faqs from '../components/03_sections/faqs'
+import Stats from '../components/03_sections/stats'
 import FullscreenPicture from '../components/03_sections/fullscreenPicture'
 import Hero from '../components/03_sections/hero'
 import Outtro from '../components/03_sections/outtro'
@@ -45,6 +46,9 @@ export default function Home() {
         </Element>
         <Sponsors />
         <SponsorInfo />
+        <Element name="stats">
+          <Stats />
+        </Element>
         <Element name="faqs">
           <Faqs />
         </Element>
