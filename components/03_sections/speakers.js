@@ -59,7 +59,7 @@ const data = {
       "name": "Haschemi, Mehdiyar",
       "paragraph_highlighted": "Product Manager for AI Solutions, Advanced Therapies, Siemens Healthineers AG",
       "paragraph": " We are the global leader when it comes to AI patent applications in medical imaging and have been a pioneer in AI development for more than 20 years. We own more than 700 patent families related to machine learning, of which more than 275 are rooted in deep learning. With established AI expertise, future-oriented staff, vast medical data sets, and the exceptional computing power needed for creating algorithm-supported healthcare solutions, we are the right partner when venturing into the world of AI.",
-      "linkedIn_link": "https://www.linkedin.com/in/mehdiyar-haschemi/",
+      "linkedIn_link": "",
       "website_link": "https://www.siemens-healthineers.com/",
       "image": "/speakers/220405_Profilbild_TUM.PNG"
     },
@@ -67,7 +67,7 @@ const data = {
       "name": "Lluch Alvarez, Èric",
       "paragraph_highlighted": "Research Scientist in Artificial Intelligence Germany, Siemens Healthineers AG",
       "paragraph": " We are the global leader when it comes to AI patent applications in medical imaging and have been a pioneer in AI development for more than 20 years. We own more than 700 patent families related to machine learning, of which more than 275 are rooted in deep learning. With established AI expertise, future-oriented staff, vast medical data sets, and the exceptional computing power needed for creating algorithm-supported healthcare solutions, we are the right partner when venturing into the world of AI.",
-      "linkedIn_link": "https://www.linkedin.com/in/ericlluch/",
+      "linkedIn_link": "",
       "website_link": "https://www.siemens-healthineers.com/",
       "image": "/speakers/fotoCarnet.jpg"
     }
