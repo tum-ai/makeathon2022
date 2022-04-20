@@ -57,4 +57,15 @@ const Nationalities = ({ nationalities }) => {
   );
 };
 
+const nationalities = {
+  nationality: {
+    'German': 20,
+    'British': 15,
+    'American': 10,
+    'Swiss': 10,
+    'Austrian': 15,
+    'French': 15,
+  },
+};
+
 export default Nationalities;

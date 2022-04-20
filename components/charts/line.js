@@ -10,7 +10,6 @@ import {
   Legend,
 } from 'chart.js';
 import { Line } from 'react-chartjs-2';
-import faker from 'faker';
 
 ChartJS.register(
   CategoryScale,
@@ -59,5 +58,6 @@ const LineChart = ({ daywise_apps }) => {
     </div>
   );
 };
+
 
 export default LineChart;

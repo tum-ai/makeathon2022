@@ -34,4 +34,5 @@ const DoughnutChart = ({ genderData }) => {
   );
 };
 
+
 export default DoughnutChart;

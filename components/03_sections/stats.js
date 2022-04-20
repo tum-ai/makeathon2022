@@ -11,6 +11,7 @@ import Masonry from 'react-masonry-css'
 import Image from 'next/image'
 
 
+import { Bar } from 'react-chartjs-2';
 
 import { useState } from 'react'
 // This site shows some statistics about the application.
@@ -18,9 +19,16 @@ import { useState } from 'react'
 
 
 
-import VerticalBarChart from '../charts/verticalBar-2';
+//import VerticalBarChart from '../charts/verticalBar-2';
+import VerticalBarChart from '../charts/verticalBar';
+import DoughnutChart from '../charts/doughnut';
+import Nationalities from '../charts/Nationalities';
+import LineChart from '../charts/line';
+
+//import ApplicationDataTable from '../components/dataTable';
 
 //import Card from '@mui/material/Card';
+
 
 const data = {
   "chapter_title": "Q&A",
@@ -93,7 +101,85 @@ const data = {
   ]
 }
 
-export default function Stats({}){
+
+const options = {
+  scales: {
+    yAxes: [
+      {
+        ticks: {
+          beginAtZero: true,
+        },
+      },
+    ],
+  },
+  maintainAspectRatio: true ,
+};
+
+
+const data2 = {
+  labels: ['AI/Tech', 'Buisness', 'Domain'],
+  datasets: [
+    {
+      label: '# of Votes',
+      data: [19, 7, 10],
+      backgroundColor: [
+        'rgba(255, 99, 132, 1)',
+        'rgba(54, 162, 235, 1)',
+        'rgba(255, 206, 86, 1)',
+        'rgba(75, 192, 192, 1)',
+        'rgba(153, 102, 255, 1)',
+        'rgba(255, 159, 64, 1)',
+      ],
+      borderColor: [
+        'rgba(255, 99, 132, 1)',
+        'rgba(54, 162, 235, 1)',
+        'rgba(255, 206, 86, 1)',
+        'rgba(75, 192, 192, 1)',
+        'rgba(153, 102, 255, 1)',
+        'rgba(255, 159, 64, 1)',
+      ],
+      borderWidth: 1,
+    },
+  ],
+};
+
+
+const genderData = {
+  gender: {
+    Male: 20,
+    Female: 10,
+    Diverse: 5,
+  },
+};
+
+const nationality = {
+  nationality: {
+    'German': 20,
+    'British': 15,
+    'American': 10,
+    'Swiss': 10,
+    'Austrian': 15,
+    'French': 15,
+  },
+};
+
+
+const daywise_apps = {
+  daywise: {
+    "2019-05-28": 3,
+    "2019-05-29": 4,
+    "2019-05-30": 3,
+    "2019-05-31": 2,
+    "2019-06-01": 2,
+    "2019-06-02": 1,
+  },
+};
+
+
+
+
+
+export default function Stats({ data2 }){
   const breakpointColumnsObj = {
     default: 2,
     1100: 1
@@ -101,58 +187,26 @@ export default function Stats({}){
   const [questionIndex, setQuestionIndex] = useState(undefined);
 
   return <div className={styles.FaqsItem}>
-        Example of a Chart:
-    
 
           <div className="col-lg-3 col-sm-3">
-                <h6> Buckets </h6>
-                <VerticalBarChart></VerticalBarChart>
+                <h6> Genders </h6>
+                <DoughnutChart genderData={genderData}></DoughnutChart>
+
+          </div>
+
+          <div className="col-lg-3 col-sm-3">
+                <h6> Nationalities </h6>
+                <Nationalities nationalities={nationality}></Nationalities>
+
+          </div>
+
+          <div className="col-lg-3 col-sm-3">
+                <h6> Applications per Day </h6>
+                <LineChart daywise_apps={daywise_apps}></LineChart>
+
           </div>
 
 
-
-    <div className={styles.Grid}>
-      <div className={styles.LeftContainer}>
-        <ChapterBar number={data.chapter_number} content={data.chapter_title} isDarkBackground={false}/>
-      </div>
-      <div className={styles.MiddleContainer}>
-        <Headline1 isH1={false} normalContent={data.title} highlightedContent={data.title_highlighted} isDarkBackground={false}/>
-        <div className={styles.Paragraph}>
-          <Paragraph1 className={styles.Paragraph} highlightedContent={data.paragraph_highlighted} normalContent={data.paragraph} isDarkBackground={false}/>
-        </div>
-      </div>
-    </div>
-    <div className={styles.BottomGrid}>
-      <div className={styles.QuestionContainer}>
-      <Masonry
-        breakpointCols={breakpointColumnsObj}
-        className={styles.myMasonryGrid}
-        columnClassName={styles.myMasonryGridColumn}>
-        {data.questions.map((question, index)=>(
-          <div key={index} className={styles.Question}>
-            <div className={styles.Header} onClick={()=>questionIndex == index ? setQuestionIndex(undefined) : setQuestionIndex(index)}>
-              {questionIndex != index ? <div className={styles.Text}>
-                <Paragraph1 normalContent={question.question} isDarkBackground={false}/>
-              </div> :
-              <div className={styles.Text}>
-                <Paragraph1 highlightedContent={question.question} isDarkBackground={false}/>
-              </div>}
-              {questionIndex == index ? <div className={styles.Arrow} style={{transform: "rotate(180deg)"}}>
-                <Image src="/assets/arrow.svg" alt="Arrow" layout="fill" objectFit="cover" />
-              </div> :
-              <div className={styles.Arrow} >
-                <Image src="/assets/arrow.svg" alt="Arrow" layout="fill" objectFit="cover" />
-              </div>}
-            </div>
-            {questionIndex == index ? <div className={styles.Answer}>
-              <Paragraph2 normalContent={question.answer} isDarkBackground={false} />
-            </div> : ""}
-            <div className={styles.Separator}></div>
-          </div>
-        ))}
-      </Masonry>
-      </div>
-    </div>
   </div>
 }
 
@@ -167,7 +221,7 @@ export async function getStaticProps() {
   //console.log(res);
 
   //const res = await fetch('http://127.0.0.1:5000/api/application/1877477104329612121');
-  const data = await res.json();
+  const data2 = await res.json();
 
   //const res_lang = await fetch('http://127.0.0.1:8000/api/appform/languages');
   //const languages = await res_lang.json();
