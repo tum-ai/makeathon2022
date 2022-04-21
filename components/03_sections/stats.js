@@ -237,10 +237,13 @@ const nationality = {
 
 
 const areaOfExpertise = {
-    areaOfExpertise: {
-  'AI': 5,
-  'Domain': 1,
-  'Business': 6,
+    nationality: {
+  'AI': 144,
+  'Business': 82,
+  'IT': 110,
+  'Domain': 48,
+  'Design/UX': 13,
+  '': 4,
     }   
 };
 
@@ -290,7 +293,11 @@ export default function Stats({ data2 }){
 
           </div>
 
+          <div className="col-lg-3 col-sm-3">
+                <h6> Area of Expertise </h6>
+                <Nationalities nationalities={areaOfExpertise}></Nationalities>
 
+          </div>
 
 
   </div>
