@@ -25,6 +25,10 @@ import DoughnutChart from '../charts/doughnut';
 import Nationalities from '../charts/Nationalities';
 import LineChart from '../charts/line';
 
+
+import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
+import { Doughnut } from 'react-chartjs-2';
+
 //import ApplicationDataTable from '../components/dataTable';
 
 //import Card from '@mui/material/Card';
@@ -152,15 +156,92 @@ const genderData = {
   },
 };
 
+//const nationality = {
+  //nationality: {
+    //'German': 20,
+    //'British': 15,
+    //'American': 10,
+    //'Swiss': 10,
+    //'Austrian': 15,
+    //'French': 15,
+  //},
+//};
+
+
+
+
+
 const nationality = {
   nationality: {
-    'German': 20,
-    'British': 15,
-    'American': 10,
-    'Swiss': 10,
-    'Austrian': 15,
-    'French': 15,
-  },
+  'Germany': 136,
+  'Australia': 1,
+  'Viet Nam': 3,
+  'Argentina': 4,
+  'Greece': 1,
+  'Tajikistan': 1,
+  'India': 64,
+  'Turkey': 32,
+  'Morocco': 1,
+  'Tunisia': 10,
+  'Brazil': 5,
+  'Kyrgyzstan': 1,
+  'Indonesia': 7,
+  'Ecuador': 1,
+  'Pakistan': 9,
+  'Italy': 7,
+  'Ghana': 2,
+  'Russian Federation': 9,
+  'Poland': 3,
+  'Egypt': 5,
+  'France': 2,
+  'Luxembourg': 1,
+  'Albania': 4,
+  'Ukraine': 2,
+  'Macedonia, The Former Yugoslav Republic of': 24,
+  'Iraq': 1,
+  'Nigeria': 6,
+  'Bulgaria': 3,
+  'Costa Rica': 1,
+  'Colombia': 3,
+  'Chile': 3,
+  'Philippines': 2,
+  'China': 8,
+  'Jordan': 2,
+  'Lebanon': 1,
+  'Kazakhstan': 1,
+  'Uganda': 1,
+  'United States': 1,
+  'Spain': 4,
+  'Bosnia and Herzegovina': 2,
+  'Hungary': 2,
+  'Serbia and Montenegro': 1,
+  'Japan': 1,
+  'Mauritius': 1,
+  'Malaysia': 1,
+  'Czech Republic': 1,
+  'Croatia': 1,
+  'Afghanistan': 1,
+  'Austria': 7,
+  'Uzbekistan': 2,
+  'Korea, Republic of': 2,
+  'Romania': 1,
+  'Nepal': 1,
+  'Belarus': 2,
+  'Algeria': 1,
+  'Ethiopia': 1,
+  'Netherlands': 1,
+  }
+};
+
+
+
+
+const areaOfExpertise = {
+    areaOfExpertise: {
+  'AI': 5,
+  'Domain': 1,
+  'Business': 6,
+    }   
 };
 
 
@@ -177,6 +258,20 @@ const daywise_apps = {
 
 
 
+          //<div className="col-lg-3 col-sm-3">
+                //<h6> Genders </h6>
+                //<DoughnutChart genderData={genderData}></DoughnutChart>
+
+          //</div>
+
+
+          //<div className="col-lg-3 col-sm-3">
+                //<h6> Applications per Day </h6>
+                //<LineChart daywise_apps={daywise_apps}></LineChart>
+
+          //</div>
+
+
 
 
 export default function Stats({ data2 }){
@@ -188,11 +283,6 @@ export default function Stats({ data2 }){
 
   return <div className={styles.FaqsItem}>
 
-          <div className="col-lg-3 col-sm-3">
-                <h6> Genders </h6>
-                <DoughnutChart genderData={genderData}></DoughnutChart>
-
-          </div>
 
           <div className="col-lg-3 col-sm-3">
                 <h6> Nationalities </h6>
@@ -200,11 +290,7 @@ export default function Stats({ data2 }){
 
           </div>
 
-          <div className="col-lg-3 col-sm-3">
-                <h6> Applications per Day </h6>
-                <LineChart daywise_apps={daywise_apps}></LineChart>
 
-          </div>
 
 
   </div>
