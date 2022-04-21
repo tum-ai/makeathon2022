@@ -1,0 +1,25 @@
+.StatsItem{
+  width: 100%;
+  padding: 140px 0;
+  overflow: hidden;
+}
+.Grid{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    gap: 80px;
+}
+.LeftContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.RightContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

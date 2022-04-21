@@ -1,8 +1,5 @@
 import React from 'react';
 import styles from '../../styles/03_sections/Stats.module.css'
-
-
-
 import ChapterBar from '../02_molecules/chapterBar'
 import Headline1 from '../01_atoms/fonts_headline1'
 import Paragraph1 from '../01_atoms/fonts_paragraph1'
@@ -16,9 +13,6 @@ import { Bar } from 'react-chartjs-2';
 import { useState } from 'react'
 // This site shows some statistics about the application.
 
-
-
-
 //import VerticalBarChart from '../charts/verticalBar-2';
 import VerticalBarChart from '../charts/verticalBar';
 import DoughnutChart from '../charts/doughnut';
@@ -26,8 +20,8 @@ import Nationalities from '../charts/Nationalities';
 import LineChart from '../charts/line';
 
 
-import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
-import { Doughnut } from 'react-chartjs-2';
+//import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
+//import { Doughnut } from 'react-chartjs-2';
 
 //import ApplicationDataTable from '../components/dataTable';
 
@@ -167,10 +161,6 @@ const genderData = {
   //},
 //};
 
-
-
-
-
 const nationality = {
   nationality: {
   'Germany': 136,
@@ -233,9 +223,6 @@ const nationality = {
   }
 };
 
-
-
-
 const areaOfExpertise = {
     nationality: {
   'AI': 144,
@@ -247,7 +234,6 @@ const areaOfExpertise = {
     }   
 };
 
-
 const daywise_apps = {
   daywise: {
     "2019-05-28": 3,
@@ -258,8 +244,6 @@ const daywise_apps = {
     "2019-06-02": 1,
   },
 };
-
-
 
           //<div className="col-lg-3 col-sm-3">
                 //<h6> Genders </h6>
@@ -274,9 +258,6 @@ const daywise_apps = {
 
           //</div>
 
-
-
-
 export default function Stats({ data2 }){
   const breakpointColumnsObj = {
     default: 2,
@@ -284,22 +265,19 @@ export default function Stats({ data2 }){
   };
   const [questionIndex, setQuestionIndex] = useState(undefined);
 
-  return <div className={styles.FaqsItem}>
-
-
-          <div className="col-lg-3 col-sm-3">
+  return <div className={styles.StatsItem}>
+          <h3 style={{marginLeft: "50px", marginBottom: "50px"}}> Some Stats about the applicants for the upcoming makeathon</h3>
+         <div className={styles.Grid}> 
+         <div className={styles.LeftContainer}>
                 <h6> Nationalities </h6>
                 <Nationalities nationalities={nationality}></Nationalities>
-
           </div>
-
-          <div className="col-lg-3 col-sm-3">
+          <div className={styles.RightContainer}>
                 <h6> Area of Expertise </h6>
                 <Nationalities nationalities={areaOfExpertise}></Nationalities>
-
           </div>
-
-
+         </div>
+          
   </div>
 }
 
