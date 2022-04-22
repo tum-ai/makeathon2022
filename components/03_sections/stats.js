@@ -299,7 +299,6 @@ export default function Stats({ data2 }){
 
           </div>
 
-
   </div>
 }
 
