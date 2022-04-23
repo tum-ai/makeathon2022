@@ -91,6 +91,13 @@ const areaOfExpertise = {
     }   
 };
 
+const applicationsReceived = {
+  apps : {
+    'received': 402,
+    'accepted': 280,
+  }
+};
+
 export default function Stats(){
   const breakpointColumnsObj = {
     default: 2,
@@ -99,14 +106,28 @@ export default function Stats(){
   const [questionIndex, setQuestionIndex] = useState(undefined);
 
   return <div className={styles.StatsItem}>
-          <h3 style={{marginLeft: "30%", marginBottom: "50px"}}> Some Stats about the applicants for the upcoming makeathon</h3>
+    <div className={styles.Header}>
+      <h3> Some Stats about the upcoming makeathon</h3>
+    </div>
          <div style={{marginLeft: "10%"}} className={styles.Grid}> 
          <div className={styles.LeftContainer}>
-                <h6> Nationalities </h6>
+          <div className={styles.AppCard}>
+            <div className={styles.cardGrid}> 
+              <div className={styles.cardLeftContainer}>Applications:</div>
+              <div className={styles.cardRightContainer}>{applicationsReceived.apps.received} </div>
+            </div>
+            <div className={styles.cardGrid}>
+              <div className={styles.cardLeftContainer}>Accepted:</div>
+              <div className={styles.cardRightContainer}>{applicationsReceived.apps.accepted}</div>
+            </div>
+          </div>
+         </div>
+         <div className={styles.MiddleContainer}>
+                <h5 style={{marginRight: "10px"}}> Nationalities </h5>
                 <Nationalities nationalities={nationality}></Nationalities>
           </div>
           <div className={styles.RightContainer}>
-                <h6> Area of Expertise </h6>
+                <h5 style={{marginRight: "10px"}}> Area of Expertise </h5>
                 <Nationalities nationalities={areaOfExpertise}></Nationalities>
           </div>
          </div>
