@@ -7,7 +7,7 @@ export default function Ticket({position}){
       <div alt="Ticket" className={styles.Ticket}></div>
       <Link href="#" passHref={true} >
         <div className={styles.CtaButton}>
-          <div className={styles.Text}>The application phase has ended!</div>
+          <div className={styles.Text}>Next application phase will open soon!</div>
         </div>
       </Link>
     </div>
@@ -16,7 +16,7 @@ export default function Ticket({position}){
       <div alt="Ticket" className={styles.Ticket}></div>
       <Link href="#" passHref={true} >
         <div className={styles.CtaButton}>
-          <div className={styles.Text}>The application phase has ended!</div>
+          <div className={styles.Text}>Next application phase will open soon!</div>
         </div>
       </Link>
     </div>
