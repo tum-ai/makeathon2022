@@ -51,11 +51,6 @@ export default function Hero(){
               </div>
             );
           })}
-          <div className={styles.Value}>
-                <div className={styles.Text}>
-                  <img src="/assets/aws_logo_white.png" alt="powered_by_aws" width={250}></img>
-                </div>
-            </div>
         </div>
       </div>
       <div className={styles.RightContainer}>
