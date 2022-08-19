@@ -32,14 +32,14 @@ export default function Home() {
         <Element name="about"></Element>
         <About />
         <Video />
-        <Roadmap />
-        <FullscreenPicture />
-        <Element name="tracks">
+        {/* <Roadmap /> */}
+        {/* <FullscreenPicture /> */}
+        {/* <Element name="tracks">
           <Tracks />
-        </Element>
-        <Element name="speakers">
+        </Element> */}
+        {/* <Element name="speakers">
           <Speakers />
-        </Element>
+        </Element> */}
         <Element name="stories">
           <Stories />
         </Element>
