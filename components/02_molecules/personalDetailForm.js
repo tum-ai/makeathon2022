@@ -23,6 +23,7 @@ export default function PersonalDetailForm({
     timeZone: false,
     areaOfExpertise: false,
     dateOfBirth: false,
+    agreement: false,
   });
 
   function checkPageStatus() {
@@ -31,6 +32,11 @@ export default function PersonalDetailForm({
       setIsAppValid(true);
     }
   }
+
+  const validateEmail = (email) => {
+    const emailRegex = new RegExp(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
+    return emailRegex.test(email);
+  };
 
   return (
     <div className={styles.PersonalDetailFormItem}>
@@ -99,22 +105,7 @@ export default function PersonalDetailForm({
                   checkPageStatus();
                 }}
                 isRequired={true}
-              />
-            </div>
-            <div className={styles.Full}>
-              <TextInput
-                headerText="Phone"
-                placeholderText="Enter your phone number ..."
-                name="phone"
-                onContentChange={(event) => onInputChange(event)}
-                value={data.phone}
-                isControlled={isControlled}
-                setIsValid={(value) => {
-                  let obj = isPageValid;
-                  obj.phone = value;
-                  setIsPageValid(obj);
-                  checkPageStatus();
-                }}
+                dataValidator={(email) => validateEmail(email)}
               />
             </div>
             <div className={styles.Half}>
@@ -516,150 +507,19 @@ export default function PersonalDetailForm({
             </div>
             <div className={styles.Full}>
               <BoolInput
-                headerText="I accept that my name and e-mail will be forwarded to OpenAI in order to create an account for accessing Codex and GPT-3."
-                name="openAI"
+                headerText="I accept that my name and e-mail will be forwarded to the partners and GPU providers of the makeathon"
+                name="agreement"
                 onContentChange={(event) => onInputChange(event)}
-                value={data.openAI}
+                value={data.agreement}
                 isControlled={isControlled}
                 setIsValid={(value) => {
                   let obj = isPageValid;
-                  obj.openAI = value;
+                  obj.agreement = value;
                   setIsPageValid(obj);
                   checkPageStatus();
                 }}
                 isRequired={true}
               />
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className={styles.Grid}>
-        <div className={styles.Left}>
-          <Headline2 normalContent={"Digital Appearence"} isDarkBackground />
-          <Paragraph1
-            normalContent={
-              ""
-            }
-            isDarkBackground
-          />
-        </div>
-        <div className={styles.Right}>
-          <div className={styles.Content}>
-            <div className={styles.Full}>
-              <TextInput
-                headerText="LinkedIn"
-                placeholderText="Enter your LinkedIn url ..."
-                withIcon={true}
-                iconPath="/assets/application/linkedIn.svg"
-                name="linkedIn"
-                onContentChange={(event) => onInputChange(event)}
-                value={data.linkedIn}
-                isControlled={isControlled}
-                isRequired={false}
-              />
-            </div>
-            <div className={styles.Full}>
-              <TextInput
-                headerText="Website"
-                placeholderText="Enter your website url ..."
-                withIcon={true}
-                iconPath="/assets/application/website.svg"
-                name="personalWebsite"
-                onContentChange={(event) => onInputChange(event)}
-                value={data.personalWebsite}
-                isControlled={isControlled}
-                isRequired={false}
-              />
-            </div>
-            <div className={styles.Full}>
-              <TextInput
-                headerText="Github"
-                placeholderText="Enter your Github url ..."
-                withIcon={true}
-                iconPath="/assets/application/github.svg"
-                name="github"
-                onContentChange={(event) => onInputChange(event)}
-                value={data.github}
-                isControlled={isControlled}
-                isRequired={false}
-                setIsValid={(value) => {
-                  let obj = isPageValid;
-                  obj.mailForward = value;
-                  setIsPageValid(obj);
-                  checkPageStatus();
-                }}
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className={styles.Grid}>
-        <div className={styles.Left}>
-          <Headline2 normalContent={"Your background"} isDarkBackground />
-          <Paragraph1
-            normalContent={
-              ""
-            }
-            isDarkBackground
-          />
-        </div>
-        <div className={styles.Right}>
-          <div className={styles.Content}>
-            <div className={styles.Full}>
-              <BoolInput
-                headerText="Are you currently pursuing or did you pursue an academic or professional degree?"
-                name="universityBool"
-                onContentChange={(event) => onInputChange(event)}
-                value={data.universityBool}
-                isControlled={isControlled}
-              />
-            </div>
-            <div className={styles.Full}>
-              <TextInput
-                headerText="If yes, which university are you studying at?"
-                placeholderText="Name of you university ..."
-                name="university"
-                withIcon
-                iconPath="/assets/application/school.svg"
-                onContentChange={(event) => onInputChange(event)}
-                value={data.university}
-                isControlled={isControlled}
-                setIsValid={(value) => setIsPageValid(value)}
-                isRequired={false}
-              />
-            </div>
-            <div className={styles.Full}>
-              <TextAreaInput
-                headerText="What describes you best?"
-                placeholderText="Enter text here ..."
-                name="bestDescription"
-                onContentChange={(event) => onInputChange(event)}
-                value={data.bestDescription}
-                isControlled={isControlled}
-              />
-            </div>
-            <div className={styles.Full}>
-              <DropDownInput
-                headerText="Which field do you think you are expert in?*"
-                name="areaOfExpertise"
-                onContentChange={(event) => onInputChange(event)}
-                value={data.areaOfExpertise}
-                isControlled={isControlled}
-                setIsValid={(value) => {
-                  let obj = isPageValid;
-                  obj.areaOfExpertise = value;
-                  setIsPageValid(obj);
-                  checkPageStatus();
-                }}
-                isRequired={true}
-              >
-                <option value="">Choose ...</option>
-                <option value="AI">Artificial Intelligence</option>
-                <option value="IT">IT</option>
-                <option value="Business">Business</option>
-                <option value="Design/UX">Design/UX</option>
-                <option value="Domain">A specific Domain</option>
-              </DropDownInput>
             </div>
           </div>
         </div>
