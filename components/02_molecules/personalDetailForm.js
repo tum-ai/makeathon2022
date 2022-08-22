@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import styles from "../../styles/02_molecules/PersonalDetailForm.module.css";
 import DateInput from "../01_atoms/dateInput";
 import DropDownInput from "../01_atoms/dropDownInput";
@@ -6,7 +7,6 @@ import Paragraph1 from "../01_atoms/fonts_paragraph1";
 import TextInput from "../01_atoms/textInput";
 import TextAreaInput from "../01_atoms/textAreaInput";
 import BoolInput from "../01_atoms/boolInput";
-import { useState } from "react";
 
 export default function PersonalDetailForm({
   data,
@@ -14,24 +14,33 @@ export default function PersonalDetailForm({
   isControlled,
   setIsAppValid,
 }) {
+  const [isDataConsentConfirmed, setIsDataConsentConfirmed] = useState(false);
+
   const [isPageValid, setIsPageValid] = useState({
-    firstname: false,
-    lastname: false,
-    email: false,
-    nationality: false,
-    placeOfResidence: false,
-    timeZone: false,
-    areaOfExpertise: false,
-    dateOfBirth: false,
-    agreement: false,
+    firstname: data.firstname !== "",
+    lastname: data.lastname !== "",
+    email: data.email !== "",
+    nationality: data.nationality !=="",
+    placeOfResidence: data.placeOfResidence !== "",
+    timeZone: data.timeZone !== "",
+    dateOfBirth: data.dateOfBirth !== "",
+    //agreement: data.agreement !== false,
+    
   });
 
+
   function checkPageStatus() {
-    console.log(isPageValid);
-    if (Object.values(isPageValid).includes(false) == false) {
-      setIsAppValid(true);
-    }
+    const isCurrentStateValid = Object.keys(isPageValid).reduce(
+      (valid, key) => {
+        const value = isPageValid[key];
+        return valid && value;
+      },
+      true
+    );
+    setIsAppValid(isCurrentStateValid)
   }
+
+  useEffect(() => checkPageStatus());
 
   const validateEmail = (email) => {
     const emailRegex = new RegExp(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
@@ -509,15 +518,18 @@ export default function PersonalDetailForm({
               <BoolInput
                 headerText="I accept that my name and e-mail will be forwarded to the partners and GPU providers of the makeathon"
                 name="agreement"
-                onContentChange={(event) => onInputChange(event)}
-                value={data.agreement}
+                onContentChange={(event) =>{
+                   onInputChange(event);
+                   setIsDataConsentConfirmed(event.target.checked);
+                  }}
+                value={isDataConsentConfirmed}
                 isControlled={isControlled}
-                setIsValid={(value) => {
-                  let obj = isPageValid;
-                  obj.agreement = value;
-                  setIsPageValid(obj);
-                  checkPageStatus();
-                }}
+                // setIsValid={(value) => {
+                //   let obj = isPageValid;
+                //   obj.agreement = value;
+                //   setIsPageValid(obj);
+                //   checkPageStatus();
+                // }}
                 isRequired={true}
               />
             </div>

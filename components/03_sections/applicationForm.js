@@ -7,7 +7,7 @@ import PersonalDetailForm from "../02_molecules/personalDetailForm";
 import ProfessionForm from "../02_molecules/professionForm";
 import StatisticsForm from "../02_molecules/statisticsForm";
 import TeamForm from "../02_molecules/teamForm";
-import SubmitForm from "../02_molecules/submitForm";
+import SummaryForm from "../02_molecules/summaryForm";
 import ResumeForm from "../02_molecules/resumeForm";
 import Image from "next/image";
 import Button from "../01_atoms/button";
@@ -15,7 +15,7 @@ import { appConfig } from "../04_constants/constants"
 import Paragraph1 from "../01_atoms/fonts_paragraph1";
 
 export default function ApplicationForm() {
-  const [applicationState, changeApplicationState] = useState(0);
+  const [applicationState, setApplicationState] = useState(0);
   /* const [applicationData, setApplicationData] = useState({
     academicBackground: "",
     confirmation: false,
@@ -55,9 +55,8 @@ export default function ApplicationForm() {
     email: "",
     nationality: "",
     placeOfResidence: "",
-    timeZone: null,
-    areaOfExpertise: "",
-    dateOfBirth: null,
+    timeZone: "",
+    dateOfBirth: 0,
     agreement: false,
     // background
     universityBool: false,
@@ -80,13 +79,14 @@ export default function ApplicationForm() {
     programmingSkillsBool: false,
     programmingSkills: "",
     programmingSkillsOthers: "",
-    sourceHeard: "",
+    sourceHeard: ""
   });
   const [isControlled, setIsControlled] = useState(false);
   const [isAppValid, setIsAppValid] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(false);
+  
 
-  function fetchData() {
+  /* function fetchData() {      // deprecated in favor of submit data
     if (!submitStatus) {
       var myHeaders = new Headers();
       myHeaders.append("Content-Type", "application/json");
@@ -106,48 +106,72 @@ export default function ApplicationForm() {
         .then((response) => {
           //           console.log(response.text());
           if (response.status == 201)
-            changeApplicationState(applicationState + 1);
+            setApplicationState(applicationState + 1);
           else if (response.status == 409)
-            changeApplicationState(applicationState + 2);
+            setApplicationState(applicationState + 2);
           else {
             console.log("fail");
-            changeApplicationState(applicationState + 3);
+            setApplicationState(applicationState + 3);
           }
         })
         .catch((error) => console.log("error", error));
 
       setSubmitStatus(true);
     }
-  }
+  } */
 
-  function onInputChange(event) {
+  const submitData = () => {
+    const data = new FormData();
+    Object.keys(applicationData).forEach(key => data.append(key, applicationData[key]));
+
+    const config = {
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "multipart/form-data",
+      },
+    };
+
+    axios
+      .post(
+        `${appConfig.urls.API_BASE_URL}/industry/submit-application`,
+        data,
+        config
+      )
+      .then(response => {
+        if (response.status === 201) {
+          console.log("App response", response.status)
+          setApplicationState(AppFormState.SUCESS_SUBMIT);
+        } else if (response.status === 409) {
+          setApplicationState(AppFormState.EMAIL_ALREADY_REGISTERED);
+        } else {
+          setApplicationState(AppFormState.ERROR_RESPONSE);
+        }
+      })
+      .catch(error => {
+        console.error("App error", error.response)
+        if (error.response !== undefined && error.response.status === 409) {
+          setApplicationState(AppFormState.EMAIL_ALREADY_REGISTERED);
+        } else {
+          setApplicationState(AppFormState.ERROR_RESPONSE);
+        }
+      });
+  };
+
+  const onInputChange = (event) => {
     let newObj = applicationData;
     Object.defineProperty(newObj, event.target.name, {
-      value: event.target.value,
+      value:
+        event.target.type === "file"
+          ? event.target.files[0]
+          : event.target.value,
       writable: true,
     });
+
     setApplicationData(newObj);
-  }
+  };
 
-  function handleNextPage() {
-    changeApplicationState(applicationState + 1);
-    setIsControlled(true);
-    setTimeout(() => {
-      setIsControlled(false);
-      setIsAppValid(false);
-    }, 500);
-    if (applicationState == 2) {
-      //console.log(applicationData);
-    }
-  }
-
-  function handlePrevPage() {
-    changeApplicationState(applicationState - 1);
-    setIsControlled(true);
-    setTimeout(() => {
-      setIsControlled(false);
-    }, 500);
-  }
+  const handleNextPage = () => setApplicationState(applicationState + 1);
+  const handlePrevPage = () => setApplicationState(applicationState - 1);
 
   function submitValidation() {
     if (applicationState == 2) {
@@ -185,7 +209,7 @@ export default function ApplicationForm() {
             stateNumber={applicationState + 1}
             nextPage={() => handleNextPage()}
             prevPage={() => handlePrevPage()}
-            isValid={isAppValid ? true : true}    // changed just for convience of programming
+            isValid={isAppValid ? true : false} 
           /> 
         </div>
       );
@@ -205,7 +229,7 @@ export default function ApplicationForm() {
             stateNumber={applicationState + 1}
             nextPage={() => handleNextPage()}
             prevPage={() => handlePrevPage()}
-            isValid={isAppValid ? true : true}
+            isValid={isAppValid ? true : false}
           />
         </div>
       );    
@@ -225,7 +249,7 @@ export default function ApplicationForm() {
             stateNumber={applicationState + 1}
             nextPage={() => handleNextPage()}
             prevPage={() => handlePrevPage()}
-            isValid={isAppValid ? true : true}
+            isValid={isAppValid ? true : false}
           />
         </div>
       );
@@ -245,7 +269,7 @@ export default function ApplicationForm() {
             stateNumber={applicationState + 1}
             nextPage={() => handleNextPage()}
             prevPage={() => handlePrevPage()}
-            isValid={isAppValid ? true : true}
+            isValid={isAppValid ? true : false}
           />
         </div>
       );
@@ -260,12 +284,12 @@ export default function ApplicationForm() {
               setIsAppValid={(value) => setIsAppValid(value)}
             />
             <ApplyFooter
-              nextBtnText="Next"
+              nextBtnText="Submit"
               prevBtnText="Prev"
               stateNumber={applicationState + 1}
               nextPage={() => handleNextPage()}
               prevPage={() => handlePrevPage()}
-              isValid={isAppValid ? true : true}
+              isValid={isAppValid ? true : false}
             />
           </div>
         );
@@ -273,10 +297,8 @@ export default function ApplicationForm() {
       return (
         <div className={styles.ApplicationFormItem}>
           <ApplyHeader title="Almost " highlighted_title="ready." />
-          <SubmitForm
-            onInputChange={(event) => onInputChange(event)}
+          <SummaryForm
             data={applicationData}
-            isControlled={isControlled}
             setIsAppValid={(value) => setIsAppValid(value)}
           />
           <ApplyFooter
@@ -291,7 +313,7 @@ export default function ApplicationForm() {
       );
 
     case 6:
-      fetchData();
+      submitData();
       return (
         <div className={styles.ApplicationFormItem}>
           <div className={styles.Wrapper}>

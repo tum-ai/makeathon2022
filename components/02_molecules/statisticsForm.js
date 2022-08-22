@@ -76,6 +76,7 @@ export default function StatisticsForm({
               name="programmingSkillsBool"
               onContentChange={(event)=>onInputChange(event)}
               isControlled={isControlled}
+              value={data.programmingSkillsBool}
               setIsValid={(value)=>{
                 let obj = isPageValid;
                 obj.programmingSkillsBool = transformYesNo(value);
@@ -95,6 +96,7 @@ export default function StatisticsForm({
               name="programmingSkills"
               onContentChange={(event)=>onInputChange(event)}
               isControlled={isControlled}
+              value={data.programmingSkills}
               setIsValid={(value)=>{
                 let obj = isPageValid;
                 obj.programmingSkills = value;
@@ -118,6 +120,7 @@ export default function StatisticsForm({
               name="programmingSkillsOthers"
               onContentChange={(event)=>onInputChange(event)}
               isControlled={isControlled}
+              value={data.programmingSkillsOthers}
               setIsValid={(value)=>{
                 let obj = isPageValid;
                 obj.programmingSkillsOthers = value;
@@ -133,6 +136,7 @@ export default function StatisticsForm({
               name="sourceHeard"
               onContentChange={(event)=>onInputChange(event)}
               isControlled={isControlled}
+              value={data.sourceHeard}
               setIsValid={(value)=>{
                 let obj = isPageValid;
                 obj.sourceHeard = value;
