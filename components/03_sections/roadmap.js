@@ -37,7 +37,7 @@ const data = {
       "icon": "/assets/workshops.svg",
       "time": "25.09 - 27.09",
       "content_highlighted": "Find your team members in the series of socializing events between 27th and 29th of September! ",
-      "content": "In addition, TUM.ai and industry partners organize educational workshops about introduction to AI to non-techies, business ideation, geting started with Codex by OpenAI, and much more!",
+      "content": "In addition, TUM.ai and industry partners organize educational workshops about introduction to AI to non-techies, business ideation and much more!",
       "img": "/assets/road04.jpg"
     },
     {
@@ -45,7 +45,7 @@ const data = {
       "icon": "/assets/business_talks.svg",
       "time": "27.09 - 29.09",
       "content_highlighted": "From the 27th until the 29th of September, ",
-      "content": "you will have a chance to listen to inspiring talks held by industry leaders on topics related to AI in the medical, environmental or educational domain. The workshops will be held in hybrid starting at 19:00 CET.",
+      "content": "you will have a chance to listen to inspiring talks held by industry leaders on topics related to AI in the medical, environmental or social domain. The workshops will be held in hybrid starting at 19:00 CET.",
       "img": "/assets/road05.jpeg"
     },
     {
