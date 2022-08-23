@@ -14,7 +14,7 @@ const data = {
   "chapter_number": "04",
   "title": "Winning teams of the last ",
   "title_highlighted": "Makeathon.",
-  "paragraph_highlighted": "Over 600 enthusiastic students and young participants have already participated in TUM.ai’s previous Makeathon iterations. ",
+  "paragraph_highlighted": "Over 800 enthusiastic students and young participants have already participated in TUM.ai’s previous Makeathon iterations. ",
   "paragraph": "Have a look at the winning teams and fantastic solutions that resulted from only 48h working time!",
   "stories": [
     {
