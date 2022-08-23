@@ -18,13 +18,13 @@ const data = {
     "For companies, NGOs, student or research organizations we offer 3 partner packages:",
   paragraph_highlighted1: "Premium Sponsor | ",
   paragraph1:
-    "Share your company’s vision and tell the word about the efforts your company takes to use AI to improve the world in a 1h talk during Deep Dive Days and during opening ceremony. Take advantage of TUM.ai’s talent pool and connect with potential future coworkers and innovators. In addition to that, benefit from marketing posts shared on TUM.ai’s media channels and enjoy many other advantages.",
+    "As a premium sponsor you will be invited to meet our outstanding participants during the on-site events. Share your company’s vision and tell the word about the efforts your company takes to use AI to improve the world during opening ceremony. Take advantage of TUM.ai’s talent pool and connect with potential future coworkers and innovators. In addition to that, benefit from marketing posts shared on TUM.ai’s media channels and enjoy many other advantages.",
   paragraph_highlighted2: "Standard Sponsor | ",
   paragraph2:
-    "Have your company’s logo advertised in  TUM.ai Makeathon website and contribute to the prize for the winners. In addition, benefit from 3-month sponsor visibility on TUM.ai’s official website and much more.",
+    "Have your company’s logo advertised on the TUM.ai Makeathon website and announcements during live events. In addition, benefit from 6-month sponsor visibility on TUM.ai’s official website and much more.",
   paragraph_highlighted3: "Challenge Setter | ",
   paragraph3:
-    "Challenge motivated young people with a problem and test the feasibility of a possible business case. Practive leadership, attract talents, inspire and get inspired, and much more!",
+    "Challenge motivated young people with a problem and test the feasibility of a possible business case. Attract talents, demonstrate your company, get new ideas, inspire and get inspired, and much more!",
   button: "Get in touch with us",
   button_link: "mailto:makeathon@tum-ai.com?subject=Sponsor%20request",
   chapter_title: "For the sponsors",

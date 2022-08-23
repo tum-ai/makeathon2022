@@ -11,47 +11,47 @@ const data = {
     {
       "title": "Application deadline",
       "icon": "/assets/deadline.svg",
-      "time": "08.04",
-      "content_highlighted": "You have time to submit your application until the 8th of April. Apply either with a group of friends or alone. ",
+      "time": "18.09",
+      "content_highlighted": "You have time to submit your application until the 18th of September. Apply either with a group of friends or alone. ",
       "content": "If you are applying with an already formed team, make sure that every member submits the application! Else, take part in exciting team-finding events to match up with other motivated participants! Hurry up to apply as there are thrilling gifts for the early bird applicants!",
       "img": "/assets/road01.jpg"
     },
     {
       "title": "Selection Process ",
       "icon": "/assets/selection.svg",
-      "time": "09.04",
-      "content_highlighted": "After careful application screening and assessment, participants will be informed by April 9th! ",
+      "time": "23.09",
+      "content_highlighted": "After careful application screening and assessment, participants will be informed by September 23rd! ",
       "content": "In the acceptance email, you can find information about the next steps and how to best prepare for the TUM.ai Makeathon.",
       "img": "/assets/road02.jpg"
     },
     {
       "title": "Opening Ceremony",
       "icon": "/assets/pitch.svg",
-      "time": "11.04",
-      "content_highlighted": "During the opening ceremony on April 11th, our premium sponsors will welcome you to the Makeathon journey and share a few words about the effort of industry leaders to use AI to benefit society. ",
+      "time": "25.09",
+      "content_highlighted": "During the opening ceremony on September 27th, our premium sponsors will welcome you to the Makeathon journey and share a few words about the effort of industry leaders to use AI to benefit society. ",
       "content": "Furthermore, challenge setters will announce their challenges for the first time and answer all your questions, followed by a socializing round where you have a chance to meet potential team members. The ceremony takes place starting at 18:00 CET.",
       "img": "/assets/road03.jpg"
     },
     {
       "title": "Workshops & Team Finding",
       "icon": "/assets/workshops.svg",
-      "time": "12.04 - 15.04",
-      "content_highlighted": "Find your team members in the series of socializing events between 12th and 15th of April! ",
+      "time": "25.09 - 27.09",
+      "content_highlighted": "Find your team members in the series of socializing events between 27th and 29th of September! ",
       "content": "In addition, TUM.ai and industry partners organize educational workshops about introduction to AI to non-techies, business ideation, geting started with Codex by OpenAI, and much more!",
       "img": "/assets/road04.jpg"
     },
     {
       "title": "Deep Dive Days",
       "icon": "/assets/business_talks.svg",
-      "time": "19.04 - 21.04",
-      "content_highlighted": "From the 19th until the 21th of April, ",
-      "content": "you will have a chance to listen to inspiring talks held by industry leaders on topics related to AI in the medical, environmental or educational domain. The workshops will be held online starting at 19:00 CET.",
+      "time": "27.09 - 29.09",
+      "content_highlighted": "From the 27th until the 29th of September, ",
+      "content": "you will have a chance to listen to inspiring talks held by industry leaders on topics related to AI in the medical, environmental or educational domain. The workshops will be held in hybrid starting at 19:00 CET.",
       "img": "/assets/road05.jpeg"
     },
     {
       "title": "Makeathon",
       "icon": "/assets/makeathon.svg",
-      "time": "22.04 - 24.04",
+      "time": "30.09 - 02.10",
       "content_highlighted": "You have 48 hours to develop a proof of concept with your team. ",
       "content": "After pitching your results on Sunday afternoon, a jury of experts will select the winning teams for each track in the closing ceremony. Fantastic prizes are waiting!",
       "img": "/assets/road06.jpg"

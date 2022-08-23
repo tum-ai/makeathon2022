@@ -33,7 +33,7 @@ const data = {
     },
     {
       "question": "What events will be held?",
-      "answer": "The TUM.ai Makeathon will provide you with various cool events to attend! You will have an opportunity to participate in exciting workshops and listen to extraordinary speakers. More details on the events are coming soon! Make sure to stay on the lookout for our full schedule!"
+      "answer": "The TUM.ai Makeathon will provide you with various cool events to attend! You will have an opportunity to participate in exciting workshops and listen to extraordinary speakers. More details on the events are coming soon! Make sure to stay on the lookout for our full schedule! "
     },
     {
       "question": "What are the prizes?",
@@ -41,7 +41,7 @@ const data = {
     },
     {
       "question": "Is TUM.ai Makeathon in-person or virtual?",
-      "answer": "Due to the ongoing COVID-19 pandemic, all the events of the April Makeathon are going to be held virtual. "
+      "answer": "We are happy to bring out Makeathon to a hybrid format for the first time! You can join the event in-person at the Mathematics and Informatics building at TUM or attend it in a virtual format! "
     },
     {
       "question": "Can we use hardware?",
@@ -53,7 +53,7 @@ const data = {
     },
     {
       "question": "What are the Makeathon tracks?",
-      "answer": "For our upcoming Makeathon, we prepared three tracks: Education, MedTech, and Environment. "
+      "answer": "For our upcoming Makeathon, we prepared four tracks: Globalization, Environment, Healthcare, and Social Support.  "
     },
     {
       "question": "What can I build?",
@@ -69,7 +69,7 @@ const data = {
     },
     {
       "question": "What is the application deadline?",
-      "answer": "The application deadline is 06.04! Make sure you don’t miss it!"
+      "answer": "The application deadline is 23.09.2022 at 11:59pm! Make sure you don’t miss it!"
     },
     {
       "question": "Who can participate?",

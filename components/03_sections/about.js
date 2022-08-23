@@ -13,7 +13,7 @@ const data = {
   paragraph_highlighted:
     "Makeathon is a 48-hour virtual challenge in which motivated students and young professionals develop a working AI solution for a real-world business case.",
   paragraph:
-    " Innovators of tomorrow work together in interdisciplinary teams on developing a prototype for the challenges in Education, Environment, and MedTech tracks. As the largest student-organized Makeathon in Germany, you can expect numerous exciting speakers, challenges, cool prizes, and excellent opportunities to meet like-minded people and connect with industry leaders, start-ups, and research groups. Due to the ongoing Corona Pandemic, all events will be held online.",
+    " Innovators of tomorrow work together in interdisciplinary teams on developing a prototype for the challenges in Globalization, Environment, Healthcare, and Social Support tracks. As the largest student-organized Makeathon in Germany, you can expect numerous exciting speakers, challenges, cool prizes, and excellent opportunities to meet like-minded people and connect with industry leaders, start-ups, and research groups. You can join the event in-person at the Mathematics and Informatics building at TUM or attend it in a virtual format!",
   button: "Learn more about TUM.ai",
   button_link: "https://www.tum-ai.com/",
   chapter_title: "About the makeathon",
