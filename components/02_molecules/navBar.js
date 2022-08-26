@@ -1,19 +1,68 @@
-import styles from '../../styles/02_molecules/NavBar.module.css'
-import { Link } from 'react-scroll'
-import Image from 'next/image'
+import styles from "../../styles/02_molecules/NavBar.module.css";
+import { Link as LinkScroll } from "react-scroll";
+import Link from "next/link";
 
-export default function NavBar(){
-  return <div className={styles.NavBarItem}>
-    <div className={styles.Grid}>
-      <div className={styles.Logo}>
-        <Image src={"/assets/logo.svg"} alt="Logo" layout="fill" objectFit="contain" />
+import Image from "next/image";
+
+export default function NavBar() {
+  return (
+    <div className={styles.NavBarItem}>
+      <div className={styles.Grid}>
+        <div className={styles.Logo}>
+          <Link href="https://www.tum-ai.com/">
+            <a>
+              <Image
+                src={"/assets/logo.svg"}
+                alt="Logo"
+                layout="fill"
+                objectFit="contain"
+              />
+            </a>
+          </Link>
+        </div>
+        <div className={styles.Nav}>
+          <LinkScroll
+            to="about"
+            spy={true}
+            smooth={true}
+            className={styles.Link}
+          >
+            About
+          </LinkScroll>
+          <LinkScroll
+            to="tracks"
+            spy={true}
+            smooth={true}
+            className={styles.Link}
+          >
+            Tracks
+          </LinkScroll>
+          <LinkScroll
+            to="speakers"
+            spy={true}
+            smooth={true}
+            className={styles.Link}
+          >
+            Speakers
+          </LinkScroll>
+          <LinkScroll
+            to="stories"
+            spy={true}
+            smooth={true}
+            className={styles.Link}
+          >
+            Stories
+          </LinkScroll>
+          <LinkScroll
+            to="faqs"
+            spy={true}
+            smooth={true}
+            className={styles.Link}
+          >
+            {"Q&A"}
+          </LinkScroll>{" "}
+        </div>
       </div>
-      <div className={styles.Nav}>
-        <Link to="about" spy={true} smooth={true} className={styles.Link}>About</Link>
-        <Link to="tracks" spy={true} smooth={true} className={styles.Link}>Tracks</Link>
-        <Link to="speakers" spy={true} smooth={true} className={styles.Link}>Speakers</Link>
-        <Link to="stories" spy={true} smooth={true} className={styles.Link}>Stories</Link>
-        <Link to="faqs" spy={true} smooth={true} className={styles.Link}>{"Q&A"}</Link>      </div>
     </div>
-  </div>
+  );
 }

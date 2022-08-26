@@ -1,31 +1,32 @@
-import styles from '../../styles/03_sections/About.module.css'
-import Headline1 from '../01_atoms/fonts_headline1'
-import Paragraph1 from '../01_atoms/fonts_paragraph1'
-import Button from '../01_atoms/button'
-import ChapterBar from '../02_molecules/chapterBar'
-import Link from 'next/link'
-import Image from 'next/image'
-import Paragraph2 from '../01_atoms/fonts_paragraph2'
-import AudioPlayer, {RHAP_UI} from 'react-h5-audio-player'
-import 'react-h5-audio-player/lib/styles.css'
+import styles from "../../styles/03_sections/About.module.css";
+import Headline1 from "../01_atoms/fonts_headline1";
+import Paragraph1 from "../01_atoms/fonts_paragraph1";
+import Button from "../01_atoms/button";
+import ChapterBar from "../02_molecules/chapterBar";
+import Link from "next/link";
+import Image from "next/image";
+import Paragraph2 from "../01_atoms/fonts_paragraph2";
 
 const data = {
-  "title": "We at TUM.ai are thrilled to have you on board and can't wait to hear what you and your team come up with! 🚀",
-  "paragraph_highlighted": "Makeathon is a 48-hour virtual challenge in which motivated students and young professionals develop a working AI solution for a real-world business case.",
-  "paragraph": " Innovators of tomorrow work together in interdisciplinary teams on developing a prototype for the challenges in Education, Environment, and MedTech tracks. As the largest student-organized Makeathon in Germany, you can expect numerous exciting speakers, challenges, cool prizes, and excellent opportunities to meet like-minded people and connect with industry leaders, start-ups, and research groups. Due to the ongoing Corona Pandemic, all events will be held online.",
-  "button": "Learn more about TUM.ai",
-  "button_link": "https://www.tum-ai.com/",
-  "chapter_title": "About the makeathon",
-  "chapter_number": "01","soundfile": "/sounds/sound.mp3",
-  "soundtitle": "What can you expect?",
-  "soundAuthor": "Nicolas Remerscheid",
-  "userImage": "/assets/author.png",
-  "userLink": "https://www.google.com",
-}
+  title:
+    "We at TUM.ai are thrilled to have you on board and can't wait to hear what you and your team come up with! 🚀",
+  paragraph_highlighted:
+    "Makeathon is a 48-hour virtual challenge in which motivated students and young professionals develop a working AI solution for a real-world business case.",
+  paragraph:
+    " Innovators of tomorrow work together in interdisciplinary teams on developing a prototype for the challenges in Education, Environment, and MedTech tracks. As the largest student-organized Makeathon in Germany, you can expect numerous exciting speakers, challenges, cool prizes, and excellent opportunities to meet like-minded people and connect with industry leaders, start-ups, and research groups. Due to the ongoing Corona Pandemic, all events will be held online.",
+  button: "Learn more about TUM.ai",
+  button_link: "https://www.tum-ai.com/",
+  chapter_title: "About the makeathon",
+  chapter_number: "01",
+  soundfile: "/sounds/sound.mp3",
+  soundtitle: "What can you expect?",
+  soundAuthor: "Nicolas Remerscheid",
+  userImage: "/assets/author.png",
+  userLink: "https://www.google.com",
+};
 
-export default function About(){
-
-  function playerStyleHandler(e){
+export default function About() {
+  function playerStyleHandler(e) {
     console.log("moin");
     e.target.nextElementSibling.children[1].style.flex = "unset";
     e.target.parentElement.style.boxShadow = "none";
@@ -33,23 +34,42 @@ export default function About(){
     e.target.parentElement.style.padding = 0;
   }
 
-  return <div className={styles.AboutItem}>
-    <div className={styles.Description}>
-      <div className={styles.Grid}>
-        <div className={styles.LeftContainer}>
-          <ChapterBar number={data.chapter_number} content={data.chapter_title} isDarkBackground={false}/>
-        </div>
-        <div className={styles.MiddleContainer}>
-          <Headline1 isH1={false} normalContent={data.title} highlightedContent={""} isDarkBackground={false}/>
-          <div className={styles.Paragraph}>
-            <Paragraph1 className={styles.Paragraph} highlightedContent={data.paragraph_highlighted} normalContent={data.paragraph} isDarkBackground={false}/>
+  return (
+    <div className={styles.AboutItem}>
+      <div className={styles.Description}>
+        <div className={styles.Grid}>
+          <div className={styles.LeftContainer}>
+            <ChapterBar
+              number={data.chapter_number}
+              content={data.chapter_title}
+              isDarkBackground={false}
+            />
           </div>
-          <div className={styles.Button}>
-            <Button content={data.button} link="https://www.tum-ai.com/" isDarkBackground={false}/>
+          <div className={styles.MiddleContainer}>
+            <Headline1
+              isH1={false}
+              normalContent={data.title}
+              highlightedContent={""}
+              isDarkBackground={false}
+            />
+            <div className={styles.Paragraph}>
+              <Paragraph1
+                className={styles.Paragraph}
+                highlightedContent={data.paragraph_highlighted}
+                normalContent={data.paragraph}
+                isDarkBackground={false}
+              />
+            </div>
+            <div className={styles.Button}>
+              <Button
+                content={data.button}
+                link="https://www.tum-ai.com/"
+                isDarkBackground={false}
+              />
+            </div>
           </div>
         </div>
-      </div>
-      {/* <div className={styles.Grid} style={{justifyContent: "flex-end"}}>
+        {/* <div className={styles.Grid} style={{justifyContent: "flex-end"}}>
         <div className={styles.Player}>
           <div className={styles.PlayerSeparator}></div>
           <div className={styles.PlayerRightContainer}>
@@ -78,6 +98,7 @@ export default function About(){
           </div>
         </div>
       </div> */}
+      </div>
     </div>
-  </div>
+  );
 }

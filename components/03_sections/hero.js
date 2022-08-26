@@ -13,7 +13,7 @@ const data = {
   "paragraph": "that connects young innovators with different backgrounds to develop AI solutions for real-life business cases.",
   "value": [
     {
-      "title": "Lauch your AI project",
+      "title": "Launch your AI project",
       "subtitle": "Use the Makeathon to kickstart your startup journey"
     },
     {
@@ -21,7 +21,7 @@ const data = {
       "subtitle": "Meet and socialize with motivated and likeminded people"
     },
     {
-      "title": "Win awesome prices",
+      "title": "Win awesome prizes",
       "subtitle": "🤫  These are still a secret. Stay tuned"
     }
   ] 
@@ -51,11 +51,6 @@ export default function Hero(){
               </div>
             );
           })}
-          <div className={styles.Value}>
-                <div className={styles.Text}>
-                  <img src="/assets/aws_logo_white.png" alt="powered_by_aws" width={250}></img>
-                </div>
-            </div>
         </div>
       </div>
       <div className={styles.RightContainer}>
