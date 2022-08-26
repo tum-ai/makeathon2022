@@ -1,10 +1,10 @@
+import { useState, useEffect } from "react";
 import styles from "../../styles/02_molecules/PersonalDetailForm.module.css";
 import Headline2 from "../01_atoms/fonts_headline2";
 import Paragraph1 from "../01_atoms/fonts_paragraph1";
 import TextInput from "../01_atoms/textInput";
 import TextAreaInput from "../01_atoms/textAreaInput";
 import BoolInput from "../01_atoms/boolInput";
-import { useState } from "react";
 import DropDownInput from "../01_atoms/dropDownInput";
 
 export default function StatisticsForm({
@@ -13,25 +13,35 @@ export default function StatisticsForm({
   isControlled,
   setIsAppValid,
 }) {
+  const [isParticipationConfirmed, setisParticipationConfirmed] = useState(false);
   const [isPageValid, setIsPageValid] = useState({
-    hackExperienceBool: false,
-    hackExperience: false,
-    programmingSkillsBool: false,
-    programmingSkills: false,
-    programmingSkillsOthers: false,
-    sourceHeard: false,
+    hackExperienceBool: data.hackExperienceBool!=="",
+    //hackExperience: data.hackExperience,
+    programmingSkillsBool: data.programmingSkillsBool !=="",
+    //programmingSkills: false,
+    //programmingSkillsOthers: false,
+    sourceHeard: data.sourceHeard !=="",
+    participationConfirmed: data.participationConfirmed !==false
   });
 
   function checkPageStatus() {
-    console.log(isPageValid);
-    if (Object.values(isPageValid).includes(false) == false) {
-      setIsAppValid(true);
-    }
+    const isCurrentStateValid = Object.keys(isPageValid).reduce(
+      (valid, key) => {
+        const value = isPageValid[key];
+        if(key=="participationConfirmed"){
+          return valid && isParticipationConfirmed;
+        }
+        return valid && value;
+      },
+      true
+    );
+    setIsAppValid(isCurrentStateValid)
   }
 
   function transformYesNo(answer){
     return answer=="yes";
   }
+  useEffect(() => checkPageStatus());
 
   return (
     <div className={styles.PersonalDetailFormItem}>
@@ -48,9 +58,10 @@ export default function StatisticsForm({
               name="hackExperienceBool"
               onContentChange={(event)=>onInputChange(event)}
               isControlled={isControlled}
+              value={transformYesNo(data.hackExperienceBool)}
               setIsValid={(value)=>{
                 let obj = isPageValid;
-                obj.hackExperienceBool = transformYesNo(value);
+                obj.hackExperienceBool = value;
                 setIsPageValid(obj);
                 checkPageStatus();}}
               isRequired = {true}
@@ -76,10 +87,10 @@ export default function StatisticsForm({
               name="programmingSkillsBool"
               onContentChange={(event)=>onInputChange(event)}
               isControlled={isControlled}
-              value={data.programmingSkillsBool}
+              value={transformYesNo(data.programmingSkillsBool)}
               setIsValid={(value)=>{
                 let obj = isPageValid;
-                obj.programmingSkillsBool = transformYesNo(value);
+                obj.programmingSkillsBool = value;
                 setIsPageValid(obj);
                 checkPageStatus();}}
               isRequired = {true}
@@ -163,6 +174,7 @@ export default function StatisticsForm({
               onContentChange={(event)=>onInputChange(event)}
               value={data.futureMember}
               isControlled={isControlled}
+              isRequired={false}
             />
           </div>
           <div className={styles.Full}>
@@ -173,6 +185,7 @@ export default function StatisticsForm({
               onContentChange={(event)=>onInputChange(event)}
               value={data.additionalInfo}
               isControlled={isControlled}
+              isRequired={false}
             />
           </div>
         </div>
@@ -194,20 +207,13 @@ export default function StatisticsForm({
               <BoolInput 
                 headerText="I hereby confirm that I will  participate for the full 48 hours of the Makeathon. (22-24.04)*"
                 name="confirmation"
-                onContentChange={(event)=>{
-                  onInputChange(event); 
-                  let obj = isPageValid; 
-                  obj.confirmation = event.target.checked;
-                  setIsPageValid(obj); 
-                  checkPageStatus();
-                  if(event.target.checked == false){
-                    setIsAppValid(false);
-                  }
-                }}
-                value={data.confirmation}
-                isControlled={isControlled}
-                setIsValid={(value)=>{let obj = isPageValid; obj.confirmation = value; setIsPageValid(obj); checkPageStatus();}}
-                isRequired={true}
+                onContentChange={(event) =>{
+                  onInputChange(event);
+                  setisParticipationConfirmed(event.target.checked);
+                 }}
+               value={isParticipationConfirmed}
+               isControlled={isControlled}
+               isRequired={true}
               />
             </div>
           </div>

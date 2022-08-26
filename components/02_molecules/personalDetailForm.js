@@ -24,7 +24,7 @@ export default function PersonalDetailForm({
     placeOfResidence: data.placeOfResidence !== "",
     timeZone: data.timeZone !== "",
     dateOfBirth: data.dateOfBirth !== "",
-    //agreement: data.agreement !== false,
+    agreement: data.agreement !== false,
     
   });
 
@@ -33,6 +33,9 @@ export default function PersonalDetailForm({
     const isCurrentStateValid = Object.keys(isPageValid).reduce(
       (valid, key) => {
         const value = isPageValid[key];
+        if(key=="agreement"){
+          return valid && isDataConsentConfirmed;
+        }
         return valid && value;
       },
       true

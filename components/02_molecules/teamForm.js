@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import styles from "../../styles/02_molecules/PersonalDetailForm.module.css";
 import DateInput from "../01_atoms/dateInput";
 import DropDownInput from "../01_atoms/dropDownInput";
@@ -6,7 +7,6 @@ import Paragraph1 from "../01_atoms/fonts_paragraph1";
 import TextInput from "../01_atoms/textInput";
 import TextAreaInput from "../01_atoms/textAreaInput";
 import BoolInput from "../01_atoms/boolInput";
-import { useState } from "react";
 
 export default function TeamForm({
   data,
@@ -15,21 +15,25 @@ export default function TeamForm({
   setIsAppValid,
 }) {
   const [isPageValid, setIsPageValid] = useState({
-    isTeamBool: false,
-    teamDetails: false,
-    attendingMode: false,
+    isTeamBool: data.isTeamBool !== "",
+    // teamDetails: false,
+    attendingMode: data.attendingMode !=="",
   });
 
   function checkPageStatus() {
-    console.log(isPageValid);
-    if (Object.values(isPageValid).includes(false) == false) {
-      setIsAppValid(true);
-    }
+    const isCurrentStateValid = Object.keys(isPageValid).reduce(
+      (valid, key) => {
+        const value = isPageValid[key];
+        return valid && value;
+      },
+      true
+    );
+    setIsAppValid(isCurrentStateValid)
   }
-
   function transformYesNo(answer){
     return answer=="yes";
   }
+  useEffect(() => checkPageStatus());
 
   return (
     <div className={styles.PersonalDetailFormItem}>
@@ -50,11 +54,11 @@ export default function TeamForm({
                 headerText="Are you part of a team?*"
                 name="teamDetailsBool"
                 onContentChange={(event)=>onInputChange(event)}
-                value={data.teamDetailsBool}
+                value={transformYesNo(data.teamDetailsBool)}
                 isControlled={isControlled}
                 setIsValid={(value) => {
                   let obj = isPageValid;
-                  obj.isTeamBool = transformYesNo(value);
+                  obj.isTeamBool = value;
                   setIsPageValid(obj);
                   checkPageStatus();
                 }}
@@ -94,10 +98,11 @@ export default function TeamForm({
             <div className={styles.Full}>
               <DropDownInput 
                 headerText="Are you planning to attend the Makeathon online or onsite?*"
-                descriptiontext="We will be having a hybrid event this year in TU München on campus Garching bei München. If you are available on the 30th of September to the 2nd of October, we would love to have you there. Please confirm your availability by marking yes or no. The response is binding, as we are expecting to fill a capacity of 100 people on-site. First come, first serve."
-                name="teamDetailsBool"
+                descriptionText="We will be having a hybrid event this year in TU München on campus Garching bei München. If you are available on the 30th of September to the 2nd of October, we would love to have you there. Please confirm your availability by marking yes or no. The response is binding, as we are expecting to fill a capacity of 100 people on-site. First come, first serve."
+                name="attendingMode"
                 onContentChange={(event)=>onInputChange(event)}
-                value={data.teamDetailsBool}
+                withIcon={false}
+                value={data.attendingMode}
                 isControlled={isControlled}
                 setIsValid={(value) => {
                   let obj = isPageValid;
@@ -108,8 +113,8 @@ export default function TeamForm({
                 isRequired={true}
               >
                 <option value="">Choose ...</option>
-                <option value="Online">Yes</option>
-                <option value="On-site">No</option>
+                <option value="Online">Online</option>
+                <option value="On-site">On-site</option>
               </DropDownInput>
             </div>
           </div>

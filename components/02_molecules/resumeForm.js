@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import styles from "../../styles/02_molecules/PersonalDetailForm.module.css";
 import DateInput from "../01_atoms/dateInput";
 import DropDownInput from "../01_atoms/dropDownInput";
@@ -6,7 +7,6 @@ import Paragraph1 from "../01_atoms/fonts_paragraph1";
 import TextInput from "../01_atoms/textInput";
 import TextAreaInput from "../01_atoms/textAreaInput";
 import BoolInput from "../01_atoms/boolInput";
-import { useState } from "react";
 
 export default function ResumeForm({
   data,
@@ -15,23 +15,30 @@ export default function ResumeForm({
   setIsAppValid,
 }) {
   const [isPageValid, setIsPageValid] = useState({
-    universityBool: false,
-    university: false,
-    areaOfExpertise: false,
-    linkedIn: false,
-    personalWebsite: false,
-    github: false,
+    universityBool: data.universityBool !=="",
+    //university: data.university,
+    areaOfExpertise: data.areaOfExpertise !=="",
+    //linkedIn: data.linkedIn,
+    //personalWebsite: data.personalWebsite,
+    //github: data.github,
   });
 
   function checkPageStatus() {
-    console.log(isPageValid);
-    if (Object.values(isPageValid).includes(false) == false) {
-      setIsAppValid(true);
-    }
+    const isCurrentStateValid = Object.keys(isPageValid).reduce(
+      (valid, key) => {
+        const value = isPageValid[key];
+        return valid && value;
+      },
+      true
+    );
+    setIsAppValid(isCurrentStateValid)
   }
+
   function transformYesNo(answer){
     return answer=="yes";
   }
+
+  useEffect(() => checkPageStatus());
 
   const validateURL = (url) => {
     const urlRegex = new RegExp(/^(https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9]+\.[^\s]{2,}|www\.[a-zA-Z0-9]+\.[^\s]{2,})$/);
@@ -56,10 +63,11 @@ export default function ResumeForm({
                 headerText="Are you currently pursuing or did you pursue an academic or professional degree?*"
                 name="universityBool"
                 onContentChange={(event) => onInputChange(event)}
+                value={transformYesNo(data.universityBool)}
                 isControlled={isControlled}
                 setIsValid={(value) => {
                   let obj = isPageValid;
-                  obj.universityBool = transformYesNo(value);   // transform it to bool
+                  obj.universityBool = value; 
                   setIsPageValid(obj);
                   checkPageStatus();
                 }}
@@ -103,7 +111,7 @@ export default function ResumeForm({
                 <option value="Computer Vision">Computer Vision</option>
                 <option value="Natural Language Processing">NLP</option>
                 <option value="Data Science">Data Science</option>
-                <option value="Software Development/DevOps">Software</option>
+                <option value="Software Development/DevOps">Software Developemnt/DevOps</option>
                 <option value="Business Development">Business Development</option>
                 <option value="Design Interface/UX/Prototyping">Design/UX</option>
               </DropDownInput>
@@ -146,12 +154,7 @@ export default function ResumeForm({
                 name="personalWebsite"
                 onContentChange={(event) => onInputChange(event)}
                 isControlled={isControlled}
-                setIsValid={(value) => {
-                  let obj = isPageValid;
-                  obj.personalWebsite = value;
-                  setIsPageValid(obj);
-                  checkPageStatus();
-                }}
+                value={data.personalWebsite}
                 isRequired={false}
                 dataValidator={(url) => validateURL(url)}
               />
@@ -166,12 +169,7 @@ export default function ResumeForm({
                 onContentChange={(event) => onInputChange(event)}
                 isControlled={isControlled}
                 isRequired={false}
-                setIsValid={(value) => {
-                  let obj = isPageValid;
-                  obj.github = value;
-                  setIsPageValid(obj);
-                  checkPageStatus();
-                }}
+                value={data.github}
                 dataValidator={(url) => validateURL(url)}
               />
             </div>

@@ -13,6 +13,7 @@ import Image from "next/image";
 import Button from "../01_atoms/button";
 import { appConfig } from "../04_constants/constants"
 import Paragraph1 from "../01_atoms/fonts_paragraph1";
+import axios from "axios";
 
 export default function ApplicationForm() {
   const [applicationState, setApplicationState] = useState(0);
@@ -79,7 +80,10 @@ export default function ApplicationForm() {
     programmingSkillsBool: false,
     programmingSkills: "",
     programmingSkillsOthers: "",
-    sourceHeard: ""
+    sourceHeard: "",
+    futureMember: false,
+    additionalInfo: "",
+    participationConfirmed: false
   });
   const [isControlled, setIsControlled] = useState(false);
   const [isAppValid, setIsAppValid] = useState(false);
@@ -133,26 +137,26 @@ export default function ApplicationForm() {
 
     axios
       .post(
-        `${appConfig.urls.API_BASE_URL}/industry/submit-application`,
+        `${appConfig.urls.API_BASE_URL}/makeathon/submit-application`,
         data,
         config
       )
       .then(response => {
         if (response.status === 201) {
           console.log("App response", response.status)
-          setApplicationState(AppFormState.SUCESS_SUBMIT);
+          setApplicationState(applicationState + 1);
         } else if (response.status === 409) {
-          setApplicationState(AppFormState.EMAIL_ALREADY_REGISTERED);
+          setApplicationState(applicationState + 2);
         } else {
-          setApplicationState(AppFormState.ERROR_RESPONSE);
+          setApplicationState(applicationState + 3);
         }
       })
       .catch(error => {
         console.error("App error", error.response)
         if (error.response !== undefined && error.response.status === 409) {
-          setApplicationState(AppFormState.EMAIL_ALREADY_REGISTERED);
+          setApplicationState(applicationState + 2);
         } else {
-          setApplicationState(AppFormState.ERROR_RESPONSE);
+          setApplicationState(applicationState + 3);
         }
       });
   };
@@ -284,7 +288,7 @@ export default function ApplicationForm() {
               setIsAppValid={(value) => setIsAppValid(value)}
             />
             <ApplyFooter
-              nextBtnText="Submit"
+              nextBtnText="Next"
               prevBtnText="Prev"
               stateNumber={applicationState + 1}
               nextPage={() => handleNextPage()}

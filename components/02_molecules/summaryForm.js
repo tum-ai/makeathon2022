@@ -107,7 +107,7 @@ export default function SubmitForm({ data, setIsAppValid }) {
                 <p className={styles.TextLabel}> Pursuing a degree: </p> 
               </div>
               <div className={styles.TextRight}>
-                <p className={styles.Text}> {bool2string(data.universityBool)} </p> 
+                <p className={styles.Text}> {data.universityBool} </p> 
               </div>
             </div>
           }
@@ -147,7 +147,7 @@ export default function SubmitForm({ data, setIsAppValid }) {
                 <p className={styles.TextLabel}> Personal Website: </p> 
               </div>
               <div className={styles.TextRight}>
-                <p className={styles.Text}> {data.otherDigitalAppearance} </p> 
+                <p className={styles.Text}> {data.personalWebsite} </p> 
               </div>
             </div>
           }
@@ -175,7 +175,7 @@ export default function SubmitForm({ data, setIsAppValid }) {
               <p className={styles.TextLabel}> Are you part of a team: </p> 
             </div>
             <div className={styles.TextRight}>
-              <p className={styles.Text}> {data.isTeamBool} </p> 
+              <p className={styles.Text}> {bool2string(data.isTeamBool)} </p> 
             </div>
           </div>
           <div className={styles.TextGrid}>
