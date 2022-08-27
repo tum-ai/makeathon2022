@@ -144,19 +144,19 @@ export default function ApplicationForm() {
       .then(response => {
         if (response.status === 201) {
           console.log("App response", response.status)
-          setApplicationState(applicationState + 1);
+          setApplicationState(7);
         } else if (response.status === 409) {
-          setApplicationState(applicationState + 2);
+          setApplicationState(8);
         } else {
-          setApplicationState(applicationState + 3);
+          setApplicationState(9);
         }
       })
       .catch(error => {
         console.error("App error", error.response)
         if (error.response !== undefined && error.response.status === 409) {
-          setApplicationState(applicationState + 2);
+          setApplicationState(8);
         } else {
-          setApplicationState(applicationState + 3);
+          setApplicationState(9);
         }
       });
   };
@@ -172,18 +172,6 @@ export default function ApplicationForm() {
     });
 
     setApplicationData(newObj);
-  }
-
-  function handleNextPage() {
-    changeApplicationState(applicationState + 1);
-    setIsControlled(true);
-    setTimeout(() => {
-      setIsControlled(false);
-      setIsAppValid(false);
-    }, 500);
-    if (applicationState == 2) {
-      //console.log(applicationData);
-    }
   }
 
   const handleNextPage = () => setApplicationState(applicationState + 1);
@@ -213,8 +201,7 @@ export default function ApplicationForm() {
     case 0:
       return (
         <div className={styles.ApplicationFormItem}>
-          <ApplyHeader title="Nice try! Come back " highlighted_title="next time!" />
-          {/* <ApplyHeader title="Details about " highlighted_title="you." />
+          <ApplyHeader title="Details about " highlighted_title="you." />
           <PersonalDetailForm
             onInputChange={(event) => onInputChange(event)}
             data={applicationData}
