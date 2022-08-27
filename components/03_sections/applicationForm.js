@@ -213,7 +213,8 @@ export default function ApplicationForm() {
     case 0:
       return (
         <div className={styles.ApplicationFormItem}>
-          <ApplyHeader title="Details about " highlighted_title="you." />
+          <ApplyHeader title="Nice try! Come back " highlighted_title="next time!" />
+          {/* <ApplyHeader title="Details about " highlighted_title="you." />
           <PersonalDetailForm
             onInputChange={(event) => onInputChange(event)}
             data={applicationData}
