@@ -214,7 +214,7 @@ export default function ApplicationForm() {
             nextPage={() => handleNextPage()}
             prevPage={() => handlePrevPage()}
             isValid={isAppValid ? true : false}
-          /> */}
+          />
         </div>
       );
     case 1:
