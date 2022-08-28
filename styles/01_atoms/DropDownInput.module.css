@@ -8,6 +8,15 @@
     width: 100%;
     font-family: 'IBM Plex Sans';
     font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    color: #E5E5E8;
+}
+.DescriptionText{
+    width: 100%;
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 28px;

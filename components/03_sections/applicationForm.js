@@ -5,30 +5,33 @@ import ApplyHeader from "../02_molecules/applyHeader";
 import ApplyFooter from "../02_molecules/applyFooter";
 import PersonalDetailForm from "../02_molecules/personalDetailForm";
 import ProfessionForm from "../02_molecules/professionForm";
-import SubmitForm from "../02_molecules/submitForm";
+import StatisticsForm from "../02_molecules/statisticsForm";
+import TeamForm from "../02_molecules/teamForm";
+import SummaryForm from "../02_molecules/summaryForm";
+import ResumeForm from "../02_molecules/resumeForm";
 import Image from "next/image";
 import Button from "../01_atoms/button";
 import { appConfig } from "../04_constants/constants"
 import Paragraph1 from "../01_atoms/fonts_paragraph1";
+import axios from "axios";
 
 export default function ApplicationForm() {
-  const [applicationState, changeApplicationState] = useState(0);
-  const [applicationData, setApplicationData] = useState({
+  const [applicationState, setApplicationState] = useState(0);
+  /* const [applicationData, setApplicationData] = useState({
     academicBackground: "",
     confirmation: false,
     futureMember: false,
     hackExperienceBool: false,
-    openAI: false,
+    agreement: false,
     programmingSkilsBool: false,
     teamDetailsBool: false,
     additionalInfo: "",
     areaOfExpertise: "",
-    bestDescription: "",
     dateOfBirth: null,
     email: "",
     firstname: "",
     github: "",
-    hackAwareness: null,
+    hackExperienceBool: false,
     hackExperience: "",
     lastname: "",
     linkedIn: "",
@@ -45,12 +48,49 @@ export default function ApplicationForm() {
     whatContribution: "",
     whatLearn: "",
     whyParticipate: "",
+  }); */
+  const [applicationData, setApplicationData] = useState({
+    // personal details
+    firstname: "",
+    lastname: "",
+    email: "",
+    nationality: "",
+    placeOfResidence: "",
+    timeZone: "",
+    dateOfBirth: 0,
+    agreement: false,
+    // background
+    universityBool: false,
+    university: "",
+    areaOfExpertise: "",
+    linkedIn: "",
+    personalWebsite: "",
+    github: "",
+    //motivation
+    whyParticipate: "",
+    whatLearn: "",
+    whatContribution: "",
+    // team part
+    isTeamBool: false,
+    teamDetails: "",
+    attendingMode: "",
+    // statistics
+    hackExperienceBool: false,
+    hackExperience: "",
+    programmingSkillsBool: false,
+    programmingSkills: "",
+    programmingSkillsOthers: "",
+    sourceHeard: "",
+    futureMember: false,
+    additionalInfo: "",
+    participationConfirmed: false
   });
   const [isControlled, setIsControlled] = useState(false);
   const [isAppValid, setIsAppValid] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(false);
+  
 
-  function fetchData() {
+  /* function fetchData() {      // deprecated in favor of submit data
     if (!submitStatus) {
       var myHeaders = new Headers();
       myHeaders.append("Content-Type", "application/json");
@@ -70,53 +110,77 @@ export default function ApplicationForm() {
         .then((response) => {
           //           console.log(response.text());
           if (response.status == 201)
-            changeApplicationState(applicationState + 1);
+            setApplicationState(applicationState + 1);
           else if (response.status == 409)
-            changeApplicationState(applicationState + 2);
+            setApplicationState(applicationState + 2);
           else {
             console.log("fail");
-            changeApplicationState(applicationState + 3);
+            setApplicationState(applicationState + 3);
           }
         })
         .catch((error) => console.log("error", error));
 
       setSubmitStatus(true);
     }
-  }
+  } */
 
-  function onInputChange(event) {
+  const submitData = () => {
+    const data = new FormData();
+    Object.keys(applicationData).forEach(key => data.append(key, applicationData[key]));
+
+    const config = {
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "multipart/form-data",
+      },
+    };
+
+    axios
+      .post(
+        `${appConfig.urls.API_BASE_URL}/makeathon/submit-application`,
+        data,
+        config
+      )
+      .then(response => {
+        if (response.status === 201) {
+          console.log("App response", response.status)
+          setApplicationState(7);
+        } else if (response.status === 409) {
+          setApplicationState(8);
+        } else {
+          setApplicationState(9);
+        }
+      })
+      .catch(error => {
+        console.error("App error", error.response)
+        if (error.response !== undefined && error.response.status === 409) {
+          setApplicationState(8);
+        } else {
+          setApplicationState(9);
+        }
+      });
+  };
+
+  const onInputChange = (event) => {
     let newObj = applicationData;
     Object.defineProperty(newObj, event.target.name, {
-      value: event.target.value,
+      value:
+        event.target.type === "file"
+          ? event.target.files[0]
+          : event.target.value,
       writable: true,
     });
+
     setApplicationData(newObj);
   }
 
-  function handleNextPage() {
-    changeApplicationState(applicationState + 1);
-    setIsControlled(true);
-    setTimeout(() => {
-      setIsControlled(false);
-      setIsAppValid(false);
-    }, 500);
-    if (applicationState == 2) {
-      //console.log(applicationData);
-    }
-  }
-
-  function handlePrevPage() {
-    changeApplicationState(applicationState - 1);
-    setIsControlled(true);
-    setTimeout(() => {
-      setIsControlled(false);
-    }, 500);
-  }
+  const handleNextPage = () => setApplicationState(applicationState + 1);
+  const handlePrevPage = () => setApplicationState(applicationState - 1);
 
   function submitValidation() {
     if (applicationState == 2) {
       if (isAppValid) {
-        if (applicationData.confirmation) {
+        if (applicationData.agreement) {
           return true;
         } else {
           return false;
@@ -137,8 +201,7 @@ export default function ApplicationForm() {
     case 0:
       return (
         <div className={styles.ApplicationFormItem}>
-          <ApplyHeader title="Nice try! Come back " highlighted_title="next time!" />
-          {/* <ApplyHeader title="Details about " highlighted_title="you." />
+          <ApplyHeader title="Details about " highlighted_title="you." />
           <PersonalDetailForm
             onInputChange={(event) => onInputChange(event)}
             data={applicationData}
@@ -151,17 +214,33 @@ export default function ApplicationForm() {
             nextPage={() => handleNextPage()}
             prevPage={() => handlePrevPage()}
             isValid={isAppValid ? true : false}
-          /> */}
+          />
         </div>
       );
-
     case 1:
       return (
         <div className={styles.ApplicationFormItem}>
-          <ApplyHeader
-            title="Let's talk about your "
-            highlighted_title="profession."
+          <ApplyHeader title="Your " highlighted_title="Resumee" />
+          <ResumeForm
+            onInputChange={(event) => onInputChange(event)}
+            data={applicationData}
+            isControlled={isControlled}
+            setIsAppValid={(value) => setIsAppValid(value)}
           />
+          <ApplyFooter
+            nextBtnText="Next"
+            prevBtnText="Prev"
+            stateNumber={applicationState + 1}
+            nextPage={() => handleNextPage()}
+            prevPage={() => handlePrevPage()}
+            isValid={isAppValid ? true : false}
+          />
+        </div>
+      );    
+    case 2:
+      return (
+        <div className={styles.ApplicationFormItem}>
+          <ApplyHeader title="Let's talk about your " highlighted_title="profession."/>
           <ProfessionForm
             onInputChange={(event) => onInputChange(event)}
             data={applicationData}
@@ -178,15 +257,52 @@ export default function ApplicationForm() {
           />
         </div>
       );
-
-    case 2:
+      case 3:
       return (
         <div className={styles.ApplicationFormItem}>
-          <ApplyHeader title="Almost " highlighted_title="ready." />
-          <SubmitForm
+          <ApplyHeader title="Makeathon specific" highlighted_title="questions."/>
+          <TeamForm
             onInputChange={(event) => onInputChange(event)}
             data={applicationData}
             isControlled={isControlled}
+            setIsAppValid={(value) => setIsAppValid(value)}
+          />
+          <ApplyFooter
+            nextBtnText="Next"
+            prevBtnText="Prev"
+            stateNumber={applicationState + 1}
+            nextPage={() => handleNextPage()}
+            prevPage={() => handlePrevPage()}
+            isValid={isAppValid ? true : false}
+          />
+        </div>
+      );
+      case 4:
+        return (
+          <div className={styles.ApplicationFormItem}>
+            <ApplyHeader title="General questions for our" highlighted_title="statistics."/>
+            <StatisticsForm
+              onInputChange={(event) => onInputChange(event)}
+              data={applicationData}
+              isControlled={isControlled}
+              setIsAppValid={(value) => setIsAppValid(value)}
+            />
+            <ApplyFooter
+              nextBtnText="Next"
+              prevBtnText="Prev"
+              stateNumber={applicationState + 1}
+              nextPage={() => handleNextPage()}
+              prevPage={() => handlePrevPage()}
+              isValid={isAppValid ? true : false}
+            />
+          </div>
+        );
+    case 5:
+      return (
+        <div className={styles.ApplicationFormItem}>
+          <ApplyHeader title="Almost " highlighted_title="ready." />
+          <SummaryForm
+            data={applicationData}
             setIsAppValid={(value) => setIsAppValid(value)}
           />
           <ApplyFooter
@@ -200,8 +316,8 @@ export default function ApplicationForm() {
         </div>
       );
 
-    case 3:
-      fetchData();
+    case 6:
+      submitData();
       return (
         <div className={styles.ApplicationFormItem}>
           <div className={styles.Wrapper}>
@@ -217,7 +333,7 @@ export default function ApplicationForm() {
         </div>
       );
 
-    case 4:
+    case 7:
       return (
         <div className={styles.ApplicationFormItem}>
           <ApplyHeader
@@ -237,7 +353,7 @@ export default function ApplicationForm() {
         </div>
       );
 
-    case 5:
+    case 8:
       return (
         <div className={styles.ApplicationFormItem}>
           <ApplyHeader
@@ -257,7 +373,7 @@ export default function ApplicationForm() {
         </div>
       );
 
-    case 6:
+    case 9:
       return (
         <div className={styles.ApplicationFormItem}>
           <ApplyHeader

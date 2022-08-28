@@ -2,21 +2,24 @@ import styles from '../../styles/01_atoms/DateInput.module.css'
 import Image from 'next/image'
 import { useState } from 'react';     
 
-export default function DateInput({value, isControlled, headerText, placeholderText, onContentChange, name, setIsValid, isRequired}){ 
-
+export default function DateInput({
+  value, 
+  headerText, 
+  placeholderText, 
+  onContentChange, 
+  name, 
+  setIsValid, 
+  isRequired
+}) { 
   const [isFieldValid, setIsFieldValid] = useState(true);
+  const [input, setInput] = useState(value);
 
-  function validateField(event){
-    if(isRequired){
-      if(event.target.value == ""){
-        setIsValid(false);
-        setIsFieldValid(false);
-      }else{
-        setIsValid(true);
-        setIsFieldValid(true);
-      }
+  const validateField = (event) => {
+    if (isRequired) {
+      setIsValid(event.target.value !== "");
+      setIsFieldValid(event.target.value !== "");
     }
-  }
+  };
 
   return <div className={styles.DateInputItem}>
     <div className={styles.InputHeader}>{headerText}</div>
@@ -27,9 +30,12 @@ export default function DateInput({value, isControlled, headerText, placeholderT
         id={name} 
         name={name} 
         placeholder={placeholderText} 
-        onChange={(event)=>onContentChange(event)}
-        value={isControlled ? value : undefined}
-        onBlur={(event)=>validateField(event)} 
+        onChange={(event)=> {
+            setInput(event.target.value);
+            onContentChange(event);
+            validateField(event);
+        }}
+        value={input}
         style={{outline: isFieldValid ? "" : "2px solid red"}}
       />
       <div className={styles.Label}>
