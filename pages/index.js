@@ -11,28 +11,7 @@ export default function Apply(){
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <NavBar />
-        <Hero id="hero"/>
-        <Element name="about"></Element>
-        <About />
-        <Video />
-        {/* <Roadmap /> */}
-        {/* <FullscreenPicture /> */}
-        {/* <Element name="tracks">
-          <Tracks />
-        </Element> */}
-        {/* <Element name="speakers">
-          <Speakers />
-        </Element> */}
-        <Element name="stories">
-          <Stories />
-        </Element>
-        <Sponsors />
-        <SponsorInfo />
-        <Element name="faqs">
-          <Faqs />
-        </Element>
-        <Outtro />
+        <ApplicationForm />
       </main>
       <footer className={styles.Footer}>
         <div className={styles.Grid}>
