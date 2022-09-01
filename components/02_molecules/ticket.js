@@ -15,9 +15,9 @@ export default function Ticket({position}){
   }else{
     return <div className={styles.TicketItem}>
       <div alt="Ticket" className={styles.Ticket}></div>
-      <Link href="#" passHref={true} >
+      <Link href="application" passHref={true} >
         <div className={styles.CtaButton}>
-          <div className={styles.Text}>Application starts soon!</div>
+          <div className={styles.Text}>Apply now!</div>
         </div>
       </Link>
     </div>
