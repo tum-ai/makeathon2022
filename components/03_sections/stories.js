@@ -18,79 +18,79 @@ const data = {
   "paragraph": "Have a look at the winning teams and fantastic solutions that resulted from only 48h working time!",
   "stories": [
     {
-      "title": "CabMate",
-      "paragraph_highlighted": "An AI based web app that supports taxi drivers on a daily basis ",
-      "paragraph": "by predicting where the most demand will be across the city. By using CabMate cabdrivers can reduce their cruising-time and have more productive shifts.",
+      "title": "CoVision",
+      "paragraph_highlighted": "An assisting app for visually impaired users. ",
+      "paragraph": "The solution does not only help blind people to assess the results of a covid quick test but also guides them step by step through the whole process after scanning the barcode on the packaging. In the future functionality will be extended for other kinds of tests, e.g. pregnancy tests.",
       "image": "/assets/story01.png",
       "members": [
-        {
-          "image": "/stories/nils_jacobsen.webp",
-          "link": "https://www.linkedin.com/in/nils-jacobsen/",
-        },
-        {
-          "image": "/stories/oliver_kovacs.webp",
-          "link": "https://www.linkedin.com/in/oliver-kovacs/",
-        },
-        {
-          "image": "/stories/ramona_dombetzki.webp",
-          "link": "https://www.linkedin.com/in/ramona-dombetzki-9a52531a0/",
-        },
-        {
-          "image": "/stories/sebastian_wilhelm.webp",
-          "link": "https://www.linkedin.com/in/sebastian-wilhelm/",
-        },
-        {
-          "image": "/stories/stefan_rummer.webp",
-          "link": "https://www.linkedin.com/in/stefanrmmr/",
-        },
+        // {
+        //   "image": "/stories/nils_jacobsen.webp",
+        //   "link": "https://www.linkedin.com/in/nils-jacobsen/",
+        // },
+        // {
+        //   "image": "/stories/oliver_kovacs.webp",
+        //   "link": "https://www.linkedin.com/in/oliver-kovacs/",
+        // },
+        // {
+        //   "image": "/stories/ramona_dombetzki.webp",
+        //   "link": "https://www.linkedin.com/in/ramona-dombetzki-9a52531a0/",
+        // },
+        // {
+        //   "image": "/stories/sebastian_wilhelm.webp",
+        //   "link": "https://www.linkedin.com/in/sebastian-wilhelm/",
+        // },
+        // {
+        //   "image": "/stories/stefan_rummer.webp",
+        //   "link": "https://www.linkedin.com/in/stefanrmmr/",
+        // },
       ]
     },
     {
-      "title": "flyAI",
-      "paragraph_highlighted": "AI as a service to enable autonomous drones to land anywhere. ",
-      "paragraph": "Added to this we create a drone fleet relocation algorithm to ensure best coverage of drone services.",
-      "image": "/stories/flyai.jpeg",
+      "title": "CheckCrew",
+      "paragraph_highlighted": "Make online fact checking quick and easy. ",
+      "paragraph": "A web extension that fact checks Twitter posts while scrolling was developed. It works by embedding tweets using GPT-3 and then efficiently searching for related articles. This also allows to enrich the tweets with links to the sources.",
+      "image": "/stories/story02.npg",
       "members": [
-        {
-          "image": "/stories/marcel_schlicke.jpg",
-          "link": "https://www.linkedin.com/in/marcel-schlicke-63657b18a/",
-        },
-        {
-          "image": "/stories/mreenav_deka.jpg",
-          "link": "https://www.linkedin.com/in/mreenavdeka/",
-        },
-        {
-          "image": "/stories/nikolas_kolbenschlag.jpg",
-          "link": "https://www.linkedin.com/in/nicolas-kolbenschlag-860161169/",
-        },
-        {
-          "image": "/stories/raphael_maier.jpg",
-          "link": "https://www.linkedin.com/in/raphael-m-952481153/",
-        },
+        // {
+        //   "image": "/stories/marcel_schlicke.jpg",
+        //   "link": "https://www.linkedin.com/in/marcel-schlicke-63657b18a/",
+        // },
+        // {
+        //   "image": "/stories/mreenav_deka.jpg",
+        //   "link": "https://www.linkedin.com/in/mreenavdeka/",
+        // },
+        // {
+        //   "image": "/stories/nikolas_kolbenschlag.jpg",
+        //   "link": "https://www.linkedin.com/in/nicolas-kolbenschlag-860161169/",
+        // },
+        // {
+        //   "image": "/stories/raphael_maier.jpg",
+        //   "link": "https://www.linkedin.com/in/raphael-m-952481153/",
+        // },
       ]
     },
     {
-      "title": "Speak Easy",
-      "paragraph_highlighted": "'Speak Easy' ",
-      "paragraph": "- a text simplification engine that automatically turns text from 'normal' into 'simple language' - language that is easily understood by elderly, cognitively impaired, mentally handicapped people and learners of a new language.",
-      "image": "/stories/speak_easy.jpeg",
+      "title": "Bonk",
+      "paragraph_highlighted": "Nitrogen level estimation. ",
+      "paragraph": "A MLP regression model is used to estimate nitrogen levels in agricultural soil based on multispectral satellite imagery. Helps to provide smallholder farmers with inexpensive and timely insights.",
+      "image": "/stories/story03.png",
       "members": [
-        {
-          "image": "/stories/alisha_r.webp",
-          "link": "https://www.linkedin.com/in/alisha-riecker-690743187/",
-        },
-        {
-          "image": "/stories/flora_g.webp",
-          "link": "https://www.linkedin.com/in/flora-g-603274a9/",
-        },
-        {
-          "image": "/stories/nicholas.webp",
-          "link": "https://www.linkedin.com/in/nicholas-jm-wolf/",
-        },
-        {
-          "image": "/stories/vanessa.jpg",
-          "link": "https://www.linkedin.com/in/vanessa-theel-624b54122/",
-        },
+        // {
+        //   "image": "/stories/alisha_r.webp",
+        //   "link": "https://www.linkedin.com/in/alisha-riecker-690743187/",
+        // },
+        // {
+        //   "image": "/stories/flora_g.webp",
+        //   "link": "https://www.linkedin.com/in/flora-g-603274a9/",
+        // },
+        // {
+        //   "image": "/stories/nicholas.webp",
+        //   "link": "https://www.linkedin.com/in/nicholas-jm-wolf/",
+        // },
+        // {
+        //   "image": "/stories/vanessa.jpg",
+        //   "link": "https://www.linkedin.com/in/vanessa-theel-624b54122/",
+        // },
       ]
     },
   ]
@@ -104,7 +104,7 @@ export default class Stories extends Component {
       speed: 200,
       slidesToShow: 2,
       slidesToScroll: 1,
-      dots: false,
+      dots: true,
       draggable: true,
       arrows: false,
       infinite: false,

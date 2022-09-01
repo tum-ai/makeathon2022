@@ -32,8 +32,8 @@ export default function Home() {
         <Element name="about"></Element>
         <About />
         <Video />
-        {/* <Roadmap /> */}
-        {/* <FullscreenPicture /> */}
+        <Roadmap />
+        <FullscreenPicture />
         {/* <Element name="tracks">
           <Tracks />
         </Element> */}
@@ -43,8 +43,8 @@ export default function Home() {
         <Element name="stories">
           <Stories />
         </Element>
-        <Sponsors />
-        <SponsorInfo />
+        {/* <Sponsors />
+        <SponsorInfo /> */}
         <Element name="faqs">
           <Faqs />
         </Element>
