@@ -21,7 +21,7 @@ const data = {
       "title": "CoVision",
       "paragraph_highlighted": "An assisting app for visually impaired users. ",
       "paragraph": "The solution does not only help blind people to assess the results of a covid quick test but also guides them step by step through the whole process after scanning the barcode on the packaging. In the future functionality will be extended for other kinds of tests, e.g. pregnancy tests.",
-      "image": "/assets/story01.png",
+      "image": "/stories/story01.png",
       "members": [
         // {
         //   "image": "/stories/nils_jacobsen.webp",
@@ -49,7 +49,7 @@ const data = {
       "title": "CheckCrew",
       "paragraph_highlighted": "Make online fact checking quick and easy. ",
       "paragraph": "A web extension that fact checks Twitter posts while scrolling was developed. It works by embedding tweets using GPT-3 and then efficiently searching for related articles. This also allows to enrich the tweets with links to the sources.",
-      "image": "/stories/story02.npg",
+      "image": "/stories/story02.png",
       "members": [
         // {
         //   "image": "/stories/marcel_schlicke.jpg",
