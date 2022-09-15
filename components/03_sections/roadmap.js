@@ -33,7 +33,7 @@ const data = {
       "img": "/assets/road03.jpg"
     },
     {
-      "title": "Deep Dive Days & Workshops + Team Finding",
+      "title": "Deep Dive Days + Team Finding",
       "icon": "/assets/workshops.svg",
       "time": "25.09 - 27.09",
       "content_highlighted": "Find your team members in the series of socializing events between 25th and 27th of September! ",
