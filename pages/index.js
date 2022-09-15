@@ -34,9 +34,9 @@ export default function Home() {
         <Video />
         <Roadmap />
         <FullscreenPicture />
-        {/* <Element name="tracks">
+        <Element name="tracks">
           <Tracks />
-        </Element> */}
+        </Element>
         {/* <Element name="speakers">
           <Speakers />
         </Element> */}

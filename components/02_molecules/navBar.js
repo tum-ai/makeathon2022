@@ -37,14 +37,14 @@ export default function NavBar() {
           >
             Tracks
           </LinkScroll>
-          <LinkScroll
+          {/* <LinkScroll
             to="speakers"
             spy={true}
             smooth={true}
             className={styles.Link}
           >
             Speakers
-          </LinkScroll>
+          </LinkScroll> */}
           <LinkScroll
             to="stories"
             spy={true}
