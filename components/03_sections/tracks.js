@@ -18,24 +18,31 @@ const data = {
   paragraph_highlighted:
     "The main idea of TUM.ai Makeathon is to develop a solution powered by AI within a cross-functional team. ",
   paragraph:
-    "The solutions you will be working on have to fit into one of three tracks: Education, Environment or MedTech. Within these tracks, you can either join a challenge pitched by one of our industry partners, challenge setter, or if you have an awesome idea yourself you can also pitch it, so you can convince others to join you in building a viable business concept.",
+    "The solutions you will be working on have to fit into one of four tracks: Globalization, Environment, Healthcare or Social Support. Within these tracks, you can either join a challenge pitched by one of our industry partners, challenge setter, or if you have an awesome idea yourself you can also pitch it, so you can convince others to join you in building a viable business concept.",
   track_list: [
     {
-      title: "MedTech",
-      icon: "/assets/health.svg",
-      text: "Find ways for AI to improve modern-day health care and make it more accessible",
-      soundfile: "/sounds/test.mp3",
-      soundtitle: "MedTech - Why should we care? 💊",
+      title: "AI & Globalization",
+      icon: "/assets/education.svg",
+      text: "Tackle problems that relate to transnational matters, such as supply chain problems, economy of developing countries, and support in stopping conflicts.",
+      soundfile: "/sounds/sound.mp3",
+      soundtitle: "Why is education important? 📘",
       soundAuthor: "Nicolas Remerscheid",
       userImage: "/assets/author.png",
       userLink: "https://www.google.com",
       guidingQuestions: [
-        "How can we improve access to healthcare for people of different ages and backgrounds?",
-        "What are the unresolved issues, and how can Technology help?",
-        "How can healthcare become more personalized?",
-        "How can a common understanding of the significance of a healthy lifestyle be achieved?",
+        "What technologies could we build to help developing countries?",
+        "How can AI & Technology support in stopping conflicts?",
+        "In what way can AI solve logistic or supply chain problems?",
       ],
       challeges: [
+        {
+          image: "/assets/woods.png",
+          title: "Google AI Geoecology",
+          paragraph_highlighted:
+            "As the largest student-organized Makeathon in Germany, ",
+          paragraph:
+            "you can expect numerous exciting speakers, big-name companies, cool prizes, and excellent opportunities to meet like-minded international students.",
+        },
         {
           image: "/assets/woods.png",
           title: "Google AI Geoecology",
@@ -47,9 +54,9 @@ const data = {
       ],
     },
     {
-      title: "Environment",
+      title: "AI for the Environment",
       icon: "/assets/environment.svg",
-      text: "Utilize AI to provide more environmentally sustainable behaviors.",
+      text: "The resources and wildlife of our planet are in danger, with a need to use the capabilities of AI. Get involved in resource planning, nature protection and urban development with a vision of coming generations.",
       soundfile: "/sounds/test.mp3",
       soundtitle: "Let's talk about environment? 🍃",
       soundAuthor: "Nicolas Remerscheid",
@@ -58,8 +65,7 @@ const data = {
       guidingQuestions: [
         "In what ways is our current Technology unsustainable, and how could we address this?",
         "How can we address the tradeoff between sustainability and affordability?",
-        "How can Technology minimize the negative impact of human behavior?",
-        "What must be done to establish a shared awareness of our responsibility towards the environment, and how can Technology help accomplish this?",
+        "How can Technology & AI minimize the negative impact of human behavior?",
       ],
       challeges: [
         {
@@ -73,19 +79,43 @@ const data = {
       ],
     },
     {
-      title: "Education",
+      title: "AI for Healthcare",
+      icon: "/assets/health.svg",
+      text: "Implement the power of innovation to solve the worldwide necessity of doctors and enable the access of medical services to the people that need it the most, while also improving our current healthcare systems.",
+      soundfile: "/sounds/test.mp3",
+      soundtitle: "MedTech - Why should we care? 💊",
+      soundAuthor: "Nicolas Remerscheid",
+      userImage: "/assets/author.png",
+      userLink: "https://www.google.com",
+      guidingQuestions: [
+        "How can we improve access to healthcare for people of different ages and backgrounds?",
+        "What are the unresolved issues, and how can AI help?",
+        "How can healthcare become more personalized?",
+      ],
+      challeges: [
+        {
+          image: "/assets/woods.png",
+          title: "Google AI Geoecology",
+          paragraph_highlighted:
+            "As the largest student-organized Makeathon in Germany, ",
+          paragraph:
+            "you can expect numerous exciting speakers, big-name companies, cool prizes, and excellent opportunities to meet like-minded international students.",
+        },
+      ],
+    },
+    {
+      title: "AI for Social Support",
       icon: "/assets/education.svg",
-      text: "Empower & enhance education for people of all ages and backgrounds",
+      text: "Bring the latest edge in technology to the world, such as improving education processes, daily activities and people that can use the added benefit of AI for a more comfortable day-to-day experience.",
       soundfile: "/sounds/sound.mp3",
       soundtitle: "Why is education important? 📘",
       soundAuthor: "Nicolas Remerscheid",
       userImage: "/assets/author.png",
       userLink: "https://www.google.com",
       guidingQuestions: [
-        "How can Remote Learning enhance access to education?",
-        "In which way can technology embrace the positive effects of Remote Learning?",
-        "What technologies could we build to help teachers quickly pivot from in-person to remote learning and vice versa?",
-        "What are the unresolved challenges (access to education in many countries, quality & effectiveness of education, personalized learning, affordability)?",
+        "How can AI enhance access to education?",
+        "In what way Technology can help vulnerable groups and improve their life quality?",
+        "How can AI & Technology be integrated into our daily activities and meet our needs?",
       ],
       challeges: [
         {
