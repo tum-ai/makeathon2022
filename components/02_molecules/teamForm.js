@@ -71,7 +71,7 @@ export default function TeamForm({
             </div>
             <div className={styles.Full}>
               <TextInput 
-                headerText="If yes, please specify the exact names and Email addresses of your team mates." 
+                headerText="If yes, please specify the exact names and Email addresses of your team mates. Maximum team size is 5. " 
                 placeholderText="List team mates here ..."
                 name="teamDetails"
                 onContentChange={(event)=>onInputChange(event)}
