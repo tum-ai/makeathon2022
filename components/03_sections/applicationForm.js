@@ -16,7 +16,7 @@ import Paragraph1 from "../01_atoms/fonts_paragraph1";
 import axios from "axios";
 
 export default function ApplicationForm() {
-  const [applicationState, setApplicationState] = useState(0);
+  const [applicationState, setApplicationState] = useState(9);
   /* const [applicationData, setApplicationData] = useState({
     academicBackground: "",
     confirmation: false,
