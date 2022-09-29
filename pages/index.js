@@ -43,8 +43,8 @@ export default function Home() {
         <Element name="stories">
           <Stories />
         </Element>
-        {/* <Sponsors />
-        <SponsorInfo /> */}
+        <Sponsors />
+        <SponsorInfo />
         <Element name="faqs">
           <Faqs />
         </Element>
