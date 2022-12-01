@@ -1,16 +1,17 @@
 .TicketItem{
-  width: 340px;
+  width: 450px;
   position: absolute;
+  top: -40px;
 }
 .Ticket{
-  width: 340px;
-  height: 600px;
-  background-image: url("/assets/ticket_ extended_deadline.svg");
-  background-size: contain;
+  width: 500px;
+  height: 680px;
+  background-image: url("/assets/ticket_before_2023.svg");
+  background-size: 95%;
   background-repeat: no-repeat;
   filter: drop-shadow(0px 40px 124px rgba(123, 154, 239, 0.25));
 }
-.CtaButton{
+/* .CtaButton{
   position: absolute;
   padding: 13px;
   background: linear-gradient(108.48deg, #9A6CDA 0%, #7C35DE 100%);
@@ -57,4 +58,4 @@
     top: 122vw;
     padding: 20px;
   }
-}
+} */

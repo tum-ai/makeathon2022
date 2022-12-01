@@ -18,10 +18,10 @@ const data = {
   "paragraph": "Have a look at the winning teams and fantastic solutions that resulted from only 48h working time!",
   "stories": [
     {
-      "title": "CoVision",
-      "paragraph_highlighted": "An assisting app for visually impaired users. ",
-      "paragraph": "The solution does not only help blind people to assess the results of a covid quick test but also guides them step by step through the whole process after scanning the barcode on the packaging. In the future functionality will be extended for other kinds of tests, e.g. pregnancy tests.",
-      "image": "/stories/story01.png",
+      "title": "Microsoft Weekend Warriors",
+      /*"paragraph_highlighted": "An assisting app for visually impaired users. ",*/
+      "paragraph": "The solution records the sign gestures of people and translates them into text or speech for non-deaf people. The NN algorithm is highly customizable for all the variety of signs languages around the world. As a result, deaf people can communicate between each other with 300 different sign languages.",
+      "image": "/stories/story01_2022.png",
       "members": [
         // {
         //   "image": "/stories/nils_jacobsen.webp",
@@ -46,10 +46,10 @@ const data = {
       ]
     },
     {
-      "title": "CheckCrew",
-      "paragraph_highlighted": "Make online fact checking quick and easy. ",
-      "paragraph": "A web extension that fact checks Twitter posts while scrolling was developed. It works by embedding tweets using GPT-3 and then efficiently searching for related articles. This also allows to enrich the tweets with links to the sources.",
-      "image": "/stories/story02.png",
+      "title": "BetterCare_TUM.ai",
+      /*"paragraph_highlighted": "Make online fact checking quick and easy. ",*/
+      "paragraph": "Demographic change will lead to an immense number of elderly people that will be cared for at home. The solution provides an all in one application to make caring for your loved ones at home easier. The team created their own dataset for kinematic model detection during the Makeathon.",
+      "image": "/stories/story02_2022.png",
       "members": [
         // {
         //   "image": "/stories/marcel_schlicke.jpg",
@@ -70,10 +70,10 @@ const data = {
       ]
     },
     {
-      "title": "Bonk",
-      "paragraph_highlighted": "Nitrogen level estimation. ",
-      "paragraph": "A MLP regression model is used to estimate nitrogen levels in agricultural soil based on multispectral satellite imagery. Helps to provide smallholder farmers with inexpensive and timely insights.",
-      "image": "/stories/story03.png",
+      "title": "AI Risk Inspecto",
+      /*"paragraph_highlighted": "Nitrogen level estimation. ",*/
+      "paragraph": "The AI Risk Inspector is an NLP tool that gives 1) an accurate estimation of the risk level of the AI product 2) an explanation of why that product was put into that risk category 3) in case it's a high risk use case, a check list of actions that is required by the EU AI Act 4) tool recommendations to mitigate issues and align the AI use case with the regulation. This is all based on the user's text-based description of their AI use case.",
+      "image": "/stories/story03_2022_edited_1.png",
       "members": [
         // {
         //   "image": "/stories/alisha_r.webp",
