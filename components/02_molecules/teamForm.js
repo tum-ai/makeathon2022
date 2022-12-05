@@ -71,7 +71,7 @@ export default function TeamForm({
             </div>
             <div className={styles.Full}>
               <TextInput 
-                headerText="If yes, please specify the exact names and Email addresses of your team mates." 
+                headerText="If yes, please specify the exact names and Email addresses of your team mates. Maximum team size is 5. " 
                 placeholderText="List team mates here ..."
                 name="teamDetails"
                 onContentChange={(event)=>onInputChange(event)}
@@ -98,7 +98,8 @@ export default function TeamForm({
             <div className={styles.Full}>
               <DropDownInput 
                 headerText="Are you planning to attend the Makeathon online or onsite?*"
-                descriptionText="We will be having a hybrid event this year in TU München on campus Garching bei München. If you are available on the 30th of September to the 2nd of October, we would love to have you there. Please confirm your availability by marking Online or On-site. The response is binding, as we are expecting to fill a capacity of 100 people on-site. First come, first serve."
+                descriptionText="We will be having a hybrid event this year in TU München on campus Garching bei München. If you are available on the 30th of September to the 2nd of October, we would love to have you there. Please confirm your availability by marking Online or On-site. Your response is binding. 
+                Please also note that it is NOT possible to stay in the TUM MI Building at night."
                 name="attendingMode"
                 onContentChange={(event)=>onInputChange(event)}
                 withIcon={false}

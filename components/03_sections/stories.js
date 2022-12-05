@@ -18,79 +18,85 @@ const data = {
   "paragraph": "Have a look at the winning teams and fantastic solutions that resulted from only 48h working time!",
   "stories": [
     {
-      "title": "CabMate",
-      "paragraph_highlighted": "An AI based web app that supports taxi drivers on a daily basis ",
-      "paragraph": "by predicting where the most demand will be across the city. By using CabMate cabdrivers can reduce their cruising-time and have more productive shifts.",
-      "image": "/assets/story01.png",
+      "title": "Weekend Warriors",
+      /*"paragraph_highlighted": "An assisting app for visually impaired users. ",*/
+      "paragraph": "The solution records the sign gestures of people and translates them into text or speech for non-deaf people. The NN algorithm is highly customizable for all the variety of signs languages around the world. As a result, deaf people can communicate between each other with 300 different sign languages.",
+      "image": "/stories/story01_2022.png",
+      "link": "https://devpost.com/software/microsoft_weekend-warriors",
+      "link_text": "Click here for the team's project page",
       "members": [
-        {
-          "image": "/stories/nils_jacobsen.webp",
-          "link": "https://www.linkedin.com/in/nils-jacobsen/",
-        },
-        {
-          "image": "/stories/oliver_kovacs.webp",
-          "link": "https://www.linkedin.com/in/oliver-kovacs/",
-        },
-        {
-          "image": "/stories/ramona_dombetzki.webp",
-          "link": "https://www.linkedin.com/in/ramona-dombetzki-9a52531a0/",
-        },
-        {
-          "image": "/stories/sebastian_wilhelm.webp",
-          "link": "https://www.linkedin.com/in/sebastian-wilhelm/",
-        },
-        {
-          "image": "/stories/stefan_rummer.webp",
-          "link": "https://www.linkedin.com/in/stefanrmmr/",
-        },
+        // {
+        //   "image": "/stories/nils_jacobsen.webp",
+        //   "link": "https://www.linkedin.com/in/nils-jacobsen/",
+        // },
+        // {
+        //   "image": "/stories/oliver_kovacs.webp",
+        //   "link": "https://www.linkedin.com/in/oliver-kovacs/",
+        // },
+        // {
+        //   "image": "/stories/ramona_dombetzki.webp",
+        //   "link": "https://www.linkedin.com/in/ramona-dombetzki-9a52531a0/",
+        // },
+        // {
+        //   "image": "/stories/sebastian_wilhelm.webp",
+        //   "link": "https://www.linkedin.com/in/sebastian-wilhelm/",
+        // },
+        // {
+        //   "image": "/stories/stefan_rummer.webp",
+        //   "link": "https://www.linkedin.com/in/stefanrmmr/",
+        // },
       ]
     },
     {
-      "title": "flyAI",
-      "paragraph_highlighted": "AI as a service to enable autonomous drones to land anywhere. ",
-      "paragraph": "Added to this we create a drone fleet relocation algorithm to ensure best coverage of drone services.",
-      "image": "/stories/flyai.jpeg",
+      "title": "Forward Propagators",
+      /*"paragraph_highlighted": "Make online fact checking quick and easy. ",*/
+      "paragraph": "Demographic change will lead to an immense number of elderly people that will be cared for at home. The solution provides an all in one application to make caring for your loved ones at home easier. The team created their own dataset for kinematic model detection during the Makeathon.",
+      "image": "/stories/story02_2022.png",
+      "link": "https://devpost.com/software/bettercare_tum-ai",
+      "link_text": "Click here for the team's project page",
       "members": [
-        {
-          "image": "/stories/marcel_schlicke.jpg",
-          "link": "https://www.linkedin.com/in/marcel-schlicke-63657b18a/",
-        },
-        {
-          "image": "/stories/mreenav_deka.jpg",
-          "link": "https://www.linkedin.com/in/mreenavdeka/",
-        },
-        {
-          "image": "/stories/nikolas_kolbenschlag.jpg",
-          "link": "https://www.linkedin.com/in/nicolas-kolbenschlag-860161169/",
-        },
-        {
-          "image": "/stories/raphael_maier.jpg",
-          "link": "https://www.linkedin.com/in/raphael-m-952481153/",
-        },
+        // {
+        //   "image": "/stories/marcel_schlicke.jpg",
+        //   "link": "https://www.linkedin.com/in/marcel-schlicke-63657b18a/",
+        // },
+        // {
+        //   "image": "/stories/mreenav_deka.jpg",
+        //   "link": "https://www.linkedin.com/in/mreenavdeka/",
+        // },
+        // {
+        //   "image": "/stories/nikolas_kolbenschlag.jpg",
+        //   "link": "https://www.linkedin.com/in/nicolas-kolbenschlag-860161169/",
+        // },
+        // {
+        //   "image": "/stories/raphael_maier.jpg",
+        //   "link": "https://www.linkedin.com/in/raphael-m-952481153/",
+        // },
       ]
     },
     {
-      "title": "Speak Easy",
-      "paragraph_highlighted": "'Speak Easy' ",
-      "paragraph": "- a text simplification engine that automatically turns text from 'normal' into 'simple language' - language that is easily understood by elderly, cognitively impaired, mentally handicapped people and learners of a new language.",
-      "image": "/stories/speak_easy.jpeg",
+      "title": "AICrossTheOcean",
+      /*"paragraph_highlighted": "Nitrogen level estimation. ",*/
+      "paragraph": "The AI Risk Inspector is an NLP tool that gives 1) an accurate estimation of the risk level of the AI product 2) an explanation of why that product was put into that risk category 3) in case it's a high risk use case, a check list of actions that is required by the EU AI Act 4) tool recommendations to mitigate issues and align the AI use case with the regulation. This is all based on the user's text-based description of their AI use case.",
+      "image": "/stories/story03_2022_edited_1.png",
+      "link": "https://devpost.com/software/ai-risk-inspector",
+      "link_text": "Click here for the team's project page",
       "members": [
-        {
-          "image": "/stories/alisha_r.webp",
-          "link": "https://www.linkedin.com/in/alisha-riecker-690743187/",
-        },
-        {
-          "image": "/stories/flora_g.webp",
-          "link": "https://www.linkedin.com/in/flora-g-603274a9/",
-        },
-        {
-          "image": "/stories/nicholas.webp",
-          "link": "https://www.linkedin.com/in/nicholas-jm-wolf/",
-        },
-        {
-          "image": "/stories/vanessa.jpg",
-          "link": "https://www.linkedin.com/in/vanessa-theel-624b54122/",
-        },
+        // {
+        //   "image": "/stories/alisha_r.webp",
+        //   "link": "https://www.linkedin.com/in/alisha-riecker-690743187/",
+        // },
+        // {
+        //   "image": "/stories/flora_g.webp",
+        //   "link": "https://www.linkedin.com/in/flora-g-603274a9/",
+        // },
+        // {
+        //   "image": "/stories/nicholas.webp",
+        //   "link": "https://www.linkedin.com/in/nicholas-jm-wolf/",
+        // },
+        // {
+        //   "image": "/stories/vanessa.jpg",
+        //   "link": "https://www.linkedin.com/in/vanessa-theel-624b54122/",
+        // },
       ]
     },
   ]
@@ -104,7 +110,7 @@ export default class Stories extends Component {
       speed: 200,
       slidesToShow: 2,
       slidesToScroll: 1,
-      dots: false,
+      dots: true,
       draggable: true,
       arrows: false,
       infinite: false,
@@ -140,9 +146,12 @@ export default class Stories extends Component {
                   </div>
                   <div className={styles.CardContent}>
                     <div className={styles.Text}>
-                      <Paragraph1 highlightedContent={story.title} isDarkBackground />
+                      <Paragraph1 highlightedContent={story.title} href={story.link} isDarkBackground />
                       <Paragraph2 highlightedContent={story.paragraph_highlighted} normalContent={story.paragraph} isDarkBackground />
                     </div>
+                      <a href={story.link} className={styles.Text}>
+                        <Paragraph2 highlightedContent={story.paragraph_highlighted} normalContent={story.link_text} isDarkBackground />
+                      </a>
                     <div className={styles.Members}>
                       {story.members.map((member,i)=>(
                         <a href={member.link} key={i} className={styles.Member}>

@@ -16,7 +16,7 @@ import Paragraph1 from "../01_atoms/fonts_paragraph1";
 import axios from "axios";
 
 export default function ApplicationForm() {
-  const [applicationState, setApplicationState] = useState(0);
+  const [applicationState, setApplicationState] = useState(10);
   /* const [applicationData, setApplicationData] = useState({
     academicBackground: "",
     confirmation: false,
@@ -390,6 +390,13 @@ export default function ApplicationForm() {
               />
             </div>
           </div>
+        </div>
+      );
+
+    case 10:
+      return (
+        <div className={styles.ApplicationFormItem}>
+          <ApplyHeader title="Nice try! Come back " highlightedTitle="next time!" />
         </div>
       );
 

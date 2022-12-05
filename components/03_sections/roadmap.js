@@ -27,27 +27,35 @@ const data = {
     {
       "title": "Opening Ceremony",
       "icon": "/assets/pitch.svg",
-      "time": "25.09",
+      "time": "27.09",
       "content_highlighted": "During the opening ceremony on September 27th, our premium sponsors will welcome you to the Makeathon journey and share a few words about the effort of industry leaders to use AI to benefit society. ",
       "content": "Furthermore, challenge setters will announce their challenges for the first time and answer all your questions, followed by a socializing round where you have a chance to meet potential team members. The ceremony takes place starting at 18:00 CET.",
       "img": "/assets/road03.jpg"
     },
     {
-      "title": "Workshops & Team Finding",
+      "title": "Deep Dive Days + Team Finding",
       "icon": "/assets/workshops.svg",
-      "time": "25.09 - 27.09",
+      "time": "27.09 - 29.09",
       "content_highlighted": "Find your team members in the series of socializing events between 27th and 29th of September! ",
-      "content": "In addition, TUM.ai and industry partners organize educational workshops about introduction to AI to non-techies, business ideation and much more!",
+      "content": "In addition, TUM.ai and industry partners organize educational workshops about introduction to AI to non-techies, business ideation and much more! You will have a chance to listen to inspiring talks held by industry leaders on topics related to AI in different domains.",
       "img": "/assets/road04.jpg"
     },
-    {
-      "title": "Deep Dive Days",
-      "icon": "/assets/business_talks.svg",
-      "time": "27.09 - 29.09",
-      "content_highlighted": "From the 27th until the 29th of September, ",
-      "content": "you will have a chance to listen to inspiring talks held by industry leaders on topics related to AI in the medical, environmental or social domain. The workshops will be held in hybrid starting at 19:00 CET.",
-      "img": "/assets/road05.jpeg"
-    },
+    // {
+    //   "title": "Workshops & Team Finding",
+    //   "icon": "/assets/workshops.svg",
+    //   "time": "25.09 - 27.09",
+    //   "content_highlighted": "Find your team members in the series of socializing events between 27th and 29th of September! ",
+    //   "content": "In addition, TUM.ai and industry partners organize educational workshops about introduction to AI to non-techies, business ideation and much more!",
+    //   "img": "/assets/road04.jpg"
+    // },
+    // {
+    //   "title": "Deep Dive Days",
+    //   "icon": "/assets/business_talks.svg",
+    //   "time": "27.09 - 29.09",
+    //   "content_highlighted": "From the 27th until the 29th of September, ",
+    //   "content": "you will have a chance to listen to inspiring talks held by industry leaders on topics related to AI in the medical, environmental or social domain. The workshops will be held in hybrid starting at 19:00 CET.",
+    //   "img": "/assets/road05.jpeg"
+    // },
     {
       "title": "Makeathon",
       "icon": "/assets/makeathon.svg",

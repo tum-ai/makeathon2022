@@ -11,7 +11,7 @@ const data = {
   title:
     "We at TUM.ai are thrilled to have you on board and can't wait to hear what you and your team come up with! 🚀",
   paragraph_highlighted:
-    "Makeathon is a 48-hour virtual challenge in which motivated students and young professionals develop a working AI solution for a real-world business case.",
+    "Makeathon is a 48-hour hybrid challenge in which motivated students and young professionals develop a working AI solution for a real-world business case.",
   paragraph:
     " Innovators of tomorrow work together in interdisciplinary teams on developing a prototype for the challenges in Globalization, Environment, Healthcare, and Social Support tracks. As the largest student-organized Makeathon in Germany, you can expect numerous exciting speakers, challenges, cool prizes, and excellent opportunities to meet like-minded people and connect with industry leaders, start-ups, and research groups. You can join the event in-person at the Mathematics and Informatics building at TUM or attend it in a virtual format!",
   button: "Learn more about TUM.ai",

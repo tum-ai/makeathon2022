@@ -71,7 +71,7 @@ export default function SubmitForm({data, onInputChange, isControlled, setIsAppV
           </div>
           <div className={styles.Full}>
             <BoolInput 
-              headerText="I hereby confirm that I will  participate for the full 48 hours of the Makeathon. (22-24.04)*"
+              headerText="I hereby confirm that I will  participate for the full 48 hours of the Makeathon. (30.09-02.10)*"
               name="confirmation"
               onContentChange={(event)=>{
                 onInputChange(event); 

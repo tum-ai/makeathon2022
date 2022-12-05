@@ -45,7 +45,7 @@ const data = {
     },
     {
       "question": "Can we use hardware?",
-      "answer": "As the TUM.ai Makeathon is going to be held online, we will not be able to distribute any hardware. We are looking for innovative digital products that can be easily presented to our jury in a virtual form. "
+      "answer": "We will not distribute any hardware. We are looking for innovative digital products that can be easily presented to our jury in a hybrid form. "
     },
     {
       "question": "What if I don’t have a team or idea?",
