@@ -56,7 +56,7 @@
 }
 .CardContent{
   padding: 24px;
-  height: 320px;
+  height: 350px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

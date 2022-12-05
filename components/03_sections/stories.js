@@ -18,10 +18,12 @@ const data = {
   "paragraph": "Have a look at the winning teams and fantastic solutions that resulted from only 48h working time!",
   "stories": [
     {
-      "title": "Microsoft Weekend Warriors",
+      "title": "Weekend Warriors",
       /*"paragraph_highlighted": "An assisting app for visually impaired users. ",*/
       "paragraph": "The solution records the sign gestures of people and translates them into text or speech for non-deaf people. The NN algorithm is highly customizable for all the variety of signs languages around the world. As a result, deaf people can communicate between each other with 300 different sign languages.",
       "image": "/stories/story01_2022.png",
+      "link": "https://devpost.com/software/microsoft_weekend-warriors",
+      "link_text": "Click here for the team's project page",
       "members": [
         // {
         //   "image": "/stories/nils_jacobsen.webp",
@@ -46,10 +48,12 @@ const data = {
       ]
     },
     {
-      "title": "BetterCare_TUM.ai",
+      "title": "Forward Propagators",
       /*"paragraph_highlighted": "Make online fact checking quick and easy. ",*/
       "paragraph": "Demographic change will lead to an immense number of elderly people that will be cared for at home. The solution provides an all in one application to make caring for your loved ones at home easier. The team created their own dataset for kinematic model detection during the Makeathon.",
       "image": "/stories/story02_2022.png",
+      "link": "https://devpost.com/software/bettercare_tum-ai",
+      "link_text": "Click here for the team's project page",
       "members": [
         // {
         //   "image": "/stories/marcel_schlicke.jpg",
@@ -70,10 +74,12 @@ const data = {
       ]
     },
     {
-      "title": "AI Risk Inspecto",
+      "title": "AICrossTheOcean",
       /*"paragraph_highlighted": "Nitrogen level estimation. ",*/
       "paragraph": "The AI Risk Inspector is an NLP tool that gives 1) an accurate estimation of the risk level of the AI product 2) an explanation of why that product was put into that risk category 3) in case it's a high risk use case, a check list of actions that is required by the EU AI Act 4) tool recommendations to mitigate issues and align the AI use case with the regulation. This is all based on the user's text-based description of their AI use case.",
       "image": "/stories/story03_2022_edited_1.png",
+      "link": "https://devpost.com/software/ai-risk-inspector",
+      "link_text": "Click here for the team's project page",
       "members": [
         // {
         //   "image": "/stories/alisha_r.webp",
@@ -140,9 +146,12 @@ export default class Stories extends Component {
                   </div>
                   <div className={styles.CardContent}>
                     <div className={styles.Text}>
-                      <Paragraph1 highlightedContent={story.title} isDarkBackground />
+                      <Paragraph1 highlightedContent={story.title} href={story.link} isDarkBackground />
                       <Paragraph2 highlightedContent={story.paragraph_highlighted} normalContent={story.paragraph} isDarkBackground />
                     </div>
+                      <a href={story.link} className={styles.Text}>
+                        <Paragraph2 highlightedContent={story.paragraph_highlighted} normalContent={story.link_text} isDarkBackground />
+                      </a>
                     <div className={styles.Members}>
                       {story.members.map((member,i)=>(
                         <a href={member.link} key={i} className={styles.Member}>
