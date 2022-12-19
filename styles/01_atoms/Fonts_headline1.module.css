@@ -2,7 +2,7 @@
     width: 100%;
 }
 .NormalHeadline{
-    font-family: IBM Plex Sans;
+    font-family: 'IBM Plex Sans';
     font-style: normal;
     font-weight: 600;
     font-size: 46px;
@@ -11,7 +11,7 @@
     margin: 0;
 }
 .NormalHeadlineDark{
-    font-family: IBM Plex Sans;
+    font-family: 'IBM Plex Sans';
     font-style: normal;
     font-weight: 600;
     font-size: 46px;
@@ -20,7 +20,7 @@
     margin: 0;
 }
 .HighlightedContent{
-    font-family: IBM Plex Sans;
+    font-family: 'IBM Plex Sans';
     font-style: normal;
     font-weight: 600;
     font-size: 46px;

@@ -6,8 +6,8 @@ class MyDocument extends Document {
       <Html>
         <Head>
           {/* <link rel="preconnect" href="https://fonts.googleapis.com"></link> 
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true"></link>  */}
-          <link href="styles/Home.module.css" rel="stylesheet"></link> 
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true"></link>
+          <link rel="stylesheet" href="styles/Home.module.css"></link> */}
         </Head>
         <body>
           <Main />
