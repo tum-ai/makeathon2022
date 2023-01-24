@@ -64,7 +64,7 @@ export default function Sponsors(){
                   <Image src={"/assets/IBM_Logo.svg"} alt="IBM" layout="fill" objectFit="contain" />
               </div>
             </Link>
-            <Link href="https://www.tngtech.com//" passHref >
+            <Link href="https://www.tngtech.com/" passHref >
               <div className={styles.Sponsor}>
                   <Image src={"/assets/Logo_TNG_Consulting.png"} alt="TNG Consulting" layout="fill" objectFit="contain" />
               </div>
