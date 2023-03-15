@@ -3,9 +3,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #F5F3FB;
-  padding-top: 140px;
   padding-bottom: 100px;
+  position: relative;
 }
 .Grid{
   width: 1200px;
@@ -13,13 +12,6 @@
   flex-direction: column;
   align-items: center;
   gap: 48px;
-}
-.TitleContainter{
-  display: flex;
-  width: calc(((100% - (5 * 24px)) / 6 * 4) + (3 * 24px));
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
 }
 .TopContainer{
   display: flex;
@@ -61,10 +53,6 @@
   opacity: 1.0;
   cursor: pointer;
 }
-.Paragraph{
-  
-  text-align: center;
-}
 
 @media only screen and (max-width: 1300px) {
   .Grid{
@@ -91,7 +79,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: linear-gradient(293.5deg, #F6F2FF 7.38%, #F7F5FF 95.63%), #F0ECFA;
+    
     padding-top: 90px;
     padding-bottom: 70px;
   }
@@ -109,6 +97,7 @@
     flex-direction: column;
     align-items: center;
     gap: 0;
+    padding-bottom: 20;
   }
   .SponsorsGrid {
     width: 80%;

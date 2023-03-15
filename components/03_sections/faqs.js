@@ -41,7 +41,7 @@ const data = {
     },
     {
       "question": "Is TUM.ai Makeathon in-person or virtual?",
-      "answer": "We are happy to bring out Makeathon to a hybrid format for the first time! You can join the event in-person at the Mathematics and Informatics building at TUM or attend it in a virtual format! "
+      "answer": "Makeathon 2023 will be taking place in-person in Garching, Germany. We are happy to welcome you in person and showcase the best of the event! You can join the event in person at the Electrical Engineering building at TUM! "
     },
     {
       "question": "Can we use hardware?",
@@ -49,31 +49,31 @@ const data = {
     },
     {
       "question": "What if I don’t have a team or idea?",
-      "answer": "You don’t need to worry about having a team or idea before the Makeathon. On (date) we are going to organize a team-finding event where you can find your teammates and start brainstorming the ideas! "
-    },
+      "answer": "You don’t need to worry about having a team or idea before the Makeathon. We will support you to find a suitable team before the event and make sure you have everything you need to get started. "
+    },/*
     {
       "question": "What are the Makeathon tracks?",
       "answer": "For our upcoming Makeathon, we prepared four tracks: Globalization, Environment, Healthcare, and Social Support.  "
-    },
+    },*/
     {
       "question": "What can I build?",
       "answer": "We are looking for AI-related ideas. Other than that - sky is the limit! Use your imagination to create new innovative AI-based products and surprise our jury with your creativity! "
     },
-    {
+    /*{
       "question": "How will tracks and prizes work?",
       "answer": "In the previous years we offered prizes to the best teams overall. However, for this year we are hoping to redesign our pricing scheme to include track specific prizes. Stay on the lookout for more information. You can expect many very attractive prizes! "
-    },
+    },*/
     {
       "question": "What skills do I need to participate?",
       "answer": "You don’t need any skills to participate! We are going to provide you with workshops on many areas, so all you need is a motivation to learn and create!"
     },
     {
       "question": "What is the application deadline?",
-      "answer": "The application deadline is 23.09.2022 at 11:59pm! Make sure you don’t miss it!"
+      "answer": "The application deadline is 28.03.2023 at 11:59 pm! Don’t miss it!"
     },
     {
       "question": "Who can participate?",
-      "answer": "Everyone can apply to participate in our Makeathon! It doesn’t matter if you are a student or a professional. As long as you have the motivation to build something cool, you are encouraged to apply! After the application deadline (here, add the deadline when available), our team is going to carefully review the applications and select a diverse pool of motivated applicants to participate in the event (our number of participants is unfortunately limited)."
+      "answer": "Everyone can apply to participate in our Makeathon! Whether you are a student or a professional, the motivation to build something cool and interest in AI must be at heart! After the application deadline on 28.03, our team will carefully review the applications and select a diverse pool of motivated applicants to participate in the event (our number of participants is unfortunately limited)."
     },
   ]
 }

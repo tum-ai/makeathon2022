@@ -2,13 +2,13 @@
   width: 100%;
   position: relative;
   padding-top: 100px;
-  padding-bottom: 200px;
+  padding-bottom: 80px;
 }
 .Background{
   width: 100%;
-  height: calc(600px + ((100vw * 0.176327) / 2));
+  height: calc(1000px + 650px - 120px + ((100vw * 0.176327) / 2));
   position: absolute;
-  bottom: 0;
+  bottom: -1000px;
 }
 .ConatinerBG{
   position: absolute;
@@ -65,14 +65,14 @@
   }
   .TicketContainer{
     width: calc(((100% - (5 * 24px)) / 6 * 4) + (3 * 24px));
-    height: 800px;
+    height: 750px;
   }
   .TextContainer{
     width: calc(((100% - (5 * 24px)) / 6 * 4) + (3 * 24px));
     padding-left: 0px;
   }
   .Background{
-    height: calc(1200px + ((100vw * 0.176327) / 2));
+    height: calc(2250px + ((100vw * 0.176327) / 2));
   }
   .OuttroItem{
     padding-bottom: 140px;
@@ -84,14 +84,14 @@
   }
   .TicketContainer{
     width: 100%;
-    height: 155vw;
+    height: 700px;
   }
   .TextContainer{
     width: 100%;
     margin-top: 50px;
   }
   .Background{
-    height: calc(1000px + ((100vw * 0.176327) / 2));
+    height: calc(2000px  + ((100vw * 0.176327) / 2));
   }
   .OuttroItem{
     padding-bottom: 70px;

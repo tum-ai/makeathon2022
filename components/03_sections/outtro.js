@@ -22,6 +22,9 @@ export default function Outtro(){
           <div className={styles.buttonWrapper}>
             <Button isDarkBackground link="https://www.tum-ai.com/" content={"Learn more about TUM.ai"}/>
           </div>
+          <div className={styles.buttonWrapper}>
+            <Button isDarkBackground link="https://tumai-makeathon-october-2022.devpost.com/project-gallery" content={"Explore previous innovative solutions created in the Makeathon"}/>
+          </div>
         </div>
       </div>
     </div>

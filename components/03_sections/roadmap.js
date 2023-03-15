@@ -9,35 +9,35 @@ import Date1 from '../01_atoms/fonts_date1'
 const data = {
   "points": [
     {
-      "title": "Application deadline",
+      "title": "Application Phase Open",
       "icon": "/assets/deadline.svg",
-      "time": "18.09",
-      "content_highlighted": "You have time to submit your application until the 18th of September. Apply either with a group of friends or alone. ",
-      "content": "If you are applying with an already formed team, make sure that every member submits the application! Else, take part in exciting team-finding events to match up with other motivated participants! Hurry up to apply as there are thrilling gifts for the early bird applicants!",
+      "time": "28.03",
+      "content_highlighted": "",
+      "content": "Registration opens for the TUM.ai Makeathon 2023. Students, recent graduates, and AI enthusiasts from around the world are invited to apply and showcase their skills and interest in AI. Participants will be asked to provide their background, interests, and goals for the Makeathon.",
       "img": "/assets/road01.jpg"
     },
     {
-      "title": "Selection Process ",
+      "title": "Application Deadline",
       "icon": "/assets/selection.svg",
-      "time": "23.09",
-      "content_highlighted": "After careful application screening and assessment, participants will be informed by September 23rd! ",
-      "content": "In the acceptance email, you can find information about the next steps and how to best prepare for the TUM.ai Makeathon.",
+      "time": "21.04",
+      "content_highlighted": "",
+      "content": "Registration closes. However, the application review process is done on a rolling basis, and participants will be informed shortly after each decision. The earlier you apply, the better. The selection process will be based on your motivation to join the Makeathon and your interest and experience in AI.",
       "img": "/assets/road02.jpg"
     },
     {
-      "title": "Opening Ceremony",
+      "title": "Opening Ceremony ",
       "icon": "/assets/pitch.svg",
-      "time": "27.09",
-      "content_highlighted": "During the opening ceremony on September 27th, our premium sponsors will welcome you to the Makeathon journey and share a few words about the effort of industry leaders to use AI to benefit society. ",
-      "content": "Furthermore, challenge setters will announce their challenges for the first time and answer all your questions, followed by a socializing round where you have a chance to meet potential team members. The ceremony takes place starting at 18:00 CET.",
+      "time": "27.04",
+      "content_highlighted": "online \n",
+      "content": "Makeathon 2023 starts with an exciting Opening Ceremony, where participants will be introduced to the event organizers, mentors, and industry partners. As a special surprise, we also invited a renowned AI expert.",
       "img": "/assets/road03.jpg"
     },
     {
-      "title": "Deep Dive Days + Team Finding",
+      "title": "Makeathon 2023 Kick-off ",
       "icon": "/assets/workshops.svg",
-      "time": "27.09 - 29.09",
-      "content_highlighted": "Find your team members in the series of socializing events between 27th and 29th of September! ",
-      "content": "In addition, TUM.ai and industry partners organize educational workshops about introduction to AI to non-techies, business ideation and much more! You will have a chance to listen to inspiring talks held by industry leaders on topics related to AI in different domains.",
+      "time": "28.04",
+      "content_highlighted": "on-site \n",
+      "content": "Following the Opening Ceremony, the Makeathon kicks off with its on-site start, the challenge presentation, and afterward, the hacking starts. \n \n",
       "img": "/assets/road04.jpg"
     },
     // {
@@ -56,14 +56,14 @@ const data = {
     //   "content": "you will have a chance to listen to inspiring talks held by industry leaders on topics related to AI in the medical, environmental or social domain. The workshops will be held in hybrid starting at 19:00 CET.",
     //   "img": "/assets/road05.jpeg"
     // },
-    {
+    /*{
       "title": "Makeathon",
       "icon": "/assets/makeathon.svg",
       "time": "30.09 - 02.10",
       "content_highlighted": "You have 48 hours to develop a proof of concept with your team. ",
       "content": "After pitching your results on Sunday afternoon, a jury of experts will select the winning teams for each track in the closing ceremony. Fantastic prizes are waiting!",
       "img": "/assets/road06.jpg"
-    },
+    },*/
   ] 
 }
 

@@ -7,9 +7,8 @@ import Ticket from '../02_molecules/ticket'
 import Image from 'next/image'
 
 const data = {
-  "headline": "Our last",
-  "headline_marked": " Makeathon",
-  "paragraph_marked_new": "Stay tuned for next Makeathon in April 2023! ",
+  "headline": "Makeathon 2023",
+  "paragraph_marked_1": "AI for Everyone \n 28.04 - 30.04",
   "paragraph_marked": "TUM.ai Makeathon is a 48h hybrid challenge ",
   "paragraph": "that connects young innovators with different backgrounds to develop AI solutions for real-life business cases.",
   "value": [
@@ -37,8 +36,10 @@ export default function Hero(){
     <div className={styles.Grid}>
       <div className={styles.LeftContainer}>
         <div className={styles.UpperContainer}>
-          <Headline1 isH1 normalContent={data.headline} highlightedContent={data.headline_marked} isDarkBackground/>
-          <Paragraph1 highlightedContent={data.paragraph_marked_new} isDarkBackground />
+          <Headline1 isH1 normalContent={data.headline} isDarkBackground/>
+          
+          <Paragraph1 highlightedContent={data.paragraph_marked_1} isDarkBackground />
+
           <Paragraph1 highlightedContent={data.paragraph_marked} normalContent={data.paragraph} isDarkBackground />
         </div>
         <div className={styles.BottomContainer}>

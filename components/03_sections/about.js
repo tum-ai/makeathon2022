@@ -11,11 +11,13 @@ const data = {
   title:
     "We at TUM.ai are thrilled to have you on board and can't wait to hear what you and your team come up with! 🚀",
   paragraph_highlighted:
-    "Makeathon is a 48-hour hybrid challenge in which motivated students and young professionals develop a working AI solution for a real-world business case.",
+    "Makeathon is a 2-day hackathon for motivated students and young professionals to develop innovative AI solutions on real-world business cases presented by industry leaders.",
   paragraph:
-    " Innovators of tomorrow work together in interdisciplinary teams on developing a prototype for the challenges in Globalization, Environment, Healthcare, and Social Support tracks. As the largest student-organized Makeathon in Germany, you can expect numerous exciting speakers, challenges, cool prizes, and excellent opportunities to meet like-minded people and connect with industry leaders, start-ups, and research groups. You can join the event in-person at the Mathematics and Informatics building at TUM or attend it in a virtual format!",
+    " Innovators of tomorrow work together in interdisciplinary teams to develop a prototype for challenges centred around the theme of AI for everyone. As Germany's leading AI student initiative, we strive to drive positive social impact through interdisciplinary projects. The Makethon seeks to achieve this by providing talks of leading industry speakers, hands-on challenges, networking opportunities with like-minded people and industry leaders, start-ups, research organizations, and amazing prizes. This year's Makeathon is in-person on TUM's campus in Garching during the last week of April. We invite you to explore the possibilities of AI and create innovative solutions that can positively impact everyone (AI for Everyone). The TUM.ai Makeathon provides an opportunity to learn and collaborate with like-minded individuals and push the boundaries of AI's possibilities. \n\nJoin us, and let's build a better future together with AI!",
   button: "Learn more about TUM.ai",
   button_link: "https://www.tum-ai.com/",
+  button_2: "Apply now",
+  button_2_link: "https://tally.so/r/wQoNR1",
   chapter_title: "About the makeathon",
   chapter_number: "01",
   soundfile: "/sounds/sound.mp3",
@@ -52,7 +54,7 @@ export default function About() {
               highlightedContent={""}
               isDarkBackground={false}
             />
-            <div className={styles.Paragraph}>
+            <div className={styles.Paragraph}> 
               <Paragraph1
                 className={styles.Paragraph}
                 highlightedContent={data.paragraph_highlighted}
@@ -60,12 +62,22 @@ export default function About() {
                 isDarkBackground={false}
               />
             </div>
-            <div className={styles.Button}>
-              <Button
-                content={data.button}
-                link="https://www.tum-ai.com/"
-                isDarkBackground={false}
-              />
+            <div className={styles.ButtonContainer}>
+              <div className={styles.Button}>
+                <Button
+                  content={data.button}
+                  link="https://www.tum-ai.com/"
+                  isDarkBackground={false}
+                />
+              </div>
+              <div className={styles.ButtonSpace}/>
+              <div className={styles.Button}>
+                <Button
+                  content={data.button_2}
+                  link={data.button_2_link}
+                  isDarkBackground={false}
+                />
+              </div>
             </div>
           </div>
         </div>

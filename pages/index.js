@@ -5,8 +5,10 @@ import FullscreenPicture from '../components/03_sections/fullscreenPicture'
 import Hero from '../components/03_sections/hero'
 import Outtro from '../components/03_sections/outtro'
 import Roadmap from '../components/03_sections/roadmap'
+import Banner from '../components/03_sections/banner'
 import Speakers from '../components/03_sections/speakers'
 import Sponsors from '../components/03_sections/sponsors'
+import PreviousSponsors from '../components/03_sections/previousSponsors'
 import Stories from '../components/03_sections/stories'
 import Tracks from '../components/03_sections/tracks'
 import styles from '../styles/Home.module.css'
@@ -33,10 +35,11 @@ export default function Home() {
         <About />
         <Video />
         <Roadmap />
+        <Banner />
         <FullscreenPicture />
-        <Element name="tracks">
+        {/*<Element name="tracks">
           <Tracks />
-        </Element>
+        </Element>*/}
         {/* <Element name="speakers">
           <Speakers />
         </Element> */}
@@ -49,6 +52,7 @@ export default function Home() {
           <Faqs />
         </Element>
         <Outtro />
+        <PreviousSponsors />
       </main>
 
       <footer className={styles.Footer}>
