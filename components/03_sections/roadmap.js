@@ -9,11 +9,11 @@ import Date1 from '../01_atoms/fonts_date1'
 const data = {
   "points": [
     {
-      "title": "Application Phase Open",
+      "title": "Application Phase Opens",
       "icon": "/assets/deadline.svg",
       "time": "28.03",
       "content_highlighted": "",
-      "content": "Registration opens for the TUM.ai Makeathon 2023. Students, recent graduates, and AI enthusiasts from around the world are invited to apply and showcase their skills and interest in AI. Participants will be asked to provide their background, interests, and goals for the Makeathon.",
+      "content": "Registration opens for the TUM.ai Makeathon 2023. Students, recent graduates and AI enthusiasts from around the world are invited to apply and showcase their skills and interest in AI. Participants will be asked to provide their background, interests, and goals for the Makeathon. ",
       "img": "/assets/road01.jpg"
     },
     {
@@ -21,23 +21,23 @@ const data = {
       "icon": "/assets/selection.svg",
       "time": "21.04",
       "content_highlighted": "",
-      "content": "Registration closes. However, the application review process is done on a rolling basis, and participants will be informed shortly after each decision. The earlier you apply, the better. The selection process will be based on your motivation to join the Makeathon and your interest and experience in AI.",
+      "content": "Registration closes. \nNote: We review applications on a rolling basis. That means the earlier you apply, the better. \n\n\n",
       "img": "/assets/road02.jpg"
     },
     {
       "title": "Opening Ceremony ",
       "icon": "/assets/pitch.svg",
       "time": "27.04",
-      "content_highlighted": "online \n",
+      "content_highlighted": "Online \n",
       "content": "Makeathon 2023 starts with an exciting Opening Ceremony, where participants will be introduced to the event organizers, mentors, and industry partners. As a special surprise, we also invited a renowned AI expert.",
       "img": "/assets/road03.jpg"
     },
     {
-      "title": "Makeathon 2023 Kick-off ",
+      "title": "Kick-off ",
       "icon": "/assets/workshops.svg",
       "time": "28.04",
-      "content_highlighted": "on-site \n",
-      "content": "Following the Opening Ceremony, the Makeathon kicks off with its on-site start, the challenge presentation, and afterward, the hacking starts. \n \n",
+      "content_highlighted": "On-Site \n",
+      "content": "Following the Opening Ceremony, the Makeathon kicks off on-site at the TUM Campus in Garching. Here, the challenges are presented and the hacking starts. \n \n",
       "img": "/assets/road04.jpg"
     },
     // {
@@ -71,7 +71,7 @@ export default function Roadmap(){
   const [roadIndex, setRoadIndex] = useState(0);
 
   function calculatePercentage(){
-    return (roadIndex * 16.6) + 10
+    return (roadIndex * 24) + 14 //(roadIndex * 16.6) + 10
   }
 
   return <div className={styles.RoadmapItem}>
@@ -115,7 +115,7 @@ export default function Roadmap(){
       </div>
       <div className={styles.RightContainer}>
         <div className={styles.TopContainer}>
-          <Image src={data.points[roadIndex].img} alt={data.points[roadIndex].title} layout="fill" objectFit='cover' />
+          {/*<Image src={data.points[roadIndex].img} alt={data.points[roadIndex].title} layout="fill" objectFit='cover' />*/}
           <div className={styles.CardTime}>
             <Date1 normalContent={data.points[roadIndex].time} isDarkBackground/>
           </div>
@@ -128,7 +128,7 @@ export default function Roadmap(){
       {data.points.map((point, index)=>(
         <div key={index} className={styles.MobileContainer}>
           <div className={styles.TopContainer}>
-            <Image src={point.img} alt={point.title} layout="fill" objectFit='cover' />
+            {/*<Image src={point.img} alt={point.title} layout="fill" objectFit='cover' />*/}
             <div className={styles.CardTime}>
               <Date1 normalContent={point.time} isDarkBackground/>
             </div>
@@ -142,3 +142,55 @@ export default function Roadmap(){
     </div>
   </div>
 }
+/*
+
+.TopContainer{
+  width: 100%; 
+  height: 260px;
+  position: relative;
+}
+.CardTime {
+  padding-top: 280px;
+  text-align: right;
+  padding-right: 40px;
+}
+.BottomContainer{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 40px;
+}
+
+.LeftContainer{
+  width: 50%;
+  height: 800px;
+  position: relative;
+}
+
+vs. 
+
+
+.TopContainer{
+  width: 100%; 
+  height: 10px;
+  position: relative;
+}
+.CardTime {
+  padding-top: 80px;
+  text-align: right;
+  padding-right: 80px;
+}
+.BottomContainer{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 40px;
+  height: 75%
+}
+.LeftContainer{
+  width: 50%;
+  height: 600px;
+  position: relative;
+}
+
+*/

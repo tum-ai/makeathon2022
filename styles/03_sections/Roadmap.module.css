@@ -12,7 +12,7 @@
 }
 .LeftContainer{
   width: 50%;
-  height: 800px;
+  height: 550px;
   position: relative;
 }
 .LineContainer{
@@ -114,7 +114,7 @@
 
 .RightContainer{
   width: 50%;
-  height: 80%;
+  height: 100%;
   background: linear-gradient(125.53deg, #211B45 8.83%, #0F2538 99.14%), #C4C4C4;
   display: flex;
   flex-direction: column;
@@ -122,19 +122,20 @@
 }
 .TopContainer{
   width: 100%; 
-  height: 260px;
+  height: 10px;
   position: relative;
 }
 .CardTime {
-  padding-top: 280px;
+  padding-top: 80px;
   text-align: right;
-  padding-right: 40px;
+  padding-right: 80px;
 }
 .BottomContainer{
   display: flex;
   flex-direction: column;
   gap: 24px;
   padding: 40px;
+  height: 75%
 }
 .MobileContainer{
   display: none;
@@ -161,6 +162,7 @@
     flex-direction: column;
     justify-content: space-between;
     gap: 24px;
+    height: 400px;
   }
   .RightContainer{
     display: none;
@@ -179,6 +181,7 @@
   }
   .MobileContainer{
     width: 100%;
+    height: 500px;
     background: linear-gradient(125.53deg, #211B45 8.83%, #0F2538 99.14%), #C4C4C4;
     display: flex;
     flex-direction: column;

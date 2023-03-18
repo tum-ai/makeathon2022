@@ -9,7 +9,7 @@ import { useState } from 'react'
 
 const data = {
   "chapter_title": "Q&A",
-  "chapter_number": "06",
+  "chapter_number": "04",
   "title": "Do you have any ",
   "title_highlighted": "questions?", 
   "paragraph_highlighted": "As the largest student-organized Makeathon in Germany, ",
@@ -41,7 +41,7 @@ const data = {
     },
     {
       "question": "Is TUM.ai Makeathon in-person or virtual?",
-      "answer": "Makeathon 2023 will be taking place in-person in Garching, Germany. We are happy to welcome you in person and showcase the best of the event! You can join the event in person at the Electrical Engineering building at TUM! "
+      "answer": "The Makeathon in April 2023 will be taking place in-person in the new Electrical Engineering building at the TUM campus in Garching, Germany. We are happy to fully welcome you in person again!"
     },
     {
       "question": "Can we use hardware?",
@@ -68,12 +68,12 @@ const data = {
       "answer": "You don’t need any skills to participate! We are going to provide you with workshops on many areas, so all you need is a motivation to learn and create!"
     },
     {
-      "question": "What is the application deadline?",
-      "answer": "The application deadline is 28.03.2023 at 11:59 pm! Don’t miss it!"
+      "question": "When is the application deadline?",
+      "answer": "The application deadline is on the 21st of April 2023. But better be quick, we review the applications on a rolling basis and only have so many spots available. "
     },
     {
       "question": "Who can participate?",
-      "answer": "Everyone can apply to participate in our Makeathon! Whether you are a student or a professional, the motivation to build something cool and interest in AI must be at heart! After the application deadline on 28.03, our team will carefully review the applications and select a diverse pool of motivated applicants to participate in the event (our number of participants is unfortunately limited)."
+      "answer": "Everyone can apply to participate in our Makeathon! Whether you are a student or a professional, what counts is your motivation to build something cool and interesting with AI. You can apply until the 21st of April 2023 and we will review your application on a rolling basis. "
     },
   ]
 }

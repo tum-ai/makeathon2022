@@ -33,11 +33,11 @@ export default function Home() {
         <Hero id="hero"/>
         <Element name="about"></Element>
         <About />
-        <Video />
         <Roadmap />
+        <Video />
         <Banner />
-        <FullscreenPicture />
-        {/*<Element name="tracks">
+        {/*<FullscreenPicture />
+        <Element name="tracks">
           <Tracks />
         </Element>*/}
         {/* <Element name="speakers">

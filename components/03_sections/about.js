@@ -11,9 +11,9 @@ const data = {
   title:
     "We at TUM.ai are thrilled to have you on board and can't wait to hear what you and your team come up with! 🚀",
   paragraph_highlighted:
-    "Makeathon is a 2-day hackathon for motivated students and young professionals to develop innovative AI solutions on real-world business cases presented by industry leaders.",
+    "The Makeathon is a 2-day hackathon for motivated students and young professionals to develop innovative AI solutions on real-world business cases presented by industry leaders.",
   paragraph:
-    " Innovators of tomorrow work together in interdisciplinary teams to develop a prototype for challenges centred around the theme of AI for everyone. As Germany's leading AI student initiative, we strive to drive positive social impact through interdisciplinary projects. The Makethon seeks to achieve this by providing talks of leading industry speakers, hands-on challenges, networking opportunities with like-minded people and industry leaders, start-ups, research organizations, and amazing prizes. This year's Makeathon is in-person on TUM's campus in Garching during the last week of April. We invite you to explore the possibilities of AI and create innovative solutions that can positively impact everyone (AI for Everyone). The TUM.ai Makeathon provides an opportunity to learn and collaborate with like-minded individuals and push the boundaries of AI's possibilities. \n\nJoin us, and let's build a better future together with AI!",
+    " Innovators of tomorrow work together in interdisciplinary teams to develop a prototype for challenges centred around the theme of AI for everyone. As Germany's leading AI student initiative, we drive positive social impact through interdisciplinary projects. The Makeathon seeks to achieve this by providing talks of leading industry speakers, hands-on challenges, networking opportunities with like-minded people, industry leaders, start-ups and research organizations. This year's Makeathon is in-person on TUM's campus in Garching during the last week of April. We invite you to explore the possibilities of AI and create innovative solutions that can positively impact everyone.",
   button: "Learn more about TUM.ai",
   button_link: "https://www.tum-ai.com/",
   button_2: "Apply now",
@@ -70,14 +70,14 @@ export default function About() {
                   isDarkBackground={false}
                 />
               </div>
-              <div className={styles.ButtonSpace}/>
+              {/*<div className={styles.ButtonSpace}/>
               <div className={styles.Button}>
                 <Button
                   content={data.button_2}
                   link={data.button_2_link}
                   isDarkBackground={false}
                 />
-              </div>
+              </div>*/}
             </div>
           </div>
         </div>

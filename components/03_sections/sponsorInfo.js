@@ -27,7 +27,7 @@ const data = {
   button: "Get in touch with us",
   button_link: "mailto:makeathon@tum-ai.com?subject=Sponsor%20request",
   chapter_title: "For the sponsors",
-  chapter_number: "05",
+  chapter_number: "03",
   soundfile: "/sounds/sound.mp3",
   soundtitle: "What can you expect?",
   soundAuthor: "Nicolas Remerscheid",

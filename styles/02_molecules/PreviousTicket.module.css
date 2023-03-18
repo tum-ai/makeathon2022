@@ -6,24 +6,21 @@
 .Ticket{
   width: 500px;
   height: 680px;
-  background-image: url("/assets/MakeathonSpring2023.svg");
+  background-image: url("/assets/Makeathon_spring2023_stats.svg");
   background-size: contain;
   background-repeat: no-repeat;
   filter: drop-shadow(0px 40px 124px rgba(123, 154, 239, 0.25));
 }
- .CtaButton{
+/* .CtaButton{
   position: absolute;
   padding: 13px;
   background: linear-gradient(108.48deg, #9A6CDA 0%, #7C35DE 100%);
   box-shadow: 0px 14.0977px 61.09px rgba(92, 46, 232, 0.16);
   border-radius: 8px;
-  width: 66.7%;
-  height: 8%;
+  width: 82%;
   margin: 9%;
-  top: 514px;
-  left: 19px;
+  top: 470px;
   text-align: center;
-  vertical-align: middle;
   cursor: pointer;
 }
 .Text{
@@ -33,7 +30,6 @@
   font-size: 16px;
   line-height: 21px;
   color: #FFFFFF;
-  padding-top: 2px;
 }
 
 @media only screen and (max-width: 1100px) {
@@ -46,15 +42,11 @@
     height: 1000px;
   }
   .CtaButton{
-    background:rgba(0, 0, 0,0);
-    top: calc(0vw + 648px);
-    width: 72.1%;
-    height: 6.75%;
-    left: 26px;
+    top: 730px;
+    padding: 20px;
   }
   .Text{
     font-size: 20px;
-    color:rgba(0, 0, 0, 0);
   }
 }
 @media only screen and (max-width: 850px) {
@@ -63,16 +55,7 @@
     height: 155vw;
   }
   .CtaButton{
-    border: 0px solid rgba(0, 0, 0, 0);
-    top: calc(110.8vw - 0px);
-    left: 13px;
-    width: 77%;
-    height: 8%;
+    top: 122vw;
     padding: 20px;
   }
-  .Text{
-    font-size: 3.8vw;
-    font-weight: 0px;
-    color:rgba(0, 0, 0, 0);
-  }
-} 
+} */
