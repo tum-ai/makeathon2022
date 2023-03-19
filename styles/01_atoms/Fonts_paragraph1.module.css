@@ -10,6 +10,7 @@
   color: #BFBFBF;
   letter-spacing: 0.03em;
   margin: 0;
+  white-space: pre-line;
 }
 .NormalParagraphDark{
   font-family: 'IBM Plex Sans';
@@ -20,6 +21,7 @@
   color: #4C4C4C; 
   letter-spacing: 0.03em;
   margin: 0;
+  white-space: pre-line;
 }
 .HighlightedContent{
   font-family: 'IBM Plex Sans';

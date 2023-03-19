@@ -1,23 +1,41 @@
 import styles from '../../styles/03_sections/Sponsors.module.css'
 import Headline2 from '../01_atoms/fonts_headline2'
+import Headline1 from '../01_atoms/fonts_headline1'
+
+import Paragraph1 from "../01_atoms/fonts_paragraph1";
+import Paragraph2 from "../01_atoms/fonts_paragraph2";
 import Image from 'next/image'
 import Link from 'next/link'
 
 export default function Sponsors(){
   return <div className={styles.SponsorsItem}>
     <div className={styles.Grid}>
-      <div className={styles.TopContainer}>
-        <div className={styles.Separator}></div>
-        <Headline2 style={{width: "auto"}} isDarkBackground={false} normalContent={"Premium Sponsors"} />
-        <div className={styles.Separator}></div>
+      <div className={styles.TitleContainer}>
+          <Headline1 style={{width: "auto"}} isDarkBackground={false} normalContent={"Makeathon 2023 Industry Partners"} />
       </div>
+      {/*<div className={styles.TitleContainer}/>*/}
+      
+        <div style={{opacity: "0.5"}} className={styles.TopContainer}>
+          <div className={styles.Separator}></div>
+          <Headline2 style={{width: "auto"}} isDarkBackground={false} normalContent={"Sponsors & Challenge Setters"} />
+          <div className={styles.Separator}></div>
+        </div>
+      
       <div className={styles.Sponsors}>
-        <Link href="https://www.microsoft.com/" passHref >
+      <div style={{opacity: "0.75"}}>
+        <Headline2
+          className={styles.Paragraph}
+          highlightedContent={""}
+          normalContent={"Coming Soon… \nStay Tuned…🚀\n\n"}
+          isDarkBackground={false}
+        />
+      </div>
+        {/*<Link href="https://www.microsoft.com/" passHref >
           <div className={styles.Premium}>
             <Image src={"/assets/microsoft.png"} alt="microsoft" layout="fill" objectFit="contain" />
           </div>
         </Link>
-        {/* <Link href="https://www.appliedai.de/" passHref >
+         <Link href="https://www.appliedai.de/" passHref >
           <div className={styles.Premium}>
             <Image src={"/assets/appliedAI.svg"} alt="netapp" layout="fill" objectFit="contain" />
           </div>
@@ -31,12 +49,12 @@ export default function Sponsors(){
           <div style={{filter: "grayscale(1)"}} className={styles.Premium}>
             <Image src={"/assets/Deloitte.png"} alt="netapp" layout="fill" objectFit="contain" />
           </div>
-        </Link>  */}
+        </Link>  
         <Link href="https://www.roche.com/" passHref >
           <div className={styles.Premium}>
             <Image src={"/assets/Roche_Logo.svg"} alt="Roche" layout="fill" objectFit="contain" />
           </div>
-        </Link> 
+        </Link> */}
         {/* <Link href="https://healthcare-xplorers.com/" passHref >
           <div style={{filter: "grayscale(1)"}} className={styles.Premium}>
             <Image src={"/assets/Healthcare-xplorers-Logo-claim.png"} alt="netapp" layout="fill" objectFit="contain" />
@@ -51,13 +69,13 @@ export default function Sponsors(){
           <Image src={"/assets/infineon.png"} alt="netapp" layout="fill" objectFit="contain" />
         </div> */}
       </div>
-      <div style={{opacity: "0.5"}} className={styles.TopContainer}>
+      {/*<div style={{opacity: "0.5"}} className={styles.TopContainer}>
         <div className={styles.Separator}></div>
         <Headline2  isDarkBackground={false} normalContent={"Sponsors"} />
         <div className={styles.Separator}></div>
       </div>
       <div className={styles.SponsorsGrid}>
-        {/* 1st row */}
+        {/* 1st row *//*}
         <div className={styles.SponsorsRow}>
             <Link href="https://www.ibm.com/" passHref >
               <div className={styles.Sponsor}>
@@ -75,9 +93,10 @@ export default function Sponsors(){
         <div className={styles.Separator}></div>
         <Headline2  isDarkBackground={false} normalContent={"Challenge Setters"} />
         <div className={styles.Separator}></div>
-      </div>
-      <div className={styles.SponsorsGrid}>
-        {/* 1st row */}
+      </div>*/}
+      
+      {/*<div className={styles.SponsorsGrid}>
+        {/* 1st row *//*}
         <div className={styles.SponsorsRow}>
           <Link href="https://www.appliedai.de/" passHref >
             <div className={styles.Sponsor}>
@@ -97,7 +116,7 @@ export default function Sponsors(){
         </div>
       </div>
         {/* 2nd row */}
-        {/* TODO: SET CORRECT HREF */}
+        {/* TODO: SET CORRECT HREF *//*}
         <div className={styles.SponsorsRow}>
             <Link href="http://knust.edu.gh" passHref >
             <div s className={styles.Sponsor}>
@@ -114,7 +133,7 @@ export default function Sponsors(){
                   <Image src={"/assets/Aim-03.jpg"} alt="ai4medicine" layout="fill" objectFit="contain" />
               </div>
             </Link>
-        </div>
+        </div>*/}
     </div>
   </div>
 }

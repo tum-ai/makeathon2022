@@ -11,24 +11,23 @@ import Paragraph2 from "../01_atoms/fonts_paragraph2";
 import Headline2 from "../01_atoms/fonts_headline2";
 
 const data = {
-  title: "Be a part of TUM.ai Makeathon",
+  title: "Interested in participating as an Industry Partner?",
   paragraph:
     "Join us on the journey of raising awareness of AI potential and inspiring young individuals to discover potential AI business cases in the real world!",
   sub_headline:
-    "For companies, NGOs, student or research organizations we offer 3 partner packages:",
-  paragraph_highlighted1: "Premium Sponsor | ",
+    "We are excited to offer partnership packages for companies, NGOs, and student or research organizations who want to support the Makeathon:",
+  paragraph_highlighted1: "Sponsors | ",
   paragraph1:
-    "As a premium sponsor you will be invited to meet our outstanding participants during the on-site events. Share your company’s vision and tell the word about the efforts your company takes to use AI to improve the world during opening ceremony. Take advantage of TUM.ai’s talent pool and connect with potential future coworkers and innovators. In addition to that, benefit from marketing posts shared on TUM.ai’s media channels and enjoy many other advantages.",
-  paragraph_highlighted2: "Standard Sponsor | ",
+    "By becoming a sponsor, you will have the opportunity to support the development of innovative AI projects and connect with a talented and motivated community of participants. Share your company’s vision with the world during the opening ceremony.  In addition to that, you benefit from marketing posts shared on TUM.ai’s media channels and enjoy many other advantages. Your company's logo will be advertised on the TUM.ai Makeathon website and announcements during live events, giving you visibility and exposure. This is an excellent opportunity to showcase your commitment to AI innovation and to connect with a network of like-minded organizations and individuals.",
+  paragraph_highlighted2: "Challenge Setters | ",
   paragraph2:
-    "Have your company’s logo advertised on the TUM.ai Makeathon website and announcements during live events. In addition, benefit from 6-month sponsor visibility on TUM.ai’s official website and much more.",
-  paragraph_highlighted3: "Challenge Setter | ",
+    "By setting a challenge for our participants, you can inspire and motivate young people to think creatively and develop innovative solutions to real-world problems. This is an excellent opportunity to attract talent, demonstrate your company, and generate new ideas.",
   paragraph3:
-    "Challenge motivated young people with a problem and test the feasibility of a possible business case. Attract talents, demonstrate your company, get new ideas, inspire and get inspired, and much more!",
+    "We would love to collaborate with you on the current and/or future Makeathon. Contact us to learn more about how you can get involved and support the development of the next generation of AI innovators.",
   button: "Get in touch with us",
   button_link: "mailto:makeathon@tum-ai.com?subject=Sponsor%20request",
   chapter_title: "For the sponsors",
-  chapter_number: "05",
+  chapter_number: "03",
   soundfile: "/sounds/sound.mp3",
   soundtitle: "What can you expect?",
   soundAuthor: "Nicolas Remerscheid",

@@ -11,7 +11,7 @@ import { Component } from 'react/cjs/react.production.min'
 
 const data = {
   "chapter_title": "Stories",
-  "chapter_number": "04",
+  "chapter_number": "02",
   "title": "Winning teams of the last ",
   "title_highlighted": "Makeathon.",
   "paragraph_highlighted": "Over 800 enthusiastic students and young participants have already participated in TUM.ai’s previous Makeathon iterations. ",

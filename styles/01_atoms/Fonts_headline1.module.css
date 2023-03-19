@@ -1,5 +1,6 @@
 .Headline1Item{
     width: 100%;
+    white-space: pre-line;
 }
 .NormalHeadline{
     font-family: 'IBM Plex Sans';
@@ -9,6 +10,7 @@
     line-height: 55px;
     color: #FFFFFF;
     margin: 0;
+    white-space: pre-line;
 }
 .NormalHeadlineDark{
     font-family: 'IBM Plex Sans';
@@ -18,6 +20,7 @@
     line-height: 55px;
     color: #000000;
     margin: 0;
+    white-space: pre-line;
 }
 .HighlightedContent{
     font-family: 'IBM Plex Sans';
@@ -27,4 +30,5 @@
     line-height: 55px;
     color: #A450E6;
     margin: 0;
+    white-space: pre-line;
 }

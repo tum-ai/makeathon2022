@@ -9,6 +9,7 @@
     line-height: 45px;
     color: #FFFFFF;
     margin: 0;
+    white-space: pre-line;
 }
 .NormalHeadlineDark{
     font-family: 'IBM Plex Sans';
@@ -18,4 +19,5 @@
     line-height: 45px;
     color: #000000;
     margin: 0;
+    white-space: pre-line;
 }

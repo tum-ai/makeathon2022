@@ -12,7 +12,7 @@ export default function Outtro(){
     <div className={styles.Content}>
       <div className={styles.Grid}>
         <div className={styles.TicketContainer}>
-          <Ticket position={"left"}/>
+          <Ticket position={"left"} version={"previous"}/>
         </div>
         <div className={styles.TextContainer}>
           <Headline1 isH1={false} isDarkBackground normalContent={"🚀 Our last "} highlightedContent={"Makeathon "} />
@@ -21,6 +21,9 @@ export default function Outtro(){
           </div>
           <div className={styles.buttonWrapper}>
             <Button isDarkBackground link="https://www.tum-ai.com/" content={"Learn more about TUM.ai"}/>
+          </div>
+          <div className={styles.buttonWrapper}>
+            <Button isDarkBackground link="https://tumai-makeathon-october-2022.devpost.com/project-gallery" content={"Explore innovative solutions created at the Makeathon"}/>
           </div>
         </div>
       </div>
