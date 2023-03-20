@@ -9,7 +9,7 @@ const data = {
   title_bold: " AI for Everyone",
 
   button: "Apply now",
-  button_link: "https://tally.so/r/wQoNR1",
+  button_link: "https://makeathon23.tum-ai.com/apply",
 };
 
 export default function Banner() {
