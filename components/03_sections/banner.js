@@ -35,7 +35,7 @@ export default function Banner() {
             <div className={styles.Button}>
                 <Button
                     content={data.button}
-                    link="https://tally.so/r/wQoNR1"
+                    link="https://makeathon23.tum-ai.com/apply"
                     isDarkBackground={false}
                 />
             </div>
