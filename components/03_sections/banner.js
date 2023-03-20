@@ -8,8 +8,8 @@ const data = {
   title: "Innovation through AI awaits you, sign up now! \nLet’s build",
   title_bold: " AI for Everyone",
 
-  button: "Apply now",
-  button_link: "https://makeathon23.tum-ai.com/apply",
+  button: "Applications reopen soon",
+  button_link: "https://makeathon.tum-ai.com",
 };
 
 export default function Banner() {
@@ -35,7 +35,7 @@ export default function Banner() {
             <div className={styles.Button}>
                 <Button
                     content={data.button}
-                    link="https://makeathon23.tum-ai.com/apply"
+                    link="https://makeathon.tum-ai.com"
                     isDarkBackground={false}
                 />
             </div>
