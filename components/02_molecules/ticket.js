@@ -17,9 +17,10 @@ export default function Ticket({position, version}){
     }else{
       return <div className={styles.TicketItem}>
         <div alt="Ticket" className={styles.Ticket}></div>
-        <Link href="https://makeathon23.tum-ai.com/apply" passHref={true} >
+//         <Link href="https://makeathon23.tum-ai.com/apply" passHref={true} >
+         <Link href="https://makeathon.tum-ai.com/" passHref={true} >
           <div className={styles.CtaButton}>
-            { <div className={styles.Text}>Apply now</div> }
+            { <div className={styles.Text}>Application opens soon!</div> }
           </div>
         </Link>
       </div>
