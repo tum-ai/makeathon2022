@@ -20,7 +20,7 @@ export default function PreviousSponsors(){
           <div className={styles.SponsorsRow}>
             <Link href="https://www.microsoft.com/" passHref >
               <div className={styles.Sponsor} >
-                <Image src={"/assets/microsoft.png"} alt="microsoft" layout="fill" objectFit="contain" />
+                <Image src={"/assets/microsoft_v3.png"} alt="microsoft" layout="fill" objectFit="contain" />
               </div>
             </Link>
             <Link href="https://www.roche.com/" passHref >
