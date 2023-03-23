@@ -17,13 +17,13 @@ export default function Outtro(){
         <div className={styles.TextContainer}>
           <Headline1 isH1={false} isDarkBackground normalContent={"🚀 Our last "} highlightedContent={"Makeathon "} />
           <div className={styles.ParagraphContainer}>
-            <Paragraph1 isDarkBackground normalContent={"If you want to learn more about our student initiative click on the link below."} />
+            <Paragraph1 isDarkBackground normalContent={"If you want to learn more about our student initiative, click the link below:"} />
           </div>
           <div className={styles.buttonWrapper}>
             <Button isDarkBackground link="https://www.tum-ai.com/" content={"Learn more about TUM.ai"}/>
           </div>
           <div className={styles.buttonWrapper}>
-            <Button isDarkBackground link="https://tumai-makeathon-october-2022.devpost.com/project-gallery" content={"Explore innovative solutions created at the Makeathon"}/>
+            <Button isDarkBackground link="https://tumai-makeathon-october-2022.devpost.com/project-gallery" content={"Explore past projects"}/>
           </div>
         </div>
       </div>
