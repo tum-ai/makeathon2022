@@ -8,8 +8,8 @@ const data = {
   title: "Innovation through AI awaits you, sign up now! \nLet’s build",
   title_bold: " AI for Everyone",
 
-  button: "Applications reopen soon",
-  button_link: "https://makeathon.tum-ai.com",
+  button: "Apply now!",
+  button_link: "https://makeathon23.tum-ai.com/apply",
 };
 
 export default function Banner() {
