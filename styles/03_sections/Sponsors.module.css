@@ -28,13 +28,18 @@
   align-items: center;
 }
 .Separator{
-  width: 150px;
+  width: 400px;
+  height: 2px;
+  background-color: #C6C4CC;
+}
+.Separator1{
+  width: 200px;
   height: 2px;
   background-color: #C6C4CC;
 }
 .Sponsors{
   display: flex;
-  column-gap: 120px;
+  column-gap: 60px;
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -54,9 +59,30 @@
   opacity: 1.0;
   cursor: pointer;
 }
+.Sponsor_bigger{
+  width: 200px;
+  height: 200px;
+  position: relative;
+  opacity: 1.0;
+  cursor: pointer;
+}
 .Premium{
   width: 250px;
   height: 250px;
+  position: relative;
+  opacity: 1.0;
+  cursor: pointer;
+}
+.Premium_smaller{
+  width: 200px;
+  height: 200px;
+  position: relative;
+  opacity: 1.0;
+  cursor: pointer;
+}
+.Premium_bigger{
+  width: 275px;
+  height: 275px;
   position: relative;
   opacity: 1.0;
   cursor: pointer;
