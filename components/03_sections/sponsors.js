@@ -40,7 +40,7 @@ export default function Sponsors(){
             <Image src={"/assets/BMWGroup_Logo.svg"} alt="BMW" layout="fill" objectFit="contain" />
           </div>
         </Link>
-        <Link href="" passHref >
+        <Link href="https://dai.ki" passHref >
           <div className={styles.Premium}>
             <Image src={"/assets/logo_Daiki.png"} alt="Daiki" layout="fill" objectFit="contain" />
           </div>
