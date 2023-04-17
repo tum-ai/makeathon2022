@@ -40,7 +40,7 @@ export default function Sponsors(){
             <Image src={"/assets/BMWGroup_Logo.svg"} alt="BMW" layout="fill" objectFit="contain" />
           </div>
         </Link>
-        <Link href="" passHref >
+        <Link href="https://dai.ki" passHref >
           <div className={styles.Premium}>
             <Image src={"/assets/logo_Daiki.png"} alt="Daiki" layout="fill" objectFit="contain" />
           </div>
@@ -60,6 +60,26 @@ export default function Sponsors(){
             <Image src={"/assets/MCML_Logo.png"} alt="MCML" layout="fill" objectFit="contain" />
           </div>
         </Link>
+        <div className={styles.SponsorsGrid}>
+          {/*/!* 1st row *//*}*/}
+          <div className={styles.SponsorsRow}>
+            <Link href="https://genistat.ch/en/" passHref >
+              <div className={styles.Sponsor}>
+                <Image src={"/assets/Genistat_Logo.png"} alt="Genistat" layout="fill" objectFit="contain" />
+              </div>
+            </Link>
+            <Link href="https://www.allianz.de" passHref >
+              <div className={styles.Sponsor_bigger}>
+                <Image src={"/assets/allianz_logo_2.png"} alt="Allianz" layout="fill" objectFit="contain" />
+              </div>
+            </Link>
+            <Link href="https://www.appliedai.de/" passHref >
+              <div className={styles.Sponsor}>
+                <Image src={"/assets/appliedAI.svg"} alt="appliedAI" layout="fill" objectFit="contain" />
+              </div>
+            </Link>
+          </div>
+        </div>
         {/* <Link href="https://www2.deloitte.com/de/de.html" passHref >
           <div style={{filter: "grayscale(1)"}} className={styles.Premium}>
             <Image src={"/assets/Deloitte.png"} alt="netapp" layout="fill" objectFit="contain" />
@@ -104,32 +124,13 @@ export default function Sponsors(){
       {/*      </Link>*/}
       {/*  </div>*/}
       {/*</div>*/}
-      <div style={{opacity: "0.5"}} className={styles.TopContainer}>
-        <div className={styles.Separator1}></div>
-        <Headline2  isDarkBackground={false} normalContent={"Challenge Setters"} />
-        <div className={styles.Separator1}></div>
-      </div>
+      {/*<div style={{opacity: "0.5"}} className={styles.TopContainer}>*/}
+      {/*  <div className={styles.Separator1}></div>*/}
+      {/*  <Headline2  isDarkBackground={false} normalContent={"Challenge Setters"} />*/}
+      {/*  <div className={styles.Separator1}></div>*/}
+      {/*</div>*/}
       
-      <div className={styles.SponsorsGrid}>
-        {/*/!* 1st row *//*}*/}
-        <div className={styles.SponsorsRow}>
-          <Link href="https://genistat.ch/en/" passHref >
-            <div className={styles.Sponsor}>
-              <Image src={"/assets/Genistat_Logo.png"} alt="Genistat" layout="fill" objectFit="contain" />
-            </div>
-          </Link>
-          <Link href="https://www.allianz.de" passHref >
-          <div className={styles.Sponsor_bigger}>
-              <Image src={"/assets/allianz_logo_2.png"} alt="Allianz" layout="fill" objectFit="contain" />
-          </div>
-          </Link>
-          <Link href="https://www.appliedai.de/" passHref >
-            <div className={styles.Sponsor}>
-              <Image src={"/assets/appliedAI.svg"} alt="appliedAI" layout="fill" objectFit="contain" />
-            </div>
-          </Link>
-        </div>
-      </div>
+
         {/*  2nd row */}
         {/* /!* TODO: SET CORRECT HREF *//*}*/}
         {/*<div className={styles.SponsorsRow}>*/}
