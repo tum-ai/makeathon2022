@@ -74,8 +74,8 @@ export default function Sponsors(){
               </div>
             </Link>
             <Link href="https://www.appliedai.de/" passHref >
-              <div className={styles.Sponsor}>
-                <Image src={"/assets/appliedAI.svg"} alt="appliedAI" layout="fill" objectFit="contain" />
+              <div className={styles.Sponsor_bigger}>
+                <Image src={"/assets/AppliedAI_Logo.png"} alt="appliedAI" layout="fill" objectFit="contain" />
               </div>
             </Link>
           </div>
