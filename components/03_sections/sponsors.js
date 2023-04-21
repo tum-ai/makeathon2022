@@ -60,6 +60,16 @@ export default function Sponsors(){
             <Image src={"/assets/MCML_Logo.png"} alt="MCML" layout="fill" objectFit="contain" />
           </div>
         </Link>
+        <Link href="https://www.microsoft.com" passHref >
+          <div className={styles.Premium_smaller}>
+            <Image src={"/assets/microsoft_v2.png"} alt="Microsoft" layout="fill" objectFit="contain" />
+          </div>
+        </Link>
+        <Link href="https://www.aleph-alpha.com" passHref >
+          <div className={styles.Premium_smaller}>
+            <Image src={"/assets/AlephAlpha_logo.png"} alt="AlephAlpha" layout="fill" objectFit="contain" />
+          </div>
+        </Link>
         <div className={styles.SponsorsGrid}>
           {/*/!* 1st row *//*}*/}
           <div className={styles.SponsorsRow}>
