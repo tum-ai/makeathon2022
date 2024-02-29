@@ -11,7 +11,7 @@ export default function Sponsors(){
   return <div className={styles.SponsorsItem}>
     <div className={styles.Grid}>
       <div className={styles.TitleContainer}>
-          <Headline1 style={{width: "auto"}} isDarkBackground={false} normalContent={"Makeathon 2023 Industry Partners"} />
+          <Headline1 style={{width: "auto"}} isDarkBackground={false} normalContent={"Makeathon 2024 Industry Partners"} />
       </div>
       {/*<div className={styles.TitleContainer}/>*/}
       

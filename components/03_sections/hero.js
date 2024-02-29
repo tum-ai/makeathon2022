@@ -10,7 +10,7 @@ const data = {
   "headline": "The TUM.ai ",
   "headline_marked": "Makeathon",
   "paragraph_marked_1": "AI for Everyone \n 28.04 - 30.04",
-  "paragraph_marked": "Join our 2-day challenge ",
+  "paragraph_marked": "Join our 3-day challenge ",
   "paragraph": "that connects young innovators with different backgrounds to develop AI solutions for real-life business cases.",
   "value": [
     {

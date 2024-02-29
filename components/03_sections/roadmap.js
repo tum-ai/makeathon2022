@@ -1,44 +1,48 @@
-import styles from '../../styles/03_sections/Roadmap.module.css'
-import Image from 'next/image'
-import { useState } from 'react'
-import Paragraph1 from '../01_atoms/fonts_paragraph1'
-import Paragraph2 from '../01_atoms/fonts_paragraph2'
-import Headline2 from '../01_atoms/fonts_headline2'
-import Date1 from '../01_atoms/fonts_date1'
+import styles from "../../styles/03_sections/Roadmap.module.css";
+import Image from "next/image";
+import { useState } from "react";
+import Paragraph1 from "../01_atoms/fonts_paragraph1";
+import Paragraph2 from "../01_atoms/fonts_paragraph2";
+import Headline2 from "../01_atoms/fonts_headline2";
+import Date1 from "../01_atoms/fonts_date1";
 
 const data = {
-  "points": [
+  points: [
     {
-      "title": "Application Phase Opens",
-      "icon": "/assets/deadline.svg",
-      "time": "28.03",
-      "content_highlighted": "",
-      "content": "Registration opens for the TUM.ai Makeathon 2023. Students, recent graduates and AI enthusiasts from around the world are invited to apply and showcase their skills and interest in AI. Participants will be asked to provide their background, interests, and goals for the Makeathon. ",
-      "img": "/assets/road01.jpg"
+      title: "Opening Pre-sign up",
+      icon: "/assets/pitch.svg",
+      time: "12.02",
+      content_highlighted: "",
+      content:
+        "Pre-sign up opens for the TUM.ai Makeathon 2024. Sign up to get notified when the application phase opens.",
+      img: "/assets/road01.jpg",
     },
     {
-      "title": "Application Deadline",
-      "icon": "/assets/selection.svg",
-      "time": "21.04",
-      "content_highlighted": "",
-      "content": "Registration closes. \nNote: We review applications on a rolling basis. That means the earlier you apply, the better. \n\n\n",
-      "img": "/assets/road02.jpg"
+      title: "Application Phase Opens",
+      icon: "/assets/deadline.svg",
+      time: "04.03",
+      content_highlighted: "",
+      content:
+        "Registration opens for the TUM.ai Makeathon 2024. Students, recent graduates and AI enthusiasts from around the world are invited to apply and showcase their skills and interest in AI. Participants will be asked to provide their background, interests, and goals for the Makeathon. ",
+      img: "/assets/road02.jpg",
     },
     {
-      "title": "Opening Ceremony ",
-      "icon": "/assets/pitch.svg",
-      "time": "27.04",
-      "content_highlighted": "Online \n",
-      "content": "Makeathon 2023 starts with an exciting Opening Ceremony, where participants will be introduced to the event organizers, mentors, and industry partners. As a special surprise, we also invited a renowned AI expert.",
-      "img": "/assets/road03.jpg"
+      title: "Application Deadline",
+      icon: "/assets/selection.svg",
+      time: "21.04",
+      content_highlighted: "",
+      content:
+        "Registration closes. \nNote: We review applications on a rolling basis. That means the earlier you apply, the better. \n\n\n",
+      img: "/assets/road03.jpg",
     },
     {
-      "title": "Kick-off ",
-      "icon": "/assets/workshops.svg",
-      "time": "28.04",
-      "content_highlighted": "On-Site \n",
-      "content": "Following the Opening Ceremony, the Makeathon kicks off on-site at the TUM Campus in Garching. Here, the challenges are presented and the hacking starts. \n \n",
-      "img": "/assets/road04.jpg"
+      title: "Kick-off ",
+      icon: "/assets/workshops.svg",
+      time: "28.04",
+      content_highlighted: "On-Site \n",
+      content:
+        "Following the Opening Ceremony, the Makeathon kicks off on-site at the TUM Campus in Garching. Here, the challenges are presented and the hacking starts. \n \n",
+      img: "/assets/road04.jpg",
     },
     // {
     //   "title": "Workshops & Team Finding",
@@ -64,83 +68,175 @@ const data = {
       "content": "After pitching your results on Sunday afternoon, a jury of experts will select the winning teams for each track in the closing ceremony. Fantastic prizes are waiting!",
       "img": "/assets/road06.jpg"
     },*/
-  ] 
-}
+  ],
+};
 
-export default function Roadmap(){
+export default function Roadmap() {
   const [roadIndex, setRoadIndex] = useState(0);
 
-  function calculatePercentage(){
-    return (roadIndex * 24) + 14 //(roadIndex * 16.6) + 10
+  function calculatePercentage() {
+    return roadIndex * 24 + 14; //(roadIndex * 16.6) + 10
   }
 
-  return <div className={styles.RoadmapItem}>
-    <div className={styles.Grid}>
-      <div className={styles.LeftContainer}>
-        <div className={styles.LineContainer}>
-          <div className={styles.Line}></div>
-        </div>
-        <div className={styles.MarkedLineContainer}>
-          <div style={{"height": calculatePercentage()+"%"}} className={styles.MarkedLine}></div>
-        </div>
-        <div className={styles.PointContainer}>
-          {data.points.map(function(point, index){
-            if(roadIndex >= index){
-              return <div style={{boxShadow: roadIndex == index ? "0px 4px 20px rgba(131, 123, 239, 0.55)" : ""}} className={styles.PointMarked} key={index} onClick={()=>setRoadIndex(index)}>
-                {/* <Image style={{opacity: 0.5}} layout='fill' objectFit='cover' src={point.icon} alt={point.title}/> */}
-              </div>
-            }else{
-              return <div className={styles.Point} key={index} onClick={()=>setRoadIndex(index)}>
-                {/* <Image layout='fill' objectFit='cover' src={point.icon} alt={point.title}/> */}
-                <div className={styles.LittlePoint} />
-              </div>
-            }
-          })}
-        </div>
-        <div className={styles.TextContainer}>
-        {data.points.map(function(point, index){
-          if(index %2 == 0){
-            return <div key={index} onClick={()=>setRoadIndex(index)} style={index==roadIndex ? {"opacity":"1"} : {"opacity":"0.5"}} className={styles.TextLeft}>
-              <Paragraph1 isUnderlined highlightedContent={point.title} normalContent={""} isDarkBackground={false}/>
-              <Paragraph2 highlightedContent={""} normalContent={point.time} isDarkBackground={false}/>
-            </div>
-          }else{
-            return <div key={index} onClick={()=>setRoadIndex(index)} style={index==roadIndex ? {"opacity":"1"} : {"opacity":"0.5"}} className={styles.TextRight}>
-              <Paragraph1 isUnderlined highlightedContent={point.title} normalContent={""} isDarkBackground={false}/>
-              <Paragraph2 highlightedContent={""} normalContent={point.time} isDarkBackground={false}/>
-            </div>
-          }
-        })}
-        </div>
-      </div>
-      <div className={styles.RightContainer}>
-        <div className={styles.TopContainer}>
-          {/*<Image src={data.points[roadIndex].img} alt={data.points[roadIndex].title} layout="fill" objectFit='cover' />*/}
-          <div className={styles.CardTime}>
-            <Date1 normalContent={data.points[roadIndex].time} isDarkBackground/>
+  return (
+    <div className={styles.RoadmapItem}>
+      <div className={styles.Grid}>
+        <div className={styles.LeftContainer}>
+          <div className={styles.LineContainer}>
+            <div className={styles.Line}></div>
+          </div>
+          <div className={styles.MarkedLineContainer}>
+            <div
+              style={{
+                height: calculatePercentage() + "%",
+              }}
+              className={styles.MarkedLine}
+            ></div>
+          </div>
+          <div className={styles.PointContainer}>
+            {data.points.map(function (point, index) {
+              if (roadIndex >= index) {
+                return (
+                  <div
+                    style={{
+                      boxShadow:
+                        roadIndex == index
+                          ? "0px 4px 20px rgba(131, 123, 239, 0.55)"
+                          : "",
+                    }}
+                    className={styles.PointMarked}
+                    key={index}
+                    onClick={() => setRoadIndex(index)}
+                  >
+                    {/* <Image style={{opacity: 0.5}} layout='fill' objectFit='cover' src={point.icon} alt={point.title}/> */}
+                  </div>
+                );
+              } else {
+                return (
+                  <div
+                    className={styles.Point}
+                    key={index}
+                    onClick={() => setRoadIndex(index)}
+                  >
+                    {/* <Image layout='fill' objectFit='cover' src={point.icon} alt={point.title}/> */}
+                    <div className={styles.LittlePoint} />
+                  </div>
+                );
+              }
+            })}
+          </div>
+          <div className={styles.TextContainer}>
+            {data.points.map(function (point, index) {
+              if (index % 2 == 0) {
+                return (
+                  <div
+                    key={index}
+                    onClick={() => setRoadIndex(index)}
+                    style={
+                      index == roadIndex
+                        ? { opacity: "1" }
+                        : { opacity: "0.5" }
+                    }
+                    className={styles.TextLeft}
+                  >
+                    <Paragraph1
+                      isUnderlined
+                      highlightedContent={point.title}
+                      normalContent={""}
+                      isDarkBackground={false}
+                    />
+                    <Paragraph2
+                      highlightedContent={""}
+                      normalContent={point.time}
+                      isDarkBackground={false}
+                    />
+                  </div>
+                );
+              } else {
+                return (
+                  <div
+                    key={index}
+                    onClick={() => setRoadIndex(index)}
+                    style={
+                      index == roadIndex
+                        ? { opacity: "1" }
+                        : { opacity: "0.5" }
+                    }
+                    className={styles.TextRight}
+                  >
+                    <Paragraph1
+                      isUnderlined
+                      highlightedContent={point.title}
+                      normalContent={""}
+                      isDarkBackground={false}
+                    />
+                    <Paragraph2
+                      highlightedContent={""}
+                      normalContent={point.time}
+                      isDarkBackground={false}
+                    />
+                  </div>
+                );
+              }
+            })}
           </div>
         </div>
-        <div className={styles.BottomContainer}>
-          <Headline2 isDarkBackground normalContent={data.points[roadIndex].title}/>
-          <Paragraph1 highlightedContent={data.points[roadIndex].content_highlighted} normalContent={data.points[roadIndex].content} isDarkBackground/>
-        </div>
-      </div>
-      {data.points.map((point, index)=>(
-        <div key={index} className={styles.MobileContainer}>
+        <div className={styles.RightContainer}>
           <div className={styles.TopContainer}>
-            {/*<Image src={point.img} alt={point.title} layout="fill" objectFit='cover' />*/}
+            {/*<Image src={data.points[roadIndex].img} alt={data.points[roadIndex].title} layout="fill" objectFit='cover' />*/}
             <div className={styles.CardTime}>
-              <Date1 normalContent={point.time} isDarkBackground/>
+              <Date1
+                normalContent={data.points[roadIndex].time}
+                isDarkBackground
+              />
             </div>
           </div>
           <div className={styles.BottomContainer}>
-            <Headline2 isDarkBackground normalContent={point.title}/>
-            <Paragraph1 highlightedContent={point.content_highlighted} normalContent={point.content} isDarkBackground/>
+            <Headline2
+              isDarkBackground
+              normalContent={data.points[roadIndex].title}
+            />
+            <Paragraph1
+              highlightedContent={
+                data.points[roadIndex].content_highlighted
+              }
+              normalContent={data.points[roadIndex].content}
+              isDarkBackground
+            />
           </div>
         </div>
-      ))}
+        {data.points.map((point, index) => (
+          <div
+            key={index}
+            className={styles.MobileContainer}
+          >
+            <div className={styles.TopContainer}>
+              {/*<Image src={point.img} alt={point.title} layout="fill" objectFit='cover' />*/}
+              <div className={styles.CardTime}>
+                <Date1
+                  normalContent={point.time}
+                  isDarkBackground
+                />
+              </div>
+            </div>
+            <div className={styles.BottomContainer}>
+              <Headline2
+                isDarkBackground
+                normalContent={point.title}
+              />
+              <Paragraph1
+                highlightedContent={
+                  point.content_highlighted
+                }
+                normalContent={point.content}
+                isDarkBackground
+              />
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
-  </div>
+  );
 }
 /*
 
