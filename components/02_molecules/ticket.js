@@ -7,20 +7,25 @@ export default function Ticket({position, version}){
   if(version != "previous"){
     if(position == "right"){
       return <div style={{right: 0}}className={styles.TicketItem}>
+        <Link href="https://tally.so/r/3y9LPB" passHref={true}>
         <div alt="Ticket" className={styles.Ticket}></div>
-          <Link href="" passHref={true} >
+          {/* <Link href="" passHref={true} >
           <div className={styles.CtaButton}>
             { <div className={styles.Text}>Applications closed!</div> }
           </div>
-        </Link>
+        </Link> */}
+         </Link>
       </div>
+      
     }else{
       return <div className={styles.TicketItem}>
+         <Link href="https://tally.so/r/3y9LPB" passHref={true}>
         <div alt="Ticket" className={styles.Ticket}></div>
-          <Link href="" passHref={true} >
+          {/* <Link href="" passHref={true} >
           <div className={styles.CtaButton}>
             { <div className={styles.Text}>Applications closed!</div> }
           </div>
+        </Link> */}
         </Link>
       </div>
     }

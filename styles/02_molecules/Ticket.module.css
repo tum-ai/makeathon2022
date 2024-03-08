@@ -4,12 +4,14 @@
   top: -40px;
 }
 .Ticket{
-  width: 500px;
+  width: 480px;
   height: 680px;
-  background-image: url("/assets/MakeathonSpring2023.svg");
+  background-image: url("/assets/Makeathon_Spring_2024.png");
   background-size: contain;
   background-repeat: no-repeat;
   filter: drop-shadow(0px 40px 124px rgba(123, 154, 239, 0.25));
+  cursor: pointer;
+  border-radius: 25px;
 }
  .CtaButton{
   position: absolute;
