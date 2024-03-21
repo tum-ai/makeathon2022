@@ -29,7 +29,7 @@ const data = {
     {
       title: "Application Deadline",
       icon: "/assets/selection.svg",
-      time: "21.04",
+      time: "19.04",
       content_highlighted: "",
       content:
         "Registration closes. \nNote: We review applications on a rolling basis. That means the earlier you apply, the better. \n\n\n",
@@ -38,10 +38,10 @@ const data = {
     {
       title: "Kick-off ",
       icon: "/assets/workshops.svg",
-      time: "28.04",
+      time: "26.04",
       content_highlighted: "On-Site \n",
       content:
-        "Following the Opening Ceremony, the Makeathon kicks off on-site at the TUM Campus in Garching. Here, the challenges are presented and the hacking starts. \n \n",
+        "Following the Opening Ceremony, the Makeathon kicks off on-site at the TUM Main Campus. Here, the challenges are presented and the hacking starts. \n \n",
       img: "/assets/road04.jpg",
     },
     // {
