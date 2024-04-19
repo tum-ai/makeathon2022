@@ -69,7 +69,7 @@ const data = {
     },
     {
       "question": "When is the application deadline?",
-      "answer": "The application deadline is on the 19th of April 2024. But better be quick, we review the applications on a rolling basis and only have so many spots available. "
+      "answer": "The application deadline is on the 21th of April 2024. But better be quick, we review the applications on a rolling basis and only have so many spots available. "
     },
     {
       "question": "Who can participate?",

@@ -46,7 +46,7 @@ export default function Home() {
         <Element name="stories">
           <Stories />
         </Element>
-        {/* <Sponsors /> */}
+        <Sponsors />
         <SponsorInfo />
         <Element name="faqs">
           <Faqs />

@@ -30,62 +30,52 @@ export default function Sponsors(){
       {/*    isDarkBackground={false}*/}
       {/*  />*/}
       {/*</div>*/}
-        <Link href="https://www.esa.int" passHref >
+        <Link href="https://www.reply.com/arlanis-reply/de/" passHref >
           <div className={styles.Premium_bigger}>
-            <Image src={"/assets/ESA_logo_1.png"} alt="ESA" layout="fill" objectFit="contain" />
+            <Image src={"/assets/Reply-LOGO.jpg"} alt="Reply" layout="fill" objectFit="contain" />
           </div>
         </Link>
-         <Link href="https://www.bmwgroup.com/de.html" passHref >
+         <Link href="https://www.gresearch.com/" passHref >
           <div className={styles.Premium}>
-            <Image src={"/assets/BMWGroup_Logo.svg"} alt="BMW" layout="fill" objectFit="contain" />
+            <Image src={"/assets/GR_Logo_Horizontal.png"} alt="GResearch" layout="fill" objectFit="contain" />
           </div>
         </Link>
-        <Link href="https://dai.ki" passHref >
+        <Link href="https://www.quantco.com/" passHref >
           <div className={styles.Premium}>
-            <Image src={"/assets/logo_Daiki.png"} alt="Daiki" layout="fill" objectFit="contain" />
+            <Image src={"/assets/quantco_white.png"} alt="Quantco" layout="fill" objectFit="contain" />
           </div>
         </Link>
-        <Link href="https://www.gresearch.co.uk" passHref >
+        <Link href="https://www.care-for-rare.org/" passHref >
           <div className={styles.Premium_smaller}>
-            <Image src={"/assets/gresearch_logo.png"} alt="GResearch" layout="fill" objectFit="contain" />
+            <Image src={"/assets/Health_Challenge_CFRl.jpg"} alt="CFRI" layout="fill" objectFit="contain" />
           </div>
         </Link>
-        <Link href="https://cohere.ai" passHref >
+        <Link href="https://www.lmu-klinikum.de/hauner/kinder-und-kinderpoliklinik" passHref >
           <div className={styles.Premium_smaller}>
-            <Image src={"/assets/Cohere_Logo.png"} alt="Cohere" layout="fill" objectFit="contain" />
+            <Image src={"/assets/Health_Challenge_Hauner.jpg"} alt="Hauner" layout="fill" objectFit="contain" />
           </div>
         </Link>
-        <Link href="https://mcml.ai" passHref >
+        <Link href="https://www.lmu-klinikum.de/" passHref >
           <div className={styles.Premium_smaller}>
-            <Image src={"/assets/MCML_Logo.png"} alt="MCML" layout="fill" objectFit="contain" />
+            <Image src={"/assets/Health_Challenge_LMU.jpg"} alt="LMU" layout="fill" objectFit="contain" />
           </div>
         </Link>
-        <Link href="https://www.microsoft.com" passHref >
+        <Link href="https://www.munich-ecosystem.de/" passHref >
           <div className={styles.Premium_smaller}>
-            <Image src={"/assets/microsoft_v2.png"} alt="Microsoft" layout="fill" objectFit="contain" />
-          </div>
-        </Link>
-        <Link href="https://www.aleph-alpha.com" passHref >
-          <div className={styles.Premium_smaller}>
-            <Image src={"/assets/AlephAlpha_logo.png"} alt="AlephAlpha" layout="fill" objectFit="contain" />
+            <Image src={"/assets/Helath_Challenge_MI.jpg"} alt="MI" layout="fill" objectFit="contain" />
           </div>
         </Link>
         <div className={styles.SponsorsGrid}>
           {/*/!* 1st row *//*}*/}
           <div className={styles.SponsorsRow}>
-            <Link href="https://genistat.ch/en/" passHref >
+            <Link href="https://jobs.check24.de/de/" passHref >
               <div className={styles.Sponsor}>
-                <Image src={"/assets/Genistat_Logo.png"} alt="Genistat" layout="fill" objectFit="contain" />
+                <Image src={"/assets/CHECK24.png"} alt="Check24" layout="fill" objectFit="contain" />
               </div>
             </Link>
-            <Link href="https://www.allianz.de" passHref >
+            <Link href="https://www.osapiens.com/de" passHref >
               <div className={styles.Sponsor_bigger}>
-                <Image src={"/assets/allianz_logo_2.png"} alt="Allianz" layout="fill" objectFit="contain" />
-              </div>
-            </Link>
-            <Link href="https://www.appliedai.de/" passHref >
-              <div className={styles.Sponsor_bigger}>
-                <Image src={"/assets/aai_logo_2.png"} alt="appliedAI" layout="fill" objectFit="contain" />
+                <Image src={"/assets/Osapiens_W.svg"} alt="Osapiens" layout="fill" objectFit="contain" />
               </div>
             </Link>
           </div>

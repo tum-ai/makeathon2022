@@ -29,7 +29,7 @@ const data = {
     {
       title: "Application Deadline",
       icon: "/assets/selection.svg",
-      time: "19.04",
+      time: "21.04",
       content_highlighted: "",
       content:
         "Registration closes. \nNote: We review applications on a rolling basis. That means the earlier you apply, the better. \n\n\n",
