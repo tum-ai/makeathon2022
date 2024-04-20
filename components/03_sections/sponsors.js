@@ -29,7 +29,7 @@ export default function Sponsors() {
             {
               name: "Salesforce",
               url: "https://www.salesforce.com/de/",
-              src: "/assets/salesforce.png",
+              src: "/assets/Salesforce.png",
             },
             {
               name: "Mercedes",
