@@ -37,14 +37,24 @@ export default function Sponsors() {
               src: "/assets/Mercedes.png",
             },
             {
-              name: "GResearch",
-              url: "https://www.gresearch.com/",
-              src: "/assets/G-Research.png",
+              name: "Jane Street",
+              url: "https://www.janestreet.com/",
+              src: "/assets/JaneStreet.png",
             },
             {
               name: "QuantCo",
               url: "https://www.quantco.com/",
               src: "/assets/QuantCo.png",
+            },
+            {
+              name: "GResearch",
+              url: "https://www.gresearch.com/",
+              src: "/assets/G-Research.png",
+            },
+            {
+              name: "JetBrains",
+              url: "https://www.jetbrains.com/",
+              src: "/assets/JetBrains.png",
             },
             {
               name: "Care for Rare",
@@ -75,16 +85,6 @@ export default function Sponsors() {
               name: "Helmholtz Munich",
               url: "https://www.helmholtz-munich.de/en",
               src: "/assets/Helmholtz.png",
-            },
-            {
-              name: "Jane Street",
-              url: "https://www.janestreet.com/",
-              src: "/assets/JaneStreet.png",
-            },
-            {
-              name: "JetBrains",
-              url: "https://www.jetbrains.com/",
-              src: "/assets/JetBrains.png",
             },
             {
               name: "msg",
