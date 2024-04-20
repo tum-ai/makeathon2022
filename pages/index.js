@@ -64,13 +64,13 @@ export default function Home() {
             <figure className="mt-10">
               <blockquote className="text-center text-xl font-semibold leading-8 text-gray-900 sm:text-2xl sm:leading-9">
                 <p>
-                  "We from Reply can't wait to get to know
-                  you during the TUM.ai Makeathon! We are
-                  already looking forward to your innovative
-                  ideas to solve our challenge. Join us in
-                  exploring the forefront of AI innovation
-                  as we go deep into the realm of predictive
-                  maintenance for enhanced energy
+                  &quot;We from Reply can&apos;t wait to get
+                  to know you during the TUM.ai Makeathon!
+                  We are already looking forward to your
+                  innovative ideas to solve our challenge.
+                  Join us in exploring the forefront of AI
+                  innovation as we go deep into the realm of
+                  predictive maintenance for enhanced energy
                   efficiency. Harness the power of data from
                   renewable energy systems to minimize
                   downtime, maximize energy output, and
@@ -78,7 +78,7 @@ export default function Home() {
                   opportunity to learn, innovate, and make a
                   tangible impact on the future of renewable
                   energy. Join us and be a part of shaping a
-                  sustainable tomorrow!"
+                  sustainable tomorrow!&quot;
                 </p>
               </blockquote>
             </figure>
