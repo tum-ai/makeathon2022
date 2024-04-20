@@ -117,7 +117,7 @@ export default function Home() {
               </div>
               <div className={styles.ThirdContainer}>
                 <a
-                  href="https://www.tum-ai.com/datenschutz"
+                  href="https://www.tum-ai.com/data-privacy"
                   className={styles.Link}
                 >
                   {"Terms&Security"}
