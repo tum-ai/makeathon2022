@@ -123,7 +123,7 @@ export default function Home() {
                   {"Terms&Security"}
                 </a>
                 <a
-                  href="https://www.tum-ai.com/impressum"
+                  href="https://www.tum-ai.com/imprint"
                   className={styles.Link}
                 >
                   Imprint
