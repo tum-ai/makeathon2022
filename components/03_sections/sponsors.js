@@ -79,7 +79,7 @@ export default function Sponsors() {
             {
               name: "Check24",
               url: "https://jobs.check24.de/de/",
-              src: "/assets/Check24.png",
+              src: "/assets/check24.svg",
             },
             {
               name: "Helmholtz Munich",
