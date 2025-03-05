@@ -9,7 +9,7 @@ const data = {
   title_bold: " AI for Everyone",
 
   button: "Apply now!",
-  button_link: "https://tally.so/r/3y9LPB",
+  button_link: "https://tally.so/r/3X2jxj",
 };
 
 export default function Banner() {
@@ -35,7 +35,7 @@ export default function Banner() {
             <div className={styles.Button}>
                 <Button
                     content={data.button}
-                    link="https://tally.so/r/3y9LPB"
+                    link="https://tally.so/r/3X2jxj"
                     isDarkBackground={false}
                 />
             </div>

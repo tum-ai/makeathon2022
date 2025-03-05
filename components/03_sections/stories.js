@@ -12,9 +12,9 @@ import { Component } from 'react/cjs/react.production.min'
 const data = {
   "chapter_title": "Stories",
   "chapter_number": "02",
-  "title": "Winning teams of the last ",
+  "title": "Winning teams of the 2023 ",
   "title_highlighted": "Makeathon.",
-  "paragraph_highlighted": "Over 800 enthusiastic students and young participants have already participated in TUM.ai’s previous Makeathon iterations. ",
+  "paragraph_highlighted": "Over 1200+ enthusiastic students and young participants have already participated in TUM.ai’s previous Makeathon iterations. ",
   "paragraph": "Have a look at the winning teams and fantastic solutions that resulted from only 48h working time!",
   "stories": [
     {

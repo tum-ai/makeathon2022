@@ -15,7 +15,7 @@ export default function Outtro(){
           <Ticket position={"left"} version={"previous"}/>
         </div>
         <div className={styles.TextContainer}>
-          <Headline1 isH1={false} isDarkBackground normalContent={"🚀 Our last "} highlightedContent={"Makeathon "} />
+          <Headline1 isH1={false} isDarkBackground normalContent={"🚀 Our 2023 "} highlightedContent={"Makeathon"}/>
           <div className={styles.ParagraphContainer}>
             <Paragraph1 isDarkBackground normalContent={"If you want to learn more about our student initiative, click the link below:"} />
           </div>

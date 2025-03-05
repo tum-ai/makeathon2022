@@ -17,7 +17,7 @@ const data = {
   button: "Learn more about TUM.ai",
   button_link: "https://www.tum-ai.com/",
   button_2: "Apply now",
-  button_2_link: "https://tally.so/r/3y9LPB",
+  button_2_link: "https://tally.so/r/3X2jxj",
   chapter_title: "About the makeathon",
   chapter_number: "01",
   soundfile: "/sounds/sound.mp3",

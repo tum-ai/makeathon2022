@@ -9,21 +9,12 @@ import Date1 from "../01_atoms/fonts_date1";
 const data = {
   points: [
     {
-      title: "Opening Pre-sign up",
-      icon: "/assets/pitch.svg",
-      time: "12.02",
-      content_highlighted: "",
-      content:
-        "Pre-sign up opens for the TUM.ai Makeathon 2024. Sign up to get notified when the application phase opens.",
-      img: "/assets/road01.jpg",
-    },
-    {
       title: "Application Phase Opens",
       icon: "/assets/deadline.svg",
-      time: "04.03",
+      time: "07.03",
       content_highlighted: "",
       content:
-        "Registration opens for the TUM.ai Makeathon 2024. Students, recent graduates and AI enthusiasts from around the world are invited to apply and showcase their skills and interest in AI. Participants will be asked to provide their background, interests, and goals for the Makeathon. ",
+        "Registration opens for the TUM.ai Makeathon 2025. Students, recent graduates and AI enthusiasts from around the world are invited to apply and showcase their skills and interest in AI. Participants will be asked to provide their background, interests, and goals for the Makeathon. ",
       img: "/assets/road02.jpg",
     },
     {
@@ -38,7 +29,7 @@ const data = {
     {
       title: "Kick-off ",
       icon: "/assets/workshops.svg",
-      time: "26.04",
+      time: "25.04",
       content_highlighted: "On-Site \n",
       content:
         "Following the Opening Ceremony, the Makeathon kicks off on-site at the TUM Main Campus. Here, the challenges are presented and the hacking starts. \n \n",
