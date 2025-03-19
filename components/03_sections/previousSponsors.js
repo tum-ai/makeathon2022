@@ -107,10 +107,10 @@ export default function PreviousSponsors() {
               </Link>
             </div>
             <div className={styles.SponsorsRow}>
-              <Link href="https://www.reply.com/arlanis-reply/de/" passHref>
+              <Link href="https://www.reply.com/de/about/careers/de" passHref>
                 <div className={styles.Sponsor}>
                   <Image
-                    src={"/assets/Reply.png"}
+                    src={"/assets/Reply - LOGO_Negative_RGB.png"}
                     alt="Reply"
                     layout="fill"
                     objectFit="contain"

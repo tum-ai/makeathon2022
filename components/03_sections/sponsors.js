@@ -18,8 +18,8 @@ export default function Sponsors() {
           {[
             {
               name: "Reply",
-              url: "https://www.reply.com/arlanis-reply/de/",
-              src: "/assets/Reply.png",
+              url: "https://www.reply.com/de/about/careers/de",
+              src: "/assets/Reply - LOGO_Negative_RGB.png",
             },
             {
               name: "Osapiens",
