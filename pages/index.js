@@ -62,6 +62,7 @@ export default function Home() {
         <PreviousSponsors />
       </main>
 
+
       <footer className={styles.Footer}>
         <div className={styles.Grid}>
           <div className={styles.Container}>
