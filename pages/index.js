@@ -41,7 +41,7 @@ export default function Home() {
         <About />
         <Roadmap />
         <Video />
-        <Banner />
+        {/* <Banner /> */}
         {/*<FullscreenPicture />
         <Element name="tracks">
           <Tracks />
