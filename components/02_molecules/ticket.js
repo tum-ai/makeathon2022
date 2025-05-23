@@ -51,5 +51,5 @@ export default function Ticket({position, version}){
     }
   }
   /*calc(121vw - 93px);
-  */
+  */ 
 }
