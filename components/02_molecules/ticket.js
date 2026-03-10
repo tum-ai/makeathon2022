@@ -1,7 +1,7 @@
 import styles from '../../styles/02_molecules/Ticket.module.css'
 import previousStyles from '../../styles/02_molecules/PreviousTicket.module.css'
 import Link from 'next/link'
-// import "../../pages/application"
+// import "../../pages/application" 
 
 export default function Ticket({position, version}){
   if(version != "previous"){
