@@ -41,7 +41,7 @@ const data = {
     },
     {
       "question": "Is TUM.ai Makeathon in-person or virtual?",
-      "answer": "The Makeathon in April 2025 will be taking place in-person in Munich, Germany. We are happy to fully welcome you in person again!"
+      "answer": "The Makeathon in April 2026 will be taking place in-person in Munich, Germany. We are happy to fully welcome you in person again!"
     },
     {
       "question": "Can we use hardware?",
@@ -73,7 +73,7 @@ const data = {
     },
     {
       "question": "Who can participate?",
-      "answer": "Everyone can apply to participate in our Makeathon! Whether you are a student or a professional, what counts is your motivation to build something cool and interesting with AI. You can apply until the 21th of April 2025 and we will review your application on a rolling basis. "
+      "answer": "Everyone can apply to participate in our Makeathon! Whether you are a student or a professional, what counts is your motivation to build something cool and interesting with AI. You can apply until the 10th of April 2026 and we will review your application on a rolling basis. "
     },
   ]
 }

@@ -14,13 +14,13 @@ const data = {
       time: "07.03",
       content_highlighted: "",
       content:
-        "Registration opens for the TUM.ai Makeathon 2025. Students, recent graduates and AI enthusiasts from around the world are invited to apply and showcase their skills and interest in AI. Participants will be asked to provide their background, interests, and goals for the Makeathon. ",
+        "Registration opens for the TUM.ai Makeathon 2026. Students, recent graduates and AI enthusiasts from around the world are invited to apply and showcase their skills and interest in AI. Participants will be asked to provide their background, interests, and goals for the Makeathon. ",
       img: "/assets/road02.jpg",
     },
     {
       title: "Application Deadline",
       icon: "/assets/selection.svg",
-      time: "21.04",
+      time: "10.04",
       content_highlighted: "",
       content:
         "Registration closes. \nNote: We review applications on a rolling basis. That means the earlier you apply, the better. \n\n\n",
@@ -29,7 +29,7 @@ const data = {
     {
       title: "Kick-off ",
       icon: "/assets/workshops.svg",
-      time: "25.04",
+      time: "17.04",
       content_highlighted: "On-Site \n",
       content:
         "Following the Opening Ceremony, the Makeathon kicks off on-site at the TUM Main Campus. Here, the challenges are presented and the hacking starts. \n \n",
